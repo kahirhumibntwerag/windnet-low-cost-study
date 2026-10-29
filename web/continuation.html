@@ -16,7 +16,7 @@
       <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="16" cy="24" r="8"/><path d="M16 6v5m0 26v5M0 24h5m23 0h5M5 13l4 4m14 14 4 4M5 35l4-4m14-14 4-4M33 14h12M35 21h10M34 28h11M31 35h14"/></svg>
       <span>Wind study<small>OPEN RESEARCH NOTEBOOK</small></span>
     </a>
-    <p class="nav-label">SOLAR-FEATURE CONTINUATION</p>
+    <p class="nav-label">TRAINING-ONLY CONTINUATION</p>
     <nav>
       <a href="#overview"><span>01</span> Overview</a>
       <a href="#performance"><span>02</span> Performance</a>
@@ -32,19 +32,21 @@
   </aside>
   <div class="workspace">
     <header class="topbar">
-      <span><i class="status-dot" aria-hidden="true"></i> WindNet continuation <span class="topbar-detail">· compact solar features</span></span>
+      <span><i class="status-dot" aria-hidden="true"></i> WindNet continuation <span class="topbar-detail">· Folds 1–4 selection CV</span></span>
       <a class="button" href="https://fixrelay.vercel.app/experiments/a772eb55-1daf-4787-84df-4fdd8f662421" target="_blank" rel="noopener noreferrer">Open experiment ↗</a>
     </header>
     <main id="main">
       <section id="overview" aria-labelledby="page-title">
-        <p class="eyebrow">H8 · Reproducible model development</p>
+        <div class="experiment-controls"><label for="experiment-select">Experiment</label><select id="experiment-select"><option value="H8">H8 · SDO features</option><option value="H9">H9 · Fast-wind loss &amp; component ablations</option></select></div>
+        <p id="experiment-eyebrow" class="eyebrow">Reproducible model development</p>
         <h1 id="page-title">Can compact solar features help?</h1>
-        <p class="lead">A continuation of the low-cost WindNet study: add scalar SDO/EVE irradiance features, measure what each addition changes, and check performance when solar wind is fast.</p>
+        <p id="experiment-lead" class="lead">A continuation of the low-cost WindNet study: add scalar SDO/EVE irradiance features, measure what each addition changes, and check performance when solar wind is fast.</p>
         <div class="scope-banner" role="note">
           <span class="scope-mark" aria-hidden="true">i</span>
           <div><strong>Model development: Folds 1–4. Original Fold 5 excluded.</strong><p>These are selection CV scores, not test evidence.</p></div>
         </div>
         <div id="load-status" class="load-status" role="status" aria-live="polite">Loading the published continuation results…</div>
+        <p id="experiment-notice" class="quiet-note" role="status" aria-live="polite" hidden></p>
         <noscript><p class="load-status error">Enable JavaScript to load the experiment tables. The data and protocol remain available in the public repository.</p></noscript>
         <div id="results-overview" hidden>
           <div class="decision"><div><span class="eyebrow">Recorded selection decision</span><h2 id="decision-title"></h2><p id="decision-detail"></p></div><span class="pill">Training CV only</span></div>
@@ -87,9 +89,15 @@
         <div id="duplicate-note" class="quiet-note" hidden></div>
       </section>
 
+      <section id="component-ablations" aria-labelledby="component-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow">Matched component ablations</p><h2 id="component-title">What does each solar component add?</h2></div></div>
+        <p class="section-intro">These four models use the same unweighted loss and the same 25% ridge / 75% tree pair. Only the input component changes. Deltas are relative to unweighted wind only; negative error deltas are better.</p>
+        <div class="panel"><div class="panel-body"><div class="legend"><span><i class="all"></i> All wind speeds</span><span><i class="fast500"></i> Observed ≥500 km/s</span><span><i class="fast600"></i> Observed ≥600 km/s</span></div><div id="component-chart" class="bar-chart" aria-label="Matched unweighted feature ablation RMSE"></div></div><div class="table-wrap" tabindex="0" role="region" aria-label="Matched component ablations"><table><caption class="sr-only">Unweighted component ablations; fixed 25% ridge and 75% tree mixture.</caption><thead><tr><th scope="col">Inputs</th><th scope="col" class="num">Added EVE inputs</th><th scope="col" class="num">RMSE</th><th scope="col" class="num">Fast ≥500</th><th scope="col" class="num">Fast ≥600</th><th scope="col" class="num">Δ RMSE</th><th scope="col" class="num">Δ Fast ≥500</th><th scope="col" class="num">Δ Fast ≥600</th></tr></thead><tbody id="component-body"></tbody></table></div></div>
+      </section>
+
       <section id="ablations" aria-labelledby="ablation-title" class="results-section" hidden>
         <div class="section-heading"><div><p class="eyebrow">02 · Complete candidate record</p><h2 id="ablation-title">Every candidate, including rejected additions</h2></div><span id="candidate-count" class="pill"></span></div>
-        <p class="section-intro">Compare wind-only models with the corresponding solar-feature models, recurrence with multiple rotations, and individual learners with blends. All reported candidates remain visible.</p>
+        <p id="candidate-intro" class="section-intro">Compare wind-only models with the corresponding solar-feature models, recurrence with multiple rotations, and individual learners with blends. All reported candidates remain visible.</p>
         <div class="panel">
           <div class="filter-bar">
             <div class="control search-control"><label for="candidate-search">Search model or family</label><input id="candidate-search" type="search" placeholder="e.g. ridge, EVE, recurrence"></div>
@@ -110,7 +118,7 @@
           <article class="panel"><div class="panel-body"><span class="small-number">A</span><h3>Derived SDO/EVE features</h3><p id="eve-source-summary">Public LASP Level 3 tables provide scalar irradiances from 6 emission-line channels and 3 diode channels. No SDO images are downloaded or used by this continuation.</p><p id="eve-feature-summary">The 62 derived inputs contain log irradiance at target-day lags 5–8, four-day means, endpoint trends, and two channel log-ratios. A two-day publication guard is applied relative to the nominal target-minus-three-day issue.</p><p class="caveat">These are present-day calibrated science products, not an archive of what was available in real time. Instrument gaps remain missing. Full-disk irradiance does not preserve spatial coronal-hole geometry.</p><p class="caveat">Preflight revision: H7 was cancelled before fitting. H8 omits diode1216 because its Fourier-filter timing is not established, and diode366 because the product is marked unstable.</p><a class="text-link" href="https://lasp.colorado.edu/eve/data_access/eve_data/products/level3/EVE_L3_V8_README.pdf" target="_blank" rel="noopener noreferrer">EVE Level 3 product documentation ↗</a></div></article>
           <article class="panel"><div class="panel-body"><span class="small-number">B</span><h3>Original holdout kept outside development</h3><p>Only original Folds 1–4 enter the continuation bundle. Original Fold 5 targets and predictions are absent, and predictor measurements sourced from Fold 5 are masked.</p><p>Inner CV rotates the validation fold through 1–4. Whole fitting blocks that duplicate a validation target date are purged, and measurements sourced from the inner validation fold are masked before fitting.</p><p>Fitting keeps original offsets 6–18; validation retains all fourteen offsets 6–19. Preprocessing is fitted within each training split. Results pool the original validation windows.</p><p class="caveat">This page reports model selection, not a fresh WindNet test comparison. A valid independent performance claim requires a future untouched evaluation.</p></div></article>
         </div>
-        <div class="panel"><div class="panel-body protocol-detail"><div><h3>A fixed decision rule</h3><p>An EVE candidate must keep overall RMSE within 1% of the wind-only incumbent and reduce observed ≥500 km/s RMSE by at least 2%. Eligible candidates minimize an equally weighted normalized overall/fast-wind MSE objective. If none qualify, the incumbent is retained. The ≥600 km/s threshold is secondary and does not select the model.</p></div><div><h3>Comparison with WindNet</h3><p>The original fold assignments and evaluation windows anchor the study. These continuation CV scores cannot be compared numerically with WindNet’s published holdout scores as if they used the same cases. The wind-only incumbent and causal persistence forecasts provide the matched development comparisons here.</p><a class="text-link" href="https://github.com/Vishal-Upendran/WindNet" target="_blank" rel="noopener noreferrer">Original WindNet repository ↗</a></div></div></div>
+        <div class="panel"><div class="panel-body protocol-detail"><div><h3 id="protocol-title">A fixed decision rule</h3><p id="selection-protocol">An EVE candidate must keep overall RMSE within 1% of the wind-only incumbent and reduce observed ≥500 km/s RMSE by at least 2%. Eligible candidates minimize an equally weighted normalized overall/fast-wind MSE objective. If none qualify, the incumbent is retained. The ≥600 km/s threshold is secondary and does not select the model.</p><p id="loss-protocol" hidden></p></div><div><h3>Comparison with WindNet</h3><p id="windnet-comparison">The original fold assignments and evaluation windows anchor the study. These continuation CV scores cannot be compared numerically with WindNet’s published holdout scores as if they used the same cases. The incumbent and causal persistence forecasts provide the matched development comparisons here.</p><a class="text-link" href="https://github.com/Vishal-Upendran/WindNet" target="_blank" rel="noopener noreferrer">Original WindNet repository ↗</a></div></div></div>
         <details id="provenance-detail" class="panel provenance" hidden><summary>Inspect run provenance and input fingerprints</summary><div class="panel-body"><dl id="provenance-list"></dl><div id="source-links"></div></div></details>
       </section>
       <div class="page-links"><a class="button button-dark" href="https://fixrelay.vercel.app/experiments/a772eb55-1daf-4787-84df-4fdd8f662421" target="_blank" rel="noopener noreferrer">Public experiment record ↗</a><a class="button" href="https://github.com/kahirhumibntwerag/windnet-low-cost-study" target="_blank" rel="noopener noreferrer">Code, data manifests &amp; protocol ↗</a><button id="reload-results" class="button" type="button">Reload results</button></div>

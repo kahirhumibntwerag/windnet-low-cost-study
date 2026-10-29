@@ -1,0 +1,32 @@
+{
+  "budget_usd": 5,
+  "prior_study_compute_estimate_usd": 0.1219,
+  "pods": [
+    {
+      "id": "nfl5cowmy12oje",
+      "created_at": "2026-10-29T15:56:19.084Z",
+      "deletion_confirmed_by": "2026-10-29T16:05:27Z",
+      "rate_usd_hour": 0.06,
+      "conservative_compute_estimate_usd": 0.009131933333333335,
+      "deleted_and_404_verified": true
+    },
+    {
+      "id": "4s24x7my60rbwz",
+      "created_at": "2026-10-29T16:05:58.234Z",
+      "deletion_confirmed_by": "2026-10-29T16:13:08Z",
+      "rate_usd_hour": 0.06,
+      "conservative_compute_estimate_usd": 0.007162766666666667,
+      "deleted_and_404_verified": true
+    }
+  ],
+  "network_volume": {
+    "id": "07ffoesra8",
+    "size_GB": 10,
+    "conservative_storage_allowance_usd": 0.001,
+    "deleted_and_404_verified": true
+  },
+  "unrelated_resources_modified": false,
+  "invoice_settled": false,
+  "notes": "Estimates use elapsed creation-to-deletion-confirmation bounds, not settled billing. Storage allowance deliberately exceeds this short run duration.",
+  "cumulative_estimate_upper_bound_usd": 0.1391947
+}

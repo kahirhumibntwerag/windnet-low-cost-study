@@ -148,7 +148,7 @@ def select_candidate(reports: dict, candidate_ids: list[str]) -> tuple[str, dict
         fast = reports[name]["metrics"]["fast_wind"]["ge_500"]["continuous_observed_fast"]
         defined = (incumbent_all["mse"] is not None and incumbent_all["mse"] > 0
                    and incumbent_fast["mse"] is not None and incumbent_fast["mse"] > 0
-                   and fast["mse"] is not None)
+                   and fast["mse"] is not None and overall["mse"] is not None)
         overall_ok = overall["rmse"] is not None and overall["rmse"] <= 1.01 * incumbent_all["rmse"]
         fast_ok = (fast["rmse"] is not None and incumbent_fast["rmse"] is not None
                    and fast["rmse"] <= 0.98 * incumbent_fast["rmse"])

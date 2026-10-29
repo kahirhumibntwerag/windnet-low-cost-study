@@ -1,5 +1,11 @@
 # WindNet low-cost forecasting study
 
+**Current continuation:** [SDO features and fast-wind dashboard](https://windnet-research-lab-oct29.wellbat32.chatgpt.site/continuation.html), [protocols and full results](results/continuation), and [reproduction instructions](continuation/README.md). This continuation uses precomputed scalar EVE measurements and no images. It develops models only on original Folds 1–4; Fold 5 targets and old forecasts are excluded from its worker. Its selected CV scores are development evidence, not a new WindNet test comparison. The full paper remains deferred during improvement.
+
+The two new completed loops reduce observed ≥500 km/s development RMSE from **133.35 to 123.91 km/s**, with overall RMSE changing from **80.72 to 81.92 km/s**. The resulting model still misses every observed ≥600 km/s exceedance. Matched component ablations and skill against persistence are included; all candidates and negative findings remain public.
+
+The sections below describe the initial frozen study. Its historical test results are not inputs to the continuation search.
+
 A reproducible study of compact solar-wind forecasts on **the original released WindNet holdouts**, with experiment records, controlled ablations, and a direct comparison to the authors' saved predictions.
 
 **The result is mixed.** The frozen selection rule reduces five-fold mean RMSE from WindNet's **80.28 to 77.87 km/s**, but correlation falls from **0.550 to 0.515**. On original **Fold 5**, which stayed sealed during model design, WindNet performs better: **76.35 versus 78.06 km/s**. The paired uncertainty interval includes zero, so this study does **not** establish an overall improvement over WindNet.
