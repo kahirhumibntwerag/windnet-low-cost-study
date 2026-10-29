@@ -27,6 +27,9 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--request',required=True);a=p.parse_args();cfg=json.loads(Path(a.request).read_text());EXPORT.mkdir(exist_ok=True)
     if cfg['stage']=='acquire':acquire();return
     if importlib.util.find_spec('sklearn') is None:subprocess.check_call([sys.executable,'-m','pip','install','--quiet','scikit-learn==1.7.2','scipy==1.16.1'])
+    if cfg['stage']=='mixtures':
+        from event_loop.mixtures import run
+        run();return
     from event_loop.science import run
     run(cfg)
 if __name__=='__main__':main()
