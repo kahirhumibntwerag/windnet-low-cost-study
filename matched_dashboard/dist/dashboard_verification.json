@@ -1,0 +1,15 @@
+{
+  "url": "https://windnet-matched-research-loop.wellbat32.chatgpt.site",
+  "deployment_id": "appgdep_6ae3a397d3948191a2edd09115f41eea",
+  "deployment_status": "succeeded",
+  "audience": "owner-private",
+  "experiment_cards": 7,
+  "final_comparison_rows": 17,
+  "development_candidate_rows": 420,
+  "M3_filter_rows": 3,
+  "HSE_metric_filter_chart_visible": true,
+  "browser_console_errors": [],
+  "replacement_characters_in_final_section": false,
+  "screenshot": "output/matched-final-dashboard.jpg",
+  "scientific_sources_unchanged_after_freeze": true
+}

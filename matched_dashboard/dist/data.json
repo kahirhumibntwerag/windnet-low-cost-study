@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T19:45:52.511144+00:00",
+  "updated_at": "2026-10-29T21:37:12.703909+00:00",
   "campaign_url": "https://fixrelay.vercel.app/campaigns/e324d24c-b179-427c-87c1-365b857658aa",
   "source_url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/tree/codex/windnet-matched-loop",
   "protocol": {
@@ -8,8 +8,8 @@
     "channel": 211,
     "history": 4,
     "delay": 3,
-    "inputs": "Only the four original released 211-Angstrom images per window; no in-situ speed, recurrence, EVE, magnetograms or extra solar observations as predictors.",
-    "development": "Folds 1-3 fit, Fold4 validation. Fold5 members remain uninterpreted bytes until final freeze. All candidates share exact rows. Fit preprocessing on fitting folds only. Original folds1-4 were used in previous research, so these are development data.",
+    "inputs": "Only four original released 211-Angstrom images per forecast. All new candidates and controls have identical fitting/evaluation rows and original fit-block labels. No wind-speed history as a predictor, recurrence data, EVE or external imagery.",
+    "development": "Four training-side folds: for each fold in the bank, fit the other three and evaluate that fold. Per-split image centering, normalization and scalers use fitting folds only. Same original training offsets6..18/evaluation offsets6..19. Fold5 bytes are hash-checked and discarded without parsing or retaining them in the development worker. Do not read/import F1 final results, released WindNet forecasts, old full-data bundles, or test-case analyses in development. Hypotheses derive only from training-side outcomes and source/metric definitions. Earlier published test scores are already known to this conversation and cannot be made unseen.",
     "training_offsets": [
       6,
       7,
@@ -41,10 +41,10 @@
       18,
       19
     ],
-    "final": "One frozen five-fold pass. For each heldout fold fit on the other four, with all choices/epochs/blends already frozen. No final-test-driven candidate selection. Never output raw holdout labels or images to the agent. Report aggregate scores and fixed ablations only.",
+    "final": "Only after strict training-side adoption and a stability check, freeze exact source/recipe/data identities, then make one separate matched historical five-fold evaluation. No test feedback may determine model choice or a subsequent hypothesis. Report continued prior exposure and sequential-testing limits; never call this a fresh blind confirmation.",
     "metrics": "Mean fold RMSE km/s, Fisher-z averaged fold Pearson r (paper aggregation), arithmetic mean r also disclosed, reduced chi-square using original target sigma, mean fold HSE threat score using original HSEcalc. MAE and 500/600 threshold metrics secondary. Report undefined metrics explicitly. Paper baseline distinct from any modern port.",
-    "success": "Predeclared candidate must improve mean fold RMSE and mean fold Pearson r versus released WindNet on identical windows; chi-square and HSE threat score reported, with a stricter all-four-metrics gate separately. Do not claim all-metric improvement unless all four pass. Validation adoption: >=1% RMSE improvement with no Pearson-r decrease; chi2/HSE are guardrails and disclosed tradeoffs.",
-    "stopping": "At most six substantive development hypotheses or US$5 estimated incremental Runpod cost. Stop adaptation at freeze, regardless of final outcome. Improvement cannot be guaranteed and failure must be retained.",
+    "success": "Require a candidate to beat BOTH training-side controls on all four aggregated metrics: mean-fold RMSE <=.99*the lower control RMSE; Fisher r >=the higher control r+.005; mean reduced chi-square <=.995*the lower control chi-square; mean original HSE threat score >=the higher control TS+.02. Undefined scores fail. Record all candidates, metrics and ablations; no single-metric promotion.",
+    "stopping": "Continue inside the original US$5 cumulative estimated Runpod envelope; prior phase conservative estimate US$0.50672. Track live worker cost and download evidence before deleting only resources created for this phase.",
     "prior_exposure": "Published historical holdout scores were already in this conversation before this request. This campaign is prospectively sealed against further test feedback, not a pristine blind or fresh confirmatory study.",
     "publication": "User explicitly authorized public RogNet campaign/experiments and commits pushed to GitHub. Dashboard remains owner-private by default."
   },
@@ -140,6 +140,18 @@
         "hypothesis": "The validation-selected image-only recipe may improve the original paper metrics on the same test windows.",
         "success_criteria": "Fixed primary must improve RMSE and Fisher correlation; strict four-metric improvement is reported separately.",
         "result_file": "final_results.json"
+      },
+      {
+        "label": "M7",
+        "id": "a0738c70-391d-4561-971d-34f3e4b66cb4",
+        "url": "https://fixrelay.vercel.app/experiments/a0738c70-391d-4561-971d-34f3e4b66cb4",
+        "title": "Training-bank controls and aligned future supervision",
+        "status": "running",
+        "hypothesis": "Aligning auxiliary targets to the forecast horizon may improve trajectory and event skill without new predictors.",
+        "method": "Four training-side CV splits; retrain both prior controls. Four controlled future-supervision losses with identical data, architecture, seeds and fixed epochs.",
+        "success_criteria": "Beat both controls on all four training-side metrics: at least 1% RMSE reduction, +0.005 Fisher r, 0.5% chi-square reduction, and +0.02 HSE threat score.",
+        "observation": "Original hashes verified; Fold5 was discarded without parsing or retention. Training-bank baselines are running.",
+        "result_file": "m7_results.json"
       }
     ]
   },
@@ -1000,6 +1012,21 @@
       "deletion_get_status": 404,
       "network_volumes_created": 0,
       "unrelated_resources_modified": false
+    },
+    "dashboard_verification": {
+      "url": "https://windnet-matched-research-loop.wellbat32.chatgpt.site",
+      "deployment_id": "appgdep_6ae3a397d3948191a2edd09115f41eea",
+      "deployment_status": "succeeded",
+      "audience": "owner-private",
+      "experiment_cards": 7,
+      "final_comparison_rows": 17,
+      "development_candidate_rows": 420,
+      "M3_filter_rows": 3,
+      "HSE_metric_filter_chart_visible": true,
+      "browser_console_errors": [],
+      "replacement_characters_in_final_section": false,
+      "screenshot": "output/matched-final-dashboard.jpg",
+      "scientific_sources_unchanged_after_freeze": true
     },
     "embedding_audit": {
       "fit_folds": [
@@ -20276,6 +20303,183 @@
         "device": "cuda",
         "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb"
       }
+    },
+    "event_acquisition": {
+      "original_members_hash_verified": 157,
+      "development_blocks": 108,
+      "fold5_members_parsed": 0,
+      "fold5_members_retained": 0,
+      "prior_final_results_available": false,
+      "seconds": 37.248570680618286
+    },
+    "event_embedding_audit": {
+      "splits": [
+        {
+          "fit_folds": [
+            2,
+            3,
+            4
+          ],
+          "blocks": 108,
+          "embedding_dimensions": 832,
+          "image_mean_training_only": 75.26574024315893,
+          "seconds": 3.9239256381988525,
+          "fold5_accessed": false,
+          "original_weight_sha256": "d93955ecfb66c9cdbe0c038f7f47fbf971e46dee30930970e22fc4a1b8fa184f",
+          "cache_sha256": "39b0b5ec9fefb5d0c66c17fafbe67c81be33c8c23987a4bf260a51272f66135e",
+          "identity": {
+            "code": {
+              "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+              "build_dashboard.py": "0f16409e580fe66fe90a7c0a2c5c8ec6a3c725e6cd2ec8eece13c2108db4aedd",
+              "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+              "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+              "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+              "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+              "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+              "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+              "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+              "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+              "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+            },
+            "python": "3.12.3",
+            "numpy": "2.1.2",
+            "torch": "2.8.0+cu128",
+            "device": "cuda",
+            "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb"
+          }
+        },
+        {
+          "fit_folds": [
+            1,
+            3,
+            4
+          ],
+          "blocks": 108,
+          "embedding_dimensions": 832,
+          "image_mean_training_only": 79.43207776465607,
+          "seconds": 3.576831102371216,
+          "fold5_accessed": false,
+          "original_weight_sha256": "d93955ecfb66c9cdbe0c038f7f47fbf971e46dee30930970e22fc4a1b8fa184f",
+          "cache_sha256": "a60b2ef99d4b7157a140815f49162bd2da6599ab5517718151e518c5ac8e0e6a",
+          "identity": {
+            "code": {
+              "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+              "build_dashboard.py": "0f16409e580fe66fe90a7c0a2c5c8ec6a3c725e6cd2ec8eece13c2108db4aedd",
+              "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+              "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+              "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+              "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+              "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+              "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+              "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+              "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+              "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+            },
+            "python": "3.12.3",
+            "numpy": "2.1.2",
+            "torch": "2.8.0+cu128",
+            "device": "cuda",
+            "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb"
+          }
+        },
+        {
+          "fit_folds": [
+            1,
+            2,
+            4
+          ],
+          "blocks": 108,
+          "embedding_dimensions": 832,
+          "image_mean_training_only": 79.32230076416947,
+          "seconds": 3.6960437297821045,
+          "fold5_accessed": false,
+          "original_weight_sha256": "d93955ecfb66c9cdbe0c038f7f47fbf971e46dee30930970e22fc4a1b8fa184f",
+          "cache_sha256": "94dd5104ffbc5725c0f23cfb035d88a1ffac3eb88bd7529734e10885144b355e",
+          "identity": {
+            "code": {
+              "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+              "build_dashboard.py": "0f16409e580fe66fe90a7c0a2c5c8ec6a3c725e6cd2ec8eece13c2108db4aedd",
+              "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+              "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+              "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+              "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+              "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+              "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+              "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+              "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+              "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+            },
+            "python": "3.12.3",
+            "numpy": "2.1.2",
+            "torch": "2.8.0+cu128",
+            "device": "cuda",
+            "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb"
+          }
+        },
+        {
+          "fit_folds": [
+            1,
+            2,
+            3
+          ],
+          "blocks": 108,
+          "embedding_dimensions": 832,
+          "image_mean_training_only": 79.47801296785194,
+          "seconds": 3.6539528369903564,
+          "fold5_accessed": false,
+          "original_weight_sha256": "d93955ecfb66c9cdbe0c038f7f47fbf971e46dee30930970e22fc4a1b8fa184f",
+          "cache_sha256": "15ea2bb03590d9a5541a9e5a297e011de6bf7a2b517898c26d31e6a65b4e5f36",
+          "identity": {
+            "code": {
+              "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+              "build_dashboard.py": "0f16409e580fe66fe90a7c0a2c5c8ec6a3c725e6cd2ec8eece13c2108db4aedd",
+              "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+              "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+              "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+              "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+              "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+              "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+              "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+              "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+              "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+            },
+            "python": "3.12.3",
+            "numpy": "2.1.2",
+            "torch": "2.8.0+cu128",
+            "device": "cuda",
+            "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb"
+          }
+        }
+      ],
+      "fold5_available": false,
+      "prior_test_results_available": false,
+      "identity": {
+        "phase_code": {
+          "__init__.py": "efb6e7445cd7ebd5bcdb4e7e5052d67b3c46913fde1b7f4ed808e63ee8812a68",
+          "remote.py": "16c1c196c6dc69055c1ab2fdd94b8b3a9763bd383a090b0c17ab1526b70913c7",
+          "runner.py": "6d241c1ec53afebd1b44fa9867a546befafe698b9a03d5a8029902adfc67deaa",
+          "science.py": "efba874fd5ad437c939040391a8614e04447b0d072cf9bc7c40d16bf683ae8a2",
+          "transport.py": "066b412313801c95c064870a03f3e6c11626fde255ed89c80ed28512cf13dedc"
+        },
+        "frozen_matched_sources": {
+          "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+          "build_dashboard.py": "0f16409e580fe66fe90a7c0a2c5c8ec6a3c725e6cd2ec8eece13c2108db4aedd",
+          "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+          "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+          "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+          "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+          "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+          "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+          "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+          "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+          "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+        },
+        "python": "3.12.3",
+        "numpy": "2.1.2",
+        "torch": "2.8.0+cu128",
+        "device": "cuda"
+      }
     }
-  }
+  },
+  "event_phase": true
 }
