@@ -1,0 +1,22 @@
+{
+  "identity": {
+    "code": {
+      "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+      "build_dashboard.py": "19f2494073bf3d1817e10bf22a5f6cf85719382c53b32769998026e0ac66fb9c",
+      "hse_original.py": "c142abe9edc71706fd88dc371819f57a9c11c2ef5bf47084f560aa46d46810e2",
+      "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+      "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+      "science.py": "9340a6751c8a312de70a4cd9fa2eda52321c27c9a7059bdf504363e7e0269e4b",
+      "test_protocol.py": "2101ba3e3345d9554be1041b8d11eae9ce936de44f5c67ec26bfe9705797a45b",
+      "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218"
+    },
+    "python": "3.12.3",
+    "numpy": "2.1.2",
+    "torch": "2.8.0+cu128",
+    "device": "cuda",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb"
+  },
+  "fit_row_sha256": "67f192c5577b5d0c3790a1b7351d8b872ced3b39de771d3806ff95e2db90b6e3",
+  "validation_row_sha256": "1c05d4b3e6e57a4dc133ce13336a9c2275979181181ed81496db478714939018",
+  "fold5_accessed": false
+}

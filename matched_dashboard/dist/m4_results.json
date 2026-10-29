@@ -1,0 +1,1509 @@
+{
+  "stage": "M4",
+  "scope": "training-side Fold4 validation only",
+  "rows": [
+    {
+      "model": "spatial_0_ridge_spatial_flatten",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "spatial",
+        "alpha": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 96.85394239145485,
+        "mae": 77.51316768101283,
+        "r": 0.36654601889397187,
+        "chi2": 52.82595523785968,
+        "sigma_valid": 280,
+        "hse_ts": 0.42857142857142855,
+        "hse_counts_original": {
+          "tp": 15,
+          "fp": 9,
+          "fn": 11
+        }
+      }
+    },
+    {
+      "model": "spatial_1_ridge_spatial_flatten",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "spatial",
+        "alpha": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 80.46953950008533,
+        "mae": 63.546734183175225,
+        "r": 0.47615786728711684,
+        "chi2": 34.39348296403854,
+        "sigma_valid": 280,
+        "hse_ts": 0.4,
+        "hse_counts_original": {
+          "tp": 10,
+          "fp": 13,
+          "fn": 2
+        }
+      }
+    },
+    {
+      "model": "spatial_2_ridge_spatial_flatten",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "spatial",
+        "alpha": 1000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 71.49254647045608,
+        "mae": 57.05384968348912,
+        "r": 0.5947950954547309,
+        "chi2": 29.211976417234965,
+        "sigma_valid": 280,
+        "hse_ts": 0.09523809523809523,
+        "hse_counts_original": {
+          "tp": 2,
+          "fp": 19,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_3_ridge_spatial_flatten",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "spatial",
+        "alpha": 10000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.21856206231539,
+        "mae": 59.79949809483119,
+        "r": 0.6241250422103702,
+        "chi2": 37.02386369928126,
+        "sigma_valid": 280,
+        "hse_ts": 0.0,
+        "hse_counts_original": {
+          "tp": 0,
+          "fp": 21,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_4_ridge_spatial_mean",
+      "recipe": {
+        "family": "ridge",
+        "view": "mean",
+        "source": "spatial",
+        "alpha": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 79.5869001947936,
+        "mae": 62.9108646937779,
+        "r": 0.46546934822789615,
+        "chi2": 35.62568124389708,
+        "sigma_valid": 280,
+        "hse_ts": 0.19047619047619047,
+        "hse_counts_original": {
+          "tp": 4,
+          "fp": 17,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_5_ridge_spatial_mean",
+      "recipe": {
+        "family": "ridge",
+        "view": "mean",
+        "source": "spatial",
+        "alpha": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.16687611306666,
+        "mae": 58.944708251953124,
+        "r": 0.5484282723604905,
+        "chi2": 31.2881434168305,
+        "sigma_valid": 280,
+        "hse_ts": 0.09523809523809523,
+        "hse_counts_original": {
+          "tp": 2,
+          "fp": 19,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_6_ridge_spatial_mean",
+      "recipe": {
+        "family": "ridge",
+        "view": "mean",
+        "source": "spatial",
+        "alpha": 1000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 71.93328155523128,
+        "mae": 58.25567964826311,
+        "r": 0.6143830022982152,
+        "chi2": 32.29347125393558,
+        "sigma_valid": 280,
+        "hse_ts": 0.0,
+        "hse_counts_original": {
+          "tp": 0,
+          "fp": 21,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_7_ridge_spatial_mean",
+      "recipe": {
+        "family": "ridge",
+        "view": "mean",
+        "source": "spatial",
+        "alpha": 10000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 80.36313078532987,
+        "mae": 64.6319701058524,
+        "r": 0.5735221051088718,
+        "chi2": 45.15481553357939,
+        "sigma_valid": 280,
+        "hse_ts": 0.0,
+        "hse_counts_original": {
+          "tp": 0,
+          "fp": 21,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_8_ridge_spatial_trend",
+      "recipe": {
+        "family": "ridge",
+        "view": "trend",
+        "source": "spatial",
+        "alpha": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 92.8002405685635,
+        "mae": 73.82542806352888,
+        "r": 0.38613689955209224,
+        "chi2": 46.16527437776254,
+        "sigma_valid": 280,
+        "hse_ts": 0.5357142857142857,
+        "hse_counts_original": {
+          "tp": 15,
+          "fp": 9,
+          "fn": 4
+        }
+      }
+    },
+    {
+      "model": "spatial_9_ridge_spatial_trend",
+      "recipe": {
+        "family": "ridge",
+        "view": "trend",
+        "source": "spatial",
+        "alpha": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 80.2561496732598,
+        "mae": 63.868053654262,
+        "r": 0.4779011480178074,
+        "chi2": 33.179273501021655,
+        "sigma_valid": 280,
+        "hse_ts": 0.32,
+        "hse_counts_original": {
+          "tp": 8,
+          "fp": 15,
+          "fn": 2
+        }
+      }
+    },
+    {
+      "model": "spatial_10_ridge_spatial_trend",
+      "recipe": {
+        "family": "ridge",
+        "view": "trend",
+        "source": "spatial",
+        "alpha": 1000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 71.66909639366138,
+        "mae": 57.752903311593194,
+        "r": 0.5919395034613478,
+        "chi2": 29.738093685491705,
+        "sigma_valid": 280,
+        "hse_ts": 0.18181818181818182,
+        "hse_counts_original": {
+          "tp": 4,
+          "fp": 18,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_11_ridge_spatial_trend",
+      "recipe": {
+        "family": "ridge",
+        "view": "trend",
+        "source": "spatial",
+        "alpha": 10000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 75.53653721796469,
+        "mae": 60.62103990827288,
+        "r": 0.6079862122153377,
+        "chi2": 39.04363797040865,
+        "sigma_valid": 280,
+        "hse_ts": 0.0,
+        "hse_counts_original": {
+          "tp": 0,
+          "fp": 21,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_12_tree_spatial_mean",
+      "recipe": {
+        "family": "tree",
+        "view": "mean",
+        "source": "spatial",
+        "leaves": 7,
+        "l2": 1
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.35600014318958,
+        "mae": 58.55649224011089,
+        "r": 0.559344100840929,
+        "chi2": 33.33225863730468,
+        "sigma_valid": 280,
+        "hse_ts": 0.28,
+        "hse_counts_original": {
+          "tp": 7,
+          "fp": 17,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "model": "spatial_13_tree_spatial_mean",
+      "recipe": {
+        "family": "tree",
+        "view": "mean",
+        "source": "spatial",
+        "leaves": 7,
+        "l2": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.8555501724953,
+        "mae": 59.22152353555905,
+        "r": 0.5487651055253927,
+        "chi2": 34.31678071885691,
+        "sigma_valid": 280,
+        "hse_ts": 0.21739130434782608,
+        "hse_counts_original": {
+          "tp": 5,
+          "fp": 17,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "model": "spatial_14_tree_spatial_mean",
+      "recipe": {
+        "family": "tree",
+        "view": "mean",
+        "source": "spatial",
+        "leaves": 7,
+        "l2": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.7236367954885,
+        "mae": 58.52764045130342,
+        "r": 0.5438737742569089,
+        "chi2": 35.08701240932347,
+        "sigma_valid": 280,
+        "hse_ts": 0.21739130434782608,
+        "hse_counts_original": {
+          "tp": 5,
+          "fp": 17,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "model": "spatial_15_tree_spatial_mean",
+      "recipe": {
+        "family": "tree",
+        "view": "mean",
+        "source": "spatial",
+        "leaves": 15,
+        "l2": 1
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 75.4801397865231,
+        "mae": 59.291194973532065,
+        "r": 0.5486059703075629,
+        "chi2": 31.567092866477832,
+        "sigma_valid": 280,
+        "hse_ts": 0.3333333333333333,
+        "hse_counts_original": {
+          "tp": 8,
+          "fp": 15,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "model": "spatial_16_tree_spatial_mean",
+      "recipe": {
+        "family": "tree",
+        "view": "mean",
+        "source": "spatial",
+        "leaves": 15,
+        "l2": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 76.57167117187892,
+        "mae": 61.07934723903584,
+        "r": 0.5298786169018893,
+        "chi2": 34.456745871674265,
+        "sigma_valid": 280,
+        "hse_ts": 0.28,
+        "hse_counts_original": {
+          "tp": 7,
+          "fp": 17,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "model": "spatial_17_tree_spatial_mean",
+      "recipe": {
+        "family": "tree",
+        "view": "mean",
+        "source": "spatial",
+        "leaves": 15,
+        "l2": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 76.38534347675807,
+        "mae": 60.3710299197185,
+        "r": 0.5197649460267744,
+        "chi2": 34.053037329063045,
+        "sigma_valid": 280,
+        "hse_ts": 0.21739130434782608,
+        "hse_counts_original": {
+          "tp": 5,
+          "fp": 17,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "model": "spatial_18_tree_spatial_trend",
+      "recipe": {
+        "family": "tree",
+        "view": "trend",
+        "source": "spatial",
+        "leaves": 7,
+        "l2": 1
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.04249232302038,
+        "mae": 58.024561834710056,
+        "r": 0.5584137740563732,
+        "chi2": 34.083133385362515,
+        "sigma_valid": 280,
+        "hse_ts": 0.3333333333333333,
+        "hse_counts_original": {
+          "tp": 8,
+          "fp": 16,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_19_tree_spatial_trend",
+      "recipe": {
+        "family": "tree",
+        "view": "trend",
+        "source": "spatial",
+        "leaves": 7,
+        "l2": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 75.49290120364955,
+        "mae": 58.59545916688364,
+        "r": 0.5332589401063126,
+        "chi2": 35.21183599770511,
+        "sigma_valid": 280,
+        "hse_ts": 0.30434782608695654,
+        "hse_counts_original": {
+          "tp": 7,
+          "fp": 16,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_20_tree_spatial_trend",
+      "recipe": {
+        "family": "tree",
+        "view": "trend",
+        "source": "spatial",
+        "leaves": 7,
+        "l2": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 76.2851921524591,
+        "mae": 59.35934330099169,
+        "r": 0.5146209200631989,
+        "chi2": 35.00441764882694,
+        "sigma_valid": 280,
+        "hse_ts": 0.36363636363636365,
+        "hse_counts_original": {
+          "tp": 8,
+          "fp": 14,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_21_tree_spatial_trend",
+      "recipe": {
+        "family": "tree",
+        "view": "trend",
+        "source": "spatial",
+        "leaves": 15,
+        "l2": 1
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 72.11018189255273,
+        "mae": 56.26849104840797,
+        "r": 0.5871098787952046,
+        "chi2": 31.739737845198963,
+        "sigma_valid": 280,
+        "hse_ts": 0.3333333333333333,
+        "hse_counts_original": {
+          "tp": 8,
+          "fp": 15,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "model": "spatial_22_tree_spatial_trend",
+      "recipe": {
+        "family": "tree",
+        "view": "trend",
+        "source": "spatial",
+        "leaves": 15,
+        "l2": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 72.69817103120081,
+        "mae": 56.33889302416542,
+        "r": 0.5760340394540849,
+        "chi2": 30.96710623492119,
+        "sigma_valid": 280,
+        "hse_ts": 0.4583333333333333,
+        "hse_counts_original": {
+          "tp": 11,
+          "fp": 13,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_23_tree_spatial_trend",
+      "recipe": {
+        "family": "tree",
+        "view": "trend",
+        "source": "spatial",
+        "leaves": 15,
+        "l2": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 76.22539372237773,
+        "mae": 59.73887184882901,
+        "r": 0.5145004229987779,
+        "chi2": 37.10945445211091,
+        "sigma_valid": 280,
+        "hse_ts": 0.2727272727272727,
+        "hse_counts_original": {
+          "tp": 6,
+          "fp": 16,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_24_ridge_combined_flatten",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "combined",
+        "alpha": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 85.92316490340065,
+        "mae": 67.99644284929548,
+        "r": 0.4812303370589939,
+        "chi2": 42.473166295649946,
+        "sigma_valid": 280,
+        "hse_ts": 0.5483870967741935,
+        "hse_counts_original": {
+          "tp": 17,
+          "fp": 6,
+          "fn": 8
+        }
+      }
+    },
+    {
+      "model": "spatial_25_ridge_combined_flatten",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "combined",
+        "alpha": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 83.09147631481504,
+        "mae": 65.74719728742328,
+        "r": 0.4979982778405789,
+        "chi2": 40.470608364612396,
+        "sigma_valid": 280,
+        "hse_ts": 0.4827586206896552,
+        "hse_counts_original": {
+          "tp": 14,
+          "fp": 8,
+          "fn": 7
+        }
+      }
+    },
+    {
+      "model": "spatial_26_ridge_combined_flatten",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "combined",
+        "alpha": 1000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 75.21110854208233,
+        "mae": 60.09228232247489,
+        "r": 0.5535642817371406,
+        "chi2": 34.34974094575365,
+        "sigma_valid": 280,
+        "hse_ts": 0.4782608695652174,
+        "hse_counts_original": {
+          "tp": 11,
+          "fp": 11,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "model": "spatial_27_ridge_combined_flatten",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "combined",
+        "alpha": 10000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 71.25535040416331,
+        "mae": 57.12486190795899,
+        "r": 0.605483386904454,
+        "chi2": 32.3956199958266,
+        "sigma_valid": 280,
+        "hse_ts": 0.047619047619047616,
+        "hse_counts_original": {
+          "tp": 1,
+          "fp": 20,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_28_ridge_combined_mean",
+      "recipe": {
+        "family": "ridge",
+        "view": "mean",
+        "source": "combined",
+        "alpha": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 106.02087973186995,
+        "mae": 87.53480965750558,
+        "r": 0.42370250255107256,
+        "chi2": 71.57264850905547,
+        "sigma_valid": 280,
+        "hse_ts": 0.3,
+        "hse_counts_original": {
+          "tp": 9,
+          "fp": 13,
+          "fn": 8
+        }
+      }
+    },
+    {
+      "model": "spatial_29_ridge_combined_mean",
+      "recipe": {
+        "family": "ridge",
+        "view": "mean",
+        "source": "combined",
+        "alpha": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 82.91548343143978,
+        "mae": 68.00928971426828,
+        "r": 0.5070289958614027,
+        "chi2": 43.01421929847043,
+        "sigma_valid": 280,
+        "hse_ts": 0.43478260869565216,
+        "hse_counts_original": {
+          "tp": 10,
+          "fp": 12,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "model": "spatial_30_ridge_combined_mean",
+      "recipe": {
+        "family": "ridge",
+        "view": "mean",
+        "source": "combined",
+        "alpha": 1000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 71.67671177265304,
+        "mae": 57.69097715105329,
+        "r": 0.5897125018386649,
+        "chi2": 31.8836321586611,
+        "sigma_valid": 280,
+        "hse_ts": 0.19047619047619047,
+        "hse_counts_original": {
+          "tp": 4,
+          "fp": 17,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_31_ridge_combined_mean",
+      "recipe": {
+        "family": "ridge",
+        "view": "mean",
+        "source": "combined",
+        "alpha": 10000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.35772268615025,
+        "mae": 60.04323120117188,
+        "r": 0.5876861048407092,
+        "chi2": 37.07698419368241,
+        "sigma_valid": 280,
+        "hse_ts": 0.0,
+        "hse_counts_original": {
+          "tp": 0,
+          "fp": 21,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_32_ridge_combined_trend",
+      "recipe": {
+        "family": "ridge",
+        "view": "trend",
+        "source": "combined",
+        "alpha": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 92.26194296121383,
+        "mae": 73.85763217381069,
+        "r": 0.45170816049427737,
+        "chi2": 55.652666058989986,
+        "sigma_valid": 280,
+        "hse_ts": 0.4594594594594595,
+        "hse_counts_original": {
+          "tp": 17,
+          "fp": 6,
+          "fn": 14
+        }
+      }
+    },
+    {
+      "model": "spatial_33_ridge_combined_trend",
+      "recipe": {
+        "family": "ridge",
+        "view": "trend",
+        "source": "combined",
+        "alpha": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 83.12498254472511,
+        "mae": 65.50750585283552,
+        "r": 0.5002658081859166,
+        "chi2": 46.74713802562858,
+        "sigma_valid": 280,
+        "hse_ts": 0.47058823529411764,
+        "hse_counts_original": {
+          "tp": 16,
+          "fp": 8,
+          "fn": 10
+        }
+      }
+    },
+    {
+      "model": "spatial_34_ridge_combined_trend",
+      "recipe": {
+        "family": "ridge",
+        "view": "trend",
+        "source": "combined",
+        "alpha": 1000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 75.56754856381679,
+        "mae": 59.36540494646345,
+        "r": 0.5476834508408749,
+        "chi2": 37.13210657532658,
+        "sigma_valid": 280,
+        "hse_ts": 0.5416666666666666,
+        "hse_counts_original": {
+          "tp": 13,
+          "fp": 10,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "model": "spatial_35_ridge_combined_trend",
+      "recipe": {
+        "family": "ridge",
+        "view": "trend",
+        "source": "combined",
+        "alpha": 10000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 72.84757331936942,
+        "mae": 58.40601588657924,
+        "r": 0.5797539800961607,
+        "chi2": 34.946994976275334,
+        "sigma_valid": 280,
+        "hse_ts": 0.047619047619047616,
+        "hse_counts_original": {
+          "tp": 1,
+          "fp": 20,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_36_tree_combined_mean",
+      "recipe": {
+        "family": "tree",
+        "view": "mean",
+        "source": "combined",
+        "leaves": 7,
+        "l2": 1
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.2201692110042,
+        "mae": 57.90795583619213,
+        "r": 0.5487444380692436,
+        "chi2": 31.394103177499353,
+        "sigma_valid": 280,
+        "hse_ts": 0.14285714285714285,
+        "hse_counts_original": {
+          "tp": 3,
+          "fp": 18,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_37_tree_combined_mean",
+      "recipe": {
+        "family": "tree",
+        "view": "mean",
+        "source": "combined",
+        "leaves": 7,
+        "l2": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.81650934214845,
+        "mae": 58.7117787952612,
+        "r": 0.5385968110470881,
+        "chi2": 31.478792489885056,
+        "sigma_valid": 280,
+        "hse_ts": 0.13636363636363635,
+        "hse_counts_original": {
+          "tp": 3,
+          "fp": 18,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "model": "spatial_38_tree_combined_mean",
+      "recipe": {
+        "family": "tree",
+        "view": "mean",
+        "source": "combined",
+        "leaves": 7,
+        "l2": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.2499361951821,
+        "mae": 57.67024010441623,
+        "r": 0.5475513748882765,
+        "chi2": 30.759688712165794,
+        "sigma_valid": 280,
+        "hse_ts": 0.14285714285714285,
+        "hse_counts_original": {
+          "tp": 3,
+          "fp": 18,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_39_tree_combined_mean",
+      "recipe": {
+        "family": "tree",
+        "view": "mean",
+        "source": "combined",
+        "leaves": 15,
+        "l2": 1
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 73.68629588422829,
+        "mae": 56.6431317556802,
+        "r": 0.5584292406341473,
+        "chi2": 31.014748589134147,
+        "sigma_valid": 280,
+        "hse_ts": 0.14285714285714285,
+        "hse_counts_original": {
+          "tp": 3,
+          "fp": 18,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_40_tree_combined_mean",
+      "recipe": {
+        "family": "tree",
+        "view": "mean",
+        "source": "combined",
+        "leaves": 15,
+        "l2": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 73.58808865360706,
+        "mae": 57.09338981649859,
+        "r": 0.5583673118725643,
+        "chi2": 29.592880833990968,
+        "sigma_valid": 280,
+        "hse_ts": 0.09523809523809523,
+        "hse_counts_original": {
+          "tp": 2,
+          "fp": 19,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_41_tree_combined_mean",
+      "recipe": {
+        "family": "tree",
+        "view": "mean",
+        "source": "combined",
+        "leaves": 15,
+        "l2": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.6361303648239,
+        "mae": 58.4463756437241,
+        "r": 0.5418136097883305,
+        "chi2": 30.608578539870106,
+        "sigma_valid": 280,
+        "hse_ts": 0.19047619047619047,
+        "hse_counts_original": {
+          "tp": 4,
+          "fp": 17,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_42_tree_combined_trend",
+      "recipe": {
+        "family": "tree",
+        "view": "trend",
+        "source": "combined",
+        "leaves": 7,
+        "l2": 1
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 73.95473616003592,
+        "mae": 57.218306650055304,
+        "r": 0.5529094107079854,
+        "chi2": 30.426118932189482,
+        "sigma_valid": 280,
+        "hse_ts": 0.22727272727272727,
+        "hse_counts_original": {
+          "tp": 5,
+          "fp": 17,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_43_tree_combined_trend",
+      "recipe": {
+        "family": "tree",
+        "view": "trend",
+        "source": "combined",
+        "leaves": 7,
+        "l2": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.3864311276175,
+        "mae": 57.44224062638176,
+        "r": 0.5457220472094709,
+        "chi2": 30.914633783100875,
+        "sigma_valid": 280,
+        "hse_ts": 0.2857142857142857,
+        "hse_counts_original": {
+          "tp": 6,
+          "fp": 15,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_44_tree_combined_trend",
+      "recipe": {
+        "family": "tree",
+        "view": "trend",
+        "source": "combined",
+        "leaves": 7,
+        "l2": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 75.56995249667045,
+        "mae": 59.26979082641076,
+        "r": 0.5235937800246503,
+        "chi2": 33.59808589442738,
+        "sigma_valid": 280,
+        "hse_ts": 0.14285714285714285,
+        "hse_counts_original": {
+          "tp": 3,
+          "fp": 18,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_45_tree_combined_trend",
+      "recipe": {
+        "family": "tree",
+        "view": "trend",
+        "source": "combined",
+        "leaves": 15,
+        "l2": 1
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 73.57653361244684,
+        "mae": 57.38050839610176,
+        "r": 0.5588095234741296,
+        "chi2": 32.37862831975918,
+        "sigma_valid": 280,
+        "hse_ts": 0.2857142857142857,
+        "hse_counts_original": {
+          "tp": 6,
+          "fp": 15,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_46_tree_combined_trend",
+      "recipe": {
+        "family": "tree",
+        "view": "trend",
+        "source": "combined",
+        "leaves": 15,
+        "l2": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.36082484116066,
+        "mae": 57.23562404260141,
+        "r": 0.5454750662906498,
+        "chi2": 32.36273605930786,
+        "sigma_valid": 280,
+        "hse_ts": 0.23809523809523808,
+        "hse_counts_original": {
+          "tp": 5,
+          "fp": 16,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_47_tree_combined_trend",
+      "recipe": {
+        "family": "tree",
+        "view": "trend",
+        "source": "combined",
+        "leaves": 15,
+        "l2": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.55327972418536,
+        "mae": 58.52694733679338,
+        "r": 0.5436206602312138,
+        "chi2": 33.33033071719358,
+        "sigma_valid": 280,
+        "hse_ts": 0.14285714285714285,
+        "hse_counts_original": {
+          "tp": 3,
+          "fp": 18,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_baseline_mix_0",
+      "recipe": {
+        "family": "spatial_blend",
+        "spatial_weight": 0,
+        "spatial": {
+          "family": "ridge",
+          "view": "flatten",
+          "source": "combined",
+          "alpha": 10000
+        },
+        "baseline": true
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 71.66369181766227,
+        "mae": 57.28608071463449,
+        "r": 0.5907403184434771,
+        "chi2": 26.86304359322414,
+        "sigma_valid": 280,
+        "hse_ts": 0.22727272727272727,
+        "hse_counts_original": {
+          "tp": 5,
+          "fp": 17,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_baseline_mix_0.25",
+      "recipe": {
+        "family": "spatial_blend",
+        "spatial_weight": 0.25,
+        "spatial": {
+          "family": "ridge",
+          "view": "flatten",
+          "source": "combined",
+          "alpha": 10000
+        },
+        "baseline": true
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 70.70760302666653,
+        "mae": 56.523941911969864,
+        "r": 0.6039318357162171,
+        "chi2": 27.580332782469643,
+        "sigma_valid": 280,
+        "hse_ts": 0.09090909090909091,
+        "hse_counts_original": {
+          "tp": 2,
+          "fp": 20,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_baseline_mix_0.5",
+      "recipe": {
+        "family": "spatial_blend",
+        "spatial_weight": 0.5,
+        "spatial": {
+          "family": "ridge",
+          "view": "flatten",
+          "source": "combined",
+          "alpha": 10000
+        },
+        "baseline": true
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 70.31689253266347,
+        "mae": 56.0642699105399,
+        "r": 0.6127038947872391,
+        "chi2": 28.741527802345534,
+        "sigma_valid": 280,
+        "hse_ts": 0.047619047619047616,
+        "hse_counts_original": {
+          "tp": 1,
+          "fp": 20,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_baseline_mix_0.75",
+      "recipe": {
+        "family": "spatial_blend",
+        "spatial_weight": 0.75,
+        "spatial": {
+          "family": "ridge",
+          "view": "flatten",
+          "source": "combined",
+          "alpha": 10000
+        },
+        "baseline": true
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 70.50095863864914,
+        "mae": 56.14311141967774,
+        "r": 0.6142467832262513,
+        "chi2": 30.346622713606497,
+        "sigma_valid": 280,
+        "hse_ts": 0.047619047619047616,
+        "hse_counts_original": {
+          "tp": 1,
+          "fp": 20,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "spatial_baseline_mix_1",
+      "recipe": {
+        "family": "spatial_blend",
+        "spatial_weight": 1,
+        "spatial": {
+          "family": "ridge",
+          "view": "flatten",
+          "source": "combined",
+          "alpha": 10000
+        },
+        "baseline": true
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 71.25535040416331,
+        "mae": 57.12486190795899,
+        "r": 0.605483386904454,
+        "chi2": 32.3956199958266,
+        "sigma_valid": 280,
+        "hse_ts": 0.047619047619047616,
+        "hse_counts_original": {
+          "tp": 1,
+          "fp": 20,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "matched_feature_ablation_energy",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "energy",
+        "alpha": 10000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.71439937396319,
+        "mae": 59.70996377127511,
+        "r": 0.5442017249601578,
+        "chi2": 36.23487714175195,
+        "sigma_valid": 280,
+        "hse_ts": 0.0,
+        "hse_counts_original": {
+          "tp": 0,
+          "fp": 21,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "matched_feature_ablation_spatial",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "spatial",
+        "alpha": 10000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.21856206231539,
+        "mae": 59.79949809483119,
+        "r": 0.6241250422103702,
+        "chi2": 37.02386369928126,
+        "sigma_valid": 280,
+        "hse_ts": 0.0,
+        "hse_counts_original": {
+          "tp": 0,
+          "fp": 21,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "matched_feature_ablation_combined",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "combined",
+        "alpha": 10000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 71.25535040416331,
+        "mae": 57.12486190795899,
+        "r": 0.605483386904454,
+        "chi2": 32.3956199958266,
+        "sigma_valid": 280,
+        "hse_ts": 0.047619047619047616,
+        "hse_counts_original": {
+          "tp": 1,
+          "fp": 20,
+          "fn": 0
+        }
+      }
+    }
+  ],
+  "selected": {
+    "model": "spatial_baseline_mix_0.5",
+    "recipe": {
+      "family": "spatial_blend",
+      "spatial_weight": 0.5,
+      "spatial": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "combined",
+        "alpha": 10000
+      },
+      "baseline": true
+    },
+    "metrics": {
+      "n": 280,
+      "rmse": 70.31689253266347,
+      "mae": 56.0642699105399,
+      "r": 0.6127038947872391,
+      "chi2": 28.741527802345534,
+      "sigma_valid": 280,
+      "hse_ts": 0.047619047619047616,
+      "hse_counts_original": {
+        "tp": 1,
+        "fp": 20,
+        "fn": 0
+      }
+    }
+  },
+  "best_raw": {
+    "model": "spatial_27_ridge_combined_flatten",
+    "recipe": {
+      "family": "ridge",
+      "view": "flatten",
+      "source": "combined",
+      "alpha": 10000
+    },
+    "metrics": {
+      "n": 280,
+      "rmse": 71.25535040416331,
+      "mae": 57.12486190795899,
+      "r": 0.605483386904454,
+      "chi2": 32.3956199958266,
+      "sigma_valid": 280,
+      "hse_ts": 0.047619047619047616,
+      "hse_counts_original": {
+        "tp": 1,
+        "fp": 20,
+        "fn": 0
+      }
+    }
+  },
+  "matched_ablations": [
+    {
+      "model": "matched_feature_ablation_energy",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "energy",
+        "alpha": 10000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.71439937396319,
+        "mae": 59.70996377127511,
+        "r": 0.5442017249601578,
+        "chi2": 36.23487714175195,
+        "sigma_valid": 280,
+        "hse_ts": 0.0,
+        "hse_counts_original": {
+          "tp": 0,
+          "fp": 21,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "matched_feature_ablation_spatial",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "spatial",
+        "alpha": 10000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.21856206231539,
+        "mae": 59.79949809483119,
+        "r": 0.6241250422103702,
+        "chi2": 37.02386369928126,
+        "sigma_valid": 280,
+        "hse_ts": 0.0,
+        "hse_counts_original": {
+          "tp": 0,
+          "fp": 21,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "matched_feature_ablation_combined",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "combined",
+        "alpha": 10000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 71.25535040416331,
+        "mae": 57.12486190795899,
+        "r": 0.605483386904454,
+        "chi2": 32.3956199958266,
+        "sigma_valid": 280,
+        "hse_ts": 0.047619047619047616,
+        "hse_counts_original": {
+          "tp": 1,
+          "fp": 20,
+          "fn": 0
+        }
+      }
+    }
+  ],
+  "incumbent": {
+    "model": "windnet_port_ensemble",
+    "metrics": {
+      "n": 280,
+      "rmse": 71.66369181766227,
+      "mae": 57.28608071463449,
+      "r": 0.5907403184434771,
+      "chi2": 26.86304359322414,
+      "sigma_valid": 280,
+      "hse_ts": 0.22727272727272727,
+      "hse_counts_original": {
+        "tp": 5,
+        "fp": 17,
+        "fn": 0
+      }
+    },
+    "epochs": [
+      38,
+      27,
+      36
+    ]
+  },
+  "gate_passed": true,
+  "fit_row_sha256": "67f192c5577b5d0c3790a1b7351d8b872ced3b39de771d3806ff95e2db90b6e3",
+  "validation_row_sha256": "1c05d4b3e6e57a4dc133ce13336a9c2275979181181ed81496db478714939018",
+  "fold5_accessed": false,
+  "seconds": 67.59791564941406,
+  "identity": {
+    "code": {
+      "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+      "build_dashboard.py": "19f2494073bf3d1817e10bf22a5f6cf85719382c53b32769998026e0ac66fb9c",
+      "hse_original.py": "c142abe9edc71706fd88dc371819f57a9c11c2ef5bf47084f560aa46d46810e2",
+      "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+      "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+      "science.py": "4d5e53e7989f96339fbb7f9a2b1c3483c962451a83713832d28de2d96354db9b",
+      "test_protocol.py": "2101ba3e3345d9554be1041b8d11eae9ce936de44f5c67ec26bfe9705797a45b",
+      "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218"
+    },
+    "python": "3.12.3",
+    "numpy": "2.1.2",
+    "torch": "2.8.0+cu128",
+    "device": "cuda",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb"
+  }
+}

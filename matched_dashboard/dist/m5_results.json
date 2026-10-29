@@ -1,0 +1,784 @@
+{
+  "stage": "M5",
+  "scope": "training-side Fold4 validation only",
+  "rows": [
+    {
+      "model": "lstm_fast_weight_2",
+      "recipe": {
+        "family": "lstm",
+        "variant": "paper",
+        "epochs": [
+          29,
+          28,
+          19
+        ],
+        "seeds": [
+          19,
+          43,
+          101
+        ],
+        "fast_weight": 2
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 71.89659199683005,
+        "mae": 57.17696173531669,
+        "r": 0.5891140809218007,
+        "chi2": 27.126381014037577,
+        "sigma_valid": 280,
+        "hse_ts": 0.18181818181818182,
+        "hse_counts_original": {
+          "tp": 4,
+          "fp": 18,
+          "fn": 0
+        }
+      },
+      "seed_rows": [
+        {
+          "seed": 19,
+          "epochs": 29,
+          "normalized_weight_mean": 1.0,
+          "fast_training_count": 230,
+          "metrics": {
+            "n": 280,
+            "rmse": 72.42491240886179,
+            "mae": 57.09865951538086,
+            "r": 0.5845407376753287,
+            "chi2": 25.31644221252568,
+            "sigma_valid": 280,
+            "hse_ts": 0.18181818181818182,
+            "hse_counts_original": {
+              "tp": 4,
+              "fp": 18,
+              "fn": 0
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "epochs": 28,
+          "normalized_weight_mean": 1.0,
+          "fast_training_count": 230,
+          "metrics": {
+            "n": 280,
+            "rmse": 72.45113251535065,
+            "mae": 58.43384857177735,
+            "r": 0.5901049252938294,
+            "chi2": 30.0228068430792,
+            "sigma_valid": 280,
+            "hse_ts": 0.2727272727272727,
+            "hse_counts_original": {
+              "tp": 6,
+              "fp": 16,
+              "fn": 0
+            }
+          }
+        },
+        {
+          "seed": 101,
+          "epochs": 19,
+          "normalized_weight_mean": 1.0,
+          "fast_training_count": 230,
+          "metrics": {
+            "n": 280,
+            "rmse": 73.4153199549943,
+            "mae": 58.0516832624163,
+            "r": 0.5658726775396763,
+            "chi2": 28.292074605593353,
+            "sigma_valid": 280,
+            "hse_ts": 0.14285714285714285,
+            "hse_counts_original": {
+              "tp": 3,
+              "fp": 18,
+              "fn": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "model": "fast2_spatial_mix_0",
+      "recipe": {
+        "family": "weighted_blend",
+        "weighted_fraction": 0,
+        "weighted": {
+          "family": "lstm",
+          "variant": "paper",
+          "epochs": [
+            29,
+            28,
+            19
+          ],
+          "seeds": [
+            19,
+            43,
+            101
+          ],
+          "fast_weight": 2
+        },
+        "other": {
+          "family": "spatial_blend",
+          "spatial_weight": 0.5,
+          "spatial": {
+            "family": "ridge",
+            "view": "flatten",
+            "source": "combined",
+            "alpha": 10000
+          },
+          "baseline": true
+        }
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 70.31689253266347,
+        "mae": 56.0642699105399,
+        "r": 0.6127038947872391,
+        "chi2": 28.741527802345534,
+        "sigma_valid": 280,
+        "hse_ts": 0.047619047619047616,
+        "hse_counts_original": {
+          "tp": 1,
+          "fp": 20,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "fast2_spatial_mix_0.25",
+      "recipe": {
+        "family": "weighted_blend",
+        "weighted_fraction": 0.25,
+        "weighted": {
+          "family": "lstm",
+          "variant": "paper",
+          "epochs": [
+            29,
+            28,
+            19
+          ],
+          "seeds": [
+            19,
+            43,
+            101
+          ],
+          "fast_weight": 2
+        },
+        "other": {
+          "family": "spatial_blend",
+          "spatial_weight": 0.5,
+          "spatial": {
+            "family": "ridge",
+            "view": "flatten",
+            "source": "combined",
+            "alpha": 10000
+          },
+          "baseline": true
+        }
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 70.45986626287171,
+        "mae": 56.18604180472238,
+        "r": 0.6083711198400541,
+        "chi2": 28.13427442130882,
+        "sigma_valid": 280,
+        "hse_ts": 0.047619047619047616,
+        "hse_counts_original": {
+          "tp": 1,
+          "fp": 20,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "fast2_spatial_mix_0.5",
+      "recipe": {
+        "family": "weighted_blend",
+        "weighted_fraction": 0.5,
+        "weighted": {
+          "family": "lstm",
+          "variant": "paper",
+          "epochs": [
+            29,
+            28,
+            19
+          ],
+          "seeds": [
+            19,
+            43,
+            101
+          ],
+          "fast_weight": 2
+        },
+        "other": {
+          "family": "spatial_blend",
+          "spatial_weight": 0.5,
+          "spatial": {
+            "family": "ridge",
+            "view": "flatten",
+            "source": "combined",
+            "alpha": 10000
+          },
+          "baseline": true
+        }
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 70.77248279064223,
+        "mae": 56.38435407366072,
+        "r": 0.6027525914836492,
+        "chi2": 27.662662859262902,
+        "sigma_valid": 280,
+        "hse_ts": 0.09090909090909091,
+        "hse_counts_original": {
+          "tp": 2,
+          "fp": 20,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "fast2_spatial_mix_0.75",
+      "recipe": {
+        "family": "weighted_blend",
+        "weighted_fraction": 0.75,
+        "weighted": {
+          "family": "lstm",
+          "variant": "paper",
+          "epochs": [
+            29,
+            28,
+            19
+          ],
+          "seeds": [
+            19,
+            43,
+            101
+          ],
+          "fast_weight": 2
+        },
+        "other": {
+          "family": "spatial_blend",
+          "spatial_weight": 0.5,
+          "spatial": {
+            "family": "ridge",
+            "view": "flatten",
+            "source": "combined",
+            "alpha": 10000
+          },
+          "baseline": true
+        }
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 71.25250993748463,
+        "mae": 56.6875252859933,
+        "r": 0.5962309632348569,
+        "chi2": 27.326697721823354,
+        "sigma_valid": 280,
+        "hse_ts": 0.18181818181818182,
+        "hse_counts_original": {
+          "tp": 4,
+          "fp": 18,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "fast2_spatial_mix_1",
+      "recipe": {
+        "family": "weighted_blend",
+        "weighted_fraction": 1,
+        "weighted": {
+          "family": "lstm",
+          "variant": "paper",
+          "epochs": [
+            29,
+            28,
+            19
+          ],
+          "seeds": [
+            19,
+            43,
+            101
+          ],
+          "fast_weight": 2
+        },
+        "other": {
+          "family": "spatial_blend",
+          "spatial_weight": 0.5,
+          "spatial": {
+            "family": "ridge",
+            "view": "flatten",
+            "source": "combined",
+            "alpha": 10000
+          },
+          "baseline": true
+        }
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 71.89659199683005,
+        "mae": 57.17696173531669,
+        "r": 0.5891140809218007,
+        "chi2": 27.126381014037577,
+        "sigma_valid": 280,
+        "hse_ts": 0.18181818181818182,
+        "hse_counts_original": {
+          "tp": 4,
+          "fp": 18,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "lstm_fast_weight_4",
+      "recipe": {
+        "family": "lstm",
+        "variant": "paper",
+        "epochs": [
+          25,
+          18,
+          22
+        ],
+        "seeds": [
+          19,
+          43,
+          101
+        ],
+        "fast_weight": 4
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 73.48278099955608,
+        "mae": 58.44117497035435,
+        "r": 0.5789728914422263,
+        "chi2": 25.76502979216061,
+        "sigma_valid": 280,
+        "hse_ts": 0.2727272727272727,
+        "hse_counts_original": {
+          "tp": 6,
+          "fp": 16,
+          "fn": 0
+        }
+      },
+      "seed_rows": [
+        {
+          "seed": 19,
+          "epochs": 25,
+          "normalized_weight_mean": 1.0,
+          "fast_training_count": 230,
+          "metrics": {
+            "n": 280,
+            "rmse": 73.45040451008339,
+            "mae": 58.491229575020924,
+            "r": 0.5756352969924112,
+            "chi2": 27.732383948604145,
+            "sigma_valid": 280,
+            "hse_ts": 0.2727272727272727,
+            "hse_counts_original": {
+              "tp": 6,
+              "fp": 16,
+              "fn": 0
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "epochs": 18,
+          "normalized_weight_mean": 1.0,
+          "fast_training_count": 230,
+          "metrics": {
+            "n": 280,
+            "rmse": 75.08564761183182,
+            "mae": 58.652865055629185,
+            "r": 0.5657940905742621,
+            "chi2": 22.740136576931334,
+            "sigma_valid": 280,
+            "hse_ts": 0.2727272727272727,
+            "hse_counts_original": {
+              "tp": 6,
+              "fp": 16,
+              "fn": 0
+            }
+          }
+        },
+        {
+          "seed": 101,
+          "epochs": 22,
+          "normalized_weight_mean": 1.0,
+          "fast_training_count": 230,
+          "metrics": {
+            "n": 280,
+            "rmse": 74.838665443933,
+            "mae": 60.203262438092914,
+            "r": 0.5779693545168781,
+            "chi2": 29.02210911732679,
+            "sigma_valid": 280,
+            "hse_ts": 0.3333333333333333,
+            "hse_counts_original": {
+              "tp": 7,
+              "fp": 14,
+              "fn": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "model": "fast4_spatial_mix_0",
+      "recipe": {
+        "family": "weighted_blend",
+        "weighted_fraction": 0,
+        "weighted": {
+          "family": "lstm",
+          "variant": "paper",
+          "epochs": [
+            25,
+            18,
+            22
+          ],
+          "seeds": [
+            19,
+            43,
+            101
+          ],
+          "fast_weight": 4
+        },
+        "other": {
+          "family": "spatial_blend",
+          "spatial_weight": 0.5,
+          "spatial": {
+            "family": "ridge",
+            "view": "flatten",
+            "source": "combined",
+            "alpha": 10000
+          },
+          "baseline": true
+        }
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 70.31689253266347,
+        "mae": 56.0642699105399,
+        "r": 0.6127038947872391,
+        "chi2": 28.741527802345534,
+        "sigma_valid": 280,
+        "hse_ts": 0.047619047619047616,
+        "hse_counts_original": {
+          "tp": 1,
+          "fp": 20,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "fast4_spatial_mix_0.25",
+      "recipe": {
+        "family": "weighted_blend",
+        "weighted_fraction": 0.25,
+        "weighted": {
+          "family": "lstm",
+          "variant": "paper",
+          "epochs": [
+            25,
+            18,
+            22
+          ],
+          "seeds": [
+            19,
+            43,
+            101
+          ],
+          "fast_weight": 4
+        },
+        "other": {
+          "family": "spatial_blend",
+          "spatial_weight": 0.5,
+          "spatial": {
+            "family": "ridge",
+            "view": "flatten",
+            "source": "combined",
+            "alpha": 10000
+          },
+          "baseline": true
+        }
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 70.58512242380975,
+        "mae": 56.24686115809849,
+        "r": 0.6057515566531639,
+        "chi2": 27.544254334286858,
+        "sigma_valid": 280,
+        "hse_ts": 0.047619047619047616,
+        "hse_counts_original": {
+          "tp": 1,
+          "fp": 20,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "fast4_spatial_mix_0.5",
+      "recipe": {
+        "family": "weighted_blend",
+        "weighted_fraction": 0.5,
+        "weighted": {
+          "family": "lstm",
+          "variant": "paper",
+          "epochs": [
+            25,
+            18,
+            22
+          ],
+          "seeds": [
+            19,
+            43,
+            101
+          ],
+          "fast_weight": 4
+        },
+        "other": {
+          "family": "spatial_blend",
+          "spatial_weight": 0.5,
+          "spatial": {
+            "family": "ridge",
+            "view": "flatten",
+            "source": "combined",
+            "alpha": 10000
+          },
+          "baseline": true
+        }
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 71.20907902135687,
+        "mae": 56.7186532156808,
+        "r": 0.5973590416133853,
+        "chi2": 26.649075444297512,
+        "sigma_valid": 280,
+        "hse_ts": 0.18181818181818182,
+        "hse_counts_original": {
+          "tp": 4,
+          "fp": 18,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "fast4_spatial_mix_0.75",
+      "recipe": {
+        "family": "weighted_blend",
+        "weighted_fraction": 0.75,
+        "weighted": {
+          "family": "lstm",
+          "variant": "paper",
+          "epochs": [
+            25,
+            18,
+            22
+          ],
+          "seeds": [
+            19,
+            43,
+            101
+          ],
+          "fast_weight": 4
+        },
+        "other": {
+          "family": "spatial_blend",
+          "spatial_weight": 0.5,
+          "spatial": {
+            "family": "ridge",
+            "view": "flatten",
+            "source": "combined",
+            "alpha": 10000
+          },
+          "baseline": true
+        }
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 72.1795428549174,
+        "mae": 57.50147007533482,
+        "r": 0.5882700829738472,
+        "chi2": 26.05600368986943,
+        "sigma_valid": 280,
+        "hse_ts": 0.22727272727272727,
+        "hse_counts_original": {
+          "tp": 5,
+          "fp": 17,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "fast4_spatial_mix_1",
+      "recipe": {
+        "family": "weighted_blend",
+        "weighted_fraction": 1,
+        "weighted": {
+          "family": "lstm",
+          "variant": "paper",
+          "epochs": [
+            25,
+            18,
+            22
+          ],
+          "seeds": [
+            19,
+            43,
+            101
+          ],
+          "fast_weight": 4
+        },
+        "other": {
+          "family": "spatial_blend",
+          "spatial_weight": 0.5,
+          "spatial": {
+            "family": "ridge",
+            "view": "flatten",
+            "source": "combined",
+            "alpha": 10000
+          },
+          "baseline": true
+        }
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 73.48278099955608,
+        "mae": 58.44117497035435,
+        "r": 0.5789728914422263,
+        "chi2": 25.76502979216061,
+        "sigma_valid": 280,
+        "hse_ts": 0.2727272727272727,
+        "hse_counts_original": {
+          "tp": 6,
+          "fp": 16,
+          "fn": 0
+        }
+      }
+    }
+  ],
+  "selected": null,
+  "best_rmse_candidate": {
+    "model": "fast2_spatial_mix_0",
+    "recipe": {
+      "family": "weighted_blend",
+      "weighted_fraction": 0,
+      "weighted": {
+        "family": "lstm",
+        "variant": "paper",
+        "epochs": [
+          29,
+          28,
+          19
+        ],
+        "seeds": [
+          19,
+          43,
+          101
+        ],
+        "fast_weight": 2
+      },
+      "other": {
+        "family": "spatial_blend",
+        "spatial_weight": 0.5,
+        "spatial": {
+          "family": "ridge",
+          "view": "flatten",
+          "source": "combined",
+          "alpha": 10000
+        },
+        "baseline": true
+      }
+    },
+    "metrics": {
+      "n": 280,
+      "rmse": 70.31689253266347,
+      "mae": 56.0642699105399,
+      "r": 0.6127038947872391,
+      "chi2": 28.741527802345534,
+      "sigma_valid": 280,
+      "hse_ts": 0.047619047619047616,
+      "hse_counts_original": {
+        "tp": 1,
+        "fp": 20,
+        "fn": 0
+      }
+    }
+  },
+  "baseline": {
+    "model": "windnet_port_ensemble",
+    "metrics": {
+      "n": 280,
+      "rmse": 71.66369181766227,
+      "mae": 57.28608071463449,
+      "r": 0.5907403184434771,
+      "chi2": 26.86304359322414,
+      "sigma_valid": 280,
+      "hse_ts": 0.22727272727272727,
+      "hse_counts_original": {
+        "tp": 5,
+        "fp": 17,
+        "fn": 0
+      }
+    },
+    "epochs": [
+      38,
+      27,
+      36
+    ]
+  },
+  "rmse_incumbent": {
+    "model": "spatial_baseline_mix_0.5",
+    "recipe": {
+      "family": "spatial_blend",
+      "spatial_weight": 0.5,
+      "spatial": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "combined",
+        "alpha": 10000
+      },
+      "baseline": true
+    },
+    "metrics": {
+      "n": 280,
+      "rmse": 70.31689253266347,
+      "mae": 56.0642699105399,
+      "r": 0.6127038947872391,
+      "chi2": 28.741527802345534,
+      "sigma_valid": 280,
+      "hse_ts": 0.047619047619047616,
+      "hse_counts_original": {
+        "tp": 1,
+        "fp": 20,
+        "fn": 0
+      }
+    }
+  },
+  "gate_passed": false,
+  "fit_row_sha256": "67f192c5577b5d0c3790a1b7351d8b872ced3b39de771d3806ff95e2db90b6e3",
+  "validation_row_sha256": "1c05d4b3e6e57a4dc133ce13336a9c2275979181181ed81496db478714939018",
+  "fold5_accessed": false,
+  "seconds": 11.048587083816528,
+  "identity": {
+    "code": {
+      "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+      "build_dashboard.py": "cad86ca7dfe2fa4a496130a9e957396f012ba471b716a6c737a7ec9445d7f81d",
+      "hse_original.py": "c142abe9edc71706fd88dc371819f57a9c11c2ef5bf47084f560aa46d46810e2",
+      "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+      "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+      "science.py": "531a0ea1fb7516edbbedb9004ab93c1a2c621b8d90d42306961dfcf80e648193",
+      "test_protocol.py": "2101ba3e3345d9554be1041b8d11eae9ce936de44f5c67ec26bfe9705797a45b",
+      "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218"
+    },
+    "python": "3.12.3",
+    "numpy": "2.1.2",
+    "torch": "2.8.0+cu128",
+    "device": "cuda",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb"
+  }
+}

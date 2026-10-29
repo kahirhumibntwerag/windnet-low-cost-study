@@ -1,0 +1,484 @@
+{
+  "stage": "M1",
+  "scope": "training-side Fold4 validation only",
+  "rows": [
+    {
+      "model": "ridge_flatten_1",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "energy",
+        "alpha": 1
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 91.39991183144055,
+        "mae": 71.14930374319252,
+        "r": 0.45168134793099163,
+        "chi2": 48.630330710135425,
+        "sigma_valid": 280,
+        "hse_ts": 0.5625,
+        "hse_counts_original": {
+          "tp": 18,
+          "fp": 5,
+          "fn": 9
+        }
+      }
+    },
+    {
+      "model": "ridge_flatten_10",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "energy",
+        "alpha": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 90.85323850358601,
+        "mae": 70.81050683362851,
+        "r": 0.45418079411871004,
+        "chi2": 48.109792414482605,
+        "sigma_valid": 280,
+        "hse_ts": 0.6129032258064516,
+        "hse_counts_original": {
+          "tp": 19,
+          "fp": 4,
+          "fn": 8
+        }
+      }
+    },
+    {
+      "model": "ridge_flatten_100",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "energy",
+        "alpha": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 86.97319106373838,
+        "mae": 68.24522687912297,
+        "r": 0.47280180829761176,
+        "chi2": 44.48030466601654,
+        "sigma_valid": 280,
+        "hse_ts": 0.6206896551724138,
+        "hse_counts_original": {
+          "tp": 18,
+          "fp": 4,
+          "fn": 7
+        }
+      }
+    },
+    {
+      "model": "ridge_flatten_1000",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "energy",
+        "alpha": 1000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 77.79057656104894,
+        "mae": 61.70355274067928,
+        "r": 0.5229323453528351,
+        "chi2": 36.02865368484163,
+        "sigma_valid": 280,
+        "hse_ts": 0.5,
+        "hse_counts_original": {
+          "tp": 11,
+          "fp": 11,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "ridge_flatten_10000",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "energy",
+        "alpha": 10000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.71439961442442,
+        "mae": 59.70996601097673,
+        "r": 0.5442017321591721,
+        "chi2": 36.234886325326904,
+        "sigma_valid": 280,
+        "hse_ts": 0.0,
+        "hse_counts_original": {
+          "tp": 0,
+          "fp": 21,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "ridge_flatten_100000",
+      "recipe": {
+        "family": "ridge",
+        "view": "flatten",
+        "source": "energy",
+        "alpha": 100000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 82.03474361077487,
+        "mae": 66.01273854111373,
+        "r": 0.48594033438295736,
+        "chi2": 48.24407991938455,
+        "sigma_valid": 280,
+        "hse_ts": 0.0,
+        "hse_counts_original": {
+          "tp": 0,
+          "fp": 21,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "ridge_mean_1",
+      "recipe": {
+        "family": "ridge",
+        "view": "mean",
+        "source": "energy",
+        "alpha": 1
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 157.97078636142336,
+        "mae": 122.02031719549564,
+        "r": 0.28105889877417395,
+        "chi2": 159.61826442430677,
+        "sigma_valid": 280,
+        "hse_ts": 0.5,
+        "hse_counts_original": {
+          "tp": 14,
+          "fp": 10,
+          "fn": 4
+        }
+      }
+    },
+    {
+      "model": "ridge_mean_10",
+      "recipe": {
+        "family": "ridge",
+        "view": "mean",
+        "source": "energy",
+        "alpha": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 111.17604814788797,
+        "mae": 89.34735317264497,
+        "r": 0.4148885083494898,
+        "chi2": 71.02006997574793,
+        "sigma_valid": 280,
+        "hse_ts": 0.46153846153846156,
+        "hse_counts_original": {
+          "tp": 12,
+          "fp": 11,
+          "fn": 3
+        }
+      }
+    },
+    {
+      "model": "ridge_mean_100",
+      "recipe": {
+        "family": "ridge",
+        "view": "mean",
+        "source": "energy",
+        "alpha": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 85.090114247698,
+        "mae": 69.06812682236723,
+        "r": 0.5011739256327172,
+        "chi2": 40.47016962651165,
+        "sigma_valid": 280,
+        "hse_ts": 0.391304347826087,
+        "hse_counts_original": {
+          "tp": 9,
+          "fp": 13,
+          "fn": 1
+        }
+      }
+    },
+    {
+      "model": "ridge_mean_1000",
+      "recipe": {
+        "family": "ridge",
+        "view": "mean",
+        "source": "energy",
+        "alpha": 1000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 74.4640248452243,
+        "mae": 59.327920715729725,
+        "r": 0.5508561179705666,
+        "chi2": 33.35555439833124,
+        "sigma_valid": 280,
+        "hse_ts": 0.23809523809523808,
+        "hse_counts_original": {
+          "tp": 5,
+          "fp": 16,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "ridge_mean_10000",
+      "recipe": {
+        "family": "ridge",
+        "view": "mean",
+        "source": "energy",
+        "alpha": 10000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 77.07398881138035,
+        "mae": 61.7868806311329,
+        "r": 0.526729814672405,
+        "chi2": 40.624971806077674,
+        "sigma_valid": 280,
+        "hse_ts": 0.0,
+        "hse_counts_original": {
+          "tp": 0,
+          "fp": 21,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "ridge_mean_100000",
+      "recipe": {
+        "family": "ridge",
+        "view": "mean",
+        "source": "energy",
+        "alpha": 100000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 85.1432644160597,
+        "mae": 68.21641273168684,
+        "r": 0.44141672567116697,
+        "chi2": 52.130759635803145,
+        "sigma_valid": 280,
+        "hse_ts": 0.0,
+        "hse_counts_original": {
+          "tp": 0,
+          "fp": 21,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "ridge_trend_1",
+      "recipe": {
+        "family": "ridge",
+        "view": "trend",
+        "source": "energy",
+        "alpha": 1
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 103.57277120292652,
+        "mae": 83.70715805581123,
+        "r": 0.4127246938488541,
+        "chi2": 65.74719458442546,
+        "sigma_valid": 280,
+        "hse_ts": 0.48717948717948717,
+        "hse_counts_original": {
+          "tp": 19,
+          "fp": 5,
+          "fn": 15
+        }
+      }
+    },
+    {
+      "model": "ridge_trend_10",
+      "recipe": {
+        "family": "ridge",
+        "view": "trend",
+        "source": "energy",
+        "alpha": 10
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 99.60046960472624,
+        "mae": 79.88404672473264,
+        "r": 0.4233907705864689,
+        "chi2": 61.64579750778673,
+        "sigma_valid": 280,
+        "hse_ts": 0.4864864864864865,
+        "hse_counts_original": {
+          "tp": 18,
+          "fp": 6,
+          "fn": 13
+        }
+      }
+    },
+    {
+      "model": "ridge_trend_100",
+      "recipe": {
+        "family": "ridge",
+        "view": "trend",
+        "source": "energy",
+        "alpha": 100
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 87.50270461927752,
+        "mae": 69.12515296443604,
+        "r": 0.4667400382865058,
+        "chi2": 50.23719504325011,
+        "sigma_valid": 280,
+        "hse_ts": 0.47058823529411764,
+        "hse_counts_original": {
+          "tp": 16,
+          "fp": 7,
+          "fn": 11
+        }
+      }
+    },
+    {
+      "model": "ridge_trend_1000",
+      "recipe": {
+        "family": "ridge",
+        "view": "trend",
+        "source": "energy",
+        "alpha": 1000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 78.46722495062875,
+        "mae": 61.42299301739561,
+        "r": 0.5082789565987561,
+        "chi2": 40.164700707040275,
+        "sigma_valid": 280,
+        "hse_ts": 0.52,
+        "hse_counts_original": {
+          "tp": 13,
+          "fp": 10,
+          "fn": 2
+        }
+      }
+    },
+    {
+      "model": "ridge_trend_10000",
+      "recipe": {
+        "family": "ridge",
+        "view": "trend",
+        "source": "energy",
+        "alpha": 10000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 76.350629305133,
+        "mae": 61.08541338980064,
+        "r": 0.5155363936090557,
+        "chi2": 39.41627439719272,
+        "sigma_valid": 280,
+        "hse_ts": 0.0,
+        "hse_counts_original": {
+          "tp": 0,
+          "fp": 21,
+          "fn": 0
+        }
+      }
+    },
+    {
+      "model": "ridge_trend_100000",
+      "recipe": {
+        "family": "ridge",
+        "view": "trend",
+        "source": "energy",
+        "alpha": 100000
+      },
+      "metrics": {
+        "n": 280,
+        "rmse": 83.43990890847724,
+        "mae": 66.91595159841849,
+        "r": 0.4569708106840655,
+        "chi2": 50.502435139067344,
+        "sigma_valid": 280,
+        "hse_ts": 0.0,
+        "hse_counts_original": {
+          "tp": 0,
+          "fp": 21,
+          "fn": 0
+        }
+      }
+    }
+  ],
+  "best_ridge": {
+    "model": "ridge_mean_1000",
+    "recipe": {
+      "family": "ridge",
+      "view": "mean",
+      "source": "energy",
+      "alpha": 1000
+    },
+    "metrics": {
+      "n": 280,
+      "rmse": 74.4640248452243,
+      "mae": 59.327920715729725,
+      "r": 0.5508561179705666,
+      "chi2": 33.35555439833124,
+      "sigma_valid": 280,
+      "hse_ts": 0.23809523809523808,
+      "hse_counts_original": {
+        "tp": 5,
+        "fp": 16,
+        "fn": 0
+      }
+    }
+  },
+  "baseline": {
+    "model": "windnet_port_ensemble",
+    "metrics": {
+      "n": 280,
+      "rmse": 71.66369181766227,
+      "mae": 57.28608071463449,
+      "r": 0.5907403184434771,
+      "chi2": 26.86304359322414,
+      "sigma_valid": 280,
+      "hse_ts": 0.22727272727272727,
+      "hse_counts_original": {
+        "tp": 5,
+        "fp": 17,
+        "fn": 0
+      }
+    },
+    "epochs": [
+      38,
+      27,
+      36
+    ]
+  },
+  "gate_passed": false,
+  "fit_row_sha256": "67f192c5577b5d0c3790a1b7351d8b872ced3b39de771d3806ff95e2db90b6e3",
+  "validation_row_sha256": "1c05d4b3e6e57a4dc133ce13336a9c2275979181181ed81496db478714939018",
+  "fold5_accessed": false,
+  "identity": {
+    "code": {
+      "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+      "hse_original.py": "c142abe9edc71706fd88dc371819f57a9c11c2ef5bf47084f560aa46d46810e2",
+      "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+      "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+      "science.py": "e1fb258a9f274c0ee716da1b60d97ea8c4c99ee641ac317bb772e65460e969f0",
+      "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218"
+    },
+    "python": "3.12.3",
+    "numpy": "2.1.2",
+    "torch": "2.8.0+cu128",
+    "device": "cuda",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb"
+  }
+}
