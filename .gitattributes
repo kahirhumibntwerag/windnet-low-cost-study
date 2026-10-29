@@ -2,3 +2,5 @@
 *.pdf -text
 *.png -text
 *.npz -text
+artifacts/continuation/*.manifest.json -text
+results/continuation/*.manifest.json -text

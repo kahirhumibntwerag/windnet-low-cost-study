@@ -1,0 +1,10 @@
+{
+  "project_id": "appgprj_6ae35dd2ef508191a8a789593a95bdfc",
+  "deployment_id": "appgdep_6ae3727e8df88191abae134adb926a98",
+  "version_id": "appgprj_6ae35dd2ef508191a8a789593a95bdfc~appgver_bd14ead876a88191bcb1e2f6a1254109",
+  "status": "succeeded",
+  "url": "https://windnet-research-lab-oct29.wellbat32.chatgpt.site/continuation.html",
+  "source_commit": "cbe79b6ef9b4d9bfa749a916b4decdab549a1cb1",
+  "audience": "owner-private",
+  "verification": "Native deployment succeeded. Local browser verified H8/H9 switching, candidate filtering, complete tables and charts. Existing access preserved."
+}

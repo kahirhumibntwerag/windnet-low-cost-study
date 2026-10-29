@@ -1,0 +1,12 @@
+{
+  "status": "hypothesis candidate only; not preregistered or executed",
+  "observation": "H8/H9 each passed a per-step 1% overall-RMSE guard, but their accumulated overall degradation is 1.49% against the starting wind-only model. H9 sample weights were not normalized and thus also changed effective regularization.",
+  "proposed_question": "Can mean-one normalized fast-case weights retain most of the fast-wind gain while restoring a fixed cumulative overall-error limit?",
+  "required_before_execution": "Register a new public experiment with fixed grids, comparison anchors, selection rule and success criteria before training. Do not reuse original holdout outcomes for any choice.",
+  "comparison_anchors": {
+    "starting_wind_overall_rmse_km_s": 80.72360614459454,
+    "h9_fast500_rmse_km_s": 123.90929011714888
+  },
+  "paper": "Still deferred while improving. H9 is a saved frozen checkpoint; no new original holdout evaluation has been run.",
+  "resources": "Both continuation pods and their temporary network volume were deleted and 404-verified; no research compute remains billing."
+}

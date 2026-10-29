@@ -1,0 +1,37 @@
+{
+  "status": "frozen_after_training_only_selection",
+  "selection_completed_before_new_original_holdout_evaluation": true,
+  "new_original_holdout_evaluations": 0,
+  "model": {
+    "id": "wind_lines__weighted_4_mix_0.25",
+    "family": "wind_lines",
+    "feature_group": "wind_lines",
+    "uses_eve": true,
+    "feature_columns": 122,
+    "members": [
+      "wind_lines__loss_weight_4",
+      "wind_lines__loss_weight_1"
+    ],
+    "weights": [
+      0.25,
+      0.75
+    ],
+    "weighted_pair_fraction": 0.25,
+    "weighted_loss_multiplier": 4
+  },
+  "selection_scope": "OriginalFolds1-4innerCV only; originalFold5targets absent",
+  "fixed_fast_thresholds_km_s": [
+    500,
+    600
+  ],
+  "source_feature_bundle_sha256": "8dd7514d63689ffe725bd08738a109184c1a99e02dba045ee1c4a66ae71f8d04",
+  "training_input_sha256": "26c35997cf19e46e3b83310f17a2a7af42f6ff9726c8727b59fb8cee94fa6d35",
+  "prediction_sha256": "5cc764a77694ceffba28fdb313c5e9c79b35455a25f206d5a583285e5efad654",
+  "full_paper": "deferred; this file is a frozen candidate recipe, not a final-test result",
+  "limits": [
+    "Selected development CV, not independent confirmation.",
+    "H9 misses all600km/s events.",
+    "Cumulative overall RMSE is1.49%worse thanstartingwindmodel; per-stepguard does not imply cumulative1%guard.",
+    "Future work must not tune using original holdout outcomes; any new final comparison must be a separately preregistered fixed evaluation."
+  ]
+}
