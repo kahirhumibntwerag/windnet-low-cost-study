@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "allowed_target_folds": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "excluded_target_folds": [
+    5
+  ],
+  "target_values_from_excluded_folds_exported": false,
+  "original_inputs_sha256": "f4723c671bb2f9a2f21dfa491c4c14e34626836f1fa82bf979c36a39d8ed273e",
+  "original_sources_sha256": "a3835b999a5a95ef3bb29e55fc2bbdf040939ffadb3ba7d525ecb6223d660d45",
+  "export_sha256": "26c35997cf19e46e3b83310f17a2a7af42f6ff9726c8727b59fb8cee94fa6d35",
+  "preparation_code_sha256": "5781fc8a64c21abec110b6a6ac950351fe0ebc7ddd5aeb96f9a39e5668e363d4",
+  "training_rows": 1512,
+  "training_rows_by_fold": {
+    "1": 518,
+    "2": 350,
+    "3": 364,
+    "4": 280
+  },
+  "fitting_rows": 1404,
+  "fit_eligible_definition": "original offset < 19; offsets 6 through 18",
+  "validation_offsets_retained": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "source_fold_zero": "Unassigned historical date; retained as in the frozen source.",
+  "source_provenance_correction": "First four original history columns originate in the row's own original block fold.",
+  "feature_guard": "All fitting-candidate values originating in Fold 5 are NaN before export.",
+  "inner_validation_requirement": "At each inner fit, additionally mask source folds withheld by that inner split before fitting preprocessing.",
+  "checks": {
+    "allowed_target_folds_only": true,
+    "original_row_identifiers_unique": true,
+    "excluded_source_values_masked": true,
+    "original_windows_retained": true
+  }
+}

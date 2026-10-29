@@ -1,0 +1,152 @@
+{
+  "retrieved_utc": "2026-10-29T16:00:21.030387+00:00",
+  "sources": [
+    {
+      "url": "https://lasp.colorado.edu/eve/data_access/eve_data/products/merged/latest_EVE_L3_merged_1nm.ncdf",
+      "sha256": "f150da94bec13f171f95e0ebbb7a368c8323f6292743180eaef27a597819a6f8",
+      "download_bytes": 20665586,
+      "version": "008",
+      "source_created": "2026-10-29T10:34:25Z",
+      "channels": [
+        {
+          "name": "Fe_IX_17",
+          "ion": "Fe IX",
+          "wavelength_nm": 17.1072998046875,
+          "units": "W/m^2"
+        },
+        {
+          "name": "Fe_XII_20",
+          "ion": "Fe XII",
+          "wavelength_nm": 19.511999130249023,
+          "units": "W/m^2"
+        },
+        {
+          "name": "Fe_XIV_21",
+          "ion": "Fe XIV",
+          "wavelength_nm": 21.133100509643555,
+          "units": "W/m^2"
+        },
+        {
+          "name": "He_II_30",
+          "ion": "He II",
+          "wavelength_nm": 30.378299713134766,
+          "units": "W/m^2"
+        },
+        {
+          "name": "Fe_XVI_34",
+          "ion": "Fe XVI",
+          "wavelength_nm": 33.54100036621094,
+          "units": "W/m^2"
+        },
+        {
+          "name": "He_I_58",
+          "ion": "He I",
+          "wavelength_nm": 58.43339920043945,
+          "units": "W/m^2"
+        },
+        {
+          "name": "diode171",
+          "description": "Channel 8 (16.64-21.5nm)",
+          "units": "W/m^2"
+        },
+        {
+          "name": "diode257",
+          "description": "Channel 2 (22.28-28.78nm)",
+          "units": "W/m^2"
+        },
+        {
+          "name": "diode304",
+          "description": "Channel 9 (27.16-33.8nm)",
+          "units": "W/m^2"
+        }
+      ]
+    }
+  ],
+  "feature_bundle_sha256": "8dd7514d63689ffe725bd08738a109184c1a99e02dba045ee1c4a66ae71f8d04",
+  "train_only_sha256": "26c35997cf19e46e3b83310f17a2a7af42f6ff9726c8727b59fb8cee94fa6d35",
+  "lags_calendar_days": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "scalar_channels": 9,
+  "feature_count": 62,
+  "rows": 1512,
+  "finite_fraction_by_feature_training_only": {
+    "log_Fe_IX_17_lag5": 0.4523809523809524,
+    "log_Fe_XII_20_lag5": 0.4523809523809524,
+    "log_Fe_XIV_21_lag5": 0.4523809523809524,
+    "log_He_II_30_lag5": 0.4523809523809524,
+    "log_Fe_XVI_34_lag5": 0.9986772486772487,
+    "log_He_I_58_lag5": 0.9986772486772487,
+    "log_diode171_lag5": 0.9993386243386243,
+    "log_diode257_lag5": 0.9993386243386243,
+    "log_diode304_lag5": 0.9993386243386243,
+    "log_Fe_IX_17_lag6": 0.453042328042328,
+    "log_Fe_XII_20_lag6": 0.453042328042328,
+    "log_Fe_XIV_21_lag6": 0.453042328042328,
+    "log_He_II_30_lag6": 0.453042328042328,
+    "log_Fe_XVI_34_lag6": 0.9993386243386243,
+    "log_He_I_58_lag6": 0.9993386243386243,
+    "log_diode171_lag6": 0.9993386243386243,
+    "log_diode257_lag6": 0.9993386243386243,
+    "log_diode304_lag6": 0.9993386243386243,
+    "log_Fe_IX_17_lag7": 0.44907407407407407,
+    "log_Fe_XII_20_lag7": 0.44907407407407407,
+    "log_Fe_XIV_21_lag7": 0.44907407407407407,
+    "log_He_II_30_lag7": 0.44907407407407407,
+    "log_Fe_XVI_34_lag7": 0.9867724867724867,
+    "log_He_I_58_lag7": 0.9867724867724867,
+    "log_diode171_lag7": 0.9867724867724867,
+    "log_diode257_lag7": 0.9867724867724867,
+    "log_diode304_lag7": 0.9867724867724867,
+    "log_Fe_IX_17_lag8": 0.4437830687830688,
+    "log_Fe_XII_20_lag8": 0.4437830687830688,
+    "log_Fe_XIV_21_lag8": 0.4437830687830688,
+    "log_He_II_30_lag8": 0.4437830687830688,
+    "log_Fe_XVI_34_lag8": 0.9702380952380952,
+    "log_He_I_58_lag8": 0.9702380952380952,
+    "log_diode171_lag8": 0.9702380952380952,
+    "log_diode257_lag8": 0.9702380952380952,
+    "log_diode304_lag8": 0.9702380952380952,
+    "log_Fe_IX_17_mean_lags5to8": 0.43783068783068785,
+    "log_Fe_XII_20_mean_lags5to8": 0.43783068783068785,
+    "log_Fe_XIV_21_mean_lags5to8": 0.43783068783068785,
+    "log_He_II_30_mean_lags5to8": 0.43783068783068785,
+    "log_Fe_XVI_34_mean_lags5to8": 0.9675925925925926,
+    "log_He_I_58_mean_lags5to8": 0.9675925925925926,
+    "log_diode171_mean_lags5to8": 0.9682539682539683,
+    "log_diode257_mean_lags5to8": 0.9682539682539683,
+    "log_diode304_mean_lags5to8": 0.9682539682539683,
+    "log_Fe_IX_17_trend_lags5to8": 0.44047619047619047,
+    "log_Fe_XII_20_trend_lags5to8": 0.44047619047619047,
+    "log_Fe_XIV_21_trend_lags5to8": 0.44047619047619047,
+    "log_He_II_30_trend_lags5to8": 0.44047619047619047,
+    "log_Fe_XVI_34_trend_lags5to8": 0.968915343915344,
+    "log_He_I_58_trend_lags5to8": 0.968915343915344,
+    "log_diode171_trend_lags5to8": 0.9695767195767195,
+    "log_diode257_trend_lags5to8": 0.9695767195767195,
+    "log_diode304_trend_lags5to8": 0.9695767195767195,
+    "logratio_Fe_XII_20_Fe_XIV_21_lag5": 0.4523809523809524,
+    "logratio_Fe_XII_20_Fe_XIV_21_lag6": 0.453042328042328,
+    "logratio_Fe_XII_20_Fe_XIV_21_lag7": 0.44907407407407407,
+    "logratio_Fe_XII_20_Fe_XIV_21_lag8": 0.4437830687830688,
+    "logratio_Fe_IX_17_Fe_XVI_34_lag5": 0.4523809523809524,
+    "logratio_Fe_IX_17_Fe_XVI_34_lag6": 0.453042328042328,
+    "logratio_Fe_IX_17_Fe_XVI_34_lag7": 0.44907407407407407,
+    "logratio_Fe_IX_17_Fe_XVI_34_lag8": 0.4437830687830688
+  },
+  "availability_rule": "Completed daily observations precede nominal t-3 issue by >=2 days; lags t-5 through t-8. Retrospective V8 calibration does not establish as-issued availability.",
+  "prospective_channel_exclusions": {
+    "diode1216": "Fourier-filter temporal support undocumented; excluded before model execution.",
+    "diode366": "Official ESP documentation reports unstable shunt resistance; excluded before model execution."
+  },
+  "limitations": [
+    "Present-day calibrated science product, not historical as-issued data.",
+    "MEGS-A failure 2014-05-26 removes short wavelength lines; no gap interpolation.",
+    "Full-disk irradiance loses spatial coronal-hole geometry; absence of gain would not refute spatial AIA features."
+  ],
+  "source_readme": "https://lasp.colorado.edu/eve/data_access/eve_data/products/level3/EVE_L3_V8_README.pdf",
+  "raw_images_downloaded": 0
+}
