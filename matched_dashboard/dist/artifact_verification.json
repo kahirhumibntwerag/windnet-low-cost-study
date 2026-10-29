@@ -1,0 +1,22 @@
+{
+  "aggregate_and_source_checks_passed": 96,
+  "archive_members_hash_verified": 125,
+  "neural_checkpoints_loaded_and_synthetic_predictions_finite": 90,
+  "tabular_checkpoints_loaded_and_synthetic_predictions_finite": 25,
+  "archive_sha256": "a9a370bc920e745d4a4708ec896efc5fac1066f2bc4519fcd796302211723b7e",
+  "archive_bytes": 686558370,
+  "raw_test_observations_read": false,
+  "test_predictions_recomputed": false,
+  "independent_reproduction": false,
+  "verification_environment": {
+    "python": "3.13.1",
+    "numpy": "2.3.1",
+    "scipy": "1.16.1",
+    "sklearn": "1.9.1",
+    "torch": "2.8.0+cpu"
+  },
+  "serialization_warnings": [
+    "Local portability check loaded scikit-learn 1.7.2 Ridge/StandardScaler artifacts under 1.9.1; all synthetic predictions were finite. This is not an exact-environment numerical reproduction."
+  ],
+  "verification_scope": "125 member hashes plus synthetic-only CPU loading checks. No raw test observations were read and no test predictions were recomputed."
+}

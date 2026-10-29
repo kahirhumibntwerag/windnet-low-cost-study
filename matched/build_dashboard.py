@@ -13,6 +13,8 @@ def main():
     (D/'data.json').write_text(json.dumps(data,indent=2))
     for p in R.glob('*.json'):
         (D/p.name).write_bytes(p.read_bytes())
+    for p in [*R.glob('*.csv'),R/'README.md']:
+        if p.exists():(D/p.name).write_bytes(p.read_bytes())
     (D/'protocol.json').write_bytes((ROOT/'matched/protocol.json').read_bytes())
     print(json.dumps({'dashboard_files':len(list(D.iterdir())),'aggregate_result_files':len(files),'raw_test_data_included':False}))
 if __name__=='__main__':main()

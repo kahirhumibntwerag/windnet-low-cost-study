@@ -1,3 +1,11 @@
+# New matched image-only campaign
+
+The [new research loop](results/matched/README.md) completed six public hypotheses and one frozen final comparison using the original WindNet images and identical folds. The fixed primary reduced mean RMSE **80.28 → 76.77 km/s (4.37%)**, increased Fisher correlation **0.550 → 0.566**, and reduced chi-square **26.83 → 26.43**, but HSE threat score fell **0.200 → 0.179**. The strict all-four-metric gate failed. This is a locked historical benchmark with prior holdout exposure, not fresh confirmation.
+
+[Public RogNet campaign](https://fixrelay.vercel.app/campaigns/e324d24c-b179-427c-87c1-365b857658aa) · [Dashboard](https://windnet-matched-research-loop.wellbat32.chatgpt.site) · [Final panel and ablations](results/matched/final_comparison.csv) · [Reproduce](matched/README.md)
+
+---
+
 # WindNet low-cost forecasting study
 
 **The full study is complete:** [eight-page paper](output/pdf/windnet-full-study.pdf), [locked E13 results](results/locked_final), [exact final bundle and saved weights](artifacts/locked_final), and [CPU reproduction instructions](results/locked_final/README.md). The [public source branch](https://github.com/kahirhumibntwerag/windnet-low-cost-study/tree/codex/windnet-study) contains the paper, results, data bundle, and weights. The [hosted final dashboard](https://windnet-research-lab-oct29.wellbat32.chatgpt.site/locked-final.html) remains owner-private; the [RogNet/FixRelay campaign and all 13 records](https://fixrelay.vercel.app/campaigns/bb47504f-7bd4-45bf-954b-b0b077ac5aee) are public.
