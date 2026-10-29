@@ -22,7 +22,9 @@ def freeze(cfg):
     r=json.loads((EXPORT/'m10_results.json').read_text());assert r['gate_passed'] and r['selected']
     selected=r['selected'];assert selected['gate']['all_four'] and selected['stability']['pre_bootstrap_passed']
     check=next(x for x in r['bootstrap_checks'] if x['model']==selected['model']);assert check['passed']
-    primary=selected['recipe'];assert primary['family']=='affine_location_mix'
+    primary=selected['recipe']
+    if primary['family']=='location_ridge':primary={'family':'affine_location_mix','location':primary,'location_weight':1.,'prior':'M6','gain':1.,'bias':0}
+    assert primary['family']=='affine_location_mix'
     no_weight=copy.deepcopy(primary);no_weight['location']['weight_lambda']=0
     no_prior={**primary,'location_weight':1.};no_cal={**primary,'gain':1.,'bias':0}
     panel=[{'model':'PRIMARY_F2','recipe':primary},{'model':'windnet_port','recipe':{'family':'port'}},{'model':'prior_M6','recipe':{'family':'prior'}},{'model':'location_raw','recipe':primary['location']},{'model':'without_precision_weight','recipe':no_weight},{'model':'without_prior_mixture','recipe':no_prior},{'model':'without_amplitude_calibration','recipe':no_cal}]

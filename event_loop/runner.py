@@ -36,6 +36,9 @@ def main():
     if cfg['stage']=='gradient' and cfg.get('mode')=='location':
         from event_loop.location import run
         run();return
+    if cfg['stage']=='gradient' and cfg.get('mode')=='location_prepare':
+        from event_loop.location import prepare
+        prepare();return
     if cfg['stage']=='gradient' and cfg.get('mode')=='precision':
         from event_loop.precision import run
         run(resume=cfg.get('resume_predictions',False));return

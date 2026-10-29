@@ -10,6 +10,16 @@
     "operation": "Restarted only this phase-owned container in place after completed fitting/grid and resumed its saved prediction bank.",
     "original_fit_source_commit": "3bf1ce5",
     "hypothesis_recipe_criteria_or_draw_changes": false,
-    "verification": "Synthetic cached and uncached bootstrap outputs exactly identical, including all percentile intervals and defined-draw counts. Seven checks pass."
+    "verification": "Synthetic cached and uncached bootstrap outputs exactly identical, including all percentile intervals and defined-draw counts. Seven checks pass.",
+    "result": "Container restart discarded temporary worker disk; resume failed before scoring because exports/event_controls.json was missing. No result or holdout data was read. Prior public M7-M9 artifacts preserved locally."
+  },
+  "rerun": {
+    "method": "Reacquire only hash-verified development bank, rebuild per-fit centering embeddings and location caches, retrain fixed controls, repeat exact M10 grid and use cached bootstrap datasets.",
+    "hypotheses_recipes_criteria_draws_changed": false,
+    "original_partial_gate_counts": {
+      "strict_all_four": 50,
+      "pre_bootstrap_stability": 31
+    },
+    "limitation": "Worker prediction bank and partial bootstrap evidence were lost. Rerun must report actual new output and compare control aggregate repeatability; cannot assert bitwise replication without those predictions."
   }
 }

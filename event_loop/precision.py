@@ -1,5 +1,6 @@
 """M10: fit-only variance weights and preregistered training-side stability."""
 import json,time
+from pathlib import Path
 import numpy as np
 from matched.runner import DATA,EXPORT,save_json,sha
 from matched.science import metrics,rowhash
@@ -54,7 +55,9 @@ def run(resume=False):
         if i%5==0:print(json.dumps({'M10_grid_bases_complete':i+1,'strict_gate_passes':sum(x['gate']['all_four'] for x in rows),'stability_pre_passes':len(candidates),'seconds':time.time()-t}),flush=True)
     assert len(rows)==3645
     if not resume:np.savez_compressed(DATA/'m10_all_predictions.npz',**all_predictions)
-    m9=json.loads((EXPORT/'m9_results.json').read_text())['selected'];m9_stability=stability(m9,controls)
+    m9_path=EXPORT/'m9_results.json'
+    if not m9_path.exists():m9_path=Path(__file__).with_name('m9_observation.json')
+    m9_result=json.loads(m9_path.read_text());m9=m9_result['selected'];m9_stability=stability(m9,m9_result['controls'])
     control_predictions={c['model']:{f:np.load(DATA/(c['model']+'.npz'))['cv'+str(f)] for f in range(1,5)} for c in controls}
     selected=None;checks=[]
     for row in sorted((x for x in rows if x['model'] in candidates),key=lambda x:x['metrics']['rmse']):
