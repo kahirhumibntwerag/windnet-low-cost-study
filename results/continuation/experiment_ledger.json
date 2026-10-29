@@ -1,0 +1,28 @@
+{
+  "campaign_url": "https://fixrelay.vercel.app/campaigns/bb47504f-7bd4-45bf-954b-b0b077ac5aee",
+  "experiments": [
+    {
+      "label": "H7",
+      "id": "892d46b4-64f7-42b2-bff9-6f46b77402cc",
+      "status": "cancelled_before_fitting",
+      "outcome": "cancelled",
+      "public_url": "https://fixrelay.vercel.app/experiments/892d46b4-64f7-42b2-bff9-6f46b77402cc"
+    },
+    {
+      "label": "H8",
+      "id": "a772eb55-1daf-4787-84df-4fdd8f662421",
+      "status": "completed",
+      "outcome": "supported_on_training_cv",
+      "public_url": "https://fixrelay.vercel.app/experiments/a772eb55-1daf-4787-84df-4fdd8f662421"
+    },
+    {
+      "label": "H9",
+      "id": "f3956e16-c32c-42cb-9d67-6b8ac6aa1970",
+      "status": "completed",
+      "outcome": "supported_on_training_cv",
+      "public_url": "https://fixrelay.vercel.app/experiments/f3956e16-c32c-42cb-9d67-6b8ac6aa1970"
+    }
+  ],
+  "original_holdout_evaluations": 0,
+  "full_paper": "deferred_per_user_during_continuation"
+}

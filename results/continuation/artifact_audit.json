@@ -1,0 +1,18 @@
+{
+  "scope": "H8/H9 training-only prediction and result artifacts; metrics verification, not an independent model-training replication",
+  "agent": "fullpaper_methods_audit subagent",
+  "result": "passed",
+  "mismatches": 0,
+  "rows": 1512,
+  "allowed_folds": [1, 2, 3, 4],
+  "prediction_columns": 87,
+  "rmse_checks": 1074,
+  "contingency_count_checks": 2864,
+  "max_metric_float_discrepancy": 2.22e-16,
+  "h8_reproduction_max_abs_km_s": 1.1368683772161603e-13,
+  "h9_selection_and_all_eligibility_checks": "matched",
+  "h9_eligible_candidates": 5,
+  "unique_nominal_issue_target_pairs": 1452,
+  "original_holdout_artifacts_opened": 0,
+  "limitations": "Selection-CV development estimates remain optimistic. This audit does not establish independent test performance or independent training reproduction."
+}
