@@ -39,6 +39,8 @@ def main():
         for p in event_dir.glob('*.json'):
             if p.name!='ledger.json':(D/p.name).write_bytes(p.read_bytes())
         (D/'event_protocol.json').write_text(json.dumps(event_protocol,indent=2),encoding='utf8')
+        if (event_dir/'README.md').exists():(D/'event_report.md').write_bytes((event_dir/'README.md').read_bytes())
+        for p in event_dir.glob('*.csv'):(D/p.name).write_bytes(p.read_bytes())
     for p in [*R.glob('*.csv'),R/'README.md']:
         if p.exists():(D/p.name).write_bytes(p.read_bytes())
     (D/'protocol.json').write_text(json.dumps(data['protocol'],indent=2),encoding='utf8')

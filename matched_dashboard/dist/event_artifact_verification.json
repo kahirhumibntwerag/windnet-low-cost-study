@@ -1,0 +1,14 @@
+{
+  "archive": "artifacts/event_loop/event_checkpoints.tar.gz",
+  "archive_bytes": 130940473,
+  "archive_sha256": "f6507a979324156f999c2a09cee9340081a5fb779844ef661aa2d136a8a5e660",
+  "checkpoint_files_verified": 40,
+  "freeze_sha256": "57db805d21920576fd18f5ce46069aee2b81dc5a5771f7f28b8ba1e0dc61131f",
+  "all_four_numerical_gates_passed": true,
+  "all_aggregate_metrics_independently_recomputed": true,
+  "all_models_have_2198_identical_test_windows": true,
+  "all_five_released_references_aligned": true,
+  "scientific_source_hashes_still_match_freeze": true,
+  "includes_raw_holdout_observations": false,
+  "post_test_model_changes": 0
+}

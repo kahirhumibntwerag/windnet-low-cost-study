@@ -57,12 +57,13 @@
       "id": "be200d9f-d6c3-43b1-8a6f-15895ca0f79a",
       "url": "https://fixrelay.vercel.app/experiments/be200d9f-d6c3-43b1-8a6f-15895ca0f79a",
       "title": "Frozen stability-qualified location model on original WindNet folds",
-      "status": "running",
+      "status": "completed",
       "hypothesis": "The training-only stability-qualified M10 primary may improve all four original metrics on identical historical windows.",
       "method": "Freeze all scientific sources, recipes, epochs and data identities; then one original five-fold pass with seven fixed models/ablations plus released WindNet. Fit all before scores are exported. No label access by estimators or post-test model replacement.",
       "success_criteria": "Strictly lower mean-fold RMSE and reduced chi-square, higher Fisher-z correlation and mean original HSE threat score versus released WindNet on2198identicalwindows. Undefined fails.",
       "result_file": "event_final_results.json",
-      "observation": "Frozen source/recipe identity57db805d21920576fd18f5ce46069aee2b81dc5a5771f7f28b8ba1e0dc61131f. Seven model recipes and all epochs/weights locked beforeFold5access. Training-only selection complete; one fixed historical comparison running."
+      "observation": "Frozen primary improved all four original historical metrics on2198identicalwindows: RMSE80.27604\u219276.25419 km/s; Fisher r0.550034\u21920.578886; reduced chi-square26.82881\u219224.53998; HSE threat score0.199591\u21920.275187. One fixed pass, no post-test model changes.40checkpointfiles verified. Conditional RMSE/HSE intervals exclude zero; r/chi-square intervals include zero. Prior historical exposure and selection limit inference.",
+      "outcome": "supported"
     }
   ]
 }

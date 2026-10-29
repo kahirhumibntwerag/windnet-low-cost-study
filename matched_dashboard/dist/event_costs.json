@@ -1,0 +1,19 @@
+{
+  "pod_id": "470fgu9o99afuc",
+  "name": "windnet-four-metric-continuation",
+  "compute_rate_usd_per_hour": 0.69,
+  "created_at": "2026-10-29T21:33:10.679Z",
+  "deleted_at": "2026-10-29 22:34:40 UTC",
+  "compute_hours_conservative": 1.0248113888888888,
+  "storage_buffer_usd": 0.02,
+  "prior_phase_estimate_usd": 0.50672,
+  "deleted_verified_404": true,
+  "created_pods": 1,
+  "created_network_volumes": 0,
+  "other_resources_mutated": false,
+  "limitations": "Conservative creation-to-deletion wall-clock estimate plus storage buffer; not a provider invoice. Includes failed attempts, restart and idle time.",
+  "compute_estimate_usd": 0.7071198583333332,
+  "this_phase_estimate_usd": 0.7271198583333333,
+  "cumulative_estimate_usd": 1.2338398583333332,
+  "cumulative_budget_usd": 5
+}

@@ -1,0 +1,207 @@
+{
+  "artifacts": [
+    {
+      "file": "fold1/normalization.npz",
+      "sha256": "4ed729fb918cdcae5ffc9662edcb5b47bd8a5e19d4f9d69f60a1ebde18b9b294",
+      "bytes": 6450
+    },
+    {
+      "file": "fold1/frozen_panel.json",
+      "sha256": "f2bedac5b88ee2819b758139bf7d990f54d4406e9479f2834fbb3f24b7a104da",
+      "bytes": 1861
+    },
+    {
+      "file": "fold1/location_0bccf2b75ed2.pkl",
+      "sha256": "234a81f0bdbae750ebba7d3663830a495667ce1ad072b977294fa85897f4bf7f",
+      "bytes": 2263811
+    },
+    {
+      "file": "fold1/port_seed19.pt",
+      "sha256": "8d33158e47a64c2301c521ec38627c51bc9bae8b42d0bc0a33c3b5f83e63446c",
+      "bytes": 7908807
+    },
+    {
+      "file": "fold1/port_seed43.pt",
+      "sha256": "4653382b0e758267612110dbd850c2b1b36c3fbf15ce005e3e57e3522f631c19",
+      "bytes": 7908807
+    },
+    {
+      "file": "fold1/port_seed101.pt",
+      "sha256": "f7f4c537784f10e51e37593f8cebeafe9ea26f3f973d78d186a9042b2e93e5dd",
+      "bytes": 7908825
+    },
+    {
+      "file": "fold1/prior_ridge.pkl",
+      "sha256": "0b34eb1d2a148c13abd85f4774f34e568e1ab56fb71c2fdcbab769fe3d55239f",
+      "bytes": 119109
+    },
+    {
+      "file": "fold1/location_b3d94e2a7739.pkl",
+      "sha256": "74ece1bb019946f0f58cb895b476f096f1f831eb60cb3f72220919d4183d6481",
+      "bytes": 2263811
+    },
+    {
+      "file": "fold2/normalization.npz",
+      "sha256": "2a67aa7ef70f4202ca8a172e7357296a3049a3d50458425f4affdd2ee20a9fe1",
+      "bytes": 6433
+    },
+    {
+      "file": "fold2/frozen_panel.json",
+      "sha256": "f2bedac5b88ee2819b758139bf7d990f54d4406e9479f2834fbb3f24b7a104da",
+      "bytes": 1861
+    },
+    {
+      "file": "fold2/location_0bccf2b75ed2.pkl",
+      "sha256": "7ae3f23e70ddb5cc90035b8d02ba5766f607cee5bb28d1836fd9c9093c0cd936",
+      "bytes": 2263811
+    },
+    {
+      "file": "fold2/port_seed19.pt",
+      "sha256": "f653426a42aaca57d8e66a4a5101481c54e960f40694910a5139745c16432b5c",
+      "bytes": 7908807
+    },
+    {
+      "file": "fold2/port_seed43.pt",
+      "sha256": "5223444e9cf9f8c25272a01f60ddc4d213c73ad4b03086a056b3d7245c87a2c8",
+      "bytes": 7908807
+    },
+    {
+      "file": "fold2/port_seed101.pt",
+      "sha256": "1aca007ef878501a52fbfdc92584e78446d9876caa3930dc786bae10fee8450c",
+      "bytes": 7908825
+    },
+    {
+      "file": "fold2/prior_ridge.pkl",
+      "sha256": "df6a5908fdeb7e63acea3082990b75f3c370b0bd56e7f447ee7ea10c22a697aa",
+      "bytes": 119109
+    },
+    {
+      "file": "fold2/location_b3d94e2a7739.pkl",
+      "sha256": "cd08e2bac4457e7bb1b20d571d3060a354320d00f9178494baf21df0c59f2ee7",
+      "bytes": 2263811
+    },
+    {
+      "file": "fold3/normalization.npz",
+      "sha256": "92466bb47c05ee51f0a9790b15684f5b1df7c2d15b0ba885bd93617d5d2285eb",
+      "bytes": 6438
+    },
+    {
+      "file": "fold3/frozen_panel.json",
+      "sha256": "f2bedac5b88ee2819b758139bf7d990f54d4406e9479f2834fbb3f24b7a104da",
+      "bytes": 1861
+    },
+    {
+      "file": "fold3/location_0bccf2b75ed2.pkl",
+      "sha256": "d9df320488bfa8a41e8f1a65901db79f0fbc6bf0d4365ff5ff8166fa19222f5a",
+      "bytes": 2263811
+    },
+    {
+      "file": "fold3/port_seed19.pt",
+      "sha256": "f820215397b68edc7b89486f281da9404cfa10d6fa1d3f078b99bd095cf65d65",
+      "bytes": 7908807
+    },
+    {
+      "file": "fold3/port_seed43.pt",
+      "sha256": "29d2df1909f32b14f727410200680d03e504cbfbdcfa63b576f2649635650f63",
+      "bytes": 7908807
+    },
+    {
+      "file": "fold3/port_seed101.pt",
+      "sha256": "a892110a8d23b06d1f8c85b3aa3f16877b055d14540257c7bedf7b768454e789",
+      "bytes": 7908825
+    },
+    {
+      "file": "fold3/prior_ridge.pkl",
+      "sha256": "b6da7a26588e6965d32b35cfb47d641e3c17ec4fc811658d61284c9c9fb8aa76",
+      "bytes": 119109
+    },
+    {
+      "file": "fold3/location_b3d94e2a7739.pkl",
+      "sha256": "f9a6d754828deb8c18eaa1ef917b40dee9cfc337d5d485550d3005232cc56fd4",
+      "bytes": 2263811
+    },
+    {
+      "file": "fold4/normalization.npz",
+      "sha256": "3f18fc7fa7620f659dfd82d7cfa51f50f63894ed1f6e470182caadd5681cf7af",
+      "bytes": 6446
+    },
+    {
+      "file": "fold4/frozen_panel.json",
+      "sha256": "f2bedac5b88ee2819b758139bf7d990f54d4406e9479f2834fbb3f24b7a104da",
+      "bytes": 1861
+    },
+    {
+      "file": "fold4/location_0bccf2b75ed2.pkl",
+      "sha256": "61365bb4214d0b8fa5f224ea27d056141671251e50bfa614b45a3590b61642b2",
+      "bytes": 2263811
+    },
+    {
+      "file": "fold4/port_seed19.pt",
+      "sha256": "2620ad3fdd963d8a3dde139225eadac6e730c377f92dc53d69b2ca35aab048fc",
+      "bytes": 7908807
+    },
+    {
+      "file": "fold4/port_seed43.pt",
+      "sha256": "96cb1b3f7e676e3ed560d159d1323ea4b47e4107328ca1d23c355946d6e23da2",
+      "bytes": 7908807
+    },
+    {
+      "file": "fold4/port_seed101.pt",
+      "sha256": "f0d8000f1d5bd412d3518e385bba3912327c13f2c72d3f0cceb40025c553b2a9",
+      "bytes": 7908825
+    },
+    {
+      "file": "fold4/prior_ridge.pkl",
+      "sha256": "89eff11107990565718b5b66ff13e4e2245fbdc50dd751aa56f08276bbf4ce80",
+      "bytes": 119109
+    },
+    {
+      "file": "fold4/location_b3d94e2a7739.pkl",
+      "sha256": "b9563f74a14ed4c798010b3d6de24636bac475af2e6dc2742d5a972f55367505",
+      "bytes": 2263811
+    },
+    {
+      "file": "fold5/normalization.npz",
+      "sha256": "6956c692393d330a28539019943c77d6b97572f42d1386c10822fc5ad64b0e71",
+      "bytes": 6432
+    },
+    {
+      "file": "fold5/frozen_panel.json",
+      "sha256": "f2bedac5b88ee2819b758139bf7d990f54d4406e9479f2834fbb3f24b7a104da",
+      "bytes": 1861
+    },
+    {
+      "file": "fold5/location_0bccf2b75ed2.pkl",
+      "sha256": "c64e819a8cdf2332f4bd3a328662c106755b3a7648209bcf82e5dd0087551a3b",
+      "bytes": 2263811
+    },
+    {
+      "file": "fold5/port_seed19.pt",
+      "sha256": "f1d25440f449731a34174fdb4d5cc53d63b41ff0b16bb3a86aba5637dc70c54c",
+      "bytes": 7908807
+    },
+    {
+      "file": "fold5/port_seed43.pt",
+      "sha256": "156c6320cfb9c305ffed499cc6dbc3b84e331244101b680330a435d2327b333a",
+      "bytes": 7908807
+    },
+    {
+      "file": "fold5/port_seed101.pt",
+      "sha256": "a84b3bfa82add3dc397a33dcf200989f9a6c8fe1d70d6571854c4b01e044ccec",
+      "bytes": 7908825
+    },
+    {
+      "file": "fold5/prior_ridge.pkl",
+      "sha256": "35d740d988ace5f2ceb241a69d76580cdd937081ce5bdfee087c7315fe72c6ee",
+      "bytes": 119109
+    },
+    {
+      "file": "fold5/location_b3d94e2a7739.pkl",
+      "sha256": "e4b68916b00cbd388d63e3fb336006821d43d405e7e5e313458afdd28186ef18",
+      "bytes": 2263811
+    }
+  ],
+  "count": 40,
+  "freeze_sha256": "57db805d21920576fd18f5ce46069aee2b81dc5a5771f7f28b8ba1e0dc61131f",
+  "includes_raw_holdout_observations": false
+}
