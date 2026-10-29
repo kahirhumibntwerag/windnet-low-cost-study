@@ -24,15 +24,18 @@ def post(path, data=b''):
 if __name__ == '__main__':
     p = argparse.ArgumentParser()
     p.add_argument('op', choices=['health', 'state', 'upload', 'run', 'download'])
-    p.add_argument('stage', nargs='?', default='h8', choices=['h8', 'h9'])
+    p.add_argument('stage', nargs='?', default='h8', choices=['h8', 'h9', 'h11'])
     a = p.parse_args()
     if a.op in ('health', 'state'):
         print(get('/' + a.op).text)
     elif a.op == 'upload':
         files = [ROOT/'continuation'/name for name in ('prepare_training.py', 'models.py', 'metrics.py', 'train.py')]
-        if a.stage == 'h9':
+        if a.stage in ('h9', 'h11'):
             files += [ROOT/'continuation/fast_loss.py']
-        files += [ROOT/'data/continuation'/name for name in ('train_only.npz', 'train_only.manifest.json', 'eve_features.npz', 'eve_features.manifest.json')]
+        if a.stage == 'h11':
+            files += [ROOT/'continuation'/name for name in ('prior_champion.py', 'champion_continuation.py')]
+            files += [ROOT/'results/continuation'/name for name in ('h8_results.json', 'h8_predictions.npz', 'h9_results.json', 'h9_predictions.npz')]
+        files += [ROOT/'artifacts/continuation'/name for name in ('train_only.npz', 'train_only.manifest.json', 'eve_features.npz', 'eve_features.manifest.json')]
         for source in files:
             print(post('/upload/' + source.name, source.read_bytes()))
     elif a.op == 'run':

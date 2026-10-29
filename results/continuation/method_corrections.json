@@ -1,0 +1,18 @@
+{
+  "preserves_existing_results_and_hashes": true,
+  "prior_champion_coverage": {
+    "finding": "H8/H9 continued ridge/tree families but omitted the previously accepted H4 neural/tree champion. Their improvement claims apply to their stated classical controls, not to the prior campaign's best accepted model.",
+    "correction": "H11 prospectively adds faithful retraining of the exact H4 recipe and applies SDO additions to that same recipe. No saved model checkpoint exists; do not call this checkpoint resumption.",
+    "h4_recipe": "50% multivariate HGB (7 leaves, minimum leaf30) +50% three-seed residual neural mean, multivariate ridge alpha10 base, seeds19/43/101, fixed optimizer steps35/1/15."
+  },
+  "sample_weight_scope": {
+    "finding": "Earlier wording that weights affect only loss was too narrow for HistGradientBoostingRegressor. Explicit Ridge imputation/scaling remain unweighted, but HGB also uses weights in its internal histogram bin construction.",
+    "effect": "Mean-one normalization controls total weight mass/effective regularization while preserving relative class weights; it is not pure loss isolation.",
+    "official_sources": [
+      "https://github.com/scikit-learn/scikit-learn/blob/1.9.1/sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py#L1121-L1124",
+      "https://github.com/scikit-learn/scikit-learn/blob/1.9.1/sklearn/ensemble/_hist_gradient_boosting/binning.py#L80-L100"
+    ]
+  },
+  "h10": "Cancelled before fitting or paid provisioning so the missing prior-champion baseline can be resolved first.",
+  "new_WindNet_comparison": "Not yet performed for the SDO continuation. Historical original-study WindNet rows must not be presented as H8/H9 results. A new comparison requires frozen recipes and a one-shot preregistered evaluation with no subsequent tuning."
+}
