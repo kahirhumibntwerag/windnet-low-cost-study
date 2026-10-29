@@ -1,0 +1,28 @@
+{
+  "sha256": "57db805d21920576fd18f5ce46069aee2b81dc5a5771f7f28b8ba1e0dc61131f",
+  "source_hashes": {
+    "event_loop/__init__.py": "efb6e7445cd7ebd5bcdb4e7e5052d67b3c46913fde1b7f4ed808e63ee8812a68",
+    "event_loop/final.py": "02ac0589fcf1d85caa269630c2eedc5306c0dadcdc0989b793a37585f9bd5022",
+    "event_loop/location.py": "8af3c6e203ba335aa34007e6b9cb810ea5e376ef523271ccf2f179c412c2586a",
+    "event_loop/m9_observation.json": "38e125ccae5ee0e1890705eb4e08dd6f8af472865632567935dd4bb9ee3bf254",
+    "event_loop/mixtures.py": "c7c9ed493db8880690f3fe882162a7518535a27dc195e70dd9017fc69fa392b1",
+    "event_loop/precision.py": "e2dede44828610d04dc88867d6a242212de70dc15a0a006fb5e0c25305bb22ed",
+    "event_loop/protocol.json": "8239729570ea4e242701242b0a5f3d6f63826f24fab966a64f63ea5597884ce0",
+    "event_loop/recover.py": "6858820bbc4761854948f41d884b80f02297099dc878ed21026c0713352e35a2",
+    "event_loop/remote.py": "20c99217ad70acc1386040a769d7028708a4a34b82c65b7565aae72d5efc22ba",
+    "event_loop/runner.py": "161d730b2dc5319ce3a9eb351f2ec4164e13e94d1caeb9a2032f5785dabfcbd6",
+    "event_loop/science.py": "efba874fd5ad437c939040391a8614e04447b0d072cf9bc7c40d16bf683ae8a2",
+    "event_loop/test_science.py": "48114256adb9db6dffd4a506b62057c5a2d6d56e70814a012a4a0e8178e864d6",
+    "event_loop/transport.py": "066b412313801c95c064870a03f3e6c11626fde255ed89c80ed28512cf13dedc",
+    "matched/final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+    "matched/hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+    "matched/protocol.json": "bed2af74ba9a00df00214fdb2bf5dc14d8c33e663d6bcbc0600100351f7165ec",
+    "matched/reference_sources.json": "31e20fdf415a7388e352230557574d0d7986197605738885ec7d74e9ae5fd155",
+    "matched/runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+    "matched/science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+    "matched/source_manifest.json": "bc05daf387663b78621dde4716852df044ceac86b6ea5f66067db589d7f87271"
+  },
+  "models": 7,
+  "fold5_parsed": false,
+  "final_evaluations": 0
+}

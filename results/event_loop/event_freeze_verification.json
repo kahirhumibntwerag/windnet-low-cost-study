@@ -1,0 +1,14 @@
+{
+  "freeze_sha256": "57db805d21920576fd18f5ce46069aee2b81dc5a5771f7f28b8ba1e0dc61131f",
+  "all_local_sources_match_frozen_worker": true,
+  "training_result_sha_matches": true,
+  "models": 7,
+  "source_archive": "artifacts/event_loop/frozen_sources.zip",
+  "source_archive_sha256": "f2f8e7094b73ffa4f9a7bd86aed5b3ecc6a86feb9dbe65826dd848e15f52f144",
+  "source_archive_entries_all_match_manifest": true,
+  "git_line_ending_normalization_differences": [
+    "event_loop/m9_observation.json",
+    "event_loop/remote.py"
+  ],
+  "reproduction_note": "Use the exact frozen_sources.zip bytes for manifest verification; Git may normalize source line endings. Archive contains public scientific sources and training-side aggregate observations only, no credentials or raw test observations."
+}
