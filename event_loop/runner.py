@@ -30,6 +30,9 @@ def main():
     if cfg['stage']=='mixtures':
         from event_loop.mixtures import run
         run();return
+    if cfg['stage']=='gradient' and cfg.get('mode')=='location':
+        from event_loop.location import run
+        run();return
     from event_loop.science import run
     run(cfg)
 if __name__=='__main__':main()

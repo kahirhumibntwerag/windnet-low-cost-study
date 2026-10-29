@@ -1,1 +1,41 @@
-{"experiments":[{"label":"M7","id":"a0738c70-391d-4561-971d-34f3e4b66cb4","url":"https://fixrelay.vercel.app/experiments/a0738c70-391d-4561-971d-34f3e4b66cb4","title":"Training-bank controls and aligned future supervision","status":"running","hypothesis":"Aligning auxiliary targets to the forecast horizon may improve trajectory and event skill without new predictors.","method":"Four training-side CV splits; retrain both prior controls. Four controlled future-supervision losses with identical data, architecture, seeds and fixed epochs.","success_criteria":"Beat both controls on all four training-side metrics: at least 1% RMSE reduction, +0.005 Fisher r, 0.5% chi-square reduction, and +0.02 HSE threat score.","observation":"Original hashes verified; Fold5 was discarded without parsing or retention. Training-bank baselines are running.","result_file":"m7_results.json"}]}
+{
+  "experiments": [
+    {
+      "label": "M7",
+      "id": "a0738c70-391d-4561-971d-34f3e4b66cb4",
+      "url": "https://fixrelay.vercel.app/experiments/a0738c70-391d-4561-971d-34f3e4b66cb4",
+      "title": "Training-bank controls and aligned future supervision",
+      "status": "completed",
+      "hypothesis": "Aligning auxiliary targets to the forecast horizon may improve trajectory and event skill without new predictors.",
+      "method": "Four training-side CV splits; retrain both prior controls. Four controlled future-supervision losses with identical data, architecture, seeds and fixed epochs.",
+      "success_criteria": "Beat both controls on all four training-side metrics: at least 1% RMSE reduction, +0.005 Fisher r, 0.5% chi-square reduction, and +0.02 HSE threat score.",
+      "observation": "No aligned-target condition passed. Some lowered chi-square, but RMSE, correlation and HSE threat score failed the balanced gate.",
+      "result_file": "m7_results.json",
+      "outcome": "not_supported"
+    },
+    {
+      "label": "M8",
+      "id": "a2bebbd3-3988-45d6-9e13-0402d9522048",
+      "url": "https://fixrelay.vercel.app/experiments/a2bebbd3-3988-45d6-9e13-0402d9522048",
+      "title": "Fixed mixtures, feature ablations and four-metric calibration",
+      "status": "completed",
+      "hypothesis": "Diverse supervision and spatial image features may complement one another and yield a balanced four-metric gain.",
+      "method": "24 fixed bases and 49 amplitude/bias settings each; 1,176 training-bank configurations. Same rows, images and folds; both prior controls retained.",
+      "success_criteria": "Beat both controls on every metric using the predeclared margins. No single-metric adoption.",
+      "result_file": "m8_results.json",
+      "outcome": "not_supported",
+      "observation": "No configuration passed all four requirements. Gate pass counts: RMSE 139, r 0, chi-square 410, HSE threat score 244 of 1176; no model adopted."
+    },
+    {
+      "label": "M9",
+      "id": "a163531e-9c25-4c9a-95d3-eedf4f4f556c",
+      "url": "https://fixrelay.vercel.app/experiments/a163531e-9c25-4c9a-95d3-eedf4f4f556c",
+      "title": "Location-preserving pretrained feature maps and weighted ridge ablations",
+      "status": "running",
+      "hypothesis": "Local pretrained activation energies may retain solar-disk geometry that global pooling loses, improving the training-side correlation ceiling.",
+      "method": "Two fixed 4x4 spatial representations, three temporal views, five ridge penalties, two fitting weights; 60 raw recipes plus 2880 fixed mixtures/calibrations. Same original images and rows.",
+      "success_criteria": "Beat both controls on all four metrics using the preregistered margins, then pass a training-only stability check.",
+      "result_file": "m9_results.json"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "identity": {
+    "phase_code": {
+      "__init__.py": "efb6e7445cd7ebd5bcdb4e7e5052d67b3c46913fde1b7f4ed808e63ee8812a68",
+      "mixtures.py": "5ad74683793ef812b6bc25f155212aba9fc9ea73f4a7ef09a9944940efdc799c",
+      "remote.py": "16c1c196c6dc69055c1ab2fdd94b8b3a9763bd383a090b0c17ab1526b70913c7",
+      "runner.py": "7bfe76a11aae721d4235cc2e3f9acd77d1b10f0ce5ef2c840a3fd19b0ca5da8d",
+      "science.py": "efba874fd5ad437c939040391a8614e04447b0d072cf9bc7c40d16bf683ae8a2",
+      "test_science.py": "724d9babb10255d5f5d4de0c5cc425c815284b7bf548b1bb077b4cf98b368a04",
+      "transport.py": "066b412313801c95c064870a03f3e6c11626fde255ed89c80ed28512cf13dedc"
+    },
+    "frozen_matched_sources": {
+      "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+      "build_dashboard.py": "8328e1d616ada65f68524719d5567eba03daa718156022c6865f00b49ce2de98",
+      "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+      "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+      "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+      "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+      "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+      "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+      "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+      "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+      "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+    },
+    "python": "3.12.3",
+    "numpy": "2.1.2",
+    "torch": "2.8.0+cu128",
+    "device": "cuda"
+  },
+  "row_audits": [
+    {
+      "held_training_fold": 1,
+      "fit_row_sha256": "30169fa5ca2421a48281113dc489a7409520406195110fb5182dbb3a2db0e5d4",
+      "validation_row_sha256": "f0499f57a34d5b1fc172a9995dd5afe48b970c6b3cf8e6794104a441c90bf87d"
+    },
+    {
+      "held_training_fold": 2,
+      "fit_row_sha256": "f12b0557c74505d03a0ad12dc77c56b5994775e1b89fabfbe0ee76f7271e75f5",
+      "validation_row_sha256": "a2aa9b82298317a41c838b9e2ebc668fd6241251dc645f9c1e839a384a628f32"
+    },
+    {
+      "held_training_fold": 3,
+      "fit_row_sha256": "0cbbb1fe7cf9f37f54361733672dea325f2dcf6c376154336c26a26d00addb54",
+      "validation_row_sha256": "34684596614430384f1f80884521077a4b41c2a879209293095fb090057fc29e"
+    },
+    {
+      "held_training_fold": 4,
+      "fit_row_sha256": "67f192c5577b5d0c3790a1b7351d8b872ced3b39de771d3806ff95e2db90b6e3",
+      "validation_row_sha256": "1c05d4b3e6e57a4dc133ce13336a9c2275979181181ed81496db478714939018"
+    }
+  ],
+  "base_count": 24,
+  "configurations": 1176,
+  "original_final_evaluations": 0,
+  "fold5_available": false
+}

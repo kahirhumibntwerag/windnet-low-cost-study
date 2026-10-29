@@ -3,6 +3,16 @@ import unittest
 import numpy as np
 from event_loop.science import gate,aggregate,train_aligned
 class EventChecks(unittest.TestCase):
+    def test_location_ridge_matches_weighted_primal(self):
+        from event_loop.location import ridge_path,representation
+        from sklearn.preprocessing import StandardScaler
+        from sklearn.linear_model import Ridge
+        rng=np.random.default_rng(19);x=rng.normal(size=(20,8));v=rng.normal(size=(5,8));y=rng.normal(size=20);sigma=rng.uniform(.1,2,20)
+        for weight in [0,1]:
+            actual=ridge_path(x,v,y,sigma,weight,[100])[100];s=StandardScaler().fit(x);s.scale_=np.maximum(s.scale_,.01);w=1+weight*(np.median(sigma)/np.maximum(sigma,np.quantile(sigma,.05)))**2;w/=w.mean()
+            expected=Ridge(alpha=100).fit(s.transform(x),y,sample_weight=w).predict(s.transform(v));np.testing.assert_allclose(actual,expected,atol=1e-9)
+        local=np.ones((2,832,16),dtype=np.float32);glob=np.ones((2,832),dtype=np.float32)
+        for kind in ['log','ratio']:self.assertEqual(representation(local,glob,kind).shape,(2,14144))
     def test_all_four_required(self):
         a={'rmse':80.,'r':.5,'chi2':30.,'hse_ts':.2};b={'rmse':79.,'r':.51,'chi2':29.,'hse_ts':.21}
         x={'rmse':77.,'r':.53,'chi2':28.,'hse_ts':.24};self.assertTrue(gate(x,[a,b])['all_four'])
