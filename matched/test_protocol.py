@@ -2,7 +2,7 @@
 import unittest
 import numpy as np
 import torch
-from matched.science import KaffeFeatures,metrics,samples
+from matched.science import KaffeFeatures,metrics,samples,block_moments,moment_score
 
 class ProtocolTests(unittest.TestCase):
     def data(self):
@@ -20,4 +20,7 @@ class ProtocolTests(unittest.TestCase):
     def test_tensorflow_same_padding(self):
         x=torch.ones((1,1,224,224));p=KaffeFeatures.same(x,7,2)
         self.assertEqual(p.shape[-2:],(229,229));self.assertEqual(p[0,0,2,2],1);self.assertEqual(p[0,0,-1,-1],0)
+    def test_block_moments_preserve_metrics(self):
+        _,a,_=samples(self.data(),[1,2,3],[4]);p=a['y']*.9+300.;x=metrics(a['y'],p,a['sigma']);y=moment_score(block_moments(a,p))
+        for k in ['rmse','r','chi2']:self.assertAlmostEqual(x[k],y[k],places=7)
 if __name__=='__main__':unittest.main()

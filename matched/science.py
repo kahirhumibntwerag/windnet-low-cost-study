@@ -288,12 +288,52 @@ def weighted_models():
     result={'stage':'M5','scope':'training-side Fold4 validation only','rows':rows,'selected':selected,'best_rmse_candidate':best_rmse,'baseline':base,'rmse_incumbent':m4,'gate_passed':bool(eligible),'fit_row_sha256':rowhash(tr),'validation_row_sha256':rowhash(va),'fold5_accessed':False,'seconds':time.time()-t,'identity':identity()}
     save_json(EXPORT/'m5_results.json',result);np.savez_compressed(DATA/'weighted_dev_predictions.npz',**preds)
     print(json.dumps({'stage':'M5_complete','selected':selected,'best_rmse':best_rmse,'gate_passed':bool(eligible),'seconds':time.time()-t}),flush=True)
+def block_moments(a,p):
+    result=[]
+    for b in dict.fromkeys(a['block'].tolist()):
+        ix=a['block']==b;y=a['y'][ix];v=p[ix];s=a['sigma'][ix];ok=s>0;tp,fp,fn=BatchwiseHSE(np.column_stack([v,y]),4,3)
+        result.append([len(y),y.sum(),v.sum(),(y*y).sum(),(v*v).sum(),(y*v).sum(),((v-y)**2).sum(),(((v[ok]-y[ok])/s[ok])**2).sum(),ok.sum(),tp,fp,fn])
+    return np.array(result,dtype=float)
+def moment_score(m):
+    n,sy,sp,syy,spp,syp,sse,chi,nchi,tp,fp,fn=m.sum(axis=0);den=(syy-sy*sy/n)*(spp-sp*sp/n)
+    return {'rmse':float(np.sqrt(sse/n)),'r':float((syp-sy*sp/n)/np.sqrt(den)) if den>0 else np.nan,'chi2':float(chi/nchi) if nchi else np.nan,'hse_ts':float(tp/(tp+fp+fn)) if tp+fp+fn else np.nan}
+def bootstrap_validation(a,p,base):
+    m=block_moments(a,p);b=block_moments(a,base);rng=np.random.default_rng(20261029);diff={k:[] for k in ['rmse','r','chi2','hse_ts']}
+    for _ in range(2000):
+        ix=rng.integers(0,len(m),len(m));x=moment_score(m[ix]);y=moment_score(b[ix])
+        for k in diff:
+            v=x[k]-y[k]
+            if np.isfinite(v):diff[k].append(v)
+    return {k:{'delta_95':np.percentile(v,[2.5,97.5]).tolist(),'defined_draws':len(v)} for k,v in diff.items()}
+def calibrate():
+    d=np.load(DATA/'dev_embeddings.npz');tr,va,_=samples(d,[1,2,3],[4]);base=json.loads((EXPORT/'baseline.json').read_text())['baseline'];base_recipe={'family':'lstm','variant':'paper','epochs':base['epochs'],'seeds':SEEDS,'fast_weight':1};bp=np.load(DATA/'baseline_dev_predictions.npz')['pred']
+    m3=json.loads((EXPORT/'m3_results.json').read_text());ns=next(r for r in m3['rows'] if r['model']=='lstm_no_sequence');nsp=np.load(DATA/'loss_dev_predictions.npz')[ns['model']]
+    m4=json.loads((EXPORT/'m4_results.json').read_text())['selected'];sp=np.load(DATA/'spatial_dev_predictions.npz')[m4['model']]
+    m5=json.loads((EXPORT/'m5_results.json').read_text());ww=np.load(DATA/'weighted_dev_predictions.npz');bases=[('baseline',base_recipe,bp),('no_sequence',ns['recipe'],nsp),('spatial',m4['recipe'],sp)]
+    for weight in [2,4]:
+        row=next(r for r in m5['rows'] if r['model']=='lstm_fast_weight_'+str(weight));bases.append(('weight'+str(weight),row['recipe'],ww[row['model']]))
+    for frac in [.25,.5,.75]:
+        row=next(r for r in m5['rows'] if r['model']=='fast4_spatial_mix_'+str(frac));bases.append(('weight4_mix'+str(frac),row['recipe'],ww[row['model']]))
+    rows=[];preds={};anchor=float(tr['y'].mean());t=time.time()
+    save_json(EXPORT/'m6_execution.json',{'identity':identity(),'fit_row_sha256':rowhash(tr),'validation_row_sha256':rowhash(va),'fold5_accessed':False})
+    for name,recipe,p in bases:
+        for gain in [.9,1,1.1,1.2,1.3,1.4,1.5]:
+            for bias in [-20,-10,0,10,20]:
+                v=anchor+gain*(p-anchor)+bias;label=f'cal_{name}_g{gain}_b{bias}';row={'model':label,'recipe':{'family':'calibrated','base':recipe,'gain':gain,'bias':bias,'anchor':'fitting_target_mean'},'metrics':metrics(va['y'],v,va['sigma'])};rows.append(row);preds[label]=v
+    eligible=[r for r in rows if r['metrics']['rmse']<=.99*base['metrics']['rmse'] and r['metrics']['r']>=base['metrics']['r']-1e-12 and r['metrics']['chi2']<=base['metrics']['chi2']+1e-10 and r['metrics']['hse_ts'] is not None and r['metrics']['hse_ts']>=base['metrics']['hse_ts']-1e-12]
+    selected=min(eligible,key=lambda r:r['metrics']['rmse']) if eligible else m4
+    rmse_eligible=[r for r in rows if r['metrics']['r']>=base['metrics']['r']-1e-12];best_rmse=min(rmse_eligible,key=lambda r:r['metrics']['rmse'])
+    chosen=preds[selected['model']] if eligible else sp
+    audit=bootstrap_validation(va,chosen,bp)
+    result={'stage':'M6','scope':'training-side Fold4 validation only','rows':rows,'selected':selected,'best_rmse_candidate':best_rmse,'gate_passed':bool(eligible),'bootstrap':audit,'bootstrap_limitations':'Conditional whole-block bootstrap, not selection-adjusted; overlapping blocks may be dependent. Cannot establish fresh confirmation.','fit_row_sha256':rowhash(tr),'validation_row_sha256':rowhash(va),'fold5_accessed':False,'seconds':time.time()-t,'identity':identity()}
+    save_json(EXPORT/'m6_results.json',result);np.savez_compressed(DATA/'calibration_dev_predictions.npz',**preds)
+    print(json.dumps({'stage':'M6_complete','selected':selected,'best_rmse':best_rmse,'gate_passed':bool(eligible),'bootstrap':audit,'seconds':time.time()-t}),flush=True)
 def run(cfg):
     stage=cfg['stage']
     if stage=='embed':prepare_embeddings()
     elif stage=='baseline':baseline()
     elif stage=='ridge':ridge()
     elif stage=='kernel':kernel()
-    elif stage=='neural':weighted_models() if cfg.get('mode')=='weighted' else loss_ablations()
+    elif stage=='neural':calibrate() if cfg.get('mode')=='calibrate' else weighted_models() if cfg.get('mode')=='weighted' else loss_ablations()
     elif stage=='spatial':spatial_models()
     else:raise ValueError('Stage not implemented '+stage)
