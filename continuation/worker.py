@@ -13,11 +13,11 @@ ROOT.mkdir(parents=True, exist_ok=True)
 TOKEN = os.environ['STUDY_TOKEN']
 PROCESS = None
 STARTED = None
-UPLOADS = {'prepare_training.py', 'models.py', 'metrics.py', 'train.py',
+UPLOADS = {'prepare_training.py', 'models.py', 'metrics.py', 'train.py', 'fast_loss.py',
            'train_only.npz', 'train_only.manifest.json', 'eve_features.npz',
            'eve_features.manifest.json', 'protocol.json'}
 OUTPUTS = {'h7_results.json', 'h7_predictions.npz', 'h8_results.json',
-           'h8_predictions.npz', 'run.log'}
+           'h8_predictions.npz', 'h9_results.json', 'h9_predictions.npz', 'run.log'}
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -68,12 +68,14 @@ class Handler(BaseHTTPRequestHandler):
                 return self.reply({'error': 'size'}, 400)
             (ROOT/self.path[8:]).write_bytes(self.rfile.read(size))
             return self.reply({'saved': self.path[8:], 'bytes': size})
-        if self.path in ('/run/h7', '/run/h8'):
+        if self.path in ('/run/h8', '/run/h9'):
             if PROCESS is not None and PROCESS.poll() is None:
                 return self.reply({'error': 'busy'}, 409)
             stage = self.path.split('/')[-1]
             with (ROOT/'run.log').open('w') as log:
-                PROCESS = subprocess.Popen([sys.executable, '-u', 'train.py', '--bundle', '.', '--output', '.', '--stage', stage],
+                command = ([sys.executable, '-u', 'train.py', '--bundle', '.', '--output', '.', '--stage', stage]
+                           if stage == 'h8' else [sys.executable, '-u', 'fast_loss.py', '--bundle', '.', '--output', '.'])
+                PROCESS = subprocess.Popen(command,
                                            cwd=ROOT, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
             STARTED = time.time()
             return self.reply({'started': stage, 'pid': PROCESS.pid})

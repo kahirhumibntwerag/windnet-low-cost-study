@@ -24,12 +24,14 @@ def post(path, data=b''):
 if __name__ == '__main__':
     p = argparse.ArgumentParser()
     p.add_argument('op', choices=['health', 'state', 'upload', 'run', 'download'])
-    p.add_argument('stage', nargs='?', default='h7', choices=['h7', 'h8'])
+    p.add_argument('stage', nargs='?', default='h8', choices=['h8', 'h9'])
     a = p.parse_args()
     if a.op in ('health', 'state'):
         print(get('/' + a.op).text)
     elif a.op == 'upload':
         files = [ROOT/'continuation'/name for name in ('prepare_training.py', 'models.py', 'metrics.py', 'train.py')]
+        if a.stage == 'h9':
+            files += [ROOT/'continuation/fast_loss.py']
         files += [ROOT/'data/continuation'/name for name in ('train_only.npz', 'train_only.manifest.json', 'eve_features.npz', 'eve_features.manifest.json')]
         for source in files:
             print(post('/upload/' + source.name, source.read_bytes()))
