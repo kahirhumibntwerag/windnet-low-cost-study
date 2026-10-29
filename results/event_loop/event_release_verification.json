@@ -1,0 +1,50 @@
+{
+  "release_url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/releases/tag/windnet-f2-2026-10-29",
+  "tag": "windnet-f2-2026-10-29",
+  "prerelease": true,
+  "all_seven_asset_digests_and_sizes_match_local": true,
+  "assets": [
+    {
+      "name": "event_checkpoints.tar.gz",
+      "size": 130940473,
+      "digest": "sha256:f6507a979324156f999c2a09cee9340081a5fb779844ef661aa2d136a8a5e660",
+      "browser_download_url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/releases/download/windnet-f2-2026-10-29/event_checkpoints.tar.gz"
+    },
+    {
+      "name": "event_checkpoint_manifest.json",
+      "size": 6606,
+      "digest": "sha256:9df29c530f4bc4724bb06861a75c69a986e8c3c68eb56c07032af372097dcfe9",
+      "browser_download_url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/releases/download/windnet-f2-2026-10-29/event_checkpoint_manifest.json"
+    },
+    {
+      "name": "event_final_comparison.csv",
+      "size": 1311,
+      "digest": "sha256:1af3f5e0d460ce6d9e7d7d2c55a85ac8f46c83d6edb7d596adf69ae71c400b12",
+      "browser_download_url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/releases/download/windnet-f2-2026-10-29/event_final_comparison.csv"
+    },
+    {
+      "name": "event_final_results.json",
+      "size": 23101,
+      "digest": "sha256:5fe5d4fc8c7243961a6447257e95482c87420e0f367da75798a0c735e528e836",
+      "browser_download_url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/releases/download/windnet-f2-2026-10-29/event_final_results.json"
+    },
+    {
+      "name": "event_freeze.json",
+      "size": 17093,
+      "digest": "sha256:57db805d21920576fd18f5ce46069aee2b81dc5a5771f7f28b8ba1e0dc61131f",
+      "browser_download_url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/releases/download/windnet-f2-2026-10-29/event_freeze.json"
+    },
+    {
+      "name": "frozen_sources.zip",
+      "size": 62589,
+      "digest": "sha256:f2f8e7094b73ffa4f9a7bd86aed5b3ecc6a86feb9dbe65826dd848e15f52f144",
+      "browser_download_url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/releases/download/windnet-f2-2026-10-29/frozen_sources.zip"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 178,
+      "digest": "sha256:599f168f1e32dbc04fdcda068a49ee0e477e39d16c404cbb14ff07bf6dc98483",
+      "browser_download_url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/releases/download/windnet-f2-2026-10-29/SHA256SUMS.txt"
+    }
+  ]
+}

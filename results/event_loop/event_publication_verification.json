@@ -1,0 +1,32 @@
+{
+  "dashboard_url": "https://windnet-matched-research-loop.wellbat32.chatgpt.site/",
+  "deployment_id": "appgdep_6ae3cafaab2481918927b29f21f40739",
+  "site_source_commit": "37fdc7b68df4418e070a3ea47e422c17298d2710",
+  "deployment_status": "succeeded",
+  "browser_verified_all_four_banner": true,
+  "browser_verified_primary_table": {
+    "rmse": "76.25",
+    "fisher_r": "0.579",
+    "chi2": "24.54",
+    "hse_ts": "0.275"
+  },
+  "browser_verified_released_reference_table": {
+    "rmse": "80.28",
+    "fisher_r": "0.550",
+    "chi2": "26.83",
+    "hse_ts": "0.200"
+  },
+  "fixed_ablations_visible": true,
+  "full_report_csv_results_audit_freeze_links_visible": true,
+  "prior_exposure_and_selection_limits_visible": true,
+  "campaign_public": true,
+  "f2_record_public_and_completed": true,
+  "github_code_results_and_seven_release_assets_published": true,
+  "runpod_worker_deleted_verified_404": true,
+  "dashboard_size_failure_resolved": {
+    "original_snapshot_bytes": 26910406,
+    "provider_file_limit_bytes": 26214400,
+    "fix": "Embed only display fields; preserve full scientific JSON exports as separate downloads. Compact snapshot about2.4MB."
+  },
+  "verified_at_utc": "2026-10-29T22:41:27.577359+00:00"
+}
