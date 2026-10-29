@@ -27,6 +27,7 @@ def freeze(cfg):
     if m6['selected']['recipe']['family']=='calibrated':panel.append({'model':'PRIMARY_without_calibration','recipe':m6['selected']['recipe']['base']})
     panel.append({'model':'M6_best_rmse_descriptive','recipe':m6['best_rmse_candidate']['recipe']})
     f={'campaign_id':'e324d24c-b179-427c-87c1-365b857658aa','created_at':dt.datetime.now(dt.timezone.utc).isoformat(),'code_hashes':code_hashes(),'baseline_recipe':br,'panel':panel,'primary':'PRIMARY_frozen','fast_specialist':'lstm_fast_weight_4','validation_balanced_gate_passed':m6['gate_passed'],'development_results_hashes':{p.name:sha(p.read_bytes()) for p in EXPORT.glob('m?_results.json')},'source_members_hash':sha((DATA/'members.json').read_bytes()),'original_kaffe_hash':sha((DATA/'kaffe/googlenet.npy').read_bytes()),'original_kaffe_graph_hash':sha((DATA/'kaffe/googlenet.py').read_bytes()),'fold5_unparsed_until_freeze':True,'final_rule':'Primary numeric success iff mean-fold RMSE lower and Fisher-z mean r higher than released WindNet on identical original windows. Separately require lower mean chi2 and higher mean HSE threat score for all-four-metric improvement. Score fixed port comparator, fast specialist and all ablations regardless. Undefined metrics fail. No candidate replacement after final scoring.','uncertainty':'2000 paired whole-block bootstrap draws within each fold, seed20261029, mean-fold RMSE/Fisher-r deltas. Conditional, not selection adjusted; block overlap/dependence and prior holdout exposure prevent fresh confirmatory claims.','prior_exposure':'Original historical holdout scores were already seen before this campaign; Folds1-4 are development data. Final is a locked historical benchmark, not a fresh blind test.','scope':'211-Angstrom, H4D3; original157blocks/2198testwindows; training13 and evaluation14 windows/block; images-only for all new models.'}
+    f['prepared_input_hashes']={str(p.relative_to(DATA)):sha(p.read_bytes()) for sub in ['development','sealed'] for p in sorted((DATA/sub).glob('*')) if p.is_file()}
     save_json(DATA/'freeze.json',f);save_json(EXPORT/'freeze.json',f)
     digest=sha((DATA/'freeze.json').read_bytes());save_json(EXPORT/'freeze_identity.json',{'sha256':digest,'models':len(panel),'primary':f['primary'],'code_hashes':f['code_hashes'],'final_holdout_evaluations':0})
     print(json.dumps({'frozen':True,'sha256':digest,'models':len(panel),'final_holdout_evaluations':0}),flush=True)
@@ -86,6 +87,10 @@ def paired_bootstrap(folds,model,reference_name='released_windnet'):
 def final(cfg):
     f=read_result('freeze.json');assert f['code_hashes']==code_hashes(),'Scientific sources changed after freeze'
     assert sha((DATA/'freeze.json').read_bytes())==cfg['freeze_sha256'],'Wrong freeze identity'
+    assert sha((DATA/'members.json').read_bytes())==f['source_members_hash']
+    assert sha((DATA/'kaffe/googlenet.npy').read_bytes())==f['original_kaffe_hash']
+    assert sha((DATA/'kaffe/googlenet.py').read_bytes())==f['original_kaffe_graph_hash']
+    for name,digest in f['prepared_input_hashes'].items():assert sha((DATA/name).read_bytes())==digest,'Prepared input changed '+name
     marker=DATA/'final.started.json'
     with marker.open('x') as out:json.dump({'started_at':dt.datetime.now(dt.timezone.utc).isoformat(),'freeze_sha256':cfg['freeze_sha256'],'experiment_url':cfg['experiment_url']},out)
     save_json(EXPORT/'final_started.json',json.loads(marker.read_text()))
