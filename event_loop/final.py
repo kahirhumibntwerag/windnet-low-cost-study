@@ -7,7 +7,7 @@ import torch.nn.functional as F
 from scipy.linalg import eigh
 from sklearn.preprocessing import StandardScaler
 from matched.runner import ROOT,DATA,EXPORT,save_json,sha,archive
-from matched.science import blocks,embed_blocks,samples,metrics,rowhash,neural_fit,fit_tabular,DEVICE,SEEDS
+from matched.science import blocks,embed_blocks,samples,metrics,rowhash,neural_fit,fit_tabular,DEVICE,SEEDS,block_moments,moment_score
 from matched.final_study import reference,aggregate,paired_bootstrap,SCIENTIFIC_FILES
 from event_loop.science import EPOCHS,identity
 from event_loop.location import LocationFeatures,representation,temporal
@@ -79,6 +79,18 @@ def predict(tr,features,recipe,cache,folder):
     else:raise ValueError(family)
     assert p.shape==(len(features['energy']),) and np.isfinite(p).all();cache[key]=p;return p
 
+def all_four_bootstrap(folds,model,draws=2000):
+    pairs=[(block_moments(f['test'],f['predictions'][model]),block_moments(f['test'],f['predictions']['released_windnet'])) for f in folds];rng=np.random.default_rng(20261029);d={k:[] for k in ['rmse','r','chi2','hse_ts']}
+    for _ in range(draws):
+        left=[];right=[]
+        for a,b in pairs:
+            ix=rng.integers(0,len(a),len(a));left.append(moment_score(a[ix]));right.append(moment_score(b[ix]))
+        for k in d:
+            if k=='r':x=np.tanh(np.mean(np.arctanh(np.clip([v[k] for v in left],-.999999,.999999))));y=np.tanh(np.mean(np.arctanh(np.clip([v[k] for v in right],-.999999,.999999))))
+            else:x=np.mean([v[k] for v in left]);y=np.mean([v[k] for v in right])
+            if np.isfinite(x-y):d[k].append(float(x-y))
+    return {'reference':'released_windnet','draws':draws,'metrics':{k:{'delta_95':np.percentile(v,[2.5,97.5]).tolist() if v else None,'defined_draws':len(v)} for k,v in d.items()},'limitations':'Conditional whole-block bootstrap, not adjusted for model selection; overlapping blocks and prior historical exposure limit inference.'}
+
 def final(cfg):
     f=json.loads((DATA/'event_freeze.json').read_text());assert sha((DATA/'event_freeze.json').read_bytes())==cfg['freeze_sha256'];assert f['source_hashes']==hashes(),'Scientific sources changed after freeze'
     assert sha((DATA/'kaffe/googlenet.npy').read_bytes())==f['original_kaffe_sha256'] and sha((DATA/'kaffe/googlenet.py').read_bytes())==f['graph_sha256']
@@ -111,5 +123,6 @@ def final(cfg):
         ms=[metrics(x['test']['y'],x['predictions'][name],x['test']['sigma']) for x in allfolds];rows.append({'model':name,'fold_metrics':ms,'summary':aggregate(ms)})
     primary=next(r['summary'] for r in rows if r['model']==f['primary']);ref=next(r['summary'] for r in rows if r['model']=='released_windnet');checks={'rmse':primary['mean_rmse']<ref['mean_rmse'],'r':primary['fisher_r']>ref['fisher_r'],'chi2':primary['mean_chi2']<ref['mean_chi2'],'hse_ts':primary['mean_hse_ts'] is not None and ref['mean_hse_ts'] is not None and primary['mean_hse_ts']>ref['mean_hse_ts']};four=all(checks.values())
     result={'stage':'F2','scope':'Locked original five-fold historical comparison; not fresh blind confirmation','primary':f['primary'],'all_four_metric_gate_passed':four,'metric_checks':checks,'primary_summary':primary,'released_windnet_summary':ref,'rows':rows,'primary_uncertainty':paired_bootstrap(allfolds,f['primary']),'verdict':'Frozen primary improved all four original metrics numerically.' if four else 'Frozen primary failed the all-four historical metric requirement.','freeze_sha256':cfg['freeze_sha256'],'final_evaluation_passes':1,'post_test_model_changes':0,'runtime_seconds':time.time()-t,'identity':identity(),'limitations':[f['exposure'],'Matched PyTorch port differs from original TensorFlow implementation; released forecasts are a separate historical comparator.','Nominal D3 and HSE conventions preserve original implementation.','Bootstrap conditional, not selection adjusted; blocks can overlap.']}
+    result['all_four_uncertainty']=all_four_bootstrap(allfolds,f['primary'])
     save_json(EXPORT/'event_final_results.json',result);save_json(EXPORT/'event_final_audit.json',{'folds':audits,'original_members':157,'total_test_windows':sum(a['test_rows'] for a in audits),'cross_fold_dates_disjoint':True,'fold5_parsed_only_after_freeze':True,'all_model_row_identity_checks_passed':True,'test_labels_never_passed_to_fit_or_predict':True,'final_evaluation_passes':1,'checkpoint_count':len(manifest)})
     print(json.dumps({'F2_complete':True,'all_four_metric_gate_passed':four,'primary':primary,'reference':ref,'seconds':time.time()-t}),flush=True)

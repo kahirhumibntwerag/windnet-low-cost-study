@@ -3,6 +3,11 @@ import unittest
 import numpy as np
 from event_loop.science import gate,aggregate,train_aligned
 class EventChecks(unittest.TestCase):
+    def test_final_four_metric_bootstrap_identical_models(self):
+        from event_loop.final import all_four_bootstrap
+        y=np.tile([300,300,350,450,550,550,500,450,400,350,300,300,300,300],4).astype(float);va={'block':np.repeat(np.arange(4),14),'y':y,'sigma':np.ones(len(y))*20};folds=[{'test':va,'predictions':{'same':y,'released_windnet':y}} for _ in range(5)]
+        result=all_four_bootstrap(folds,'same',draws=50)
+        for m in result['metrics'].values():self.assertEqual(m['delta_95'],[0.,0.]);self.assertEqual(m['defined_draws'],50)
     def test_bootstrap_cache_preserves_exact_draws_and_intervals(self):
         from event_loop.mixtures import bootstrap
         from unittest.mock import patch
