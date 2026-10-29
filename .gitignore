@@ -1,0 +1,13 @@
+.secrets/
+data/
+upstream/
+tmp/
+*.html
+__pycache__/
+*.pyc
+.venv/
+dashboard/
+inspect_sources.py
+*.tar.gz
+*.tar
+tmp-pdf/

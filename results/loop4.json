@@ -1,0 +1,442 @@
+{
+  "stage": "loop4",
+  "hypothesis": "Convex averaging of distinct errors improves over the best single model",
+  "best": {
+    "weights": {
+      "recurrence_ridge": 0.0,
+      "multi_ridge": 0.0,
+      "multi_tree": 0.5,
+      "residual_nn": 0.5
+    },
+    "rmse": 73.85014903916235,
+    "mae": 59.96348242813259,
+    "r": 0.5894819304556824,
+    "n": 280
+  },
+  "best_single_rmse": 74.46974348585023,
+  "improvement_pct": 0.832008299861553,
+  "candidates": 35,
+  "grid": [
+    {
+      "weights": {
+        "recurrence_ridge": 0.0,
+        "multi_ridge": 0.0,
+        "multi_tree": 0.0,
+        "residual_nn": 1.0
+      },
+      "rmse": 74.46974348585023,
+      "mae": 60.067327709145765,
+      "r": 0.5874130002620581,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.0,
+        "multi_ridge": 0.0,
+        "multi_tree": 0.25,
+        "residual_nn": 0.75
+      },
+      "rmse": 73.96039309890685,
+      "mae": 59.87039230662522,
+      "r": 0.5905293571364596,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.0,
+        "multi_ridge": 0.0,
+        "multi_tree": 0.5,
+        "residual_nn": 0.5
+      },
+      "rmse": 73.85014903916235,
+      "mae": 59.96348242813259,
+      "r": 0.5894819304556824,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.0,
+        "multi_ridge": 0.0,
+        "multi_tree": 0.75,
+        "residual_nn": 0.25
+      },
+      "rmse": 74.14079168806684,
+      "mae": 60.432688992801744,
+      "r": 0.5834982057354957,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.0,
+        "multi_ridge": 0.0,
+        "multi_tree": 1.0,
+        "residual_nn": 0.0
+      },
+      "rmse": 74.8276498657102,
+      "mae": 61.20009463551444,
+      "r": 0.5720585546416473,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.0,
+        "multi_ridge": 0.25,
+        "multi_tree": 0.0,
+        "residual_nn": 0.75
+      },
+      "rmse": 74.57804148492838,
+      "mae": 60.08963148403658,
+      "r": 0.5839070560276911,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.0,
+        "multi_ridge": 0.25,
+        "multi_tree": 0.25,
+        "residual_nn": 0.5
+      },
+      "rmse": 74.06942579425846,
+      "mae": 59.88611379498795,
+      "r": 0.5868936385239053,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.0,
+        "multi_ridge": 0.25,
+        "multi_tree": 0.5,
+        "residual_nn": 0.25
+      },
+      "rmse": 73.95933420819708,
+      "mae": 59.976131266047446,
+      "r": 0.585740135073215,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.0,
+        "multi_ridge": 0.25,
+        "multi_tree": 0.75,
+        "residual_nn": 0.0
+      },
+      "rmse": 74.24953945186184,
+      "mae": 60.43627566064791,
+      "r": 0.5796822071293981,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.0,
+        "multi_ridge": 0.5,
+        "multi_tree": 0.0,
+        "residual_nn": 0.5
+      },
+      "rmse": 74.72741529086905,
+      "mae": 60.13094945677502,
+      "r": 0.5800130795144791,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.0,
+        "multi_ridge": 0.5,
+        "multi_tree": 0.25,
+        "residual_nn": 0.25
+      },
+      "rmse": 74.21981322453216,
+      "mae": 59.92939200885416,
+      "r": 0.5828390256321723,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.0,
+        "multi_ridge": 0.5,
+        "multi_tree": 0.5,
+        "residual_nn": 0.0
+      },
+      "rmse": 74.10993501130625,
+      "mae": 60.00645397470983,
+      "r": 0.5815547313709671,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.0,
+        "multi_ridge": 0.75,
+        "multi_tree": 0.0,
+        "residual_nn": 0.25
+      },
+      "rmse": 74.91761920821608,
+      "mae": 60.22995296678001,
+      "r": 0.5757419471277174,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.0,
+        "multi_ridge": 0.75,
+        "multi_tree": 0.25,
+        "residual_nn": 0.0
+      },
+      "rmse": 74.41130465275195,
+      "mae": 59.99319757853725,
+      "r": 0.5783777458608048,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.0,
+        "multi_ridge": 1.0,
+        "multi_tree": 0.0,
+        "residual_nn": 0.0
+      },
+      "rmse": 75.14834320893223,
+      "mae": 60.40780314031806,
+      "r": 0.5711066994845779,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.25,
+        "multi_ridge": 0.0,
+        "multi_tree": 0.0,
+        "residual_nn": 0.75
+      },
+      "rmse": 74.22081841600534,
+      "mae": 59.85345507863488,
+      "r": 0.581174774780339,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.25,
+        "multi_ridge": 0.0,
+        "multi_tree": 0.25,
+        "residual_nn": 0.5
+      },
+      "rmse": 73.88286908483494,
+      "mae": 59.836312522277424,
+      "r": 0.5829996038436813,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.25,
+        "multi_ridge": 0.0,
+        "multi_tree": 0.5,
+        "residual_nn": 0.25
+      },
+      "rmse": 73.9454834005245,
+      "mae": 60.16915679966882,
+      "r": 0.5801461043272087,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.25,
+        "multi_ridge": 0.0,
+        "multi_tree": 0.75,
+        "residual_nn": 0.0
+      },
+      "rmse": 74.40765014252767,
+      "mae": 60.75466225973284,
+      "r": 0.5718464314189052,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.25,
+        "multi_ridge": 0.25,
+        "multi_tree": 0.0,
+        "residual_nn": 0.5
+      },
+      "rmse": 74.36175450050048,
+      "mae": 59.88842403624124,
+      "r": 0.5773009922617339,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.25,
+        "multi_ridge": 0.25,
+        "multi_tree": 0.25,
+        "residual_nn": 0.25
+      },
+      "rmse": 74.0244385559586,
+      "mae": 59.866540873431404,
+      "r": 0.5789771720824003,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.25,
+        "multi_ridge": 0.25,
+        "multi_tree": 0.5,
+        "residual_nn": 0.0
+      },
+      "rmse": 74.08692319108847,
+      "mae": 60.15633387317244,
+      "r": 0.5760080903428932,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.25,
+        "multi_ridge": 0.5,
+        "multi_tree": 0.0,
+        "residual_nn": 0.25
+      },
+      "rmse": 74.54375846367496,
+      "mae": 60.01616818959519,
+      "r": 0.5730126850108728,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.25,
+        "multi_ridge": 0.5,
+        "multi_tree": 0.25,
+        "residual_nn": 0.0
+      },
+      "rmse": 74.20725982200032,
+      "mae": 59.91742585882496,
+      "r": 0.5745087965083865,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.25,
+        "multi_ridge": 0.75,
+        "multi_tree": 0.0,
+        "residual_nn": 0.0
+      },
+      "rmse": 74.7665303918516,
+      "mae": 60.18702084932642,
+      "r": 0.5683236510810323,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.5,
+        "multi_ridge": 0.0,
+        "multi_tree": 0.0,
+        "residual_nn": 0.5
+      },
+      "rmse": 74.47523606946484,
+      "mae": 59.94044857418521,
+      "r": 0.5695327771801714,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.5,
+        "multi_ridge": 0.0,
+        "multi_tree": 0.25,
+        "residual_nn": 0.25
+      },
+      "rmse": 74.31056890400222,
+      "mae": 60.09834503192214,
+      "r": 0.5694875416301717,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.5,
+        "multi_ridge": 0.0,
+        "multi_tree": 0.5,
+        "residual_nn": 0.0
+      },
+      "rmse": 74.54440439989826,
+      "mae": 60.59193039067593,
+      "r": 0.5643011903952021,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.5,
+        "multi_ridge": 0.25,
+        "multi_tree": 0.0,
+        "residual_nn": 0.25
+      },
+      "rmse": 74.64784325635458,
+      "mae": 60.07814658512858,
+      "r": 0.5652915693248031,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.5,
+        "multi_ridge": 0.25,
+        "multi_tree": 0.25,
+        "residual_nn": 0.0
+      },
+      "rmse": 74.48354770904909,
+      "mae": 60.151990308242866,
+      "r": 0.5650849492997623,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.5,
+        "multi_ridge": 0.5,
+        "multi_tree": 0.0,
+        "residual_nn": 0.0
+      },
+      "rmse": 74.86121135471285,
+      "mae": 60.22290961275163,
+      "r": 0.5606184362638162,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.75,
+        "multi_ridge": 0.0,
+        "multi_tree": 0.0,
+        "residual_nn": 0.25
+      },
+      "rmse": 75.22788976590378,
+      "mae": 60.40615854892907,
+      "r": 0.5515778638179762,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.75,
+        "multi_ridge": 0.0,
+        "multi_tree": 0.25,
+        "residual_nn": 0.0
+      },
+      "rmse": 75.23487666789677,
+      "mae": 60.68298853064254,
+      "r": 0.5490937911714043,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 0.75,
+        "multi_ridge": 0.25,
+        "multi_tree": 0.0,
+        "residual_nn": 0.0
+      },
+      "rmse": 75.4305918247062,
+      "mae": 60.545627405636615,
+      "r": 0.546998825469478,
+      "n": 280
+    },
+    {
+      "weights": {
+        "recurrence_ridge": 1.0,
+        "multi_ridge": 0.0,
+        "multi_tree": 0.0,
+        "residual_nn": 0.0
+      },
+      "rmse": 76.46406815901831,
+      "mae": 61.15968546039127,
+      "r": 0.5267843200468914,
+      "n": 280
+    }
+  ],
+  "fold5_scored": false
+}

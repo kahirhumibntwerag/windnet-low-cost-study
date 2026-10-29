@@ -1,0 +1,13 @@
+{
+  "pod_id": "p8lbvekk47g2e9",
+  "volume_id": "xwbdx55rdk",
+  "hourly_gpu_rate_usd": 0.69,
+  "duration_approx_minutes": 10.6,
+  "estimated_gpu_cost_usd": 0.1219,
+  "budget_usd": 5,
+  "billing_records": "not yet posted at cleanup",
+  "pod_deleted_confirmed": true,
+  "volume_deleted_confirmed": true,
+  "image": "runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404",
+  "gpu": "PRO 6000 Blackwell MIG 24GB"
+}

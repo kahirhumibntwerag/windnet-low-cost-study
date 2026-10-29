@@ -1,0 +1,7 @@
+{"outer_fold_complete": 1, "rows": 518, "selected_on_inner": "multi_ridge"}
+{"outer_fold_complete": 2, "rows": 350, "selected_on_inner": "multi_ridge"}
+{"outer_fold_complete": 3, "rows": 364, "selected_on_inner": "multi_ridge"}
+{"outer_fold_complete": 4, "rows": 280, "selected_on_inner": "multi_ridge"}
+{"outer_fold_complete": 5, "rows": 686, "selected_on_inner": "convex_ensemble"}
+FINAL_COMPLETE
+{"stage": "final", "seconds": 48.1113395690918}

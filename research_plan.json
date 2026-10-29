@@ -1,0 +1,19 @@
+{
+  "question": "Can compact in-situ models improve solar-wind forecasts on the released WindNet 211-Angstrom holdouts without using images as predictors?",
+  "upstream_commit": "a996baa075ecdbd2b1c15533002692e29db43c19",
+  "budget_usd": 5,
+  "history": 4,
+  "delay": 3,
+  "outer_folds": "Original Fold1 through Fold5 from the authors' Fold211.tar release; never regenerate random assignments.",
+  "evaluation_windows": "Identical to WindNet DataWindowParser: j in range(20-H-D+1), target j+H+D-1. For H=4,D=3: offsets 6 through 19 inclusive.",
+  "training_windows": "Use original training script's range(20-H-D): offsets 6 through 18. Preserve this asymmetry and audit it.",
+  "development": "For the adaptive hypothesis loop, fit on original Folds1-3 and inspect Fold4 only. Fold5 stays sealed. Freeze methods before final evaluation. Then run the original five outer holdouts with inner-fold model selection confined to their four training folds. Label five-fold results exploratory because architecture design used Folds1-4; Fold5 is the confirmatory holdout.",
+  "metrics": "Primary RMSE km/s; secondary MAE and Pearson r. Mean fold RMSE with standard error; Fisher-z average r. Paired partition-block bootstrap on untouched Fold5. Published WindNet scores are historical references, not reruns or a paired significance test.",
+  "loops": [
+    "H1: Regularized regression on the same four speed measurements is a useful low-cost reference; compare ridge against the paper's fixed linear/RBF SVR and training mean.",
+    "H2: Adding causal 27-day recurrence and recent in-situ plasma and magnetic statistics improves development RMSE over short history; ablate speed-only recurrence against multivariate features.",
+    "H3: A small GPU residual neural network improves the best linear forecast; compare residual network and convex blends chosen on development only. A negative result retains the simpler method."
+  ],
+  "stopping": "After H3 failed its 2% criterion, add one registered H4 diversity hypothesis before unlocking Fold5: convex weights in increments of 0.25 over recurrence ridge, multivariate ridge/tree, and residual network; require 1% improvement over the current selection rule. Then one locked final evaluation; stop if budget would exceed US$5. No further tuning after final outer scoring.",
+  "claims": "Do not promise or invent improvement. Same holdouts do not mean same input information: recurrence extends wind history and multivariate models add in-situ measurements. Do not claim an architectural advance to WindNet or operational chronological generalization."
+}
