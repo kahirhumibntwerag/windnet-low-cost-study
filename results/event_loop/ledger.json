@@ -31,11 +31,24 @@
       "id": "a163531e-9c25-4c9a-95d3-eedf4f4f556c",
       "url": "https://fixrelay.vercel.app/experiments/a163531e-9c25-4c9a-95d3-eedf4f4f556c",
       "title": "Location-preserving pretrained feature maps and weighted ridge ablations",
-      "status": "running",
+      "status": "completed",
       "hypothesis": "Local pretrained activation energies may retain solar-disk geometry that global pooling loses, improving the training-side correlation ceiling.",
       "method": "Two fixed 4x4 spatial representations, three temporal views, five ridge penalties, two fitting weights; 60 raw recipes plus 2880 fixed mixtures/calibrations. Same original images and rows.",
       "success_criteria": "Beat both controls on all four metrics using the preregistered margins, then pass a training-only stability check.",
-      "result_file": "m9_results.json"
+      "result_file": "m9_results.json",
+      "outcome": "supported",
+      "observation": "One of 2940 configurations passed all four training-side gates: RMSE78.55, Fisher r0.567, chi-square27.02, HSE_TS0.280. The event gain has positive conditional intervals against both controls; other gains remain uncertain versus priorM6. Stability must be checked before freeze."
+    },
+    {
+      "label": "M10",
+      "id": "8c4cdf0d-efef-4a0b-9b32-75ce01718201",
+      "url": "https://fixrelay.vercel.app/experiments/8c4cdf0d-efef-4a0b-9b32-75ce01718201",
+      "title": "Variance-weight sensitivity and stability of location-preserving forecasting",
+      "status": "running",
+      "hypothesis": "Fit-side precision weights may improve balanced margins and make the isolated M9 validation pass stable across training folds.",
+      "method": "45 raw location ridge recipes and 3600 mixtures/calibrations, same images and rows. Require all four gates, 3/4 directional leave-one-fold-out passes, no fold RMSE loss above5%, and positive HSE bootstrap bounds against both controls. Audit M9 with the same stability rule.",
+      "success_criteria": "Strict four-metric gate plus preregistered stability; select the lowest RMSE eligible candidate. No test scoring.",
+      "result_file": "m10_results.json"
     }
   ]
 }

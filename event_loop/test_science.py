@@ -3,6 +3,12 @@ import unittest
 import numpy as np
 from event_loop.science import gate,aggregate,train_aligned
 class EventChecks(unittest.TestCase):
+    def test_stability_rejects_a_single_fold_driven_win(self):
+        from event_loop.precision import stability
+        base={'n':14,'rmse':80.,'r':.5,'chi2':30.,'hse_ts':.2,'mae':40.};good={**base,'rmse':75.,'r':.6,'chi2':28.,'hse_ts':.3};controls=[{'fold_metrics':[base.copy() for _ in range(4)]}]*2
+        self.assertTrue(stability({'fold_metrics':[good.copy() for _ in range(4)]},controls)['pre_bootstrap_passed'])
+        mixed=[{**base,'rmse':81.,'r':.49,'chi2':31.,'hse_ts':.19} for _ in range(4)];mixed[0]=good
+        self.assertFalse(stability({'fold_metrics':mixed},controls)['pre_bootstrap_passed'])
     def test_location_ridge_matches_weighted_primal(self):
         from event_loop.location import ridge_path,representation
         from sklearn.preprocessing import StandardScaler

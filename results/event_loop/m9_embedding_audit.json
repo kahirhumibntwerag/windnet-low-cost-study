@@ -1,0 +1,58 @@
+{
+  "audits": [
+    {
+      "held_training_fold": 1,
+      "image_mean_fit_only": 75.26574024315893,
+      "cache_sha256": "905afd8ddc045c11271674b3c133358ee983be35a762271f60a47828e511eccc",
+      "global_energy_matches_original": true
+    },
+    {
+      "held_training_fold": 2,
+      "image_mean_fit_only": 79.43207776465607,
+      "cache_sha256": "9ac6e58190d59e293f2f98a692401543ca23c2ed7596a6e8834f30e8052de8c8",
+      "global_energy_matches_original": true
+    },
+    {
+      "held_training_fold": 3,
+      "image_mean_fit_only": 79.32230076416947,
+      "cache_sha256": "76232fb0b1baabae8444c5cce58d5ce21f16078d2717aa312db2f53481081a54",
+      "global_energy_matches_original": true
+    },
+    {
+      "held_training_fold": 4,
+      "image_mean_fit_only": 79.47801296785194,
+      "cache_sha256": "d4a892db2c16d45329fc314117b5081f09cc594e38616ffa3549211cc7021472",
+      "global_energy_matches_original": true
+    }
+  ],
+  "fold5_available": false,
+  "identity": {
+    "phase_code": {
+      "__init__.py": "efb6e7445cd7ebd5bcdb4e7e5052d67b3c46913fde1b7f4ed808e63ee8812a68",
+      "location.py": "8af3c6e203ba335aa34007e6b9cb810ea5e376ef523271ccf2f179c412c2586a",
+      "mixtures.py": "5ad74683793ef812b6bc25f155212aba9fc9ea73f4a7ef09a9944940efdc799c",
+      "remote.py": "16c1c196c6dc69055c1ab2fdd94b8b3a9763bd383a090b0c17ab1526b70913c7",
+      "runner.py": "2dca90dc8c93c1c9826dc24165f5d06803e532305cad53e4f222b570b6aad3df",
+      "science.py": "efba874fd5ad437c939040391a8614e04447b0d072cf9bc7c40d16bf683ae8a2",
+      "test_science.py": "fc93b7a8954bfc93e38224148d0a258ee4c3fae6ad3ba85885e15a9a14dd2016",
+      "transport.py": "066b412313801c95c064870a03f3e6c11626fde255ed89c80ed28512cf13dedc"
+    },
+    "frozen_matched_sources": {
+      "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+      "build_dashboard.py": "8328e1d616ada65f68524719d5567eba03daa718156022c6865f00b49ce2de98",
+      "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+      "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+      "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+      "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+      "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+      "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+      "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+      "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+      "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+    },
+    "python": "3.12.3",
+    "numpy": "2.1.2",
+    "torch": "2.8.0+cu128",
+    "device": "cuda"
+  }
+}
