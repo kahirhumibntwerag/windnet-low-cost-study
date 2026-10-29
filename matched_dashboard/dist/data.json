@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T22:01:13.086653+00:00",
+  "updated_at": "2026-10-29T22:18:15.090810+00:00",
   "campaign_url": "https://fixrelay.vercel.app/campaigns/e324d24c-b179-427c-87c1-365b857658aa",
   "source_url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/tree/codex/windnet-matched-loop",
   "protocol": {
@@ -178,7 +178,7 @@
         "success_criteria": "Beat both controls on all four metrics using the preregistered margins, then pass a training-only stability check.",
         "result_file": "m9_results.json",
         "outcome": "supported",
-        "observation": "One of 2940 configurations passed all four training-side gates: RMSE78.55, Fisher r0.567, chi-square27.02, HSE_TS0.280. The event gain has positive conditional intervals against both controls; other gains remain uncertain versus priorM6. Stability must be checked before freeze."
+        "observation": "One of 2940 configurations passed all four training-side gates: RMSE78.55, Fisher r0.567, chi-square27.02, HSE_TS0.280. The event gain has positive conditional intervals against both controls; other gains remain uncertain versus priorM6. Stability must be checked before freeze. Subsequent preregistered stability screen passed only2/4 leave-one-fold-out checks, so this isolated candidate was not frozen."
       },
       {
         "label": "M10",
@@ -189,7 +189,8 @@
         "hypothesis": "Fit-side precision weights may improve balanced margins and make the isolated M9 validation pass stable across training folds.",
         "method": "45 raw location ridge recipes and 3600 mixtures/calibrations, same images and rows. Require all four gates, 3/4 directional leave-one-fold-out passes, no fold RMSE loss above5%, and positive HSE bootstrap bounds against both controls. Audit M9 with the same stability rule.",
         "success_criteria": "Strict four-metric gate plus preregistered stability; select the lowest RMSE eligible candidate. No test scoring.",
-        "result_file": "m10_results.json"
+        "result_file": "m10_results.json",
+        "observation": "Fitting and the grid initially finished; temporary worker disk was lost during an operational restart before outcome export. The same preregistered procedure is being rerun with cached bootstrap inputs. Hypotheses, recipes, scoring formulas, draws and selection criteria are unchanged; failures are recorded in m10_transport_retry.json."
       }
     ]
   },
@@ -20722,6 +20723,31 @@
         "numpy": "2.1.2",
         "torch": "2.8.0+cu128",
         "device": "cuda"
+      }
+    },
+    "m10_transport_retry": {
+      "stage": "M10_operations",
+      "event": "First launch raced with package upload and failed unsupported dispatch before fitting. Upload completion verified, then same preregistered request retried.",
+      "failed_returncode": 1,
+      "scientific_changes_between_attempts": false,
+      "hypothesis_changes": false,
+      "test_accesses": 0,
+      "bootstrap_resume": {
+        "reason": "Repeated decompression/reconstruction of identical training validation splits in each candidate/control bootstrap caused avoidable CPU overhead.",
+        "operation": "Restarted only this phase-owned container in place after completed fitting/grid and resumed its saved prediction bank.",
+        "original_fit_source_commit": "3bf1ce5",
+        "hypothesis_recipe_criteria_or_draw_changes": false,
+        "verification": "Synthetic cached and uncached bootstrap outputs exactly identical, including all percentile intervals and defined-draw counts. Seven checks pass.",
+        "result": "Container restart discarded temporary worker disk; resume failed before scoring because exports/event_controls.json was missing. No result or holdout data was read. Prior public M7-M9 artifacts preserved locally."
+      },
+      "rerun": {
+        "method": "Reacquire only hash-verified development bank, rebuild per-fit centering embeddings and location caches, retrain fixed controls, repeat exact M10 grid and use cached bootstrap datasets.",
+        "hypotheses_recipes_criteria_draws_changed": false,
+        "original_partial_gate_counts": {
+          "strict_all_four": 50,
+          "pre_bootstrap_stability": 31
+        },
+        "limitation": "Worker prediction bank and partial bootstrap evidence were lost. Rerun must report actual new output and compare control aggregate repeatability; cannot assert bitwise replication without those predictions."
       }
     },
     "m7_results": {
