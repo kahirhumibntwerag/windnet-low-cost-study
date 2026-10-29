@@ -1,0 +1,1736 @@
+{
+  "source_url": "https://drive.usercontent.google.com/download?id=1JJjXjauT02z-RevZZ-8nQmHv9wr9wDrT&export=download&confirm=t",
+  "channel": 211,
+  "release": "authors processed fold archive",
+  "members": [
+    {
+      "member": "Fold1/Partition40.npy",
+      "fold": 1,
+      "partition": "Partition40",
+      "release_member_sha256": "1cd525b9518ae2dac8d0a3ce294d233dcabcc94a080ae099b6cc373f1d66c9bd",
+      "output_sha256": "e2b163190290d87e4a8aea08107ba0c21ae492f1885c114d8c7fc881b6b17910",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition45.npy",
+      "fold": 1,
+      "partition": "Partition45",
+      "release_member_sha256": "9f66ce9a4eeda87823d8d5c5d724ec22ac5dc4b5f88354a84e4a284ad1c99f28",
+      "output_sha256": "366889e8916829503aefc2408349eb846b444a95b9135c1696cb329beced7dab",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition41.npy",
+      "fold": 1,
+      "partition": "Partition41",
+      "release_member_sha256": "17c398d41e6c6ce39a65fd565c14a0d957c9deec619efcafd1a9faa8e763514c",
+      "output_sha256": "5d335eebcf58f82c498ea58281c7c119748f63fe78b22a5db97647ec6e514b2d",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition56.npy",
+      "fold": 1,
+      "partition": "Partition56",
+      "release_member_sha256": "30138e3795d5cdaa0d9f60ac15fba7b59abb9f31e8e06c536bc3708b0afd63e3",
+      "output_sha256": "417586ed9d1326481b8bf4767a84064b4e6c0547674ac7efb9ba5da3b227116e",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition19.npy",
+      "fold": 1,
+      "partition": "Partition19",
+      "release_member_sha256": "c2ba55d907854f97d5fea93f610b3a134975706f632fdc6f20cebce2572cd4b1",
+      "output_sha256": "324bbe6c3cf7ef227ff467496552d2ef594b9c316eb5830bb0463e8799ce6a17",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition44.npy",
+      "fold": 1,
+      "partition": "Partition44",
+      "release_member_sha256": "cb953dc3d6790da158d94853f48fff410460ad001a950e4eb0f532da13e5d391",
+      "output_sha256": "c42c9a44018fae23c2adc55d346a52d0f7222dc5628c0d5bcf2dd4d6e0a0772a",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition51.npy",
+      "fold": 1,
+      "partition": "Partition51",
+      "release_member_sha256": "330f2fc4d6d6080d526bff4e09be3dc5cb7eb879dc74a8ef437d869d2b0e6ad8",
+      "output_sha256": "3228638376aab198d5f32ca79fbd330c9943a17ce170e1f13a065cdfbb9d44c7",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition89.npy",
+      "fold": 1,
+      "partition": "Partition89",
+      "release_member_sha256": "81ced777bd78f3cd6c72e01aab96a91b037683fe5a0ddad99f1e1773d7a1f6a0",
+      "output_sha256": "b0f2c1981d46e024acf241bc02e0c5b7102d5a628b4cdc00e20b35eeb486209e",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition52.npy",
+      "fold": 1,
+      "partition": "Partition52",
+      "release_member_sha256": "facc0ddc8df184e949666166449c626ff57ba8bf492ca74de89aee6ab2f0cd01",
+      "output_sha256": "6fa64879fe51a353f9eaaf634996f4883f7048684f1abd9bdf8c00a25371a741",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition84.npy",
+      "fold": 1,
+      "partition": "Partition84",
+      "release_member_sha256": "37e760beed9f5b913e84197128f5aebcef5d3079d940caec99c0d2051c1ca2d7",
+      "output_sha256": "c9191a56db637c744aed833013f36b3e7dcdfa606f8b11e937c84674760b129c",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition131.npy",
+      "fold": 1,
+      "partition": "Partition131",
+      "release_member_sha256": "7114f286606aa06b32327a9283e854bc35beb70abe5e6310d1395d7f2fb9bfc8",
+      "output_sha256": "27de981bcbd24e9319ca2b98e7f06da7a2b8247f2f320903f7a08b7443c5ef7f",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition15.npy",
+      "fold": 1,
+      "partition": "Partition15",
+      "release_member_sha256": "671127a8277d0b4391fc3b44488f43f466f88e5a8716868b7b9864a98fb80708",
+      "output_sha256": "30fb1c213217d0bbd523fd2acea6b05bbe0219b0ed825b20f3417a77e3c2740b",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition154.npy",
+      "fold": 1,
+      "partition": "Partition154",
+      "release_member_sha256": "a0a3264ce2f8d09aa888e07321a23b87654ba32b845eb737184a58f22a60af3d",
+      "output_sha256": "e5f0a1de88bc3ce88983d2c76df2ffadfd7414b5bfcab34cce107828df6ef58d",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition92.npy",
+      "fold": 1,
+      "partition": "Partition92",
+      "release_member_sha256": "b1e349311eda05ffd1b1679fbd1f01d78825358bd7279570bf691734127e1069",
+      "output_sha256": "8748eab7c9d1fc987284dff248c9dc02423d7ef13eaf5dcde9bccfcc9cd78976",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition136.npy",
+      "fold": 1,
+      "partition": "Partition136",
+      "release_member_sha256": "d80e7efe595f0244128958efe86694a03f947e458168c095b143029372a35750",
+      "output_sha256": "ff8aa2f5c98ffbf6af673d9bc287f3a69682f6dfabf4d5f36a0743ef4d69a7cd",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition103.npy",
+      "fold": 1,
+      "partition": "Partition103",
+      "release_member_sha256": "666225e1ff1fc13543e739b2f089691a6fb4e59accd7fed79cad8861388f03e6",
+      "output_sha256": "03dd5ec22c946c70ad70d369b2326bd638e9ca15016723349114f42a7dd15ad4",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition157.npy",
+      "fold": 1,
+      "partition": "Partition157",
+      "release_member_sha256": "43010553801d40a6064d13ca6b324554da26cc999af888aebf3fd976ebf07012",
+      "output_sha256": "d33037cb1856648a135852a2c01a236ebfb02d3316fe0b0403d0dd785c97a92c",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition88.npy",
+      "fold": 1,
+      "partition": "Partition88",
+      "release_member_sha256": "3c324e56e341f3210c8e591f91fbc3a0ccfdcc4b9c74865c9fd1c03861ff4011",
+      "output_sha256": "7e139cc767b6944dce3580e297a67b358c4538a8236be2385d8624d4b7e0b884",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition36.npy",
+      "fold": 1,
+      "partition": "Partition36",
+      "release_member_sha256": "889058d0887f718c0be482c20c5cdeab272cada43f1929629d157560444f1b65",
+      "output_sha256": "f54399f8a3952335dd9af4254a6eac3f3090c1145b834a40c94e142f7c065b85",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition21.npy",
+      "fold": 1,
+      "partition": "Partition21",
+      "release_member_sha256": "6ab3251e6027d5d4fec1b8c79f6353a3abbd0c0e7afda0cad68300400bb5f7f2",
+      "output_sha256": "47fc47c979f0bd552258c730f2dc185e4cabb9301fc5da6abb10e9cbd2473cb1",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition50.npy",
+      "fold": 1,
+      "partition": "Partition50",
+      "release_member_sha256": "ee28b9ec5075078a758d35226999f8405e749c9246ca6c7eff3e98cf52916309",
+      "output_sha256": "03ef5c12360c5f30f34a6ed2c4126cbdb3d96675b037d4e5e1dd6669bc74e176",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition79.npy",
+      "fold": 1,
+      "partition": "Partition79",
+      "release_member_sha256": "ebbb5e20c45c422123bd6d55951cb8bb2d2b34e11aa395a5bae8e7757ca6a878",
+      "output_sha256": "ea3243101f5498b32364d0c6c631a4299f2173a6d4b6b060747d4ffc51c6c064",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition2.npy",
+      "fold": 1,
+      "partition": "Partition2",
+      "release_member_sha256": "6fd20966190b31fe9f5eefa78bcb1bf95a4143e0fcf92dc9ada45c2216f5261d",
+      "output_sha256": "b07598a31df0e2872cc94ab19b7a03676dee22055217ac53805e0f471b931ea6",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition87.npy",
+      "fold": 1,
+      "partition": "Partition87",
+      "release_member_sha256": "9fa2d073291d8d91427e587f8cb98139140892ab7910088506aea7b1eec11aa6",
+      "output_sha256": "73909ab3fe76eb723bb03f757786dc16529d28a275cd2c23e271968bdc266b67",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition61.npy",
+      "fold": 1,
+      "partition": "Partition61",
+      "release_member_sha256": "3679f24cdf0b0e96daee9f8fbfc2bd245372efd27f0e46dd7feb963ff441b4bf",
+      "output_sha256": "35a1ba789cc5095d3e6ed002da8df40326cc6df70ea5bf6eab6e976a7966b24d",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition28.npy",
+      "fold": 1,
+      "partition": "Partition28",
+      "release_member_sha256": "1361eebc113cee0efdf6c457e43c1bc91c0b2a0eeaef0469c7b9f81d8ced63ee",
+      "output_sha256": "2aab8d0794a373b4597d25f6150afa105b10abcab8a6a9e5a522406e6b332ec6",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition29.npy",
+      "fold": 1,
+      "partition": "Partition29",
+      "release_member_sha256": "4f9f0fe0065408982be26dcf42df7f468856e7f9e2bf4261a4661afd01adc06b",
+      "output_sha256": "02e65b4aa5541965f7e1aa8bb347870855be0ca3ceb703924c8133aeda0b7945",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition57.npy",
+      "fold": 1,
+      "partition": "Partition57",
+      "release_member_sha256": "156d6b7a879c2e66393daffc489c025bdc9244eeca546e4a1236385f79afdf31",
+      "output_sha256": "f9014532c9117b434745dc67361e694378040f6c75e97b8b47a7bc507917351a",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition83.npy",
+      "fold": 1,
+      "partition": "Partition83",
+      "release_member_sha256": "350050100f41216b8fa46c57ed832f9658d02a5d7c27709ac0e21b13fb661a65",
+      "output_sha256": "a098e4fffa424756f2973d36a494f3386ca999e0677fa743d2c8524276670b29",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition135.npy",
+      "fold": 1,
+      "partition": "Partition135",
+      "release_member_sha256": "2d4aa083fcd68639f6eaf34b7e77ef4ee48121133dc49fa52e2fff5deb2df5be",
+      "output_sha256": "cbf4bb611e9109c365a1e0ca40f3623497e422c823a2fab9e6a32eb539c68fc4",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition151.npy",
+      "fold": 1,
+      "partition": "Partition151",
+      "release_member_sha256": "b1413a4482c9a13dfb1f16f1b27e3dbe8f9865ffb9782c1f49df4eab4215e624",
+      "output_sha256": "02495636a88b7a2d71a219f609830b9d08751657ae9600aab5aad8cf6aa9ee99",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition111.npy",
+      "fold": 1,
+      "partition": "Partition111",
+      "release_member_sha256": "addd22592eb1a8a4e826114702189ca9157c84a514bbbdb56ca4874c85dcbc60",
+      "output_sha256": "2015f245525371b08afd2e1c315c7199abe68daad5545f0195bada69e35b0295",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition146.npy",
+      "fold": 1,
+      "partition": "Partition146",
+      "release_member_sha256": "24bb7b12765f3b8bc0e6aa03940e0611f319e8e6d30f5dd5bd94758ccad05f2e",
+      "output_sha256": "a994938973e9884b71c151cb2b4cdc4616606b35bd7a9f6830f81a83b9d4f130",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition86.npy",
+      "fold": 1,
+      "partition": "Partition86",
+      "release_member_sha256": "a2641d832019479ce11fcc6352df77be468e0432460d818c7908dcc7973042b7",
+      "output_sha256": "680118b655b7289d7b248f18128ca717bb696ed3184a6199a47fbd11fed24569",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition85.npy",
+      "fold": 1,
+      "partition": "Partition85",
+      "release_member_sha256": "41bed289719d8ece1895756482cbff2656a1fa500f50f9ee3b17307a5182ce4c",
+      "output_sha256": "bf3599437356a670903d3010396fe3bbb1f65ae56d7b1e2db49c050efbcbb7e0",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition53.npy",
+      "fold": 1,
+      "partition": "Partition53",
+      "release_member_sha256": "38bd2f9c837462f3c8d3eff1be1eff6752182be8507b1d50e92407ea672c8ea4",
+      "output_sha256": "6247b1e809c97be8430f7170e6d97b2007bf1868109cbe1cf347344886e0df3f",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold1/Partition62.npy",
+      "fold": 1,
+      "partition": "Partition62",
+      "release_member_sha256": "30b899af923f3b6dd01210bf51e7a0ae0a20d4a510b4a6a660feeb48055b67c4",
+      "output_sha256": "f47233ef3ebbf43bc7417ee6ac369e606b48aa7bc835e2ce0863f83dc0aed1f8",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition124.npy",
+      "fold": 2,
+      "partition": "Partition124",
+      "release_member_sha256": "d081a07189c76cf9d27fe4b1065d6ba662c41efd555f2a571273a1d3f3d78e56",
+      "output_sha256": "07f3d6000c92d01186aa87e99f69688dfa700713928c48a2f70125531ba501be",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition132.npy",
+      "fold": 2,
+      "partition": "Partition132",
+      "release_member_sha256": "ae056fb86200099ad3ac5998058980a45bd0b828e2e766b22c012d53f48a7efe",
+      "output_sha256": "9cb3589add2a010b68a3709a57a4c1958891d0332ddf6e91110a5a4502922c3f",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition99.npy",
+      "fold": 2,
+      "partition": "Partition99",
+      "release_member_sha256": "5382083b481086bd5b0a5ee9f910bf1f11b6204e62447dd9ad8a3ff46b4d2a6a",
+      "output_sha256": "d54c8a667c3c418bc90c5cbda4a52ceb67a596ffb0d361b6dbb5ba6fc1bf4ecd",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition26.npy",
+      "fold": 2,
+      "partition": "Partition26",
+      "release_member_sha256": "0bb1c3de96524d9b010275625c5b09be1ab606821a179762f7c7ab2ac5151832",
+      "output_sha256": "a4ea35027999e24b9a92a6233184e9d573ef1eee02fc94f5923f1b80f35eca4c",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition8.npy",
+      "fold": 2,
+      "partition": "Partition8",
+      "release_member_sha256": "ddd9476eba665a6f3ae948433db0ed094406ea2324d111a7c7af1e6e7a803785",
+      "output_sha256": "1110728bb26621e079039c4b971fdbd259e325622feff23cb3bd90a652d5b462",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition59.npy",
+      "fold": 2,
+      "partition": "Partition59",
+      "release_member_sha256": "a5d8cc5696b11679d75aa88ad6594b79c0bfd73a1baa654d19f4b8baad65c9cb",
+      "output_sha256": "bb605f26d33f2c8d63fc49d2390d29f8e4a4512d23561717df2165f4e1b3681d",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition55.npy",
+      "fold": 2,
+      "partition": "Partition55",
+      "release_member_sha256": "9ec045a1c2c35eff5b7cc01264b4618c7d1d48f87c200bcea828ff2733c8124d",
+      "output_sha256": "6f42df3a7156a3d56f5e00a90a0f15c805004229efd7068a82f5ec6e0711613a",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition130.npy",
+      "fold": 2,
+      "partition": "Partition130",
+      "release_member_sha256": "93ff4cb0e63d43003da8f265b5599425aa168f03c084ab74913c22dd6ea1c6a1",
+      "output_sha256": "c93a74730b7b2026ae77bf9189d8d37751c64b9ea0ef2d2b15752a6f2d23a53b",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition20.npy",
+      "fold": 2,
+      "partition": "Partition20",
+      "release_member_sha256": "764e128b6510ce43754970e49ff62b125cf3b75eafb54b110ac7b6cbe98945d7",
+      "output_sha256": "3ba0a59cdfaf0ddc227ad607ab2051d04155fd3c115aa3f60af37168eb5f265e",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition144.npy",
+      "fold": 2,
+      "partition": "Partition144",
+      "release_member_sha256": "7f27cb608a2c64df6de409607e00c93b4769a14499aebb19367ae53625668139",
+      "output_sha256": "958a801e8fa2f06a40d9cff2d88c9fd7241b88c563aaf5360cf10cde1f362945",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition91.npy",
+      "fold": 2,
+      "partition": "Partition91",
+      "release_member_sha256": "b795ab90911f9dfeb90aa5a703ba253f58cd36afc833f021fb6e7bfbb5102c03",
+      "output_sha256": "2bbec5e12cbaca263e1d706efd4ff761b662db76c0934d6b0e2d982a4577432e",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition66.npy",
+      "fold": 2,
+      "partition": "Partition66",
+      "release_member_sha256": "7ada202586e40adace770e9a185df567792adb3ea8e3b52086bba61330390101",
+      "output_sha256": "0bbaaec2b8d46082f2645484e30b691dbb2a1f9e4acf0c1fab0a7bcead74e317",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition65.npy",
+      "fold": 2,
+      "partition": "Partition65",
+      "release_member_sha256": "763d928d3d5a44afc150368c43adef22151e4c97d9647fcb8e9db6253f8e0bac",
+      "output_sha256": "e33e116e943803e3ae85396643e6271be8bd695a22eedeffec37e42fcb862e05",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition23.npy",
+      "fold": 2,
+      "partition": "Partition23",
+      "release_member_sha256": "5b72dabd7169ef9d94676e6e1c8c906470c51dd9564d075aa438403617147aab",
+      "output_sha256": "a80a52ef839d2ff8a98494d356298ba87e205676800540cc2d23514ee9460536",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition94.npy",
+      "fold": 2,
+      "partition": "Partition94",
+      "release_member_sha256": "f8e5049def3fee3835d45c61708140b6bf80863ca851116adccc1391fb2f32e4",
+      "output_sha256": "e550a499a4235f6c9726d4c86632df291f79e9e8043b61d6e8810dea7f06475f",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition133.npy",
+      "fold": 2,
+      "partition": "Partition133",
+      "release_member_sha256": "1ccc340ca208b5050f777c11de4bdec7b724c3c1566b5b04da1c046b5b8af05e",
+      "output_sha256": "61366a5b5d46ec1c4ee4daeaf867e02d6c80b9d028a66ef2f36aacbe3869226b",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition145.npy",
+      "fold": 2,
+      "partition": "Partition145",
+      "release_member_sha256": "dbd77ad773649f28e609f2290c8c009cda01a779777823a1fc6ef2fd880f1302",
+      "output_sha256": "2cdfe4a235eb4be858308a8e9d6280bd4c55f75d00591f4108fb9f2da15ddee0",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition137.npy",
+      "fold": 2,
+      "partition": "Partition137",
+      "release_member_sha256": "7d9144dbe8c84ad7641420e5c7300c66ceae125038a904bee3adb388b333ef93",
+      "output_sha256": "9f71f240aa3a04552e174fc9be2c88734383a6a26e2ccbca2813c59a58d6e757",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition127.npy",
+      "fold": 2,
+      "partition": "Partition127",
+      "release_member_sha256": "6f68ac925946eccd1d9d2f7447a8614811b6d72553469041391f4e691dfae913",
+      "output_sha256": "c453f09212aef897d915ba29f33873f6f2753a3e4d67f1df504c11518fa3af9d",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition48.npy",
+      "fold": 2,
+      "partition": "Partition48",
+      "release_member_sha256": "8385f9da7a8a4c81817cd940cf0b9e78740a50e654033174e156d5bc268af27f",
+      "output_sha256": "23435ae3421423d61d43462877ad54cbe78878ce37769099de45c865cc1894e5",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition156.npy",
+      "fold": 2,
+      "partition": "Partition156",
+      "release_member_sha256": "b9ac1b6a6a2a399b8d4c5f8223a0800bdaeef6ad281886917d1925c2131306ed",
+      "output_sha256": "07388b7212e94700fcdbd872e2f406513422250abcf527be340309c9f3b73670",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition152.npy",
+      "fold": 2,
+      "partition": "Partition152",
+      "release_member_sha256": "135f381a3d7b976e0143a3238f41f546b7ea20fd358044903f69ae3a118ed7a3",
+      "output_sha256": "91c27d8edf9c2a90caa291efbae5ee16797b5f883ab9f5c25b47fe4ef58f0503",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition27.npy",
+      "fold": 2,
+      "partition": "Partition27",
+      "release_member_sha256": "bd8e4f31e892d56ea808c7ef09acfdb74b1bb5e5e310305eb6f9ff32c5472c43",
+      "output_sha256": "838cdaf9ff215d417ec3b435e2b3380d1c03b20c1f8e9cdbc76dd7838bf57fd6",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition6.npy",
+      "fold": 2,
+      "partition": "Partition6",
+      "release_member_sha256": "c5890073529bab87680586d93d24ba2d51f84bced02a6a936c6d4182a711fa77",
+      "output_sha256": "b31d23d6818456ddd90b9b00eb748af06fcb8cd25e8f77e1e91683801ffb4c40",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold2/Partition67.npy",
+      "fold": 2,
+      "partition": "Partition67",
+      "release_member_sha256": "48e96d793a8b5c0cf2be2f808f5570e5e14da77a1c571657b8cdfd125fcdb4b6",
+      "output_sha256": "c840bf33f6f284f30947c481970095a21f6e6f20569c79649959d7c499dfaac7",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition39.npy",
+      "fold": 3,
+      "partition": "Partition39",
+      "release_member_sha256": "72e116ebd0265b4cebb155b48ee400ec528de73c2c5e97a56ac6a5725c534231",
+      "output_sha256": "f5915df31f566129251e1ee825fc07101f84e732863b304592d44bfe5b63b27f",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition96.npy",
+      "fold": 3,
+      "partition": "Partition96",
+      "release_member_sha256": "97661976ecc03e03a33e1b826c0471fd4331adb211e4f150379028637ab7cfdc",
+      "output_sha256": "6ba649c40e51dc075b7d747ed7782a8252f1643b30003d936e57301ef0b4f6d0",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition11.npy",
+      "fold": 3,
+      "partition": "Partition11",
+      "release_member_sha256": "37b14506440a938d163673ad3f0ede9fb210b8631dd8bd5b9254dfb5f3a0182b",
+      "output_sha256": "1c8f5d5de609050607a9bf5e3856f2650acb4b322c8eaecbbb5be43e56782881",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition143.npy",
+      "fold": 3,
+      "partition": "Partition143",
+      "release_member_sha256": "789729dd5b55b0fdf65df616de7da30e617abb062e7c32b4543e58b8c412670a",
+      "output_sha256": "d418336284a60f747d36ccaf1c3aea9aeb7b7e8fb82097d5e62d794261662347",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition126.npy",
+      "fold": 3,
+      "partition": "Partition126",
+      "release_member_sha256": "6ac16c2a3480c7fc7a7f27af3f11511edf690f1748e51c3a575abfb4942a4747",
+      "output_sha256": "67e04f36af37425470e13d60000a53e62ca56de530d3f82293ffff511b52384e",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition24.npy",
+      "fold": 3,
+      "partition": "Partition24",
+      "release_member_sha256": "c6feda8102fcedca28be2bb91c7af57725886fb921fc512966728bcf0149d0ad",
+      "output_sha256": "70d8a390f99054b69e5834d58f36219f1ae979898446f53e3cbc1736bd7f4480",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition54.npy",
+      "fold": 3,
+      "partition": "Partition54",
+      "release_member_sha256": "0dd87dc3707c72caa22f9cdb2a987056242b05240e829afedc518c4524b7b8af",
+      "output_sha256": "88ec83bbd7a5004e768e8f93241fe6087c68cf05e51b8fbee22fd2ebb7ca3b88",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition60.npy",
+      "fold": 3,
+      "partition": "Partition60",
+      "release_member_sha256": "458df0ae4ade0fa7b30a596d2c194e27a8cdc1c230c93bbe1af003bdbf183baa",
+      "output_sha256": "9cef0894ed412407b138d3cbe54e7664d80ad63f5e2f5c9b09f3c1a50b26755d",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition1.npy",
+      "fold": 3,
+      "partition": "Partition1",
+      "release_member_sha256": "21b3f1fdd07bda8a1b0c0f6db3314064a63344d0ecf77692c66a3ae51c05c853",
+      "output_sha256": "ebe0fedab50d6a18c0d23f150d01dce5b2d2cca7c0b84729fc0645f352b791c9",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition139.npy",
+      "fold": 3,
+      "partition": "Partition139",
+      "release_member_sha256": "7a614c3c50400332ab11970ae2ac5e5ca0b9c3f9d6da8d7388071adccba937f3",
+      "output_sha256": "095f697ead51af46421954558433b334b2f06ee8219edbd627ea15d777bb2b33",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition4.npy",
+      "fold": 3,
+      "partition": "Partition4",
+      "release_member_sha256": "bcca6cd75e1214d95c3f19994cbf39d3d2d48326c1a48880853363ad0e86fb7c",
+      "output_sha256": "1bd34d17dca9da4debe6fb14a9c810f099c46bea6bebe7f9f9a7783e830ea84d",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition102.npy",
+      "fold": 3,
+      "partition": "Partition102",
+      "release_member_sha256": "b50a091a4e6361e802c953e25d4e08809c3e3672da295b96cc40235ef49f4a1f",
+      "output_sha256": "4bd8784a77c7108d947e2522ef6ccce7aef27ee0d75857afdc03b13da93b5538",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition110.npy",
+      "fold": 3,
+      "partition": "Partition110",
+      "release_member_sha256": "30e309f5ea60f40d422fe486592b76bc5b7c194fe34426516470346564298273",
+      "output_sha256": "b7266b4386633f175b4c463664c898d13bbf6bd7d0f2780e9e3eddb6170aafb1",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition90.npy",
+      "fold": 3,
+      "partition": "Partition90",
+      "release_member_sha256": "c48c0781672b5b1ffbe3901efdc673118a5eab3a361aa2676eb70c79bb1371e6",
+      "output_sha256": "dc84d5c8530ea108df28f599b20ca8c2aec55c0e5e2b8072b1f09952175e216e",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition116.npy",
+      "fold": 3,
+      "partition": "Partition116",
+      "release_member_sha256": "887f880f8df9d52a1252ec307dce2de5e9473e38d47f73539843b360587b11cb",
+      "output_sha256": "c82209579bf721455d6679d0b277cd0724a47c813e02422189d264a7ac7da29c",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition134.npy",
+      "fold": 3,
+      "partition": "Partition134",
+      "release_member_sha256": "dd4dd360b515a4d16f7ec6b7cf9f3898d23cbcad810d6cd0855a51cb45fc7824",
+      "output_sha256": "ef60b26494cb000707d09a70a87f57df6f72c6bd7be563e50db3a5e193e5bb21",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition43.npy",
+      "fold": 3,
+      "partition": "Partition43",
+      "release_member_sha256": "e6e2eb27cbe82c0c6bc0d4eb9b152b3fc039abe19f50d7269c1c4e7539379da3",
+      "output_sha256": "02630ab12abeb393b319bb17828485e41d390f7b5d642d8e6dc6aa65d5aae75b",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition9.npy",
+      "fold": 3,
+      "partition": "Partition9",
+      "release_member_sha256": "cbc6df2f98b1f833a6b997232ec0e45148ec042b1372941a1932652b9e395e2f",
+      "output_sha256": "d55dd6cac49ffb81fa7996e3d215f406a16ca4aed272b72590ee9a9a20b4f747",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition47.npy",
+      "fold": 3,
+      "partition": "Partition47",
+      "release_member_sha256": "b53f0c8f25a19e7f5a0cb49760f88203431d6c4218aa973c2172969a6eb980a8",
+      "output_sha256": "ee49e2811ab248d6f26484017676783173521c024acc715d2abb94db3c8d6541",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition93.npy",
+      "fold": 3,
+      "partition": "Partition93",
+      "release_member_sha256": "bd77e1543757043acc30c231764a781fceb915d33c5a3d0f3b6c1f9d13ba8909",
+      "output_sha256": "1ed180eeb728973ead4d88bc343b308ac91b91acc7b6a5e594bb8767768cef97",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition10.npy",
+      "fold": 3,
+      "partition": "Partition10",
+      "release_member_sha256": "7f3aaa101ca968f6a491eb319b030825af0f497b74e0359906ec3cadcac5a71c",
+      "output_sha256": "7bcc41102b74596b5319e4be06c2bbe53d6fa7924f1a29c53baf3c07b9b11635",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition115.npy",
+      "fold": 3,
+      "partition": "Partition115",
+      "release_member_sha256": "e32288830931a34568cc2753682db7b2a436ed74f09f77a223420586d9c914e1",
+      "output_sha256": "f9254eb2ff3bdfc443e49a3de147f1908e2e522fa55e1c6745d0d3cfb97b06e5",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition123.npy",
+      "fold": 3,
+      "partition": "Partition123",
+      "release_member_sha256": "4553399120d37e1e06feafd4e656c2b1a4085a6d38927bae2c7bb427561b29f6",
+      "output_sha256": "1eb1e0495db4ac2fdc048337c235cc7eb3b3a301224b5375d229420d24aa45f5",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition117.npy",
+      "fold": 3,
+      "partition": "Partition117",
+      "release_member_sha256": "5c00de4c6f7059e7d7ccbae04cc07ca22a8691ace9e413bac1ec7a170a8a7965",
+      "output_sha256": "824b835e96ecf560e74e856f1e9b410e07bdde1eb4a16b0ca5ad4a01c0457327",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition153.npy",
+      "fold": 3,
+      "partition": "Partition153",
+      "release_member_sha256": "cc4058db4cf8762f2a2df18df4242ae4d48a164ff0bd69c981ca40e8e52eea75",
+      "output_sha256": "f47b50be56f5b4feb24a5f1170a7b0579366c106443e80cc58de83209da368b1",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold3/Partition18.npy",
+      "fold": 3,
+      "partition": "Partition18",
+      "release_member_sha256": "4c2c1f847334a8f3bcd0a8ec57ba07d9cbaeaaa8b2ce9fe10f37996c2751d858",
+      "output_sha256": "1f243c970f48efdc630850b2ed00aee50c976d9d2bdb5541c7e58a28cef18ba4",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition150.npy",
+      "fold": 4,
+      "partition": "Partition150",
+      "release_member_sha256": "a2a1ef0f8def8aa017ab443eef88df338ae0ff83a0a2dd8a9445e80c6f36b047",
+      "output_sha256": "62ca0a2d9ac130e2cd681df9ea88039affc234f7ca8584ddf9808338f4333b6d",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition119.npy",
+      "fold": 4,
+      "partition": "Partition119",
+      "release_member_sha256": "0bd764bd542b24aec5c6c245e3c02071b3f33b162cc617761743e3b3afba513b",
+      "output_sha256": "a79e0cd3dd213c0a9a07eca8ee3c88150226b81469aba2395dcff190341b6544",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition140.npy",
+      "fold": 4,
+      "partition": "Partition140",
+      "release_member_sha256": "7d4e8e064d476311aaf4c6b272d9a90c804071e5c516af44aa9d44cf0f67eb7c",
+      "output_sha256": "82b51923421b3079f271e6aa3202d69927432f27c2c03502f053e460711d0c4f",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition148.npy",
+      "fold": 4,
+      "partition": "Partition148",
+      "release_member_sha256": "2cc085beca77d13cebcd589e1d62502a84f7bef912a98ca0d98d50dff3e1a6a2",
+      "output_sha256": "a4d9f8e476230314dbdd6c5925cce8f85a1ca3a3f7158d7bdbcf242270e5b66f",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition37.npy",
+      "fold": 4,
+      "partition": "Partition37",
+      "release_member_sha256": "495a9d86cb0e067558383d08452bafff3433f1f754791a80fde5b69b37edc941",
+      "output_sha256": "8a2d8507f576be483bbe496a7a00571f8bdec66d91b5d094e18fc764c368ab8c",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition81.npy",
+      "fold": 4,
+      "partition": "Partition81",
+      "release_member_sha256": "5b47b54b21d8ef5cd6b56f3989e511c47dec6107da97482f9410f8e87aad2191",
+      "output_sha256": "7369e03496206926e3a6471854192c10005a96335e6764885f9fd6ce2d411a8d",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition149.npy",
+      "fold": 4,
+      "partition": "Partition149",
+      "release_member_sha256": "b6325c7022fd66d447997e3e4e28939cbf034e4669c7f821d3f28f41806df959",
+      "output_sha256": "91753043862c3ca25faefdcd298515ad874150b73c8f91a2aeae23b8b0e6db9a",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition42.npy",
+      "fold": 4,
+      "partition": "Partition42",
+      "release_member_sha256": "e000849f5e9b50e3ee6c146b862da06f6c4353a603e535b748c0cbbb3bd34bda",
+      "output_sha256": "cb73a8e0ff141c45fb7b71452656e4052cce1b54faf38bfe08a66992634df433",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition82.npy",
+      "fold": 4,
+      "partition": "Partition82",
+      "release_member_sha256": "df929877a59cf48e4195a91bc01f22251216b4f948897267aeb564cadec73d9e",
+      "output_sha256": "6853f01dbfd9e87fbf4b646a55e1d763ee9b2b49a67077b35487a25a57f31e2b",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition38.npy",
+      "fold": 4,
+      "partition": "Partition38",
+      "release_member_sha256": "09351c86f44e1920184d53c3c46739de0a053116f8ffaefd29328d43fc808614",
+      "output_sha256": "c28fe36c25efbc7d7d6bb26b1299a28a0619b82406d548c614e492d46b2e4383",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition155.npy",
+      "fold": 4,
+      "partition": "Partition155",
+      "release_member_sha256": "32ecb446fa3a00436dfdf3fcb970cf8a0b04c1672058f9bb5408edb9d9cd3bdc",
+      "output_sha256": "4ebfa317462f928ff613dbce659111943c5f59231153915fe9f9dbd9dbab2e94",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition98.npy",
+      "fold": 4,
+      "partition": "Partition98",
+      "release_member_sha256": "17bbff1803cfecb481b51b41798752749989bc3d49e633e7bfe03261ec2220d4",
+      "output_sha256": "fee6f76f8113316b067c92d2b8a3e3fee2ff229a486d60126c546fa53aeca00f",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition63.npy",
+      "fold": 4,
+      "partition": "Partition63",
+      "release_member_sha256": "3565b09306f483bc5138cfcf6f082bbb731c329d2693fca0bcfda6e7f2f5e039",
+      "output_sha256": "abbb8c410227c675ecbe496821dd954eefe09abafc7f217e57014cc0ec8fdeee",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition25.npy",
+      "fold": 4,
+      "partition": "Partition25",
+      "release_member_sha256": "239c15f893e7f523e3d0061a43db87b7c22a8c3bf281f2e36e1e8937a296fcf1",
+      "output_sha256": "37219820c40ff67b7678a54d794d6060c8636eef3fd760d6f976305bf1fb2ca8",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition129.npy",
+      "fold": 4,
+      "partition": "Partition129",
+      "release_member_sha256": "069299128b9c9daec9780179ba082d2f4f9b6969a41ed98ea37761f8f01ca9a0",
+      "output_sha256": "fa6fbc89607306be180eb3cdf4528e18fa8028a8ac12ef552f15f7bd74d99e1d",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition100.npy",
+      "fold": 4,
+      "partition": "Partition100",
+      "release_member_sha256": "d25810f686d5591156ec35e02caa39e39b8651921adc006eed57c9c48bc7f90c",
+      "output_sha256": "dc2e28f5e9572edc41ad1896ae0fa00e010a62f68cccca4cd09585fa3418f52a",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition120.npy",
+      "fold": 4,
+      "partition": "Partition120",
+      "release_member_sha256": "cf9b200544a76e7f120b8e68edd2e915d744becce222655e254921a672991f45",
+      "output_sha256": "5cdc6d6bed41a37a3fb49f2ae78b07bd10f1e9ab35daeb8d726d335296bdae5f",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition105.npy",
+      "fold": 4,
+      "partition": "Partition105",
+      "release_member_sha256": "440af53c44fc4d944e8ddbd20296e76d08557deff6fecc4b85acab4f5092020c",
+      "output_sha256": "72eacfed63c51298fb550030acd9b608ec7e8c4d35b4d2070f67dd987fa49c60",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition22.npy",
+      "fold": 4,
+      "partition": "Partition22",
+      "release_member_sha256": "859da5fab9954f8e4e8ef56428eaa44faa55d160d49deadb409dc59f06f99e73",
+      "output_sha256": "cfc74e76fcc68a5434fc1481914990b1b5a82f379bffabbbe97bee6ed888213e",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold4/Partition3.npy",
+      "fold": 4,
+      "partition": "Partition3",
+      "release_member_sha256": "67c39a62debc4d6ca0fbcd3a1da20e73612ebe39efad828964a712a0390c2cf0",
+      "output_sha256": "c75a375bf01675eb161aef3747ed324c4304f86d8c1dbdb7ffef46980db8a3e5",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition12.npy",
+      "fold": 5,
+      "partition": "Partition12",
+      "release_member_sha256": "a7ae3494d0e21727c9336a51a9bda55906976bd00c2d943caf1f6150e755133d",
+      "output_sha256": "accb0e2d257ed4b68fab4363216e5c79dbad677731a13c646d4500ac31499c8c",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition17.npy",
+      "fold": 5,
+      "partition": "Partition17",
+      "release_member_sha256": "897ca51b12fe7070715e10b686d22feae8f6e71820ea544e172a4c33db10f044",
+      "output_sha256": "bca9fee9fb77e3c146f960374c15d2553d243f87b79a5a7ea50172bbb362b5aa",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition46.npy",
+      "fold": 5,
+      "partition": "Partition46",
+      "release_member_sha256": "b424d66f9635f2d5e6b85bcffa4d53856afd99356718e81f7d0ac2b269c07ef5",
+      "output_sha256": "f7d0df00f19b851c674e90c8189f2f3505386d4afb5851c228073acd2b95c192",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition31.npy",
+      "fold": 5,
+      "partition": "Partition31",
+      "release_member_sha256": "9547048ac51eab8dde7c11deef48160b8ab0577643f0764cb43cbc949150b8db",
+      "output_sha256": "25ef8b0189580bba545c0df266ea22d0ce5e02842c28d54984376bd543ff02b1",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition122.npy",
+      "fold": 5,
+      "partition": "Partition122",
+      "release_member_sha256": "9822a3d0d690304b3d89d463f38d91ba670618daf0866b170a96c9ce88f10421",
+      "output_sha256": "7864b31d3d37e4636a4377a4bd9bf2b1993206dac0f20cbbbd5398886604a66d",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition7.npy",
+      "fold": 5,
+      "partition": "Partition7",
+      "release_member_sha256": "adb79b396af83a05ee05f5a547337ef71a8e733cf311aba330561b0eca0b6443",
+      "output_sha256": "adbdfd9c1a34f0ed0c77a180bcd0d3c18c125be6469016bb47ede251933f4e5a",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition147.npy",
+      "fold": 5,
+      "partition": "Partition147",
+      "release_member_sha256": "39bdea1084aaa50e8503b13839231ddbe63bd47f52521cd9e540eec0d441da0e",
+      "output_sha256": "59ef0e62396a550077454c4fbab738be9603296aedbc81b1645babb395d624fa",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition118.npy",
+      "fold": 5,
+      "partition": "Partition118",
+      "release_member_sha256": "6f2d4fa7fe5557cae1825e005b3c4f0f55ab31fbdfb65dfc586db3454ca04056",
+      "output_sha256": "eacc3c60eec0157e1b2c3b6807cccb262fc22f529fa8fe44a09828093d00a024",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition121.npy",
+      "fold": 5,
+      "partition": "Partition121",
+      "release_member_sha256": "f28e64e2c951fa5713bce52754f6c103da2508751d65053298bd06b17a86aac5",
+      "output_sha256": "80f01b987beabe1893a36c5ccdfab361e74dcd090604ca229111473964083623",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition13.npy",
+      "fold": 5,
+      "partition": "Partition13",
+      "release_member_sha256": "6d1536a87a29606efed792694c57c519ae48e7f655ad764c0757ea1d3ba9f7ab",
+      "output_sha256": "b6edee2039ab8158f73e55461c93c7bd433dcac249be01fcb7a713f37d3ede9a",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition112.npy",
+      "fold": 5,
+      "partition": "Partition112",
+      "release_member_sha256": "73b13a2555082fe4c005fc162691a473ae7881308f1bb9ae80af0bfd856a6c74",
+      "output_sha256": "7f3bd7a69353e4c9fae3b6f838d1231a4e933b93a544118ef0c2c7c4b32da1ba",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition104.npy",
+      "fold": 5,
+      "partition": "Partition104",
+      "release_member_sha256": "f7a51886c345c0477b7180c756658d3f30cfcdd2877cdec1360f2bf9f04d4890",
+      "output_sha256": "600f3335b6eb8423a4183b182d04e0363ffc650abf7fe0db3b22029b722e9938",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition75.npy",
+      "fold": 5,
+      "partition": "Partition75",
+      "release_member_sha256": "699a99af703f4fe6fe199bd2bd1cc4e086f44ae6b04ab05f9ab53e4279081fda",
+      "output_sha256": "1664cbf651e6a3e71f91ba34fe8b41da37b07c9c99a35266ee11fad364a3cf07",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition76.npy",
+      "fold": 5,
+      "partition": "Partition76",
+      "release_member_sha256": "61f3fd3bfbcc9fa772b1a5e22ca5f38265aba002689afaf9dcb8f88f929ca3e7",
+      "output_sha256": "c23b6238a4edaa6b7d26c0366e6195f44115dd700056e6562934e5402534900d",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition14.npy",
+      "fold": 5,
+      "partition": "Partition14",
+      "release_member_sha256": "b7818f1d89b9e399cc0c9f940bbe57ac00043ef028d853787bd0bd1645e19c36",
+      "output_sha256": "bd3bda3608aba740330c9a6279f7b8ded53ff661363c78d6c132ceaeb4fe439b",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition49.npy",
+      "fold": 5,
+      "partition": "Partition49",
+      "release_member_sha256": "a4893c94b08d4c8ab31513b8c16fddacfe6da2dedc39bfec109592d0a32d7119",
+      "output_sha256": "71a97a768172abb562a74eba9fcfb1c538960190e13b89c620837d4bf8ed2c8d",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition68.npy",
+      "fold": 5,
+      "partition": "Partition68",
+      "release_member_sha256": "903f4ded18d0eaafd5dc98cb5008230c5a5b02d8d2fb1b3c84915c7bfadc9f17",
+      "output_sha256": "028ea7d855747968d32102a623cd25803879a633e2c04d0b4149286b09e371d0",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition77.npy",
+      "fold": 5,
+      "partition": "Partition77",
+      "release_member_sha256": "690d1e816034818d8d8d88a53e002e82ea6dbd334af603f0f6e2638dc13adc2f",
+      "output_sha256": "e4fa658c0440e47ac2d58d02ad1bff7e698dce53bc2fe64645c32034560d8a99",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition107.npy",
+      "fold": 5,
+      "partition": "Partition107",
+      "release_member_sha256": "3589fb8101b8782bc4d8e737417218d35eeed0a24407809bd1b61fd7a9b66513",
+      "output_sha256": "ae1bdf50d160585f0d60a77dfcfddbfc4c6eed9e140003cc2b8504113fa02dfe",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition128.npy",
+      "fold": 5,
+      "partition": "Partition128",
+      "release_member_sha256": "b6aeb6867c5923f373daf2e3ee6c474298129c085dc13889507a1e3c147946b0",
+      "output_sha256": "272fe6503537ab5b0a9cba26a33fb1cbe2e23d5b221b69d8a9749743164778f4",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition73.npy",
+      "fold": 5,
+      "partition": "Partition73",
+      "release_member_sha256": "e2e7e5c55a179d34f280f184826158b54cf8623061e443bdad66c0049c355f8d",
+      "output_sha256": "a50948be2fbc8710e0bff628d434b99b18e105120a2c0d4ce0c5ad782ac26095",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition109.npy",
+      "fold": 5,
+      "partition": "Partition109",
+      "release_member_sha256": "c96c55ed8451f914b9ad80dc9dfd936a09075bc4defd472f90d96ea3cace28b2",
+      "output_sha256": "463e131f8be2af2abca591de1b92c5ea290d75e8b260bdded0ceac7de5b89f68",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition101.npy",
+      "fold": 5,
+      "partition": "Partition101",
+      "release_member_sha256": "9b75d62fdd6983aa1816af2c0dbbdefb6c0e76abcd4421eba0a9895c5d2de7e7",
+      "output_sha256": "f95b071b7445c0dc3178bb06e84b00f8e1eb415c7709d4dee944a5c28046e8ed",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition33.npy",
+      "fold": 5,
+      "partition": "Partition33",
+      "release_member_sha256": "8e0280dd201edae9bfc0290b45c4e6e956afbff3467458fe222809f7c1081b49",
+      "output_sha256": "f85cf7f78b91122d30b0c62eb79a9766d162ee7a769f80085d89b234f1f62a92",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition80.npy",
+      "fold": 5,
+      "partition": "Partition80",
+      "release_member_sha256": "24b891e855735112cd74ae13bada18662b70269d0cf5b8657ab76c4364709b66",
+      "output_sha256": "2537b3851a28225a53d3c730827387caf634da75e5daf13ee0c976e717ade86f",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition70.npy",
+      "fold": 5,
+      "partition": "Partition70",
+      "release_member_sha256": "8a5673b2e6fb96b3df77197710759cd422b96a52f579fdb176d46b24230bba69",
+      "output_sha256": "4c0aa1ac3cbcbffd2df163ecb14a935959254078cbb114ba4ecead10ba4c2d0f",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition72.npy",
+      "fold": 5,
+      "partition": "Partition72",
+      "release_member_sha256": "80e46c5b606a0f18f3f662b361f70f9a3c05412bfd8ec7b4bc051ae8b3143592",
+      "output_sha256": "cafbf73d4cec113c3d8b88b23b1033b70eb561c523c10302b5dbf3361f6659d8",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition142.npy",
+      "fold": 5,
+      "partition": "Partition142",
+      "release_member_sha256": "62477e1a415c524ccd4b22d2abe60ae792ba01e39a5cc28c4f0ea281d51ab065",
+      "output_sha256": "034ff06a972b0850841840ed945f4bb0d8ee3b768a58a642a71b7b9ce54280fc",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition30.npy",
+      "fold": 5,
+      "partition": "Partition30",
+      "release_member_sha256": "6eba32d4c03937b0470d904bf6bb9b53ea3df25af86a643675281e45c3a3fd1b",
+      "output_sha256": "8537a865213262022cfa9101b44a2760dabb5aede22f7519f4ffbdb74eca7d6c",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition69.npy",
+      "fold": 5,
+      "partition": "Partition69",
+      "release_member_sha256": "e2a1f701340d00195a6cab19ff20d2fad469916f5e34929a707ceedc53184156",
+      "output_sha256": "5e0a71a2f0e5dae3c2bd93bff2292c690cdab5bb7774edd999c9ebecac12f200",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition141.npy",
+      "fold": 5,
+      "partition": "Partition141",
+      "release_member_sha256": "8f2f42561d796e31c0c31429a3552ada2b6200c59e929f8bb6d3a44bc60f3818",
+      "output_sha256": "eaf3fd24e67e7885e9f46168745350e20fe5c5f2544c0054167f83cc6172c09b",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition138.npy",
+      "fold": 5,
+      "partition": "Partition138",
+      "release_member_sha256": "e8a9a7020d49b18e978598acf342a8859c46c974141cfd27cf365d1e0e8a2063",
+      "output_sha256": "58c58b99abb3318bbb5a0b98f9e372a60301ac87e809f97ba23d053a4cd3972e",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition78.npy",
+      "fold": 5,
+      "partition": "Partition78",
+      "release_member_sha256": "aaaf1701991d807ee2ff4d86adcd35779eed9e1a4c6d0b2d24a5a46156501586",
+      "output_sha256": "335d9b742095c4e1039db883b629f39dc58ef50c8a221c4e9bc1dc49ca518958",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition32.npy",
+      "fold": 5,
+      "partition": "Partition32",
+      "release_member_sha256": "95ca0c5cb3fd8942b13c4b6747e284f3098f67ab60eb773790e1d5444e7810c7",
+      "output_sha256": "a7610a4e32321ba0c4e243cc6a7386de4ee15d1b1b4c736c02441fcc6ced2aed",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition97.npy",
+      "fold": 5,
+      "partition": "Partition97",
+      "release_member_sha256": "d700a1296a1c6a9143d951e5ffaf87b4b06cc1431503cc620d096c2e97fce1cf",
+      "output_sha256": "da9d8f6c58e9e1bc78b25a93bb7ca010588754692e86c166c4a9028e62158366",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition95.npy",
+      "fold": 5,
+      "partition": "Partition95",
+      "release_member_sha256": "401a3ed47ae49519d06d5e892624deba47adb45b49854221bcacd59b1ead2111",
+      "output_sha256": "57a4f2f169abe3bcaa4d8841095e740495234b6144fa588d51cec7665c327527",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition108.npy",
+      "fold": 5,
+      "partition": "Partition108",
+      "release_member_sha256": "708794955052e92f42aa1854972bcb2961415eca252ab8647120a2a05a5c0710",
+      "output_sha256": "5eae829d482cf82e16acb93d7902f71ffd61c84f003b5604ccf41dd7ccdf0691",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition114.npy",
+      "fold": 5,
+      "partition": "Partition114",
+      "release_member_sha256": "1f5c885d6d0352e8001457e4f75e78abbe55dd05036a2d55176901c331c609d6",
+      "output_sha256": "33def39d0e5e6aca234c26242ca84fc1ce5da72031258606c0017c67e6ef1af3",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition35.npy",
+      "fold": 5,
+      "partition": "Partition35",
+      "release_member_sha256": "2fc5362fdc67144526772b848b116963f03da6687fa67a720b930c6154f7aa37",
+      "output_sha256": "51c1fd420eaa40ce9bd57a911bff05127d788f424c244cbae2b1ba6a8c05724d",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition64.npy",
+      "fold": 5,
+      "partition": "Partition64",
+      "release_member_sha256": "ea3241424a8a1ed864913b79729728d877a25e75a498ab02b9d848086b969d75",
+      "output_sha256": "52c2d7e6ec6ddb6b1bd69c74f0f0cf83a7e12edb3b2e2b80af4e14b4940dfa4a",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition16.npy",
+      "fold": 5,
+      "partition": "Partition16",
+      "release_member_sha256": "efe9b083b5268fc431df45c6e687961eca7fdb77314060622518bef9442ee4a9",
+      "output_sha256": "b7ac1d8001e293d4cb7718b4608648fb88b714ac3c8692a187c63b7765127fec",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition58.npy",
+      "fold": 5,
+      "partition": "Partition58",
+      "release_member_sha256": "c704a089e8dbc89c90da9ce9e1651fd38248fb79ec96549be06f504371e50be1",
+      "output_sha256": "e07589a2023bf1107d462f0f069394a43691247fd273516257aebe0c03a28ad7",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition113.npy",
+      "fold": 5,
+      "partition": "Partition113",
+      "release_member_sha256": "c49add766d3f488694727c64b7902645b4ebe5fd720dbd43becb8c8459f85e1c",
+      "output_sha256": "849c4549794a403e15e47cd04be85a20d2e4ec4af38dd9a864dffadcf218d80e",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition125.npy",
+      "fold": 5,
+      "partition": "Partition125",
+      "release_member_sha256": "4a5b68450f77210ae3c6b96ea8ed55c058e88967bb62a25d4daea24cbbc34e71",
+      "output_sha256": "c57b99094bc59f152e87b73616029493345de2239c0fa5525872667104b67711",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition71.npy",
+      "fold": 5,
+      "partition": "Partition71",
+      "release_member_sha256": "8579153d72e800834a5eced71d405a1d1756e76ed16a091838c40b538782f43b",
+      "output_sha256": "13204b770cf1ff8bbe8b5661f283a103b43f2e6ae1aafb31df24e270108cab43",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition106.npy",
+      "fold": 5,
+      "partition": "Partition106",
+      "release_member_sha256": "e40302551df1883fdc611a4ab0984110d82f6008046f8cba6a8f0c01e6b8b9d5",
+      "output_sha256": "facdac4b983ca9552656a5246daaaa3b091838936504fec43e9dc56b6f2db5c0",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition34.npy",
+      "fold": 5,
+      "partition": "Partition34",
+      "release_member_sha256": "6b9f30936a4e801241f2c513ce2c240547a83d501f4f4958c69c922a10290130",
+      "output_sha256": "a2de0572d178dc631b3e54a0b685b38d4f9130ade963785ab02fcdcf1d35cfd8",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition74.npy",
+      "fold": 5,
+      "partition": "Partition74",
+      "release_member_sha256": "38eeeb66c41499d15a8376036cadcdb6920bd2b96497c08ac8a5051ec2888777",
+      "output_sha256": "2cb3831a1f5a63eb34975b3c43e3331bf9aeb335049ea55b057916b8afc1a30e",
+      "shape": [
+        20,
+        15
+      ]
+    },
+    {
+      "member": "Fold5/Partition5.npy",
+      "fold": 5,
+      "partition": "Partition5",
+      "release_member_sha256": "cf45670a327d8a099b105cf757b4effc4823ba35afa90b1d78bfb015d0ce91a4",
+      "output_sha256": "2f5f83366e081845edfd523be88bc49f176d4917d9736038d4561769c7a51d67",
+      "shape": [
+        20,
+        15
+      ]
+    }
+  ],
+  "images_retained": false,
+  "predictors_from_images": false
+}
