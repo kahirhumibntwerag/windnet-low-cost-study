@@ -1,5 +1,5 @@
 """Stage entry point. Development stages cannot open sealed Fold5 members."""
-import argparse, ast, hashlib, io, json, os, pickle, re, sys, tarfile, time
+import argparse, ast, hashlib, importlib.util, io, json, os, pickle, re, subprocess, sys, tarfile, time
 from pathlib import Path
 import numpy as np
 import requests
@@ -64,6 +64,8 @@ def main():
     EXPORT.mkdir(exist_ok=True)
     if cfg['stage']=='acquire':acquire()
     else:
+        if importlib.util.find_spec('sklearn') is None:
+            subprocess.check_call([sys.executable,'-m','pip','install','--quiet','scikit-learn==1.7.2','scipy==1.16.1'])
         from matched.science import run
         run(cfg)
 if __name__=='__main__':main()

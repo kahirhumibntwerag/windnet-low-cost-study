@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "name": "googlenet.py",
+      "sha256": "47d60d66707de8f46eda8fd7327e8d9f4e9a655bdcffcecdfafa245c251390bc",
+      "bytes": 7851
+    },
+    {
+      "name": "network.py",
+      "sha256": "207973d8897f1ad35eb00949e5be9068ef58fa81e882dab7bcd18d55038bf71a",
+      "bytes": 9663
+    },
+    {
+      "name": "googlenet.py",
+      "sha256": "c40b34bd4910e175ce121a41083ab5336bd6689167eb7206f63831706335c834",
+      "bytes": 8074
+    },
+    {
+      "name": "googlenet.npy",
+      "sha256": "d93955ecfb66c9cdbe0c038f7f47fbf971e46dee30930970e22fc4a1b8fa184f",
+      "bytes": 28000395
+    }
+  ]
+}

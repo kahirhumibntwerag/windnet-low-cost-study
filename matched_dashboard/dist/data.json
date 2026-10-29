@@ -1,0 +1,104 @@
+{
+  "updated_at": "2026-10-29T19:08:52.475990+00:00",
+  "campaign_url": "https://fixrelay.vercel.app/campaigns/e324d24c-b179-427c-87c1-365b857658aa",
+  "source_url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/tree/codex/windnet-matched-loop",
+  "protocol": {
+    "campaign_id": "e324d24c-b179-427c-87c1-365b857658aa",
+    "upstream_commit": "a996baa075ecdbd2b1c15533002692e29db43c19",
+    "channel": 211,
+    "history": 4,
+    "delay": 3,
+    "inputs": "Only the four original released 211-Angstrom images per window; no in-situ speed, recurrence, EVE, magnetograms or extra solar observations as predictors.",
+    "development": "Folds 1-3 fit, Fold4 validation. Fold5 members remain uninterpreted bytes until final freeze. All candidates share exact rows. Fit preprocessing on fitting folds only. Original folds1-4 were used in previous research, so these are development data.",
+    "training_offsets": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "evaluation_offsets": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "final": "One frozen five-fold pass. For each heldout fold fit on the other four, with all choices/epochs/blends already frozen. No final-test-driven candidate selection. Never output raw holdout labels or images to the agent. Report aggregate scores and fixed ablations only.",
+    "metrics": "Mean fold RMSE km/s, Fisher-z averaged fold Pearson r (paper aggregation), arithmetic mean r also disclosed, reduced chi-square using original target sigma, mean fold HSE threat score using original HSEcalc. MAE and 500/600 threshold metrics secondary. Report undefined metrics explicitly. Paper baseline distinct from any modern port.",
+    "success": "Predeclared candidate must improve mean fold RMSE and mean fold Pearson r versus released WindNet on identical windows; chi-square and HSE threat score reported, with a stricter all-four-metrics gate separately. Do not claim all-metric improvement unless all four pass. Validation adoption: >=1% RMSE improvement with no Pearson-r decrease; chi2/HSE are guardrails and disclosed tradeoffs.",
+    "stopping": "At most six substantive development hypotheses or US$5 estimated incremental Runpod cost. Stop adaptation at freeze, regardless of final outcome. Improvement cannot be guaranteed and failure must be retained.",
+    "prior_exposure": "Published historical holdout scores were already in this conversation before this request. This campaign is prospectively sealed against further test feedback, not a pristine blind or fresh confirmatory study.",
+    "publication": "User explicitly authorized public RogNet campaign/experiments and commits pushed to GitHub. Dashboard remains owner-private by default."
+  },
+  "ledger": {
+    "experiments": [
+      {
+        "label": "M1",
+        "id": "0e77b3e7-4118-4fc3-b354-b85cff0e5c2b",
+        "url": "https://fixrelay.vercel.app/experiments/0e77b3e7-4118-4fc3-b354-b85cff0e5c2b",
+        "title": "Original embeddings and regularized temporal heads",
+        "status": "running",
+        "hypothesis": "Regularization can improve validation RMSE over a matched WindNet architecture port while preserving correlation.",
+        "method": "Original GoogLeNet weights, identical image windows; three-seed LSTM baseline and 18 ridge candidates. Original Folds1\u00e2\u20ac\u201c3 fit, Fold4 validation.",
+        "success_criteria": "At least 1% lower validation RMSE with Pearson r no worse than the matched baseline; report chi-square and original HSE threat score."
+      }
+    ]
+  },
+  "results": {
+    "acquisition": {
+      "members": 157,
+      "source_member_hashes_verified": true,
+      "fold5_members_unparsed": 49,
+      "development_folds": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "images": "original 211-Angstrom release",
+      "seconds": 25.00968027114868
+    },
+    "kaffe_manifest": {
+      "files": [
+        {
+          "name": "googlenet.py",
+          "sha256": "47d60d66707de8f46eda8fd7327e8d9f4e9a655bdcffcecdfafa245c251390bc",
+          "bytes": 7851
+        },
+        {
+          "name": "network.py",
+          "sha256": "207973d8897f1ad35eb00949e5be9068ef58fa81e882dab7bcd18d55038bf71a",
+          "bytes": 9663
+        },
+        {
+          "name": "googlenet.py",
+          "sha256": "c40b34bd4910e175ce121a41083ab5336bd6689167eb7206f63831706335c834",
+          "bytes": 8074
+        },
+        {
+          "name": "googlenet.npy",
+          "sha256": "d93955ecfb66c9cdbe0c038f7f47fbf971e46dee30930970e22fc4a1b8fa184f",
+          "bytes": 28000395
+        }
+      ]
+    }
+  }
+}
