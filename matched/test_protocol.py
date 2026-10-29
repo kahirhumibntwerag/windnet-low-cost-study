@@ -2,7 +2,7 @@
 import unittest
 import numpy as np
 import torch
-from matched.science import KaffeFeatures,metrics,samples,block_moments,moment_score
+from matched.science import KaffeFeatures,metrics,samples,block_moments,moment_score,neural_fit
 
 class ProtocolTests(unittest.TestCase):
     def data(self):
@@ -23,4 +23,9 @@ class ProtocolTests(unittest.TestCase):
     def test_block_moments_preserve_metrics(self):
         _,a,_=samples(self.data(),[1,2,3],[4]);p=a['y']*.9+300.;x=metrics(a['y'],p,a['sigma']);y=moment_score(block_moments(a,p))
         for k in ['rmse','r','chi2']:self.assertAlmostEqual(x[k],y[k],places=7)
+    def test_fixed_epoch_prediction_does_not_read_test_labels(self):
+        tr,va,_=samples(self.data(),[1,2,3],[4]);features={'energy':va['energy'],'spatial':va['spatial']}
+        # There is deliberately no y/sigma/history_y key in the test feature dict.
+        p,state,_=neural_fit(tr,features,19,fixed_epochs=1)
+        self.assertEqual(len(p),14);self.assertTrue(np.isfinite(p).all());self.assertEqual(state['epochs'],1)
 if __name__=='__main__':unittest.main()

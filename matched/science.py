@@ -330,7 +330,10 @@ def calibrate():
     print(json.dumps({'stage':'M6_complete','selected':selected,'best_rmse':best_rmse,'gate_passed':bool(eligible),'bootstrap':audit,'seconds':time.time()-t}),flush=True)
 def run(cfg):
     stage=cfg['stage']
-    if stage=='embed':prepare_embeddings()
+    if stage in ['freeze','final']:
+        from matched.final_study import freeze,final
+        (freeze if stage=='freeze' else final)(cfg)
+    elif stage=='embed':prepare_embeddings()
     elif stage=='baseline':baseline()
     elif stage=='ridge':ridge()
     elif stage=='kernel':kernel()
