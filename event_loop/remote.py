@@ -13,7 +13,7 @@ def main():
             for f in sorted((ROOT/package).glob('*')):
                 if f.suffix not in ['.py','.json']:continue
                 r=requests.post(c['url']+'/upload/'+package+'/'+f.name,headers=h,data=f.read_bytes(),timeout=90);r.raise_for_status()
-        print('Uploaded scientific packages and public protocols; no prior results or credentials uploaded')
+        print('Uploaded scientific packages, protocols and public training-side observations; no historical final results or credentials uploaded')
     elif a.op=='run':
         r=requests.post(c['url']+'/run',headers=h,json=json.loads(a.args[0]),timeout=45);r.raise_for_status();print(r.text)
     else:

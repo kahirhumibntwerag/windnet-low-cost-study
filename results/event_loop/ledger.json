@@ -44,12 +44,24 @@
       "id": "8c4cdf0d-efef-4a0b-9b32-75ce01718201",
       "url": "https://fixrelay.vercel.app/experiments/8c4cdf0d-efef-4a0b-9b32-75ce01718201",
       "title": "Variance-weight sensitivity and stability of location-preserving forecasting",
-      "status": "running",
+      "status": "completed",
       "hypothesis": "Fit-side precision weights may improve balanced margins and make the isolated M9 validation pass stable across training folds.",
       "method": "45 raw location ridge recipes and 3600 mixtures/calibrations, same images and rows. Require all four gates, 3/4 directional leave-one-fold-out passes, no fold RMSE loss above5%, and positive HSE bootstrap bounds against both controls. Audit M9 with the same stability rule.",
       "success_criteria": "Strict four-metric gate plus preregistered stability; select the lowest RMSE eligible candidate. No test scoring.",
       "result_file": "m10_results.json",
-      "observation": "Fitting and the grid initially finished; temporary worker disk was lost during an operational restart before outcome export. The same preregistered procedure is being rerun with cached bootstrap inputs. Hypotheses, recipes, scoring formulas, draws and selection criteria are unchanged; failures are recorded in m10_transport_retry.json."
+      "observation": "50of3645 strict four-metric passes;31pass fold stability. Seven candidates rejected for uncertain event intervals; the eighth qualifies: RMSE78.00, Fisher r0.574, chi-square26.56, HSE_TS0.249. Positive event-score intervals against both controls and3/4 fold-stability checks. Recovered controls and row audits exactly match originals. Operational failures retained.",
+      "outcome": "supported"
+    },
+    {
+      "label": "F2",
+      "id": "be200d9f-d6c3-43b1-8a6f-15895ca0f79a",
+      "url": "https://fixrelay.vercel.app/experiments/be200d9f-d6c3-43b1-8a6f-15895ca0f79a",
+      "title": "Frozen stability-qualified location model on original WindNet folds",
+      "status": "planned",
+      "hypothesis": "The training-only stability-qualified M10 primary may improve all four original metrics on identical historical windows.",
+      "method": "Freeze all scientific sources, recipes, epochs and data identities; then one original five-fold pass with seven fixed models/ablations plus released WindNet. Fit all before scores are exported. No label access by estimators or post-test model replacement.",
+      "success_criteria": "Strictly lower mean-fold RMSE and reduced chi-square, higher Fisher-z correlation and mean original HSE threat score versus released WindNet on2198identicalwindows. Undefined fails.",
+      "result_file": "event_final_results.json"
     }
   ]
 }

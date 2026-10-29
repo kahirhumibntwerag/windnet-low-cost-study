@@ -20,6 +20,12 @@
       "strict_all_four": 50,
       "pre_bootstrap_stability": 31
     },
-    "limitation": "Worker prediction bank and partial bootstrap evidence were lost. Rerun must report actual new output and compare control aggregate repeatability; cannot assert bitwise replication without those predictions."
+    "limitation": "Worker prediction bank and partial bootstrap evidence were lost. Rerun must report actual new output and compare control aggregate repeatability; cannot assert bitwise replication without those predictions.",
+    "completed": true,
+    "controls_and_fold_metrics_exactly_identical": true,
+    "row_audits_exactly_identical": true,
+    "strict_gate_count": 50,
+    "pre_stability_count": 31,
+    "bootstrap_candidates_checked": 8
   }
 }
