@@ -6,6 +6,7 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 from sklearn.linear_model import Ridge
+from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.preprocessing import StandardScaler
 from scipy.linalg import eigh
 from scipy.spatial.distance import cdist
@@ -124,6 +125,7 @@ def samples(d,fit_folds,eval_folds):
     assert not set(tr['row'])&set(va['row'])
     return tr,va,{'emin':emin,'escale':escale}
 def view(a,kind='flatten',source='energy'):
+    if source=='combined':return np.concatenate([view(a,kind,'energy'),view(a,kind,'spatial')],axis=1)
     x=a[source]
     if kind=='flatten':return x.reshape(len(x),-1)
     if kind=='mean':return x.mean(axis=1)
@@ -236,6 +238,37 @@ def loss_ablations():
     result={'stage':'M3','scope':'training-side Fold4 validation only','rows':rows,'selected':selected,'incumbent':base,'gate_passed':passed,'fit_row_sha256':rowhash(tr),'validation_row_sha256':rowhash(va),'fold5_accessed':False,'seconds':time.time()-t,'identity':identity()}
     save_json(EXPORT/'m3_results.json',result);np.savez_compressed(DATA/'loss_dev_predictions.npz',**preds)
     print(json.dumps({'stage':'M3_complete','selected':selected['model'],'gate_passed':passed,'seconds':time.time()-t}),flush=True)
+def fit_tabular(tr,va,recipe):
+    source=recipe.get('source','energy');kind=recipe['view'];scaler=StandardScaler().fit(view(tr,kind,source));x=scaler.transform(view(tr,kind,source));v=scaler.transform(view(va,kind,source))
+    if recipe['family']=='ridge':model=Ridge(alpha=recipe['alpha'],solver='cholesky')
+    elif recipe['family']=='tree':model=HistGradientBoostingRegressor(max_iter=200,learning_rate=.05,max_leaf_nodes=recipe['leaves'],l2_regularization=recipe['l2'],min_samples_leaf=20,early_stopping=False,random_state=2026)
+    else:raise ValueError(recipe)
+    model.fit(x,tr['y']);return model.predict(v),{'model':model,'scaler':scaler,'recipe':recipe}
+def spatial_models():
+    d=np.load(DATA/'dev_embeddings.npz');tr,va,_=samples(d,[1,2,3],[4]);rows=[];preds={};best_raw=None;t=time.time()
+    baseline=json.loads((EXPORT/'baseline.json').read_text())['baseline'];bp=np.load(DATA/'baseline_dev_predictions.npz')['pred']
+    save_json(EXPORT/'m4_execution.json',{'identity':identity(),'fit_row_sha256':rowhash(tr),'validation_row_sha256':rowhash(va),'fold5_accessed':False})
+    recipes=[]
+    for source in ['spatial','combined']:
+        for kind in ['flatten','mean','trend']:
+            for alpha in [10,100,1000,10000]:recipes.append({'family':'ridge','view':kind,'source':source,'alpha':alpha})
+        for kind in ['mean','trend']:
+            for leaves in [7,15]:
+                for l2 in [1,10,100]:recipes.append({'family':'tree','view':kind,'source':source,'leaves':leaves,'l2':l2})
+    for i,recipe in enumerate(recipes):
+        p,_=fit_tabular(tr,va,recipe);name='spatial_'+str(i)+'_'+recipe['family']+'_'+recipe['source']+'_'+recipe['view'];row={'model':name,'recipe':recipe,'metrics':metrics(va['y'],p,va['sigma'])};rows.append(row);preds[name]=p
+        if best_raw is None or row['metrics']['rmse']<best_raw['metrics']['rmse']:best_raw=row
+        if i%12==0:print(json.dumps({'spatial_candidates_complete':i+1,'seconds':time.time()-t}),flush=True)
+    sp=preds[best_raw['model']]
+    for w in [0,.25,.5,.75,1]:
+        p=(1-w)*bp+w*sp;name='spatial_baseline_mix_'+str(w);row={'model':name,'recipe':{'family':'spatial_blend','spatial_weight':w,'spatial':best_raw['recipe'],'baseline':True},'metrics':metrics(va['y'],p,va['sigma'])};rows.append(row);preds[name]=p
+    ablations=[]
+    for source in ['energy','spatial','combined']:
+        recipe={**best_raw['recipe'],'source':source};p,_=fit_tabular(tr,va,recipe);row={'model':'matched_feature_ablation_'+source,'recipe':recipe,'metrics':metrics(va['y'],p,va['sigma'])};ablations.append(row);preds[row['model']]=p
+    eligible=[r for r in rows if r['metrics']['r']>=baseline['metrics']['r']];selected=min(eligible or rows,key=lambda r:r['metrics']['rmse']);passed=selected['metrics']['rmse']<=.99*baseline['metrics']['rmse'] and selected['metrics']['r']>=baseline['metrics']['r']
+    result={'stage':'M4','scope':'training-side Fold4 validation only','rows':rows+ablations,'selected':selected,'best_raw':best_raw,'matched_ablations':ablations,'incumbent':baseline,'gate_passed':passed,'fit_row_sha256':rowhash(tr),'validation_row_sha256':rowhash(va),'fold5_accessed':False,'seconds':time.time()-t,'identity':identity()}
+    save_json(EXPORT/'m4_results.json',result);np.savez_compressed(DATA/'spatial_dev_predictions.npz',**preds)
+    print(json.dumps({'stage':'M4_complete','selected':selected,'gate_passed':passed,'seconds':time.time()-t}),flush=True)
 def run(cfg):
     stage=cfg['stage']
     if stage=='embed':prepare_embeddings()
@@ -243,4 +276,5 @@ def run(cfg):
     elif stage=='ridge':ridge()
     elif stage=='kernel':kernel()
     elif stage=='neural':loss_ablations()
+    elif stage=='spatial':spatial_models()
     else:raise ValueError('Stage not implemented '+stage)

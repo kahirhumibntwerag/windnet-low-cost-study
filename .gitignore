@@ -4,6 +4,7 @@ upstream/
 tmp/
 *.html
 !web/*.html
+!matched_dashboard/dist/*.html
 __pycache__/
 *.pyc
 .venv/
