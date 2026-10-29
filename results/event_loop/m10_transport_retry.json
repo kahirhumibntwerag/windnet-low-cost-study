@@ -1,0 +1,8 @@
+{
+  "stage": "M10_operations",
+  "event": "First launch raced with package upload and failed unsupported dispatch before fitting. Upload completion verified, then same preregistered request retried.",
+  "failed_returncode": 1,
+  "scientific_changes_between_attempts": false,
+  "hypothesis_changes": false,
+  "test_accesses": 0
+}

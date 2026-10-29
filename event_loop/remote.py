@@ -7,6 +7,8 @@ def main():
     if a.op in ['health','state']:
         r=requests.get(c['url']+'/'+a.op,headers=h,timeout=45);r.raise_for_status();print(r.text)
     elif a.op=='upload':
+        state=requests.get(c['url']+'/state',headers=h,timeout=45);state.raise_for_status()
+        if state.json()['running']:raise RuntimeError('Refuse package mutation while an experiment is running')
         for package in ['matched','event_loop']:
             for f in sorted((ROOT/package).glob('*')):
                 if f.suffix not in ['.py','.json']:continue

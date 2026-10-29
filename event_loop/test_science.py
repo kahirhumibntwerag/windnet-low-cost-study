@@ -3,6 +3,17 @@ import unittest
 import numpy as np
 from event_loop.science import gate,aggregate,train_aligned
 class EventChecks(unittest.TestCase):
+    def test_final_location_prediction_has_no_validation_labels(self):
+        from event_loop.final import fit_location
+        from event_loop.location import ridge_path
+        from pathlib import Path
+        import tempfile
+        rng=np.random.default_rng(3);x=rng.normal(size=(20,4,3));v=rng.normal(size=(5,4,3));y=rng.normal(400,20,20);sigma=rng.uniform(10,30,20)
+        recipe={'family':'location_ridge','representation':'ratio','view':'flatten','weight_lambda':1,'alpha':10000}
+        with tempfile.TemporaryDirectory() as td:
+            actual=fit_location({'ratio':x,'y':y,'sigma':sigma},{'ratio':v},recipe,{},Path(td))
+        expected=ridge_path(x.reshape(20,-1),v.reshape(5,-1),y,sigma,1,[10000])[10000]
+        np.testing.assert_allclose(actual,expected,atol=1e-9)
     def test_stability_rejects_a_single_fold_driven_win(self):
         from event_loop.precision import stability
         base={'n':14,'rmse':80.,'r':.5,'chi2':30.,'hse_ts':.2,'mae':40.};good={**base,'rmse':75.,'r':.6,'chi2':28.,'hse_ts':.3};controls=[{'fold_metrics':[base.copy() for _ in range(4)]}]*2
