@@ -1,0 +1,75 @@
+# WindNet low-cost forecasting study
+
+A reproducible study of compact solar-wind forecasts on **the original released WindNet holdouts**, with experiment records, controlled ablations, and a direct comparison to the authors' saved predictions.
+
+**The result is mixed.** The frozen selection rule reduces five-fold mean RMSE from WindNet's **80.28 to 77.87 km/s**, but correlation falls from **0.550 to 0.515**. On original **Fold 5**, which stayed sealed during model design, WindNet performs better: **76.35 versus 78.06 km/s**. The paired uncertainty interval includes zero, so this study does **not** establish an overall improvement over WindNet.
+
+- [Interactive dashboard](https://windnet-research-lab-oct29.wellbat32.chatgpt.site) (owner-private hosting).
+- [Short paper with charts and ablations](output/pdf/windnet-study.pdf).
+- [Complete model comparison](results/comparison.csv), [matched predictions](results/matched_predictions.csv), and [feature ablations](results/ablations.json).
+- [Public FixRelay campaign](https://fixrelay.vercel.app/campaigns/bb47504f-7bd4-45bf-954b-b0b077ac5aee), [six experiment records](results/experiment_ledger.json), and [study protocol](research_plan.json).
+
+## What was preserved
+
+The study recovers the authors' 211-Angstrom release rather than regenerating a random split. It retains all **157 original 20-day blocks** and **2,198 evaluation windows** for history 4 and delay 3. Every target was matched exactly to the released WindNet prediction arrays. The reference reproduces the paper's rounded mean RMSE (80.28 km/s) and correlation (0.550).
+
+The original code uses 13 training windows and 14 test windows per block; that asymmetry is preserved. Duplicate dates within a fold are retained, and no date is shared across folds. Fitting masks historical measurements originating in a withheld fold, including when those measurements occur in recurrence features.
+
+No SDO image is a predictor. The processed author archive bundles labels with image arrays, so approximately 1.04 GB is streamed to recover labels and original block identities; image arrays are discarded. Raw SDO archives and neural image checkpoints are not downloaded. The compact model input file is approximately 265 KiB.
+
+## What the ablations show
+
+The controlled comparison fixes the model family to ridge regression and keeps the same holdout rows. Removing the 27-day recurrence band raises mean RMSE by **4.50 km/s**; removing the 54-day band raises it by **0.67 km/s**. Magnetic variables add only a small average benefit, and plasma variables add essentially none. Longer recent speed history alone does not help.
+
+The full ridge, neural residual model, and convex ensemble have mean RMSEs of 78.38, 78.35, and 77.87 km/s, respectively. Those are model-family comparisons rather than isolated feature effects. The requested feature ablations were planned after final scoring and are explicitly exploratory.
+
+## Reproduce
+
+Use Python 3.12 or 3.13. A CUDA GPU is needed for the neural stages; CPU-only protocol checks and ridge ablations are supported. No Runpod account or credential is required by the research runner itself.
+
+```bash
+git clone https://github.com/kahirhumibntwerag/windnet-low-cost-study.git
+cd windnet-low-cost-study
+python -m venv .venv
+# Activate .venv for your shell.
+python -m pip install -r requirements.txt
+
+git clone https://github.com/Vishal-Upendran/WindNet.git upstream
+git -C upstream checkout a996baa075ecdbd2b1c15533002692e29db43c19
+python recover_folds.py --channel 211
+python prepare_data.py
+python verify_protocol.py
+python reproduce.py --mode check
+```
+
+On a CUDA-enabled machine, run the four development cycles and frozen evaluation into a **new output directory**:
+
+```bash
+python reproduce.py --mode full --output results/rerun/my-run
+```
+
+The runner refuses to overwrite existing files and leaves the checked-in results unchanged. It calls the frozen scientific functions directly and records the code hash, data hashes, package versions, GPU, and completed stages. To run development without opening the final holdouts, use `--mode development`. For an independent CPU rerun of the controlled feature ablations:
+
+```bash
+python reproduce.py --mode ablations --output results/rerun/cpu-ablations
+```
+
+The CPU path also checks that the unchanged short, recurrence, and full ridge variants match the original Runpod means within `1e-7`. It uses the checked-in final results only for this consistency check, not for choosing hyperparameters.
+
+See [reproducibility details](docs/reproducibility.md) for the environment limits, optional reference download, and output layout. The original Runpod experiment used `runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404` on a PRO 6000 Blackwell MIG 24 GB GPU. Estimated GPU cost was approximately US$0.12, below the US$5 cap; this is not a settled invoice. The temporary pod and volume were deleted.
+
+## Interpretation and limits
+
+Fold 5 was unscored during the four development hypotheses. Five-fold means are exploratory because Folds 1–4 informed architecture design. The original random-block holdouts do not establish chronological or operational forecast skill. The Fold 5 paired cluster bootstrap uses 33 clusters of overlapping released blocks and 5,000 resamples; compact minus WindNet RMSE has a 95% interval of **[-6.16, 7.95] km/s**.
+
+The inputs differ: this study uses longer in-situ history and extra measurements, while WindNet uses solar images. It therefore does not isolate an architectural improvement. WindNet is evaluated from the sole prediction array retained in each released Testing folder; this study did not choose a new checkpoint. The upstream code used its held-out fold for checkpoint selection, an additional limitation of that historical comparator.
+
+## Sources and license
+
+Upendran, V., Cheung, M. C. M., Hanasoge, S., & Krishnamurthi, G. (2020), *Solar wind prediction using deep learning*, Space Weather, 18, e2020SW002478. [DOI: 10.1029/2020SW002478](https://doi.org/10.1029/2020SW002478).
+
+- [Original WindNet source](https://github.com/Vishal-Upendran/WindNet).
+- [Author-released folds and predictions](https://drive.google.com/drive/folders/18Z9-IcjtUOdaYWOQvPnB8YCKZ4kTj581).
+- [NASA OMNI documentation and fill codes](https://omniweb.gsfc.nasa.gov/html/ow_data.html).
+
+The [MIT license](LICENSE) covers this repository's new code. Upstream code, author-released predictions, measurements, and publications retain their own terms. The RogNet/FixRelay campaign and all six experiments are public; direct record links are in the sanitized ledger. Registry access tokens are excluded, and registry records are not independent peer review.

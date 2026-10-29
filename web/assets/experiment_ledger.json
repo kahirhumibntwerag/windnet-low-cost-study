@@ -1,0 +1,120 @@
+{
+  "campaign_id": "bb47504f-7bd4-45bf-954b-b0b077ac5aee",
+  "visibility": "Public RogNet/FixRelay campaign and experiments; no access tokens included.",
+  "experiments": [
+    {
+      "id": "64808149-f9b0-4146-a8c5-826f806fec75",
+      "label": "H1",
+      "title": "Four days of speed",
+      "status": "supported",
+      "scope": "Development \u00b7 Fold 4",
+      "hypothesis": "Regularized regression can match the fixed SVM baselines using the original four speed measurements.",
+      "method": "Fit Folds 1\u20133. Validate on Fold 4. Test ridge regularization, fixed linear/RBF SVMs, mean and persistence.",
+      "observation": "Ridge RMSE 88.78 km/s versus 89.95 for the RBF SVM. Little trend skill (r = 0.070).",
+      "model": "short_ridge",
+      "development_rmse": 88.78037264152084,
+      "criteria": "Match or improve the fixed SVM baseline.",
+      "parent": [],
+      "candidates": "5 ridge penalties, 2 SVMs, and 3 simple references.",
+      "visibility": "public",
+      "url": "https://fixrelay.vercel.app/experiments/64808149-f9b0-4146-a8c5-826f806fec75"
+    },
+    {
+      "id": "47df780d-06e8-4d72-be6b-882c191d7649",
+      "label": "H2",
+      "title": "Recurrence and in-situ measurements",
+      "status": "supported",
+      "scope": "Development \u00b7 Fold 4",
+      "hypothesis": "History around 27 and 54 days, plus optional plasma and magnetic measurements, improves RMSE by at least 2%.",
+      "method": "Compare ridge and small boosted trees with 34 speed features or 78 total features. Mask fitting measurements from held-out folds.",
+      "observation": "Multivariate tree RMSE 74.83 km/s, a 15.72% reduction from H1. Recurrence alone accounts for most of the gain.",
+      "model": "multi_tree",
+      "development_rmse": 74.8276498657102,
+      "criteria": "At least 2% below H1 ridge.",
+      "parent": [
+        "64808149-f9b0-4146-a8c5-826f806fec75"
+      ],
+      "candidates": "10 ridge configurations and 8 tree configurations.",
+      "visibility": "public",
+      "url": "https://fixrelay.vercel.app/experiments/47df780d-06e8-4d72-be6b-882c191d7649"
+    },
+    {
+      "id": "c06155f7-a014-4519-917f-43197ada6e06",
+      "label": "H3",
+      "title": "GPU residual learning",
+      "status": "not_supported",
+      "scope": "Development \u00b7 Fold 4",
+      "hypothesis": "A small residual neural network improves the augmented linear model by at least 2%.",
+      "method": "32/16-unit MLP, three fixed seeds, two weight decays, training-only scaling, early stopping and residual blends.",
+      "observation": "RMSE 74.47 versus 75.15 km/s for the linear reference: 0.90% improvement, below the 2% threshold.",
+      "model": "residual_nn",
+      "development_rmse": 74.46974348585023,
+      "criteria": "At least 2% below augmented ridge.",
+      "parent": [
+        "47df780d-06e8-4d72-be6b-882c191d7649"
+      ],
+      "candidates": "6 neural fits; 5 residual blend weights per configuration.",
+      "visibility": "public",
+      "url": "https://fixrelay.vercel.app/experiments/c06155f7-a014-4519-917f-43197ada6e06"
+    },
+    {
+      "id": "dabe03cd-892d-44eb-bd59-f6acdbc50618",
+      "label": "H4",
+      "title": "Average different model errors",
+      "status": "supported",
+      "scope": "Development \u00b7 Fold 4",
+      "hypothesis": "A convex ensemble improves the accepted simpler selection rule by at least 1%.",
+      "method": "35 convex weight combinations across recurrence ridge, multivariate ridge/tree, and the residual neural ensemble.",
+      "observation": "Half tree, half neural forecast reached 73.85 km/s. Gain: 1.31% over the accepted tree; 0.83% over the best single neural model.",
+      "model": "convex_ensemble",
+      "development_rmse": 73.85014903916235,
+      "criteria": "At least 1% below the accepted rule, not below the best single model.",
+      "parent": [
+        "c06155f7-a014-4519-917f-43197ada6e06",
+        "47df780d-06e8-4d72-be6b-882c191d7649"
+      ],
+      "candidates": "35 weight combinations.",
+      "visibility": "public",
+      "url": "https://fixrelay.vercel.app/experiments/dabe03cd-892d-44eb-bd59-f6acdbc50618"
+    },
+    {
+      "id": "c2afa20b-1c9f-4c6b-b934-23e108cddaa0",
+      "label": "E5",
+      "title": "Frozen original-holdout evaluation",
+      "status": "inconclusive",
+      "scope": "Original Folds 1\u20135",
+      "hypothesis": "The frozen selection rule improves untouched Fold 5 RMSE by at least 2% over short-history ridge.",
+      "method": "Freeze the code, tune within each outer training set, retain all original test rows, and use 5,000 paired resamples of overlapping-block clusters. Match released WindNet predictions row by row.",
+      "observation": "Lower five-fold mean RMSE (77.87 vs WindNet 80.28), but lower correlation (0.515 vs 0.550). Fold 5 favors WindNet (76.35 vs 78.06). The confidence interval against short ridge includes zero.",
+      "model": "selected_model",
+      "development_rmse": null,
+      "criteria": "Point improvement plus uncertainty reported; no forced positive result.",
+      "parent": [
+        "dabe03cd-892d-44eb-bd59-f6acdbc50618"
+      ],
+      "candidates": "5 original outer holdouts; 2,198 matched forecasts; Fold 5 primary.",
+      "visibility": "public",
+      "url": "https://fixrelay.vercel.app/experiments/c2afa20b-1c9f-4c6b-b934-23e108cddaa0"
+    },
+    {
+      "id": "5a522e3f-4329-47c6-a411-ea413a999707",
+      "label": "E6",
+      "title": "Controlled feature ablations",
+      "status": "inconclusive",
+      "scope": "Post-evaluation \u00b7 Exploratory",
+      "hypothesis": "Removing recurrence or in-situ covariate groups degrades the full multivariate ridge model.",
+      "method": "Fix ridge model family, source masks, and evaluation rows. Retune penalty within the same inner fold for 10 feature variants.",
+      "observation": "Removing the 27-day band costs 4.50 km/s; 54-day band costs 0.67; magnetic variables cost 0.21; removing plasma is essentially unchanged. Longer recent history alone does not help.",
+      "model": "multi_ridge",
+      "development_rmse": null,
+      "criteria": "Report each component honestly, including negligible or negative additions.",
+      "parent": [
+        "c2afa20b-1c9f-4c6b-b934-23e108cddaa0"
+      ],
+      "candidates": "10 feature variants \u00d7 5 outer folds \u00d7 5 inner penalties.",
+      "visibility": "public",
+      "url": "https://fixrelay.vercel.app/experiments/5a522e3f-4329-47c6-a411-ea413a999707"
+    }
+  ],
+  "campaign_url": "https://fixrelay.vercel.app/campaigns/bb47504f-7bd4-45bf-954b-b0b077ac5aee"
+}

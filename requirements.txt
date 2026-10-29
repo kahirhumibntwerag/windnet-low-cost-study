@@ -1,0 +1,12 @@
+# Observed local verification stack. The Runpod run's recorded NumPy was 2.1.2;
+# its scikit-learn/SciPy versions were not captured. See docs/reproducibility.md.
+numpy==2.3.1
+scipy==1.16.1
+scikit-learn==1.9.1
+torch==2.8.0
+requests==2.32.4
+gdown==6.5.1
+beautifulsoup4==4.15.0
+matplotlib==3.10.5
+reportlab==5.1.0
+pypdf>=6,<7

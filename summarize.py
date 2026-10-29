@@ -55,7 +55,7 @@ uncertainty={name:cluster_bootstrap(5,name) for name in ['released_windnet','sho
 ab=json.loads((OUT/'ablations.json').read_text())
 summary={'date':'2026-10-29','repository':'https://github.com/kahirhumibntwerag/windnet-low-cost-study',
     'dashboard':'https://windnet-research-lab-oct29.wellbat32.chatgpt.site','metrics':metrics,'uncertainty_fold5':uncertainty,
-    'ablations':ab,'ledger':json.loads((OUT/'experiment_ledger.json').read_text()),
+    'ablations':ab,'ledger':json.loads((OUT/'experiment_ledger.json').read_text(encoding='utf-8')),
     'split_audit':json.loads((ROOT/'data/split_audit.json').read_text()),'compute':json.loads((OUT/'compute.json').read_text()),
     'labels':LABELS,'ablation_labels':ALABEL,'reference_alignment':{'rows':2198,'max_error':0.0},
     'caveats':['Five-fold averages are exploratory because Folds 1–4 informed model design.',

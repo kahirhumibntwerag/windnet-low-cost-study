@@ -3,6 +3,7 @@ data/
 upstream/
 tmp/
 *.html
+!web/*.html
 __pycache__/
 *.pyc
 .venv/
@@ -11,3 +12,4 @@ inspect_sources.py
 *.tar.gz
 *.tar
 tmp-pdf/
+results/rerun/
