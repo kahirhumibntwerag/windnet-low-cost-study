@@ -1,0 +1,14 @@
+{
+  "campaign_id": "e324d24c-b179-427c-87c1-365b857658aa",
+  "phase": "Prospective continuation explicitly requested after F1",
+  "authorization": "The user requested continued research until all four metrics improve, using training-side validation only to choose hypotheses, and continued public RogNet/GitHub/dashboard updates. This supersedes the earlier six-hypothesis stopping rule for this new phase; earlier frozen code/results remain unchanged.",
+  "input_information": "Only four original released 211-Angstrom images per forecast. All new candidates and controls have identical fitting/evaluation rows and original fit-block labels. No wind-speed history as a predictor, recurrence data, EVE or external imagery.",
+  "training_bank": [1,2,3,4],
+  "validation": "Four training-side folds: for each fold in the bank, fit the other three and evaluate that fold. Per-split image centering, normalization and scalers use fitting folds only. Same original training offsets6..18/evaluation offsets6..19. Fold5 bytes are hash-checked and discarded without parsing or retaining them in the development worker.",
+  "hypothesis_boundary": "Do not read/import F1 final results, released WindNet forecasts, old full-data bundles, or test-case analyses in development. Hypotheses derive only from training-side outcomes and source/metric definitions. Earlier published test scores are already known to this conversation and cannot be made unseen.",
+  "controls": "Retrain both the original matched WindNet port and the prior M6 frozen recipe within each training-bank split. Use their original training-selected seed epochs38/27/36. Baseline recipes are retained regardless of new candidates.",
+  "adoption": "Require a candidate to beat BOTH training-side controls on all four aggregated metrics: mean-fold RMSE <=.99*the lower control RMSE; Fisher r >=the higher control r+.005; mean reduced chi-square <=.995*the lower control chi-square; mean original HSE threat score >=the higher control TS+.02. Undefined scores fail. Record all candidates, metrics and ablations; no single-metric promotion.",
+  "final": "Only after strict training-side adoption and a stability check, freeze exact source/recipe/data identities, then make one separate matched historical five-fold evaluation. No test feedback may determine model choice or a subsequent hypothesis. Report continued prior exposure and sequential-testing limits; never call this a fresh blind confirmation.",
+  "budget": "Continue inside the original US$5 cumulative estimated Runpod envelope; prior phase conservative estimate US$0.50672. Track live worker cost and download evidence before deleting only resources created for this phase.",
+  "publication": "Append public experiment records to the existing RogNet campaign; commit code and results to codex/windnet-matched-loop; update the existing owner-private dashboard."
+}
