@@ -157,7 +157,14 @@ def select_candidate(reports: dict, candidate_ids: list[str]) -> tuple[str, dict
         checks[name] = {"eligible": bool(defined and overall_ok and fast_ok),
                         "overall_guard_passed": bool(overall_ok), "fast_guard_passed": bool(fast_ok), "J": objective}
     eligible = [name for name in candidate_ids if checks[name]["eligible"]]
-    selected = min(eligible, key=lambda name: (checks[name]["J"], reports[name]["metrics"]["overall"]["rmse"], name)) if eligible else INCUMBENT_ID
+    # Exact objective ties prefer fewer solar features and fewer fitted pairs.
+    # This order is fixed before execution, not chosen from score differences.
+    def tie_order(name):
+        group = name.split('__')[0]
+        feature_complexity = GROUPS.index(group)
+        mixture_complexity = int('_mix_' in name)
+        return (checks[name]['J'], feature_complexity, mixture_complexity, name)
+    selected = min(eligible, key=tie_order) if eligible else INCUMBENT_ID
     return selected, checks
 
 
