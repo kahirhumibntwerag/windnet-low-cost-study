@@ -17,6 +17,14 @@
       "rate_usd_hour": 0.06,
       "conservative_compute_estimate_usd": 0.007162766666666667,
       "deleted_and_404_verified": true
+    },
+    {
+      "id": "3gmkg88yc701lb",
+      "created_at": "2026-10-29T16:43:54.773Z",
+      "deletion_confirmed_by": "2026-10-29T16:50:19Z",
+      "rate_usd_hour": 0.59,
+      "conservative_compute_estimate_usd": 0.0629705361111111,
+      "deleted_and_404_verified": true
     }
   ],
   "network_volume": {
@@ -28,5 +36,19 @@
   "unrelated_resources_modified": false,
   "invoice_settled": false,
   "notes": "Estimates use elapsed creation-to-deletion-confirmation bounds, not settled billing. Storage allowance deliberately exceeds this short run duration.",
-  "cumulative_estimate_upper_bound_usd": 0.1391947
+  "cumulative_estimate_upper_bound_usd": 0.2041652361111111,
+  "additional_network_volumes": [
+    {
+      "id": "vk511jocge",
+      "type": "STANDARD",
+      "unused_after_capacity_failure": true,
+      "deleted_and_404_verified": true
+    },
+    {
+      "id": "7ghknz5x1q",
+      "type": "HIGH_PERFORMANCE",
+      "deleted_and_404_verified": true
+    }
+  ],
+  "additional_storage_allowance_usd": 0.002
 }

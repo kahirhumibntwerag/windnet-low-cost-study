@@ -1,0 +1,32 @@
+{
+  "schema": "locked_final_v1",
+  "status": "frozen",
+  "experiment": "E13",
+  "protocol_url": "https://fixrelay.vercel.app/experiments/a83dbc31-db26-4d65-840e-8ac888103019",
+  "recipes_sha256": "31987943dadb16666124ff5aa7a8c3e317301b85e018d8ae692fa8d13d1a2b98",
+  "selection_from_final_test": false,
+  "primary": "starting_wind",
+  "fast_wind_primary": "h9_fast_specialist",
+  "source_sha256": {
+    "study_inputs.npz": "f4723c671bb2f9a2f21dfa491c4c14e34626836f1fa82bf979c36a39d8ed273e",
+    "source_folds.npz": "a3835b999a5a95ef3bb29e55fc2bbdf040939ffadb3ba7d525ecb6223d660d45",
+    "eve_source.ncdf": "f150da94bec13f171f95e0ebbb7a368c8323f6292743180eaef27a597819a6f8",
+    "matched_predictions.csv": "f52ebfdf36594a5529cb5a0dffc776ad77002ab9415088331f681b57badd7756"
+  },
+  "code_sha256": {
+    "prepare_locked_final.py": "df1ca68d5b33ffb80d9dc98122e5b4d2b1c826e8e38fcbfb5728cc9dd0cb6ee0",
+    "locked_final.py": "e61eb20d9c80c02f818d7b966704d2f8afd942cdcfa3a139e7cd7d8048a2e103",
+    "final_uncertainty.py": "dbbeabda365ed8b6f0b855884b47fd3b40eda2cd9496407229efd55342f19323",
+    "final_reporting.py": "4d68735164568f6041a4a526ca933ac97d665d5966f55171576a004f1cffa009",
+    "prior_champion.py": "8105eacd612cba22b03a75f5326701f695fa3258d2a05bf48b17a9f350600b74",
+    "models.py": "fddf568c9ea82fff3a9fa827a777151ebebe2d92cfdf27ff9d8f647ca1454715",
+    "metrics.py": "7d8f06011eb489382e15a98d18852796dd38bec685645cd1deb0066e2f6521ee",
+    "train.py": "bc7ee514f973753f1a5f34d7d8520ca78ba0f718d46139bc620957595b2f5b07",
+    "prepare_training.py": "5781fc8a64c21abec110b6a6ac950351fe0ebc7ddd5aeb96f9a39e5668e363d4",
+    "fast_loss.py": "ca0ba8554086bbe0707156a0b7317dd71b45c2d70d46fd998483611efacb6246"
+  },
+  "recipe_freeze_sha256": "b22fcedeb90818b927814ac545ae32111fcc7b9a04dde7a68a6250f1e20164f6",
+  "h12_audit_sha256": "8d4fc54eb37c6b76cc5ac118c623d620e8af87d02a2a71f77480b86618367186",
+  "created_utc": "2026-10-29T18:15:49.963652+00:00",
+  "interpretation": "One-shot historical same-holdout comparison; original test data already viewed in earlier study; no fresh confirmation or subsequent tuning."
+}
