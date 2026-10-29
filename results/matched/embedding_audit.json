@@ -1,0 +1,29 @@
+{
+  "fit_folds": [
+    1,
+    2,
+    3
+  ],
+  "blocks": 108,
+  "embedding_dimensions": 832,
+  "image_mean_training_only": 79.47801296785194,
+  "seconds": 3.8336477279663086,
+  "fold5_accessed": false,
+  "original_weight_sha256": "d93955ecfb66c9cdbe0c038f7f47fbf971e46dee30930970e22fc4a1b8fa184f",
+  "cache_sha256": "15ea2bb03590d9a5541a9e5a297e011de6bf7a2b517898c26d31e6a65b4e5f36",
+  "identity": {
+    "code": {
+      "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+      "hse_original.py": "c142abe9edc71706fd88dc371819f57a9c11c2ef5bf47084f560aa46d46810e2",
+      "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+      "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+      "science.py": "e1fb258a9f274c0ee716da1b60d97ea8c4c99ee641ac317bb772e65460e969f0",
+      "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218"
+    },
+    "python": "3.12.3",
+    "numpy": "2.1.2",
+    "torch": "2.8.0+cu128",
+    "device": "cuda",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb"
+  }
+}

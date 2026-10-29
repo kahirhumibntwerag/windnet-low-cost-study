@@ -1,0 +1,174 @@
+{
+  "stage": "M1",
+  "scope": "training-side Fold4 validation only",
+  "rows": [
+    {
+      "model": "windnet_port_seed19",
+      "metrics": {
+        "n": 280,
+        "rmse": 72.09976850235483,
+        "mae": 57.52363630022322,
+        "r": 0.5838362492557063,
+        "chi2": 27.9690415413088,
+        "sigma_valid": 280,
+        "hse_ts": 0.22727272727272727,
+        "hse_counts_original": {
+          "tp": 5,
+          "fp": 17,
+          "fn": 0
+        }
+      },
+      "epochs": 38,
+      "trace": [
+        {
+          "epoch": 20,
+          "validation_rmse": 82.94323953687726
+        },
+        {
+          "epoch": 40,
+          "validation_rmse": 73.15868635788789
+        },
+        {
+          "epoch": 60,
+          "validation_rmse": 87.50817116062592
+        }
+      ]
+    },
+    {
+      "model": "windnet_port_seed43",
+      "metrics": {
+        "n": 280,
+        "rmse": 71.13944652902272,
+        "mae": 56.733448355538506,
+        "r": 0.597376457226518,
+        "chi2": 27.01691371375914,
+        "sigma_valid": 280,
+        "hse_ts": 0.14285714285714285,
+        "hse_counts_original": {
+          "tp": 3,
+          "fp": 18,
+          "fn": 0
+        }
+      },
+      "epochs": 27,
+      "trace": [
+        {
+          "epoch": 20,
+          "validation_rmse": 72.05002966773183
+        },
+        {
+          "epoch": 40,
+          "validation_rmse": 73.35807589988501
+        },
+        {
+          "epoch": 60,
+          "validation_rmse": 77.67765010791959
+        }
+      ]
+    },
+    {
+      "model": "windnet_port_seed101",
+      "metrics": {
+        "n": 280,
+        "rmse": 73.25684624274962,
+        "mae": 58.50301742553711,
+        "r": 0.5752225726522545,
+        "chi2": 26.954538030766173,
+        "sigma_valid": 280,
+        "hse_ts": 0.23809523809523808,
+        "hse_counts_original": {
+          "tp": 5,
+          "fp": 16,
+          "fn": 0
+        }
+      },
+      "epochs": 36,
+      "trace": [
+        {
+          "epoch": 20,
+          "validation_rmse": 89.92555052750568
+        },
+        {
+          "epoch": 40,
+          "validation_rmse": 79.01941988195304
+        },
+        {
+          "epoch": 60,
+          "validation_rmse": 75.02736657895935
+        }
+      ]
+    },
+    {
+      "model": "windnet_port_ensemble",
+      "metrics": {
+        "n": 280,
+        "rmse": 71.66369181766227,
+        "mae": 57.28608071463449,
+        "r": 0.5907403184434771,
+        "chi2": 26.86304359322414,
+        "sigma_valid": 280,
+        "hse_ts": 0.22727272727272727,
+        "hse_counts_original": {
+          "tp": 5,
+          "fp": 17,
+          "fn": 0
+        }
+      },
+      "epochs": [
+        38,
+        27,
+        36
+      ]
+    }
+  ],
+  "baseline": {
+    "model": "windnet_port_ensemble",
+    "metrics": {
+      "n": 280,
+      "rmse": 71.66369181766227,
+      "mae": 57.28608071463449,
+      "r": 0.5907403184434771,
+      "chi2": 26.86304359322414,
+      "sigma_valid": 280,
+      "hse_ts": 0.22727272727272727,
+      "hse_counts_original": {
+        "tp": 5,
+        "fp": 17,
+        "fn": 0
+      }
+    },
+    "epochs": [
+      38,
+      27,
+      36
+    ]
+  },
+  "audit": {
+    "fit_rows": 1144,
+    "validation_rows": 280,
+    "fit_row_sha256": "67f192c5577b5d0c3790a1b7351d8b872ced3b39de771d3806ff95e2db90b6e3",
+    "validation_row_sha256": "1c05d4b3e6e57a4dc133ce13336a9c2275979181181ed81496db478714939018",
+    "fold5_accessed": false,
+    "identity": {
+      "code": {
+        "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+        "hse_original.py": "c142abe9edc71706fd88dc371819f57a9c11c2ef5bf47084f560aa46d46810e2",
+        "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+        "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+        "science.py": "e1fb258a9f274c0ee716da1b60d97ea8c4c99ee641ac317bb772e65460e969f0",
+        "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218"
+      },
+      "python": "3.12.3",
+      "numpy": "2.1.2",
+      "torch": "2.8.0+cu128",
+      "device": "cuda",
+      "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb"
+    },
+    "port_limitations": [
+      "PyTorch instead of TensorFlow1.7",
+      "float32 bilinear resize instead of cv2 float64",
+      "gradient clipping 10 for numerical stability",
+      "validation-RMSE early stopping instead of original test-correlation checkpoint selection"
+    ]
+  }
+}

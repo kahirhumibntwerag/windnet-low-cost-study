@@ -7,6 +7,8 @@ import torch.nn.functional as F
 from torch import nn
 from sklearn.linear_model import Ridge
 from sklearn.preprocessing import StandardScaler
+from scipy.linalg import eigh
+from scipy.spatial.distance import cdist
 from matched.runner import DATA,EXPORT,ROOT,numeric_npy,save_json,sha
 from matched.hse_original import BatchwiseHSE
 
@@ -197,9 +199,32 @@ def ridge():
     result={'stage':'M1','scope':'training-side Fold4 validation only','rows':rows,'best_ridge':best,'baseline':base,'gate_passed':passed,'fit_row_sha256':rowhash(tr),'validation_row_sha256':rowhash(va),'fold5_accessed':False,'identity':identity()}
     save_json(EXPORT/'m1_results.json',result);np.savez_compressed(DATA/'ridge_dev_predictions.npz',**preds)
     print(json.dumps({'stage':'M1_complete','best':best,'gate_passed':passed}),flush=True)
+def kernel():
+    d=np.load(DATA/'dev_embeddings.npz');tr,va,_=samples(d,[1,2,3],[4]);rows=[];predictions={};best_raw=None
+    baseline=json.loads((EXPORT/'baseline.json').read_text())['baseline'];bp=np.load(DATA/'baseline_dev_predictions.npz')['pred']
+    t=time.time();ym=float(tr['y'].mean())
+    save_json(EXPORT/'m2_execution.json',{'identity':identity(),'fit_row_sha256':rowhash(tr),'validation_row_sha256':rowhash(va),'fold5_accessed':False})
+    for kind in ['flatten','mean','trend']:
+        scaler=StandardScaler().fit(view(tr,kind));x=scaler.transform(view(tr,kind));v=scaler.transform(view(va,kind))
+        dist=cdist(x,x,'sqeuclidean');dv=cdist(v,x,'sqeuclidean')
+        for gf in [.1,1,10]:
+            gamma=gf/x.shape[1];k=np.exp(-gamma*dist);kv=np.exp(-gamma*dv);lam,q=eigh(k,check_finite=False);lam=np.maximum(lam,0);qy=q.T@(tr['y']-ym);vq=kv@q
+            for alpha in [.01,.1,1,10,100]:
+                p=vq@(qy/(lam+alpha))+ym;name=f'kernel_{kind}_g{gf}_a{alpha}';recipe={'family':'kernel','view':kind,'gamma_factor':gf,'alpha':alpha,'source':'energy'}
+                row={'model':name,'recipe':recipe,'metrics':metrics(va['y'],p,va['sigma'])};rows.append(row);predictions[name]=p
+                if best_raw is None or row['metrics']['rmse']<best_raw['metrics']['rmse']:best_raw=row
+    kp=predictions[best_raw['model']]
+    for w in [0,.25,.5,.75,1]:
+        p=(1-w)*bp+w*kp;name='kernel_baseline_mix_'+str(w);row={'model':name,'recipe':{'family':'blend','kernel_weight':w,'kernel':best_raw['recipe'],'baseline':True},'metrics':metrics(va['y'],p,va['sigma'])};rows.append(row);predictions[name]=p
+    eligible=[r for r in rows if r['metrics']['r']>=baseline['metrics']['r']];selected=min(eligible,key=lambda r:r['metrics']['rmse']) if eligible else min(rows,key=lambda r:r['metrics']['rmse'])
+    passed=selected['metrics']['rmse']<=.99*baseline['metrics']['rmse'] and selected['metrics']['r']>=baseline['metrics']['r']
+    result={'stage':'M2','scope':'training-side Fold4 validation only','rows':rows,'selected':selected,'best_raw':best_raw,'incumbent':baseline,'gate_passed':passed,'fit_row_sha256':rowhash(tr),'validation_row_sha256':rowhash(va),'fold5_accessed':False,'seconds':time.time()-t,'identity':identity()}
+    save_json(EXPORT/'m2_results.json',result);np.savez_compressed(DATA/'kernel_dev_predictions.npz',**predictions)
+    print(json.dumps({'stage':'M2_complete','selected':selected,'gate_passed':passed,'seconds':time.time()-t}),flush=True)
 def run(cfg):
     stage=cfg['stage']
     if stage=='embed':prepare_embeddings()
     elif stage=='baseline':baseline()
     elif stage=='ridge':ridge()
+    elif stage=='kernel':kernel()
     else:raise ValueError('Stage not implemented '+stage)
