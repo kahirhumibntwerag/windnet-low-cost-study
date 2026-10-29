@@ -158,7 +158,9 @@ def neural_fit(tr,va,seed,max_epochs=300,patience=40,fixed_epochs=None,variant='
         for ind in torch.randperm(len(x),device=DEVICE).split(128):
             out=model(x[ind]);err=out[:,-1]-y[ind]
             loss=(err**2).mean()
-            if variant=='paper':loss=loss+.1*((out-seq[ind])**2).mean()+((err/sigma[ind])**2).mean()+1e-6*sum((p**2).sum() for p in model.parameters())
+            if variant in ['paper','no_variance']:loss=loss+.1*((out-seq[ind])**2).mean()
+            if variant in ['paper','no_sequence']:loss=loss+((err/sigma[ind])**2).mean()
+            loss=loss+1e-6*sum((p**2).sum() for p in model.parameters())
             opt.zero_grad();loss.backward();torch.nn.utils.clip_grad_norm_(model.parameters(),10);opt.step()
         if fixed_epochs:continue
         model.eval()
@@ -221,10 +223,24 @@ def kernel():
     result={'stage':'M2','scope':'training-side Fold4 validation only','rows':rows,'selected':selected,'best_raw':best_raw,'incumbent':baseline,'gate_passed':passed,'fit_row_sha256':rowhash(tr),'validation_row_sha256':rowhash(va),'fold5_accessed':False,'seconds':time.time()-t,'identity':identity()}
     save_json(EXPORT/'m2_results.json',result);np.savez_compressed(DATA/'kernel_dev_predictions.npz',**predictions)
     print(json.dumps({'stage':'M2_complete','selected':selected,'gate_passed':passed,'seconds':time.time()-t}),flush=True)
+def loss_ablations():
+    d=np.load(DATA/'dev_embeddings.npz');tr,va,norm=samples(d,[1,2,3],[4]);rows=[];preds={};t=time.time();base=json.loads((EXPORT/'baseline.json').read_text())['baseline']
+    save_json(EXPORT/'m3_execution.json',{'identity':identity(),'fit_row_sha256':rowhash(tr),'validation_row_sha256':rowhash(va),'fold5_accessed':False})
+    for variant in ['no_sequence','no_variance','mse_only']:
+        pp=[];epochs=[];seed_rows=[]
+        for seed in SEEDS:
+            p,state,trace=neural_fit(tr,va,seed,variant=variant);torch.save({**state,'normalization':norm},DATA/f'models/{variant}_{seed}.pt');pp.append(p);epochs.append(state['epochs']);seed_rows.append({'seed':seed,'epochs':state['epochs'],'metrics':metrics(va['y'],p,va['sigma']),'trace':trace})
+        p=np.mean(pp,axis=0);name='lstm_'+variant;row={'model':name,'recipe':{'family':'lstm','variant':variant,'epochs':epochs,'seeds':SEEDS},'metrics':metrics(va['y'],p,va['sigma']),'seed_rows':seed_rows};rows.append(row);preds[name]=p
+        print(json.dumps({'condition':variant,'metrics':row['metrics'],'epochs':epochs}),flush=True)
+    eligible=[r for r in rows if r['metrics']['r']>=base['metrics']['r']];selected=min(eligible or rows,key=lambda r:r['metrics']['rmse']);passed=selected['metrics']['rmse']<=.99*base['metrics']['rmse'] and selected['metrics']['r']>=base['metrics']['r']
+    result={'stage':'M3','scope':'training-side Fold4 validation only','rows':rows,'selected':selected,'incumbent':base,'gate_passed':passed,'fit_row_sha256':rowhash(tr),'validation_row_sha256':rowhash(va),'fold5_accessed':False,'seconds':time.time()-t,'identity':identity()}
+    save_json(EXPORT/'m3_results.json',result);np.savez_compressed(DATA/'loss_dev_predictions.npz',**preds)
+    print(json.dumps({'stage':'M3_complete','selected':selected['model'],'gate_passed':passed,'seconds':time.time()-t}),flush=True)
 def run(cfg):
     stage=cfg['stage']
     if stage=='embed':prepare_embeddings()
     elif stage=='baseline':baseline()
     elif stage=='ridge':ridge()
     elif stage=='kernel':kernel()
+    elif stage=='neural':loss_ablations()
     else:raise ValueError('Stage not implemented '+stage)
