@@ -1,0 +1,11 @@
+{
+  "project_id": "appgprj_6ae35dd2ef508191a8a789593a95bdfc",
+  "source_commit": "1d1e8ea779887ab2ea8e4cd156c840530b98c6bb",
+  "deployment_id": "appgdep_6ae39438820c8191887827300160b4c7",
+  "version_id": "appgprj_6ae35dd2ef508191a8a789593a95bdfc~appgver_37a393042c588191b66a576dd0e6b398",
+  "status": "succeeded",
+  "url": "https://windnet-research-lab-oct29.wellbat32.chatgpt.site",
+  "audience": "owner_private_preserved",
+  "public_research_repository": "https://github.com/kahirhumibntwerag/windnet-low-cost-study",
+  "artifact_archive_unchanged": true
+}

@@ -1,21 +1,29 @@
 # WindNet low-cost forecasting study
 
-**Current continuation:** [SDO features and fast-wind dashboard](https://windnet-research-lab-oct29.wellbat32.chatgpt.site/continuation.html), [protocols and full results](results/continuation), and [reproduction instructions](continuation/README.md). This continuation uses precomputed scalar EVE measurements and no images. It develops models only on original Folds 1–4; Fold 5 targets and old forecasts are excluded from its worker. Its selected CV scores are development evidence, not a new WindNet test comparison. The full paper remains deferred during improvement.
+**The full study is complete:** [eight-page paper](output/pdf/windnet-full-study.pdf), [locked E13 results](results/locked_final), [exact final bundle and saved weights](artifacts/locked_final), and [CPU reproduction instructions](results/locked_final/README.md). The [public source branch](https://github.com/kahirhumibntwerag/windnet-low-cost-study/tree/codex/windnet-study) contains the paper, results, data bundle, and weights. The [hosted final dashboard](https://windnet-research-lab-oct29.wellbat32.chatgpt.site/locked-final.html) remains owner-private; the [RogNet/FixRelay campaign and all 13 records](https://fixrelay.vercel.app/campaigns/bb47504f-7bd4-45bf-954b-b0b077ac5aee) are public.
 
-The two new completed loops reduce observed ≥500 km/s development RMSE from **133.35 to 123.91 km/s**, with overall RMSE changing from **80.72 to 81.92 km/s**. The resulting model still misses every observed ≥600 km/s exceedance. Matched component ablations and skill against persistence are included; all candidates and negative findings remain public.
+**No overall superiority was established.** Neither preregistered balanced-improvement gate passed in E13. The fixed 15-model panel reports useful fast-wind error reductions alongside event-detection and overall-error trade-offs. P1's positive ESP-feature ablation in the final panel is descriptive; it was not promoted into a newly selected model. No tuning or model changes followed final scoring.
 
-The sections below describe the initial frozen study. Its historical test results are not inputs to the continuation search.
+The final comparison preserves the original five holdouts and evaluation windows, including released WindNet forecasts and the **actual old frozen campaign winner**. That saved historical reference is distinct from **P0**, which faithfully retrains the earlier neural/tree recipe under stricter isolation. The primary and fast-wind-primary roles were fixed before E13; no winner was selected from test scores. The historical holdouts had already been viewed, so this is a locked historical comparison, not fresh confirmation.
+
+Development H7-H12 used original Folds 1–4 only, with zero original-holdout evaluations in that stage. The separately frozen E13 stage made one final evaluation pass. Derived scalar SDO/EVE features were used; no SDO images were downloaded for the continuation. [Protocols, all candidates, negative findings, and cancellations](results/continuation) remain available. The exact final bundle includes evaluation inputs and manifests, while the checkpoint archive retains **40 CPU-portable fitted artifacts** across five folds.
+
+The cumulative conservative compute/storage estimate is **below US$0.22**, under the US$5 cap; this is an estimate, not a settled invoice. Temporary study pods and volumes were deleted, with evidence in [costs](results/locked_final/costs.json). E13 ran on CPU: Python 3.12.3, NumPy 2.3.1, SciPy 1.16.1, scikit-learn 1.9.1, and PyTorch 2.8.0+cu128 with `--device cpu`. A GPU is not required for the final reproduction.
+
+## Historical initial study
+
+The sections below preserve the initial campaign's results and reproduction procedure. Its historical scores did not enter the training-only continuation search. Use the [E13 reproduction guide](results/locked_final/README.md) for the completed final panel; the CUDA workflow below concerns the initial study.
 
 A reproducible study of compact solar-wind forecasts on **the original released WindNet holdouts**, with experiment records, controlled ablations, and a direct comparison to the authors' saved predictions.
 
 **The result is mixed.** The frozen selection rule reduces five-fold mean RMSE from WindNet's **80.28 to 77.87 km/s**, but correlation falls from **0.550 to 0.515**. On original **Fold 5**, which stayed sealed during model design, WindNet performs better: **76.35 versus 78.06 km/s**. The paired uncertainty interval includes zero, so this study does **not** establish an overall improvement over WindNet.
 
-- [Interactive dashboard](https://windnet-research-lab-oct29.wellbat32.chatgpt.site) (owner-private hosting).
+- [Historical initial-study dashboard](https://windnet-research-lab-oct29.wellbat32.chatgpt.site/initial-study.html) (owner-private hosting).
 - [Short paper with charts and ablations](output/pdf/windnet-study.pdf).
 - [Complete model comparison](results/comparison.csv), [matched predictions](results/matched_predictions.csv), and [feature ablations](results/ablations.json).
 - [Public FixRelay campaign](https://fixrelay.vercel.app/campaigns/bb47504f-7bd4-45bf-954b-b0b077ac5aee), [six experiment records](results/experiment_ledger.json), and [study protocol](research_plan.json).
 
-## What was preserved
+## Historical initial study: what was preserved
 
 The study recovers the authors' 211-Angstrom release rather than regenerating a random split. It retains all **157 original 20-day blocks** and **2,198 evaluation windows** for history 4 and delay 3. Every target was matched exactly to the released WindNet prediction arrays. The reference reproduces the paper's rounded mean RMSE (80.28 km/s) and correlation (0.550).
 
@@ -23,13 +31,13 @@ The original code uses 13 training windows and 14 test windows per block; that a
 
 No SDO image is a predictor. The processed author archive bundles labels with image arrays, so approximately 1.04 GB is streamed to recover labels and original block identities; image arrays are discarded. Raw SDO archives and neural image checkpoints are not downloaded. The compact model input file is approximately 265 KiB.
 
-## What the ablations show
+## Historical initial study: what the ablations show
 
 The controlled comparison fixes the model family to ridge regression and keeps the same holdout rows. Removing the 27-day recurrence band raises mean RMSE by **4.50 km/s**; removing the 54-day band raises it by **0.67 km/s**. Magnetic variables add only a small average benefit, and plasma variables add essentially none. Longer recent speed history alone does not help.
 
 The full ridge, neural residual model, and convex ensemble have mean RMSEs of 78.38, 78.35, and 77.87 km/s, respectively. Those are model-family comparisons rather than isolated feature effects. The requested feature ablations were planned after final scoring and are explicitly exploratory.
 
-## Reproduce
+## Reproduce the historical initial study
 
 Use Python 3.12 or 3.13. A CUDA GPU is needed for the neural stages; CPU-only protocol checks and ridge ablations are supported. No Runpod account or credential is required by the research runner itself.
 
@@ -64,7 +72,7 @@ The CPU path also checks that the unchanged short, recurrence, and full ridge va
 
 See [reproducibility details](docs/reproducibility.md) for the environment limits, optional reference download, and output layout. The original Runpod experiment used `runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404` on a PRO 6000 Blackwell MIG 24 GB GPU. Estimated GPU cost was approximately US$0.12, below the US$5 cap; this is not a settled invoice. The temporary pod and volume were deleted.
 
-## Interpretation and limits
+## Historical initial study: interpretation and limits
 
 Fold 5 was unscored during the four development hypotheses. Five-fold means are exploratory because Folds 1–4 informed architecture design. The original random-block holdouts do not establish chronological or operational forecast skill. The Fold 5 paired cluster bootstrap uses 33 clusters of overlapping released blocks and 5,000 resamples; compact minus WindNet RMSE has a 95% interval of **[-6.16, 7.95] km/s**.
 
@@ -78,4 +86,4 @@ Upendran, V., Cheung, M. C. M., Hanasoge, S., & Krishnamurthi, G. (2020), *Solar
 - [Author-released folds and predictions](https://drive.google.com/drive/folders/18Z9-IcjtUOdaYWOQvPnB8YCKZ4kTj581).
 - [NASA OMNI documentation and fill codes](https://omniweb.gsfc.nasa.gov/html/ow_data.html).
 
-The [MIT license](LICENSE) covers this repository's new code. Upstream code, author-released predictions, measurements, and publications retain their own terms. The RogNet/FixRelay campaign and all six experiments are public; direct record links are in the sanitized ledger. Registry access tokens are excluded, and registry records are not independent peer review.
+The [MIT license](LICENSE) covers this repository's new code. Upstream code, author-released predictions, measurements, and publications retain their own terms. The RogNet/FixRelay campaign and all 13 completed/cancelled records are public; direct links are in the initial and continuation ledgers and the full dashboard history. Registry access tokens are excluded, and registry records are not independent peer review.

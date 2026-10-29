@@ -1,0 +1,377 @@
+{
+  "status": "passed",
+  "experiment": "E13_reporting_verification",
+  "created_utc": "2026-10-29T18:34:00.807460+00:00",
+  "scope": "Completed E13 reporting artifacts only; independent NumPy metrics and fixed-prediction uncertainty; no raw source archives, full feature bundle, model deserialization, refitting, selection or tuning.",
+  "mismatch_count": 0,
+  "mismatches": [],
+  "checks": {
+    "integrity_checks": 66073,
+    "count_fields": 24227,
+    "floating_fields": 40183,
+    "exact_fields": 1274,
+    "pooled_reports": 15,
+    "fold_reports": 75,
+    "dedup_reports": 15,
+    "uncertainty_comparisons": 36
+  },
+  "maximum_absolute_numeric_difference": 5.46229728115577e-14,
+  "numeric_tolerance": {
+    "rtol": 1e-10,
+    "atol": 1e-08
+  },
+  "rows": 2198,
+  "models": 15,
+  "block_count": 157,
+  "split_contract": [
+    {
+      "fold": 1,
+      "blocks": 37,
+      "fit_rows": 1560,
+      "test_rows": 518,
+      "purged_blocks": []
+    },
+    {
+      "fold": 2,
+      "blocks": 25,
+      "fit_rows": 1716,
+      "test_rows": 350,
+      "purged_blocks": []
+    },
+    {
+      "fold": 3,
+      "blocks": 26,
+      "fit_rows": 1703,
+      "test_rows": 364,
+      "purged_blocks": []
+    },
+    {
+      "fold": 4,
+      "blocks": 20,
+      "fit_rows": 1781,
+      "test_rows": 280,
+      "purged_blocks": []
+    },
+    {
+      "fold": 5,
+      "blocks": 49,
+      "fit_rows": 1404,
+      "test_rows": 686,
+      "purged_blocks": []
+    }
+  ],
+  "unique_issue_target_pairs": 2053,
+  "fast_case_counts": {
+    "observed_ge_500": 400,
+    "observed_ge_600": 110
+  },
+  "frozen_mixture_max_absolute_differences_km_s": {
+    "h9_fast_specialist": 0.0,
+    "P4": 0.0,
+    "P5": 0.0,
+    "P6": 0.0
+  },
+  "uncertainty_scopes": {
+    "all_original_windows": {
+      "occupied_bins": 54,
+      "original_windows": 2198
+    },
+    "original_fold5": {
+      "occupied_bins": 32,
+      "original_windows": 686
+    }
+  },
+  "formal_gate_verification": {
+    "overall_role": "starting_wind",
+    "fast_role": "h9_fast_specialist",
+    "overall_checks": {
+      "mean_RMSE_le_99pct_released_windnet": true,
+      "mean_MAE_not_worse_released_windnet": false,
+      "mean_RMSE_le_99pct_old_frozen_selected": false,
+      "mean_MAE_not_worse_old_frozen_selected": true
+    },
+    "fast_checks": {
+      "fast500_RMSE_le_98pct_released_windnet": true,
+      "CSI500_not_worse_released_windnet": false,
+      "fast500_RMSE_le_98pct_old_frozen_selected": true,
+      "CSI500_not_worse_old_frozen_selected": true,
+      "mean_RMSE_le_101pct_better_reference": true
+    },
+    "overall_passed": false,
+    "fast_passed": false,
+    "outcome": "not_supported",
+    "success_criteria_verbatim": "Historical numerical support only if EITHER (A) predeclared starting_wind has meanfoldRMSE<=.99*BOTHreferenceRMSEs and meanfoldMAE<=BOTHreferenceMAEs, OR (B) predeclaredH9 has observed-fast500 pooledRMSE<=.98*BOTHreferencefastRMSEs,CSI500>=BOTHreferenceCSIs,andmeanfoldRMSE<=1.01*the lower of the two reference meanfoldRMSEs. References are releasedWindNet andactualold_frozen_selected. Undefinedscores fail the relevant criterion. Secondary600 or another attractive panel member cannot rescue these preregistered roles. Otherwise not_supported. Even if either numerical gate passes, state historical locked benchmark only, not fresh generalization evidence. The model portfolio remains unchanged for all outcomes; no further tuning on these holdouts."
+  },
+  "headline_scores": {
+    "starting_wind": {
+      "mean_fold_rmse": 77.44461389665146,
+      "mean_fold_mae": 60.77641200590206,
+      "pooled_fast500_rmse": 130.7361722680249,
+      "CSI500": 0.17142857142857143
+    },
+    "h9_fast_specialist": {
+      "mean_fold_rmse": 78.17213646040935,
+      "mean_fold_mae": 61.987417977997005,
+      "pooled_fast500_rmse": 122.4495691883376,
+      "CSI500": 0.22
+    },
+    "P0": {
+      "mean_fold_rmse": 77.75363163589,
+      "mean_fold_mae": 60.54877439634764,
+      "pooled_fast500_rmse": 129.55015973977825,
+      "CSI500": 0.2033195020746888
+    },
+    "released_windnet": {
+      "mean_fold_rmse": 80.27603827020411,
+      "mean_fold_mae": 60.5736819897102,
+      "pooled_fast500_rmse": 138.91465959301746,
+      "CSI500": 0.23516949152542374
+    },
+    "old_frozen_selected": {
+      "mean_fold_rmse": 77.87240937138698,
+      "mean_fold_mae": 61.171242203730664,
+      "pooled_fast500_rmse": 130.91522608004018,
+      "CSI500": 0.15869565217391304
+    }
+  },
+  "checkpoint_archive_members_verified": 40,
+  "checkpoint_archive_members": {
+    "checkpoints/fold1/P0.joblib": {
+      "sha256": "c8ab85899ac159f13f79d1d6a63f1997563573ca75ba8df880c73bfe36fdd0de",
+      "bytes": 121391,
+      "matches_recorded": true
+    },
+    "checkpoints/fold1/P1.joblib": {
+      "sha256": "b402fa7c922f2d1aecbaad2123e94daced5719403cbd2f7256a7d94331e91e2f",
+      "bytes": 165425,
+      "matches_recorded": true
+    },
+    "checkpoints/fold1/P2.joblib": {
+      "sha256": "7211a13fd455dd3ad1b229c70e33c1f11a82b8b0567f28a079980cbe21eaec3a",
+      "bytes": 220155,
+      "matches_recorded": true
+    },
+    "checkpoints/fold1/P3.joblib": {
+      "sha256": "8f857b900f48ae0bd631cfdd06f1840bdfd0edef800136354d210d460a59537d",
+      "bytes": 268620,
+      "matches_recorded": true
+    },
+    "checkpoints/fold1/all_eve_pair.joblib": {
+      "sha256": "d5e316c0f4c348a4ed390271b4b92e76fce23d9909f92a7f38d2d1feccd91f82",
+      "bytes": 174828,
+      "matches_recorded": true
+    },
+    "checkpoints/fold1/raw4_lines.joblib": {
+      "sha256": "15abd312cb8155539ecbdaa4165683913be71a767bd8d9af153615d94bce65fe",
+      "bytes": 136710,
+      "matches_recorded": true
+    },
+    "checkpoints/fold1/unweighted_lines.joblib": {
+      "sha256": "41ecf558e7cb2e2ba8ae586b2af4ccaf9db096667077d879af84e21f4d6a99ca",
+      "bytes": 139553,
+      "matches_recorded": true
+    },
+    "checkpoints/fold1/wind_pair.joblib": {
+      "sha256": "a6631cb56b98034cd687835f9700f12798f638251702f25f8d2384a16e07de1d",
+      "bytes": 72403,
+      "matches_recorded": true
+    },
+    "checkpoints/fold2/P0.joblib": {
+      "sha256": "759cf564410573bd6851b3407cc7b9632bc9db4777830036c1adf130d7689668",
+      "bytes": 121877,
+      "matches_recorded": true
+    },
+    "checkpoints/fold2/P1.joblib": {
+      "sha256": "62f077bc77b4bb52f08394c06cc8c69dab31bf31649d8a36900b39ddea1e4fd8",
+      "bytes": 166741,
+      "matches_recorded": true
+    },
+    "checkpoints/fold2/P2.joblib": {
+      "sha256": "20553cd4100acc5193f49c06216c8c4c28fe300b560f38a540a0829ccc3a3373",
+      "bytes": 222222,
+      "matches_recorded": true
+    },
+    "checkpoints/fold2/P3.joblib": {
+      "sha256": "a40cbbb184817fa2a46f69d1179f94b7edf4b4fc4c5c983b386e089eefdd22f2",
+      "bytes": 270990,
+      "matches_recorded": true
+    },
+    "checkpoints/fold2/all_eve_pair.joblib": {
+      "sha256": "d007808054d459cc7ed7a3accff54ecc8a8785852e290dbc05cffe9c5394415f",
+      "bytes": 177104,
+      "matches_recorded": true
+    },
+    "checkpoints/fold2/raw4_lines.joblib": {
+      "sha256": "2c5db32704d1aca726070f3031382f12ef9c0ebdc9b418c10638c14b66463009",
+      "bytes": 140618,
+      "matches_recorded": true
+    },
+    "checkpoints/fold2/unweighted_lines.joblib": {
+      "sha256": "ba2f60224ec6c966193340e110186e21cc25cedf96e943596e586be1a78c4830",
+      "bytes": 141473,
+      "matches_recorded": true
+    },
+    "checkpoints/fold2/wind_pair.joblib": {
+      "sha256": "3fc83e57255b37b6942479ce33a68f11883039435ffd40bb9de7d011997b9f28",
+      "bytes": 72734,
+      "matches_recorded": true
+    },
+    "checkpoints/fold3/P0.joblib": {
+      "sha256": "07c0ab6037264966af2a7a3bd834948a40bcfd6cf661f6c762facd79bba81671",
+      "bytes": 122057,
+      "matches_recorded": true
+    },
+    "checkpoints/fold3/P1.joblib": {
+      "sha256": "eca3fa254f6c2f8e555689445a5343c08a17bec52d1f6a86721914fff02f1560",
+      "bytes": 163763,
+      "matches_recorded": true
+    },
+    "checkpoints/fold3/P2.joblib": {
+      "sha256": "216b7f41e4f1c92eef9337629bd9e09bddeb4a6132c22276988b9437e99b2d48",
+      "bytes": 221750,
+      "matches_recorded": true
+    },
+    "checkpoints/fold3/P3.joblib": {
+      "sha256": "7d702dfc3966f5e54e0f3b977ae7dd5c6709fd17d1bd960a496670e631acfff0",
+      "bytes": 267783,
+      "matches_recorded": true
+    },
+    "checkpoints/fold3/all_eve_pair.joblib": {
+      "sha256": "0ccf627c8efca4e3008e2b58b53cc2872aa427829fc8ce6f9a6dc0e225e2aecd",
+      "bytes": 176202,
+      "matches_recorded": true
+    },
+    "checkpoints/fold3/raw4_lines.joblib": {
+      "sha256": "b4ca5733b598df943899cd733ad6a2e353e8a41b642bffb66a6512405bc8a0e0",
+      "bytes": 139476,
+      "matches_recorded": true
+    },
+    "checkpoints/fold3/unweighted_lines.joblib": {
+      "sha256": "b6c8c5ad7712cafb02e02caecec318c68b27be712ecbd582e70e976099ca7cf7",
+      "bytes": 141105,
+      "matches_recorded": true
+    },
+    "checkpoints/fold3/wind_pair.joblib": {
+      "sha256": "2feb93890758019810690423ecf13699d3d9253e076a7e0953ce38061a8b523c",
+      "bytes": 72923,
+      "matches_recorded": true
+    },
+    "checkpoints/fold4/P0.joblib": {
+      "sha256": "1d74b861f9b950ca8754569d5317d22b10aa03828c3e043e7ba1a14462ed67d2",
+      "bytes": 122507,
+      "matches_recorded": true
+    },
+    "checkpoints/fold4/P1.joblib": {
+      "sha256": "c1914fb3272e0b55850a7d60e06c9b534d1edf577a92e427379e82ed05259176",
+      "bytes": 166986,
+      "matches_recorded": true
+    },
+    "checkpoints/fold4/P2.joblib": {
+      "sha256": "d948e007619dce2213919e918438325f91e708309a4dbb80561bf624f6bfd4a3",
+      "bytes": 226452,
+      "matches_recorded": true
+    },
+    "checkpoints/fold4/P3.joblib": {
+      "sha256": "8d3b97b9cef287e74266d9c4ff72a315ae794e9f85037eab7ee8ee10a81b16c8",
+      "bytes": 275048,
+      "matches_recorded": true
+    },
+    "checkpoints/fold4/all_eve_pair.joblib": {
+      "sha256": "7777eb87d69621f6ee31d21966c892b5aab05df83eb8cd206a6829f67039f07a",
+      "bytes": 180922,
+      "matches_recorded": true
+    },
+    "checkpoints/fold4/raw4_lines.joblib": {
+      "sha256": "93483bee7772716d4099da599af7194625e07986082b2ca5739794da7b7b8285",
+      "bytes": 142339,
+      "matches_recorded": true
+    },
+    "checkpoints/fold4/unweighted_lines.joblib": {
+      "sha256": "192248aae52dbd6c9861099b56d04faf717871191a06f11f9d6a8115b4759e45",
+      "bytes": 145744,
+      "matches_recorded": true
+    },
+    "checkpoints/fold4/wind_pair.joblib": {
+      "sha256": "9a3de7ab71b51889354d50bc390975489df61d1edd243eabb23286255d6fec7e",
+      "bytes": 73423,
+      "matches_recorded": true
+    },
+    "checkpoints/fold5/P0.joblib": {
+      "sha256": "591ea7713ebcad6a940650d392c9c49b1444414ebe890be5da7885362821af1c",
+      "bytes": 117779,
+      "matches_recorded": true
+    },
+    "checkpoints/fold5/P1.joblib": {
+      "sha256": "77dcfec60697dda4f84b05a7a7fba734a4c41676735ad9baede3498bcbfd145a",
+      "bytes": 162375,
+      "matches_recorded": true
+    },
+    "checkpoints/fold5/P2.joblib": {
+      "sha256": "f5b9c24c14735941ddbad67ac6a8c2d0bc751462b7afb80afbb18435d1c357e8",
+      "bytes": 216782,
+      "matches_recorded": true
+    },
+    "checkpoints/fold5/P3.joblib": {
+      "sha256": "5056a38ddbf468fdc1c9c1b9bff760d642eb21b14c52b6b93830a9a69160162b",
+      "bytes": 265682,
+      "matches_recorded": true
+    },
+    "checkpoints/fold5/all_eve_pair.joblib": {
+      "sha256": "192e8f4355abf3f303cfc672c3699f02c9eb1d367af2cf96db1912cbb03ef958",
+      "bytes": 174900,
+      "matches_recorded": true
+    },
+    "checkpoints/fold5/raw4_lines.joblib": {
+      "sha256": "179e2a8c49eb860d986b698f98feff5fd8ebbb0866b824b1f504f465b732ce09",
+      "bytes": 137204,
+      "matches_recorded": true
+    },
+    "checkpoints/fold5/unweighted_lines.joblib": {
+      "sha256": "316df29012cbd8dd32fd6090a78243e8a1af252a15514b83940cab4b11b79c88",
+      "bytes": 139080,
+      "matches_recorded": true
+    },
+    "checkpoints/fold5/wind_pair.joblib": {
+      "sha256": "f909b00bc7f295321395ceafceb522bd37e953e05ea3bb84c4facbf6da39a7a8",
+      "bytes": 71726,
+      "matches_recorded": true
+    }
+  },
+  "artifact_sha256": {
+    "final_results.json": "09415318acc247881f7eca5579f221abba7d5268829dabe45e5cd5ca43197680",
+    "predictions.npz": "2fec3d5cc570f831d25642c09c607964e74fd4f417d3b62923a3a677ada37750",
+    "comparison.csv": "8e216865d366e51e6686fa7e09bf21251175627989ffbdd0949614d854c8db83",
+    "checkpoints.tar.gz": "a73954812e04b2774696a9603a00ddfcb2462b073c5c8b0007e9f0f1e289423e",
+    "freeze_manifest.json": "990efbef907fe906e3f5c22734058d5046b7059d4ee92273127369d5cfb78e7d",
+    "recipe_freeze.json": "b22fcedeb90818b927814ac545ae32111fcc7b9a04dde7a68a6250f1e20164f6",
+    "outcome_verdict.json": "cf0b34a4116c186ecc278f855cbbb675a300d7cc21903321d2b32c2a5936aedf"
+  },
+  "frozen_raw_source_fingerprints": {
+    "study_inputs.npz": "f4723c671bb2f9a2f21dfa491c4c14e34626836f1fa82bf979c36a39d8ed273e",
+    "source_folds.npz": "a3835b999a5a95ef3bb29e55fc2bbdf040939ffadb3ba7d525ecb6223d660d45",
+    "eve_source.ncdf": "f150da94bec13f171f95e0ebbb7a368c8323f6292743180eaef27a597819a6f8",
+    "matched_predictions.csv": "f52ebfdf36594a5529cb5a0dffc776ad77002ab9415088331f681b57badd7756"
+  },
+  "frozen_code_sha256": {
+    "prepare_locked_final.py": "df1ca68d5b33ffb80d9dc98122e5b4d2b1c826e8e38fcbfb5728cc9dd0cb6ee0",
+    "locked_final.py": "e61eb20d9c80c02f818d7b966704d2f8afd942cdcfa3a139e7cd7d8048a2e103",
+    "final_uncertainty.py": "dbbeabda365ed8b6f0b855884b47fd3b40eda2cd9496407229efd55342f19323",
+    "final_reporting.py": "4d68735164568f6041a4a526ca933ac97d665d5966f55171576a004f1cffa009",
+    "prior_champion.py": "8105eacd612cba22b03a75f5326701f695fa3258d2a05bf48b17a9f350600b74",
+    "models.py": "fddf568c9ea82fff3a9fa827a777151ebebe2d92cfdf27ff9d8f647ca1454715",
+    "metrics.py": "7d8f06011eb489382e15a98d18852796dd38bec685645cd1deb0066e2f6521ee",
+    "train.py": "bc7ee514f973753f1a5f34d7d8520ca78ba0f718d46139bc620957595b2f5b07",
+    "prepare_training.py": "5781fc8a64c21abec110b6a6ac950351fe0ebc7ddd5aeb96f9a39e5668e363d4",
+    "fast_loss.py": "ca0ba8554086bbe0707156a0b7317dd71b45c2d70d46fd998483611efacb6246"
+  },
+  "recipes_sha256": "31987943dadb16666124ff5aa7a8c3e317301b85e018d8ae692fa8d13d1a2b98",
+  "public_protocol_url": "https://fixrelay.vercel.app/experiments/a83dbc31-db26-4d65-840e-8ac888103019",
+  "public_protocol_section_sha256": "b9bbe73d8495fdd5de9f13b6067b4d5cba6237a073df54ce1eb8fb9927dca13e",
+  "provenance_limits": [
+    "Raw sources, old matched CSV and full feature/provenance bundle were intentionally not reopened. Their fingerprints were checked for consistency across frozen preparation/execution metadata, not independently recalculated.",
+    "Both frozen reference columns share the same verified original-row identity vector as every reported model. Original CSV value alignment remains bound to the pre-score frozen preparation checks.",
+    "Fit-side source masks were verified through frozen code/source fingerprints and recorded count bounds; raw feature masks were not recomputed.",
+    "Conditional bootstrap results are historical benchmark diagnostics; this verification does not create fresh generalization evidence."
+  ],
+  "no_model_changes": true
+}

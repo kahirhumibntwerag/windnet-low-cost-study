@@ -1,0 +1,10 @@
+{
+  "archive_sha256_verified": true,
+  "individual_checkpoints_verified": 40,
+  "all_cpu_portable_loads_passed": true,
+  "synthetic_prediction_rows_per_model": 2,
+  "raw_evaluation_sources_opened": 0,
+  "model_refits": 0,
+  "evaluation_reruns": 0,
+  "note": "Only completed checkpoint artifacts loaded; zero-valued synthetic inputs test serialization, not forecast accuracy."
+}

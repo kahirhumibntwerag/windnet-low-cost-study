@@ -1,0 +1,14 @@
+{
+  "protocol_url": "https://fixrelay.vercel.app/experiments/a83dbc31-db26-4d65-840e-8ac888103019",
+  "freeze_manifest_sha256": "990efbef907fe906e3f5c22734058d5046b7059d4ee92273127369d5cfb78e7d",
+  "selection_from_final_test": false,
+  "predeclared_overall_gate_passed": false,
+  "predeclared_fast_gate_passed": false,
+  "outcome": "not_supported",
+  "model_changes": 0,
+  "fresh_confirmation": false,
+  "refs": [
+    "released_windnet",
+    "old_frozen_selected"
+  ]
+}

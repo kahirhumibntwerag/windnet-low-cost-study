@@ -1,0 +1,33 @@
+{
+  "checked_utc": "2026-10-29T18:43:47.449965+00:00",
+  "scope": "LocalbrowserUI on8765; no modelruns",
+  "root_redirect": "/locked-final.html",
+  "model_rows": 15,
+  "public_experiment_cards": 13,
+  "paired_reference_rows": 12,
+  "filter_P1_rows": 1,
+  "fast500_counts": {
+    "tp": 110,
+    "fp": 100,
+    "fn": 290,
+    "tn": 1698
+  },
+  "fast600_counts": {
+    "tp": 4,
+    "fp": 1,
+    "fn": 106,
+    "tn": 2087
+  },
+  "paper_link_visible": true,
+  "pdf_sha256": "a59296c6ca5eab53cdbc3190de5f7e89e110d0134d7dd284177b9fe54d2f7591",
+  "console_errors": [],
+  "hosted_browser_qa": {
+    "status": "passed",
+    "url": "https://windnet-research-lab-oct29.wellbat32.chatgpt.site/locked-final",
+    "loaded": true,
+    "model_rows": 15,
+    "experiment_cards": 13,
+    "paper_link_visible": true,
+    "verdict_matches": true
+  }
+}

@@ -21,8 +21,80 @@
       "status": "completed",
       "outcome": "supported_on_training_cv",
       "public_url": "https://fixrelay.vercel.app/experiments/f3956e16-c32c-42cb-9d67-6b8ac6aa1970"
+    },
+    {
+      "label": "H10",
+      "id": "629f3afe-fddc-4582-aa3f-090ca3b24271",
+      "status": "cancelled_before_fitting",
+      "outcome": "cancelled",
+      "scope": "Before fitting",
+      "observation": "Cancelled without fitting to restore the missing prior-champion comparison first; no negative scientific run.",
+      "public_url": "https://fixrelay.vercel.app/experiments/629f3afe-fddc-4582-aa3f-090ca3b24271"
+    },
+    {
+      "label": "H11",
+      "id": "f978fd1e-c27c-4cf9-ae86-faaac54dbc0c",
+      "status": "completed",
+      "outcome": "not_supported",
+      "scope": "Training-only CV, original Folds 1-4",
+      "adoption": false,
+      "selected": "P0",
+      "observation": "No candidate passed the preregistered P0-relative adoption rule; P0 retained and all controls reported.",
+      "public_url": "https://fixrelay.vercel.app/experiments/f978fd1e-c27c-4cf9-ae86-faaac54dbc0c"
+    },
+    {
+      "label": "H12",
+      "id": "509276ed-b66e-4869-8cb8-f6b6c250a1e5",
+      "status": "completed",
+      "outcome": "inconclusive",
+      "scope": "Fixed training-CV predictions",
+      "observation": "Integrity passed; no H11 adoption or portfolio change after the fixed stability audit.",
+      "public_url": "https://fixrelay.vercel.app/experiments/509276ed-b66e-4869-8cb8-f6b6c250a1e5"
     }
   ],
   "original_holdout_evaluations": 0,
-  "full_paper": "deferred_per_user_during_continuation"
+  "original_holdout_evaluations_scope": "H7-H12 continuation development only; the separately frozen E13 final pass is recorded below.",
+  "training_stage": {
+    "records": ["H7", "H8", "H9", "H10", "H11", "H12"],
+    "target_folds": [1, 2, 3, 4],
+    "original_holdout_evaluations": 0,
+    "model_selection_from_original_holdouts": false
+  },
+  "final_stage": {
+    "label": "E13",
+    "id": "a83dbc31-db26-4d65-840e-8ac888103019",
+    "status": "completed",
+    "outcome": "not_supported",
+    "public_url": "https://fixrelay.vercel.app/experiments/a83dbc31-db26-4d65-840e-8ac888103019",
+    "original_holdout_evaluation_passes": 1,
+    "fixed_model_count": 15,
+    "selection_from_final_test": false,
+    "fresh_confirmation": false,
+    "balanced_overall_gate_passed": false,
+    "balanced_fast_gate_passed": false,
+    "post_final_model_changes": 0,
+    "positive_p1_esp_ablation": "descriptive; not promoted after final scoring",
+    "results_directory": "results/locked_final",
+    "freeze_manifest_sha256": "990efbef907fe906e3f5c22734058d5046b7059d4ee92273127369d5cfb78e7d"
+  },
+  "full_paper": {
+    "status": "completed",
+    "pages": 8,
+    "path": "output/pdf/windnet-full-study.pdf"
+  },
+  "public_campaign_record_count": 13,
+  "initial_study_ledger": "results/experiment_ledger.json",
+  "publication": {
+    "code_paper_data_weights": "public GitHub branch codex/windnet-study",
+    "hosted_dashboard_url": "https://windnet-research-lab-oct29.wellbat32.chatgpt.site/locked-final.html",
+    "hosted_dashboard_visibility": "owner-private",
+    "exact_final_artifacts": "artifacts/locked_final",
+    "saved_checkpoint_count": 40
+  },
+  "cost_summary": {
+    "cumulative_conservative_estimate_usd": 0.21274459322777775,
+    "settled_invoice": false,
+    "temporary_study_resources_deleted": true,
+    "evidence": "results/locked_final/costs.json"
+  }
 }

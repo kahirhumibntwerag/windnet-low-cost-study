@@ -1,0 +1,8 @@
+{
+  "stage": "E13",
+  "device": "cpu",
+  "image": "runpod/pytorch@sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+  "hourly_compute_usd": 0.06,
+  "reason": "GPU data-center stock and co-located network storage did not align; fixed small tabular networks support CPU. Device chosen before any final fitting or scores.",
+  "freeze_manifest_sha256": "990efbef907fe906e3f5c22734058d5046b7059d4ee92273127369d5cfb78e7d"
+}

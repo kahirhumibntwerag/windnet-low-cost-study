@@ -1,0 +1,7 @@
+{
+  "experiment": "E13",
+  "freeze_manifest_sha256": "990efbef907fe906e3f5c22734058d5046b7059d4ee92273127369d5cfb78e7d",
+  "protocol_url": "https://fixrelay.vercel.app/experiments/a83dbc31-db26-4d65-840e-8ac888103019",
+  "started_utc": "2026-10-29T18:22:10.790110+00:00",
+  "selection_from_final_test": false
+}

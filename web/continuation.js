@@ -8,12 +8,13 @@
   const thresholds = [500, 600];
   const experiments = {
     H8: {file: './continuation.json', title: 'Can compact solar features help?', url: 'https://fixrelay.vercel.app/experiments/a772eb55-1daf-4787-84df-4fdd8f662421'},
-    H9: {file: './fast_loss.json', title: 'Can fast-wind-aware training help?', url: 'https://fixrelay.vercel.app/experiments/f3956e16-c32c-42cb-9d67-6b8ac6aa1970'}
+    H9: {file: './fast_loss.json', title: 'Can fast-wind-aware training help?', url: 'https://fixrelay.vercel.app/experiments/f3956e16-c32c-42cb-9d67-6b8ac6aa1970'},
+    H11: {file: './champion.json', title: 'How does the prior champion compare?', url: 'https://fixrelay.vercel.app/experiments/f978fd1e-c27c-4cf9-ae86-faaac54dbc0c'}
   };
   const groups = {wind_only: ['Wind only', 0], wind_esp: ['Wind + ESP diodes', 18], wind_lines: ['Wind + EVE lines', 44], wind_all_eve: ['Wind + all EVE', 62]};
   const parameter = new URLSearchParams(location.search || '').get('experiment')?.toUpperCase();
   const state = {data: null, rows: [], viewed: null, selected: null, experiment: null, requested: experiments[parameter] ? parameter : 'auto', loadToken: 0};
-  const incumbentLabel = () => state.experiment === 'H9' ? 'H8 reference' : 'Wind-only incumbent';
+  const incumbentLabel = () => state.experiment === 'H11' ? 'Registered incumbent' : state.experiment === 'H9' ? 'H8 reference' : 'Wind-only incumbent';
   const make = (tag, text, className) => {
     const element = document.createElement(tag);
     if (text !== undefined && text !== null) element.textContent = String(text);
@@ -52,6 +53,19 @@
       const spec = meta.spec || report.spec || {};
       const params = spec.params || {};
       let label = report.label || meta.label;
+      if (!label && data.experiment === 'H11') {
+        const p = /^p([0-6])(?:\b|_)/i.exec(id)?.[1];
+        const labels = {
+          0: 'P0 · Prior champion · wind only', 1: 'P1 · Prior champion + ESP diodes',
+          2: 'P2 · Prior champion + EVE lines', 3: 'P3 · Prior champion + all EVE',
+          4: 'P4 · 75% prior champion + 25% H9', 5: 'P5 · 50% prior champion + 50% H9',
+          6: 'P6 · 25% prior champion + 75% H9'
+        };
+        if (p !== undefined) label = labels[p];
+        else if (/h8.*wind|wind.*h8/i.test(id)) label = 'Control · H8 wind model';
+        else if (id === 'starting_wind_reference') label = 'Control · Starting wind model';
+        else if (/h9/i.test(id)) label = 'Control · H9 model';
+      }
       if (!label) {
         if (meta.feature_group) {
           const group = groups[meta.feature_group]?.[0] || titleCase(meta.feature_group);
@@ -134,7 +148,7 @@
 
   function renderChart() {
     const all = $('chart-scope').value === 'all';
-    let rows = state.rows.filter(row => all || row.representative || row.selected || row.incumbent || row.id === state.viewed);
+    let rows = state.rows.filter(row => all || state.experiment === 'H11' || row.representative || row.selected || row.incumbent || row.id === state.viewed);
     if (!rows.length) rows = state.rows.slice(0, 8);
     const values = rows.flatMap(row => [row.metrics.overall?.rmse, ...thresholds.map(threshold => fastError(row, threshold).rmse)]).filter(finite);
     const max = values.length ? Math.max(...values) : null;
@@ -161,7 +175,7 @@
       group.append(label, bars); elements.push(group);
     }
     chart.replaceChildren(...elements);
-    $('chart-note').textContent = `${rows.length} of ${state.rows.length} candidates shown. ${all ? 'Every recorded candidate is included.' : 'Family representatives, the incumbent, the recorded selection, and the inspected candidate are shown; choose “Every candidate” for the full chart.'} All bars use the same scale. Click a model label to inspect its detailed scores.`;
+    $('chart-note').textContent = `${rows.length} of ${state.rows.length} candidates shown. ${all || state.experiment === 'H11' ? 'Every recorded candidate and control is included.' : 'Family representatives, the incumbent, the recorded selection, and the inspected candidate are shown; choose “Every candidate” for the full chart.'} All bars use the same scale. Click a model label to inspect its detailed scores.`;
   }
 
   function renderSkills(row) {
@@ -258,8 +272,8 @@
 
   function renderComponentAblations() {
     const entries = Object.entries(state.data.feature_ablations_unweighted || {});
-    $('component-ablations').hidden = !entries.length;
-    if (!entries.length) return;
+    $('component-ablations').hidden = !entries.length || state.experiment === 'H11';
+    if (!entries.length || state.experiment === 'H11') return;
     const items = entries.map(([group, value]) => ({group, value, row: state.rows.find(row => row.id === value.candidate)}));
     const maximum = Math.max(1, ...items.flatMap(({row}) => row ? [row.metrics.overall?.rmse, ...thresholds.map(t => fastError(row, t).rmse)] : []).filter(finite));
     const ceiling = Math.ceil(maximum / 20) * 20;
@@ -283,19 +297,35 @@
     $('component-chart').replaceChildren(...chart); $('component-body').replaceChildren(...table);
   }
 
+  function renderChampionControls() {
+    $('champion-controls').hidden = state.experiment !== 'H11';
+    if (state.experiment !== 'H11') return;
+    const p0 = state.rows.find(row => /^p0(?:\b|_)/i.test(row.id) || /^P0\b/.test(row.label));
+    const delta = (current, baseline) => finite(current) && finite(baseline) ? current - baseline : null;
+    const rows = state.rows.map(row => {
+      const tr = make('tr'); const identity = make('td'); const button = make('button', row.label, 'candidate-name'); button.type = 'button'; button.addEventListener('click', () => setViewed(row.id)); identity.append(button);
+      const inputs = row.meta.feature_group ? groups[row.meta.feature_group]?.[0] || titleCase(row.meta.feature_group) : row.usesEve ? 'Includes EVE' : 'Wind only';
+      tr.append(identity, make('td', inputs), metricCell(row.metrics.overall?.rmse), metricCell(fastError(row, 500).rmse), metricCell(fastError(row, 600).rmse), metricCell(delta(row.metrics.overall?.rmse, p0?.metrics.overall?.rmse), 1, 'negative'), metricCell(delta(fastError(row, 500).rmse, p0 ? fastError(p0, 500).rmse : null), 1, 'negative'));
+      return tr;
+    });
+    $('champion-body').replaceChildren(...rows);
+  }
+
   function renderExperimentContext() {
     const h9 = state.experiment === 'H9';
+    const h11 = state.experiment === 'H11';
     const config = experiments[state.experiment];
     $('experiment-select').value = state.experiment;
     $('experiment-eyebrow').textContent = `${state.experiment} · Reproducible model development`;
     $('page-title').textContent = config.title;
-    document.title = `WindNet study · ${state.experiment} ${h9 ? 'Fast-wind loss' : 'Solar features'}`;
-    $('experiment-lead').textContent = h9 ? 'Continue from H8’s retained model: keep the learner pair fixed, isolate ESP and emission-line components, and test whether placing more training weight on fast wind changes the trade-off.' : 'A continuation of the low-cost WindNet study: add scalar SDO/EVE irradiance features, measure what each addition changes, and check performance when solar wind is fast.';
-    $('candidate-intro').textContent = h9 ? 'Every new H9 forecast and the exact H8 reference remain visible. Compare component groups, loss multipliers, and fixed weighted/unweighted forecast mixtures. Evaluation scores are always unweighted.' : 'Compare wind-only models with the corresponding solar-feature models, recurrence with multiple rotations, and individual learners with blends. All reported candidates remain visible.';
+    document.title = `WindNet study · ${state.experiment} ${h11 ? 'Prior-champion controls' : h9 ? 'Fast-wind loss' : 'Solar features'}`;
+    $('experiment-lead').textContent = h11 ? 'Restore the earlier neural-and-tree champion as a matched control, retrain its recipe under stricter data isolation, and compare solar additions and mixtures with H8 and H9.' : h9 ? 'Continue from H8’s retained model: keep the learner pair fixed, isolate ESP and emission-line components, and test whether placing more training weight on fast wind changes the trade-off.' : 'A continuation of the low-cost WindNet study: add scalar SDO/EVE irradiance features, measure what each addition changes, and check performance when solar wind is fast.';
+    $('candidate-intro').textContent = h11 ? 'Every H11 forecast and the H8/H9 controls remain visible. P0 is a fresh retraining of the earlier champion recipe, P1–P3 add solar components, and P4–P6 mix P0 with H9. Scores are selection CV, not independent test evidence.' : h9 ? 'Every new H9 forecast and the exact H8 reference remain visible. Compare component groups, loss multipliers, and fixed weighted/unweighted forecast mixtures. Evaluation scores are always unweighted.' : 'Compare wind-only models with the corresponding solar-feature models, recurrence with multiple rotations, and individual learners with blends. All reported candidates remain visible.';
     $('selection-protocol').textContent = `A ${h9 ? 'new candidate' : 'solar-feature candidate'} must keep overall RMSE within 1% of ${h9 ? 'the exact H8 reference' : 'the wind-only incumbent'} and reduce observed ≥500 km/s RMSE by at least 2%. Eligible candidates minimize an equally weighted normalized overall/fast-wind MSE objective. If none qualify, ${h9 ? 'the exact H8 reference' : 'the wind-only incumbent'} is retained. The ≥600 km/s threshold is secondary and does not select the model.`;
-    $('loss-protocol').hidden = !h9;
-    $('loss-protocol').textContent = 'H9 fixes every learner pair at 25% ridge (α=1000) + 75% trees (7 leaves, minimum 30 samples per leaf). Observed ≥500 km/s fitting rows receive weight 1, 2, or 4; other rows receive 1. Weights act only on the learner loss and are not normalized, so they also change the effective regularization scale. Preprocessing and evaluation remain unweighted. Forecast mixtures use 25%, 50%, or 75% of a weighted pair with the remaining fraction from its unweighted counterpart.';
-    document.querySelectorAll('a[href*="fixrelay.vercel.app/experiments/"]').forEach(link => {link.href = config.url; if (link.closest('.sidebar-bottom')) link.textContent = `${state.experiment} experiment on FixRelay ↗`;});
+    $('loss-protocol').hidden = !h9 && !h11;
+    $('loss-protocol').textContent = h11 ? 'P0 uses 50% histogram-gradient boosting and 50% of a three-seed residual neural ensemble. The neural recipe uses a ridge anchor (α=10), hidden layers of 32 and 16 units, SiLU activations, and dropout 0.2. Seeds 19, 43, and 101 use fixed optimization steps of 35, 1, and 15, respectively. This is faithful recipe retraining on isolated data; no saved weights are reused. P1 adds 18 ESP features, P2 adds 44 emission-line features, and P3 adds all 62 EVE features. P4–P6 mix P0 with H9 fractions of 25%, 50%, and 75%.' : 'H9 fixes every learner pair at 25% ridge (α=1000) + 75% trees (7 leaves, minimum 30 samples per leaf). Observed ≥500 km/s fitting rows receive weight 1, 2, or 4; other rows receive 1. Literal weights are not normalized and affect both learner fitting and HGB internal binning, so they also change the effective regularization scale. Explicit imputation/scaling and evaluation remain unweighted. Forecast mixtures use 25%, 50%, or 75% of a weighted pair with the remaining fraction from its unweighted counterpart.';
+    if (h11) $('selection-protocol').textContent = 'H11 first restores the missing prior-champion control. A P1–P6 candidate must reduce P0 overall RMSE by at least 1%, keep fast ≥500 RMSE within 1% of P0, and keep overall RMSE within 1% of the starting wind model. Eligible candidates minimize equally weighted normalized overall/fast MSE; ties prefer fewer features, then fewer fits. Otherwise P0 is retained. This P0-relative adoption rule does not establish a new global best. All comparisons use Folds 1–4 selection CV.';
+    document.querySelectorAll('a[href*="fixrelay.vercel.app/experiments/"]:not([data-fixed-experiment])').forEach(link => {link.href = config.url; if (link.closest('.sidebar-bottom')) link.textContent = `${state.experiment} experiment on FixRelay ↗`;});
   }
 
   function renderLoaded() {
@@ -303,7 +333,11 @@
     renderExperimentContext();
     const selected = state.rows.find(row => row.selected) || state.rows.find(row => row.id === data.incumbent) || state.rows[0];
     state.selected = selected.id;
-    if (typeof data.improvement_retained === 'boolean') {
+    if (state.experiment === 'H11') {
+      const adoption = typeof data.adoption === 'boolean' ? data.adoption : typeof data.adopted === 'boolean' ? data.adopted : typeof data.adoption?.adopted === 'boolean' ? data.adoption.adopted : data.adoption_decision?.adopted;
+      $('decision-title').textContent = adoption === true ? 'A candidate met the recorded adoption rule.' : adoption === false ? 'The recorded adoption rule did not adopt a new model.' : 'The prior champion is included in the matched control comparison.';
+      $('decision-detail').textContent = `${selected.label}. The table below carries the earlier champion recipe forward through fresh retraining and reports H8/H9 controls on the same development cases. This selection CV comparison does not establish a held-out improvement.`;
+    } else if (typeof data.improvement_retained === 'boolean') {
       $('decision-title').textContent = data.improvement_retained ? 'A new candidate passed the prescribed development guards.' : 'The exact H8 reference was retained.';
       $('decision-detail').textContent = `${selected.label}. ${data.improvement_retained ? 'The recorded selection met both development guards against H8.' : 'No new candidate met both development guards against H8.'} This uses selection CV and does not establish a held-out improvement.`;
     } else if (typeof data.eve_retained === 'boolean') {
@@ -322,6 +356,7 @@
     $('load-status').hidden = true;
     renderProvenance();
     renderComponentAblations();
+    renderChampionControls();
     setViewed(state.rows.some(row => row.id === state.viewed) ? state.viewed : selected.id);
   }
 
@@ -334,10 +369,14 @@
     status.textContent = 'Loading the published continuation results…';
     $('reload-results').disabled = true;
     try {
-      let experiment = requested === 'auto' ? 'H9' : requested;
-      let response = await fetch(experiments[experiment].file, {cache: 'no-store'});
-      let pending = false;
-      if (!response.ok && response.status === 404 && experiment === 'H9') {pending = true; experiment = 'H8'; response = await fetch(experiments.H8.file, {cache: 'no-store'});}
+      const order = requested === 'auto' || requested === 'H11' ? ['H11', 'H9', 'H8'] : requested === 'H9' ? ['H9', 'H8'] : ['H8'];
+      let experiment, response;
+      const pending = [];
+      for (const name of order) {
+        experiment = name; response = await fetch(experiments[name].file, {cache: 'no-store'});
+        if (response.ok || response.status !== 404) break;
+        pending.push(name);
+      }
       if (!response.ok) throw new Error(response.status === 404 ? 'The continuation results have not been published to this page yet.' : `The results file could not be loaded (HTTP ${response.status}).`);
       const data = await response.json();
       if (token !== state.loadToken) return;
@@ -345,8 +384,8 @@
       const rows = normalize(data);
       if (!rows.length) throw new Error('The continuation artifact does not contain any completed candidate reports yet.');
       state.data = data; state.rows = rows; state.experiment = experiment;
-      $('experiment-notice').hidden = !pending;
-      $('experiment-notice').textContent = 'H9 has not published completed results yet. H8 is shown below. Select H9 or reload to check again; no H9 metrics are implied.';
+      $('experiment-notice').hidden = !pending.length;
+      $('experiment-notice').textContent = `${pending.join(' and ')} ${pending.length > 1 ? 'have' : 'has'} not published completed results yet. ${experiment} is shown below. Select an experiment or reload to check again; no results for a pending experiment are implied.`;
       renderLoaded();
     } catch (error) {
       if (token !== state.loadToken) return;

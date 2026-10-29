@@ -1,0 +1,110 @@
+{
+  "campaign_url": "https://fixrelay.vercel.app/campaigns/bb47504f-7bd4-45bf-954b-b0b077ac5aee",
+  "experiments": [
+    {
+      "label": "H1",
+      "title": "Four days of speed",
+      "outcome": "supported",
+      "scope": "Initial study: Development \u00b7 Fold 4",
+      "observation": "Ridge RMSE 88.78 km/s versus 89.95 for the RBF SVM. Little trend skill (r = 0.070).",
+      "url": "https://fixrelay.vercel.app/experiments/64808149-f9b0-4146-a8c5-826f806fec75"
+    },
+    {
+      "label": "H2",
+      "title": "Recurrence and in-situ measurements",
+      "outcome": "supported",
+      "scope": "Initial study: Development \u00b7 Fold 4",
+      "observation": "Multivariate tree RMSE 74.83 km/s, a 15.72% reduction from H1. Recurrence alone accounts for most of the gain.",
+      "url": "https://fixrelay.vercel.app/experiments/47df780d-06e8-4d72-be6b-882c191d7649"
+    },
+    {
+      "label": "H3",
+      "title": "GPU residual learning",
+      "outcome": "not_supported",
+      "scope": "Initial study: Development \u00b7 Fold 4",
+      "observation": "RMSE 74.47 versus 75.15 km/s for the linear reference: 0.90% improvement, below the 2% threshold.",
+      "url": "https://fixrelay.vercel.app/experiments/c06155f7-a014-4519-917f-43197ada6e06"
+    },
+    {
+      "label": "H4",
+      "title": "Average different model errors",
+      "outcome": "supported",
+      "scope": "Initial study: Development \u00b7 Fold 4",
+      "observation": "Half tree, half neural forecast reached 73.85 km/s. Gain: 1.31% over the accepted tree; 0.83% over the best single neural model.",
+      "url": "https://fixrelay.vercel.app/experiments/dabe03cd-892d-44eb-bd59-f6acdbc50618"
+    },
+    {
+      "label": "E5",
+      "title": "Frozen original-holdout evaluation",
+      "outcome": "inconclusive",
+      "scope": "Initial study: Original Folds 1\u20135",
+      "observation": "Lower five-fold mean RMSE (77.87 vs WindNet 80.28), but lower correlation (0.515 vs 0.550). Fold 5 favors WindNet (76.35 vs 78.06). The confidence interval against short ridge includes zero.",
+      "url": "https://fixrelay.vercel.app/experiments/c2afa20b-1c9f-4c6b-b934-23e108cddaa0"
+    },
+    {
+      "label": "E6",
+      "title": "Controlled feature ablations",
+      "outcome": "inconclusive",
+      "scope": "Initial study: Post-evaluation \u00b7 Exploratory",
+      "observation": "Removing the 27-day band costs 4.50 km/s; 54-day band costs 0.67; magnetic variables cost 0.21; removing plasma is essentially unchanged. Longer recent history alone does not help.",
+      "url": "https://fixrelay.vercel.app/experiments/5a522e3f-4329-47c6-a411-ea413a999707"
+    },
+    {
+      "label": "H7",
+      "title": "Original eleven-channel SDO proposal",
+      "outcome": "cancelled",
+      "scope": "Before fitting",
+      "observation": "Excluded two channels after the quality audit; no scientific model run.",
+      "url": "https://fixrelay.vercel.app/experiments/892d46b4-64f7-42b2-bff9-6f46b77402cc"
+    },
+    {
+      "label": "H8",
+      "title": "Scalar SDO features in classical ensembles",
+      "outcome": "supported",
+      "scope": "Training-only CV, Folds 1-4",
+      "observation": "Met its stated fast-error guard against classical controls; prior neural champion was missing and is supplied in H11.",
+      "url": "https://fixrelay.vercel.app/experiments/a772eb55-1daf-4787-84df-4fdd8f662421"
+    },
+    {
+      "label": "H9",
+      "title": "Fast-case weights and component ablations",
+      "outcome": "supported",
+      "scope": "Training-only CV, Folds 1-4",
+      "observation": "Fast error improved with an overall-error trade-off. The cumulative drift is retained in the report.",
+      "url": "https://fixrelay.vercel.app/experiments/f3956e16-c32c-42cb-9d67-6b8ac6aa1970"
+    },
+    {
+      "label": "H10",
+      "title": "Mean-one normalization proposal",
+      "outcome": "cancelled",
+      "scope": "Before fitting",
+      "observation": "Cancelled without model fitting to repair the missing prior-champion comparison first.",
+      "url": "https://fixrelay.vercel.app/experiments/629f3afe-fddc-4582-aa3f-090ca3b24271"
+    },
+    {
+      "label": "H11",
+      "title": "Carry forward the prior neural champion",
+      "outcome": "not_supported",
+      "scope": "Training-only CV, Folds 1-4",
+      "observation": "Faithful recipe retraining plus SDO additions; no candidate met the preregistered overall-improvement gate.",
+      "url": "https://fixrelay.vercel.app/experiments/f978fd1e-c27c-4cf9-ae86-faaac54dbc0c"
+    },
+    {
+      "label": "H12",
+      "title": "Fixed stability audit",
+      "outcome": "inconclusive",
+      "scope": "Fixed training-CV predictions",
+      "observation": "Integrity passed; no H11 adoption. Conditional resampling did not change the portfolio.",
+      "url": "https://fixrelay.vercel.app/experiments/509276ed-b66e-4869-8cb8-f6b6c250a1e5"
+    },
+    {
+      "label": "E13",
+      "title": "Locked WindNet and prior-winner comparison",
+      "outcome": "not_supported",
+      "scope": "Original five holdouts; previously viewed historical data",
+      "observation": "One-shot fixed 15-model panel: fast-error gains, weaker event detection; neither balanced-improvement gate passed. No tuning followed.",
+      "url": "https://fixrelay.vercel.app/experiments/a83dbc31-db26-4d65-840e-8ac888103019"
+    }
+  ],
+  "reading_note": "Development CV and historical test results have different roles. Supported means the stated experiment criterion, not overall superiority or fresh confirmation."
+}

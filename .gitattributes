@@ -1,6 +1,11 @@
 * text=auto eol=lf
-*.pdf -text
+*.pdf binary
 *.png -text
 *.npz -text
 artifacts/continuation/*.manifest.json -text
 results/continuation/*.manifest.json -text
+artifacts/locked_final/*.json -text
+results/locked_final/*.json -text
+results/locked_final/*.csv -text
+output/report_summary.json -text
+continuation/*.py -text

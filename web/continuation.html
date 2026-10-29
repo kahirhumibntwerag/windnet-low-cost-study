@@ -37,7 +37,7 @@
     </header>
     <main id="main">
       <section id="overview" aria-labelledby="page-title">
-        <div class="experiment-controls"><label for="experiment-select">Experiment</label><select id="experiment-select"><option value="H8">H8 · SDO features</option><option value="H9">H9 · Fast-wind loss &amp; component ablations</option></select></div>
+        <div class="experiment-controls"><label for="experiment-select">Experiment</label><select id="experiment-select"><option value="H11">H11 · Prior champion &amp; matched controls</option><option value="H9">H9 · Fast-wind loss &amp; component ablations</option><option value="H8">H8 · SDO features</option></select></div>
         <p id="experiment-eyebrow" class="eyebrow">Reproducible model development</p>
         <h1 id="page-title">Can compact solar features help?</h1>
         <p id="experiment-lead" class="lead">A continuation of the low-cost WindNet study: add scalar SDO/EVE irradiance features, measure what each addition changes, and check performance when solar wind is fast.</p>
@@ -48,6 +48,7 @@
         <div id="load-status" class="load-status" role="status" aria-live="polite">Loading the published continuation results…</div>
         <p id="experiment-notice" class="quiet-note" role="status" aria-live="polite" hidden></p>
         <noscript><p class="load-status error">Enable JavaScript to load the experiment tables. The data and protocol remain available in the public repository.</p></noscript>
+        <div class="method-correction"><strong>Prior-champion baseline correction</strong><p>H8 and H9 did not include the earlier neural-and-tree champion. H11 brings that recipe into the stricter isolated development protocol through fresh retraining; saved weights are not reused. H10 was cancelled before fitting to correct this missing baseline, so it provides no negative experimental result.</p><a data-fixed-experiment="H11" href="https://fixrelay.vercel.app/experiments/f978fd1e-c27c-4cf9-ae86-faaac54dbc0c" target="_blank" rel="noopener noreferrer">H11 public preregistration ↗</a></div>
         <div id="results-overview" hidden>
           <div class="decision"><div><span class="eyebrow">Recorded selection decision</span><h2 id="decision-title"></h2><p id="decision-detail"></p></div><span class="pill">Training CV only</span></div>
           <div class="view-controls">
@@ -58,6 +59,12 @@
           <p class="view-note" id="view-note"></p>
           <div class="stats" id="summary-stats"></div>
         </div>
+      </section>
+
+      <section id="champion-controls" aria-labelledby="champion-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow">Prior champion carried forward</p><h2 id="champion-title">A matched comparison of the earlier best recipe</h2></div></div>
+        <p id="champion-intro" class="section-intro">P0 retrains the earlier equal-weight neural-and-tree recipe on the isolated Folds 1–4 inputs. P1–P3 add solar components; P4–P6 mix P0 with the H9 forecast. The H8 wind model and H9 model remain explicit controls.</p>
+        <div class="panel"><div class="table-wrap" tabindex="0" role="region" aria-label="Prior champion and matched controls"><table><caption class="sr-only">Prior champion, component additions, mixtures, and H8/H9 controls on the same training-only cross-validation protocol.</caption><thead><tr><th scope="col">Candidate / role</th><th scope="col">Solar inputs</th><th scope="col" class="num">RMSE</th><th scope="col" class="num">Fast ≥500</th><th scope="col" class="num">Fast ≥600</th><th scope="col" class="num">Δ RMSE vs P0</th><th scope="col" class="num">Δ Fast ≥500 vs P0</th></tr></thead><tbody id="champion-body"></tbody></table></div><p class="table-caption">These are fresh recipe-matched fits under stricter data isolation. They are not comparisons with the earlier model’s saved weights or historical scores.</p></div>
       </section>
 
       <section id="performance" aria-labelledby="performance-title" class="results-section" hidden>
@@ -119,6 +126,8 @@
           <article class="panel"><div class="panel-body"><span class="small-number">B</span><h3>Original holdout kept outside development</h3><p>Only original Folds 1–4 enter the continuation bundle. Original Fold 5 targets and predictions are absent, and predictor measurements sourced from Fold 5 are masked.</p><p>Inner CV rotates the validation fold through 1–4. Whole fitting blocks that duplicate a validation target date are purged, and measurements sourced from the inner validation fold are masked before fitting.</p><p>Fitting keeps original offsets 6–18; validation retains all fourteen offsets 6–19. Preprocessing is fitted within each training split. Results pool the original validation windows.</p><p class="caveat">This page reports model selection, not a fresh WindNet test comparison. A valid independent performance claim requires a future untouched evaluation.</p></div></article>
         </div>
         <div class="panel"><div class="panel-body protocol-detail"><div><h3 id="protocol-title">A fixed decision rule</h3><p id="selection-protocol">An EVE candidate must keep overall RMSE within 1% of the wind-only incumbent and reduce observed ≥500 km/s RMSE by at least 2%. Eligible candidates minimize an equally weighted normalized overall/fast-wind MSE objective. If none qualify, the incumbent is retained. The ≥600 km/s threshold is secondary and does not select the model.</p><p id="loss-protocol" hidden></p></div><div><h3>Comparison with WindNet</h3><p id="windnet-comparison">The original fold assignments and evaluation windows anchor the study. These continuation CV scores cannot be compared numerically with WindNet’s published holdout scores as if they used the same cases. The incumbent and causal persistence forecasts provide the matched development comparisons here.</p><a class="text-link" href="https://github.com/Vishal-Upendran/WindNet" target="_blank" rel="noopener noreferrer">Original WindNet repository ↗</a></div></div></div>
+        <div class="panel"><div class="panel-body"><h3>Method correction: what sample weights affect</h3><p class="section-intro">The earlier “loss-only” description was too narrow. Histogram-gradient boosting also uses sample weights when building its internal bins. Explicit imputation and scaling remain unweighted, and evaluation metrics remain unweighted. H9’s literal weights were not normalized, so they also change effective regularization.</p></div></div>
+        <div class="panel"><div class="panel-body"><span class="pill">Not yet performed for new models</span><h3 class="comparison-title">One-shot WindNet comparison after model freeze</h3><p class="section-intro">A matched comparison on the original holdout has not yet been performed for the new models shown here. Model selection uses only Folds 1–4. After the final recipe and evaluation protocol are frozen, a one-shot evaluation can compare the frozen forecasts with WindNet on the same cases. No historical holdout score is loaded by this page.</p></div></div>
         <details id="provenance-detail" class="panel provenance" hidden><summary>Inspect run provenance and input fingerprints</summary><div class="panel-body"><dl id="provenance-list"></dl><div id="source-links"></div></div></details>
       </section>
       <div class="page-links"><a class="button button-dark" href="https://fixrelay.vercel.app/experiments/a772eb55-1daf-4787-84df-4fdd8f662421" target="_blank" rel="noopener noreferrer">Public experiment record ↗</a><a class="button" href="https://github.com/kahirhumibntwerag/windnet-low-cost-study" target="_blank" rel="noopener noreferrer">Code, data manifests &amp; protocol ↗</a><button id="reload-results" class="button" type="button">Reload results</button></div>

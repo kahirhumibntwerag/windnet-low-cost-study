@@ -10,6 +10,7 @@ __pycache__/
 dashboard/
 inspect_sources.py
 *.tar.gz
+!artifacts/locked_final/checkpoints.tar.gz
 *.tar
 tmp-pdf/
 results/rerun/

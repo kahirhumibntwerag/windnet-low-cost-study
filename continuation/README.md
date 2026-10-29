@@ -1,4 +1,30 @@
-# Training-only continuation boundary
+# Completed continuation and locked final comparison
+
+The [eight-page full paper](../output/pdf/windnet-full-study.pdf) and [E13 results](../results/locked_final) are complete. The [hosted final dashboard](https://windnet-research-lab-oct29.wellbat32.chatgpt.site/locked-final.html) remains owner-private; the [public source branch](https://github.com/kahirhumibntwerag/windnet-low-cost-study/tree/codex/windnet-study) publishes the paper, results, exact input bundles, and saved weights. All 13 completed/cancelled [RogNet/FixRelay campaign records](https://fixrelay.vercel.app/campaigns/bb47504f-7bd4-45bf-954b-b0b077ac5aee) are public.
+
+Neither preregistered balanced-improvement gate passed in the fixed 15-model E13 panel. Fast-wind error improvements coexist with detection and overall-error trade-offs. P1's positive final ESP ablation is descriptive and was not promoted after evaluation. No tuning or model changes followed final scoring. The previously viewed historical holdouts are not fresh confirmation.
+
+The training stage H7-H12 made **zero original-holdout evaluations**. The subsequent E13 stage was separately preregistered, frozen, and executed once. Its [final-only input bundle](../artifacts/locked_final) must not be routed back into selection. The archive retains **40 CPU-portable fitted artifacts**, eight per fold, from which the fixed mixtures can be reconstructed. [Final reproduction instructions](../results/locked_final/README.md) use a new copied bundle directory, a new output directory, the exact freeze hash, and both persistent one-shot markers.
+
+The E13 reference runtime was **CPU**, Python 3.12.3, NumPy 2.3.1, SciPy 1.16.1, scikit-learn 1.9.1, and PyTorch 2.8.0+cu128 with CUDA unavailable and `--device cpu`. A GPU is not required. The exact prepared final bundle avoids downloading SDO images or changing source archives.
+
+| Record | Scope and outcome |
+|---|---|
+| H7 | Cancelled before fitting after the channel-quality audit. |
+| H8 | Classical solar-feature candidates; its stated training-CV criterion was supported. |
+| H9 | Component and fast-case-weight ablations; fast error improved with an overall-error trade-off. |
+| H10 | Cancelled before fitting to restore the missing prior-champion control; no negative scientific run. |
+| H11 | Prior-champion recipe retraining plus additions/mixtures; no candidate passed the adoption rule, and P0 was retained. |
+| H12 | Fixed training-prediction stability audit; inconclusive, with no H11 adoption or portfolio change. |
+| E13 | Separate one-shot final panel; completed, `not_supported`; neither balanced gate passed. |
+
+P0 is fresh faithful retraining of the earlier 50% tree / 50% three-seed residual-neural recipe. It is distinct from the **actual old frozen campaign winner**, which enters E13 through its saved historical forecasts. P1-P3 add ESP, lines, or all EVE inputs; P4-P6 mix P0 with fixed H9 fractions 0.25/0.50/0.75. E13 reports these seven forecasts, H9 specialist, starting wind, H8 SDO, matched classical wind, unweighted lines, weight-4 lines, the actual old frozen winner, and released WindNet. The starting wind and H9 specialist roles were declared before evaluation; no test-ranked winner was selected.
+
+H9's literal weights were not normalized. They change effective regularization, and histogram-gradient boosting also uses them for internal binning. The earlier “loss-only” wording was too narrow; explicit imputation/scaling and evaluation remain unweighted.
+
+The cumulative conservative study compute/storage estimate is **below US$0.22**, not a settled invoice. Temporary study pods and volumes were deleted and verified absent. See [final costs](../results/locked_final/costs.json), [the completed ledger](../results/continuation/experiment_ledger.json), and [all 13 records](../results/locked_final/experiment_timeline.json).
+
+## Training-only continuation boundary
 
 The continuation does not use original Fold 5 for feature selection, tuning,
 error analysis, threshold selection, or development metrics. Previous test
@@ -50,7 +76,9 @@ array at import time.
 This preparation does not train a model, provision compute, access credentials,
 or evaluate any original held-out forecasts.
 
-## SDO-derived features and completed continuation
+## Historical H8-H9 record: SDO-derived features
+
+The following development results, runtimes, and cost estimate describe H8/H9 before H11 and E13. They are preserved as stage history; the completed full paper and cumulative cost are described above.
 
 The continuation downloads the official EVE V008 merged NetCDF table (20.7 MB)
 and extracts scalar irradiances. No image is downloaded. The feature manifest
@@ -114,7 +142,7 @@ pods and their volume were deleted and their absence verified. The cumulative
 conservative compute/storage estimate is below US$0.14, including the earlier
 study; this is not a settled invoice.
 
-## Reproduce the new experiments
+## Reproduce historical H8-H9 training stages
 
 The public `artifacts/continuation/` directory contains the exact isolated
 training and scalar-feature bundles (about 0.57 MB), including manifests. It
@@ -157,5 +185,6 @@ input reproduction, even though the same named V8 channels remain accessible.
 Public protocols/outcomes: [campaign](https://fixrelay.vercel.app/campaigns/bb47504f-7bd4-45bf-954b-b0b077ac5aee),
 [H8](https://fixrelay.vercel.app/experiments/a772eb55-1daf-4787-84df-4fdd8f662421),
 [H9](https://fixrelay.vercel.app/experiments/f3956e16-c32c-42cb-9d67-6b8ac6aa1970).
-The full paper and any new original-holdout comparison remain deferred; this
-continuation did not reopen those holdouts for tuning or error analysis.
+The completed full paper and separately frozen E13 comparison are linked above.
+H7-H12 did not reopen original holdouts for tuning or error analysis; E13's
+one-shot historical comparison is recorded separately and was followed by no tuning.

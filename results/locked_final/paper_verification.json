@@ -1,0 +1,33 @@
+{
+  "pdf": "C:\\Users\\mhesh\\OneDrive\\Belgeler\\ChatGPT\\experiment\\output\\pdf\\windnet-full-study.pdf",
+  "pages": 8,
+  "extracted_words": 2759,
+  "sha256": "a59296c6ca5eab53cdbc3190de5f7e89e110d0134d7dd284177b9fe54d2f7591",
+  "source_results_sha256": "09415318acc247881f7eca5579f221abba7d5268829dabe45e5cd5ca43197680",
+  "source_report_summary_sha256": "65e5bf4ed80a67ece75cf637cdd787737dc3bb58c1fbf9b287b4fe5d913f988f",
+  "new_model_selection": false,
+  "balanced_gate_passed": false,
+  "original_short_pdf_untouched": true,
+  "numeric_text_checks": {
+    "77.44": true,
+    "80.28": true,
+    "77.87": true,
+    "122.45": true,
+    "138.91": true,
+    "130.92": true,
+    "4/110": true,
+    "19/110": true,
+    "0.213": true
+  },
+  "paper_figures": {
+    "roles": "C:\\Users\\mhesh\\OneDrive\\Belgeler\\ChatGPT\\experiment\\output\\figures\\paper_roles.png",
+    "neural": "C:\\Users\\mhesh\\OneDrive\\Belgeler\\ChatGPT\\experiment\\output\\figures\\paper_neural.png",
+    "classical": "C:\\Users\\mhesh\\OneDrive\\Belgeler\\ChatGPT\\experiment\\output\\figures\\paper_classical.png",
+    "skill": "C:\\Users\\mhesh\\OneDrive\\Belgeler\\ChatGPT\\experiment\\output\\figures\\paper_reference_skill.png"
+  },
+  "body_font_pt": 10.2,
+  "missing_glyphs": false,
+  "parent_visual_review": "All8pages reviewed; updated bibliography page8 reviewed; no clipping, overlap, illegible glyphs or table overflow.",
+  "independent_manuscript_review": "All75completepanelnumericcells and detection/referencecoverageclaims checked against completed outputs; onlyRef5author/title correction needed and fixed.",
+  "review_is_reporting_only": true
+}
