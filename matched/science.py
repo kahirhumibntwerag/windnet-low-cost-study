@@ -145,7 +145,7 @@ class WindNetPort(nn.Module):
     def forward(self,x):
         out,_=self.rnn(x);out=F.dropout(out,self.dropout,self.training)
         return torch.stack([F.elu(h(out[:,i])).squeeze(-1) for i,h in enumerate(self.heads)],dim=1)
-def neural_fit(tr,va,seed,max_epochs=300,patience=40,fixed_epochs=None,variant='paper'):
+def neural_fit(tr,va,seed,max_epochs=300,patience=40,fixed_epochs=None,variant='paper',fast_weight=1):
     torch.manual_seed(seed);np.random.seed(seed)
     model=WindNetPort().to(DEVICE);opt=torch.optim.Adam(model.parameters(),lr=.0005)
     ymin=float(tr['y'].min());yscale=float(np.ptp(tr['y']));assert yscale>0
@@ -153,15 +153,16 @@ def neural_fit(tr,va,seed,max_epochs=300,patience=40,fixed_epochs=None,variant='
     seq=torch.tensor((tr['history_y']-ymin)/yscale,dtype=torch.float32,device=DEVICE)
     valid_sigma=tr['sigma'][tr['sigma']>0];floor=float(np.quantile(valid_sigma,.05)) if len(valid_sigma) else 1.
     sigma=torch.tensor(np.maximum(tr['sigma'],floor)/yscale,dtype=torch.float32,device=DEVICE)
+    raw_weights=np.where(tr['y']>=500,float(fast_weight),1.);raw_weights=raw_weights/raw_weights.mean();weights=torch.tensor(raw_weights,dtype=torch.float32,device=DEVICE)
     xv=torch.tensor(va['energy'],dtype=torch.float32,device=DEVICE)
     best=float('inf');best_epoch=0;best_state=None;trace=[]
     for epoch in range(1,(fixed_epochs or max_epochs)+1):
         model.train()
         for ind in torch.randperm(len(x),device=DEVICE).split(128):
             out=model(x[ind]);err=out[:,-1]-y[ind]
-            loss=(err**2).mean()
-            if variant in ['paper','no_variance']:loss=loss+.1*((out-seq[ind])**2).mean()
-            if variant in ['paper','no_sequence']:loss=loss+((err/sigma[ind])**2).mean()
+            loss=(weights[ind]*err**2).mean()
+            if variant in ['paper','no_variance']:loss=loss+.1*(weights[ind,None]*(out-seq[ind])**2).mean()
+            if variant in ['paper','no_sequence']:loss=loss+(weights[ind]*(err/sigma[ind])**2).mean()
             loss=loss+1e-6*sum((p**2).sum() for p in model.parameters())
             opt.zero_grad();loss.backward();torch.nn.utils.clip_grad_norm_(model.parameters(),10);opt.step()
         if fixed_epochs:continue
@@ -174,7 +175,7 @@ def neural_fit(tr,va,seed,max_epochs=300,patience=40,fixed_epochs=None,variant='
     if not fixed_epochs:model.load_state_dict(best_state)
     model.eval()
     with torch.inference_mode():pred=model(xv)[:,-1].cpu().numpy()*yscale+ymin
-    state={'state_dict':{k:v.cpu() for k,v in model.state_dict().items()},'ymin':ymin,'yscale':yscale,'epochs':fixed_epochs or best_epoch,'seed':seed,'sigma_floor_training':floor,'variant':variant}
+    state={'state_dict':{k:v.cpu() for k,v in model.state_dict().items()},'ymin':ymin,'yscale':yscale,'epochs':fixed_epochs or best_epoch,'seed':seed,'sigma_floor_training':floor,'variant':variant,'fast_weight':fast_weight,'normalized_weight_mean':float(raw_weights.mean()),'fast_training_count':int(np.sum(tr['y']>=500))}
     return pred,state,trace
 def baseline():
     d=np.load(DATA/'dev_embeddings.npz');tr,va,norm=samples(d,[1,2,3],[4]);rows=[];preds=[];epochs=[]
@@ -269,12 +270,30 @@ def spatial_models():
     result={'stage':'M4','scope':'training-side Fold4 validation only','rows':rows+ablations,'selected':selected,'best_raw':best_raw,'matched_ablations':ablations,'incumbent':baseline,'gate_passed':passed,'fit_row_sha256':rowhash(tr),'validation_row_sha256':rowhash(va),'fold5_accessed':False,'seconds':time.time()-t,'identity':identity()}
     save_json(EXPORT/'m4_results.json',result);np.savez_compressed(DATA/'spatial_dev_predictions.npz',**preds)
     print(json.dumps({'stage':'M4_complete','selected':selected,'gate_passed':passed,'seconds':time.time()-t}),flush=True)
+def weighted_models():
+    d=np.load(DATA/'dev_embeddings.npz');tr,va,norm=samples(d,[1,2,3],[4]);rows=[];preds={};t=time.time();base=json.loads((EXPORT/'baseline.json').read_text())['baseline']
+    m4=json.loads((EXPORT/'m4_results.json').read_text())['selected'];sp=np.load(DATA/'spatial_dev_predictions.npz')[m4['model']]
+    save_json(EXPORT/'m5_execution.json',{'identity':identity(),'fit_row_sha256':rowhash(tr),'validation_row_sha256':rowhash(va),'fold5_accessed':False})
+    for weight in [2,4]:
+        pp=[];epochs=[];seed_rows=[]
+        for seed in SEEDS:
+            p,state,trace=neural_fit(tr,va,seed,fast_weight=weight);torch.save({**state,'normalization':norm},DATA/f'models/weighted{weight}_{seed}.pt');pp.append(p);epochs.append(state['epochs']);seed_rows.append({'seed':seed,'epochs':state['epochs'],'normalized_weight_mean':state['normalized_weight_mean'],'fast_training_count':state['fast_training_count'],'metrics':metrics(va['y'],p,va['sigma'])})
+        p=np.mean(pp,axis=0);name='lstm_fast_weight_'+str(weight);recipe={'family':'lstm','variant':'paper','epochs':epochs,'seeds':SEEDS,'fast_weight':weight};row={'model':name,'recipe':recipe,'metrics':metrics(va['y'],p,va['sigma']),'seed_rows':seed_rows};rows.append(row);preds[name]=p
+        for w in [0,.25,.5,.75,1]:
+            mix=w*p+(1-w)*sp;name=f'fast{weight}_spatial_mix_{w}';row={'model':name,'recipe':{'family':'weighted_blend','weighted_fraction':w,'weighted':recipe,'other':m4['recipe']},'metrics':metrics(va['y'],mix,va['sigma'])};rows.append(row);preds[name]=mix
+        print(json.dumps({'fast_weight':weight,'metrics':rows[-1]['metrics'],'epochs':epochs}),flush=True)
+    eligible=[r for r in rows if r['metrics']['rmse']<=.99*base['metrics']['rmse'] and r['metrics']['r']>=base['metrics']['r'] and r['metrics']['chi2']<=base['metrics']['chi2'] and r['metrics']['hse_ts'] is not None and r['metrics']['hse_ts']>=base['metrics']['hse_ts']]
+    selected=min(eligible,key=lambda r:r['metrics']['rmse']) if eligible else None
+    rmse_eligible=[r for r in rows if r['metrics']['r']>=m4['metrics']['r']];best_rmse=min(rmse_eligible or rows,key=lambda r:r['metrics']['rmse'])
+    result={'stage':'M5','scope':'training-side Fold4 validation only','rows':rows,'selected':selected,'best_rmse_candidate':best_rmse,'baseline':base,'rmse_incumbent':m4,'gate_passed':bool(eligible),'fit_row_sha256':rowhash(tr),'validation_row_sha256':rowhash(va),'fold5_accessed':False,'seconds':time.time()-t,'identity':identity()}
+    save_json(EXPORT/'m5_results.json',result);np.savez_compressed(DATA/'weighted_dev_predictions.npz',**preds)
+    print(json.dumps({'stage':'M5_complete','selected':selected,'best_rmse':best_rmse,'gate_passed':bool(eligible),'seconds':time.time()-t}),flush=True)
 def run(cfg):
     stage=cfg['stage']
     if stage=='embed':prepare_embeddings()
     elif stage=='baseline':baseline()
     elif stage=='ridge':ridge()
     elif stage=='kernel':kernel()
-    elif stage=='neural':loss_ablations()
+    elif stage=='neural':weighted_models() if cfg.get('mode')=='weighted' else loss_ablations()
     elif stage=='spatial':spatial_models()
     else:raise ValueError('Stage not implemented '+stage)
