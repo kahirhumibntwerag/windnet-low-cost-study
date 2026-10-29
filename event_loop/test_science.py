@@ -3,6 +3,17 @@ import unittest
 import numpy as np
 from event_loop.science import gate,aggregate,train_aligned
 class EventChecks(unittest.TestCase):
+    def test_bootstrap_cache_preserves_exact_draws_and_intervals(self):
+        from event_loop.mixtures import bootstrap
+        from unittest.mock import patch
+        rng=np.random.default_rng(4);datasets={};pp={};cc={}
+        for f in range(1,5):
+            y=np.tile([300,300,350,450,550,550,500,450,400,350,300,300,300,300],4).astype(float);va={'block':np.repeat(np.arange(4),14),'y':y,'sigma':np.ones(len(y))*20};datasets[f]=({},va);pp[f]=y+rng.normal(0,5,len(y));cc[f]=y+rng.normal(0,30,len(y))
+        with patch('event_loop.mixtures.split',side_effect=lambda f:({},datasets[f][1],{})):
+            expected=bootstrap(pp,cc)
+        with patch('event_loop.mixtures.split',side_effect=AssertionError('Cached bootstrap must not reload splits')):
+            actual=bootstrap(pp,cc,datasets=datasets)
+        self.assertEqual(actual,expected)
     def test_final_location_prediction_has_no_validation_labels(self):
         from event_loop.final import fit_location
         from event_loop.location import ridge_path

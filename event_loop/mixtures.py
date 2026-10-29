@@ -5,10 +5,11 @@ from matched.runner import DATA,EXPORT,save_json
 from matched.science import fit_tabular,metrics,rowhash,block_moments,moment_score
 from event_loop.science import split,aggregate,gate,identity,save_predictions
 
-def bootstrap(predictions,controls):
+def bootstrap(predictions,controls,datasets=None):
     all_pairs=[]
     for held in range(1,5):
-        _,va,_=split(held);all_pairs.append((block_moments(va,predictions[held]),block_moments(va,controls[held])))
+        va=split(held)[1] if datasets is None else datasets[held][1]
+        all_pairs.append((block_moments(va,predictions[held]),block_moments(va,controls[held])))
     rng=np.random.default_rng(20261029);draws={k:[] for k in ['rmse','r','chi2','hse_ts']}
     for _ in range(2000):
         left=[];right=[]

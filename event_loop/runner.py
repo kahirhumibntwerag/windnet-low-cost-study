@@ -38,7 +38,7 @@ def main():
         run();return
     if cfg['stage']=='gradient' and cfg.get('mode')=='precision':
         from event_loop.precision import run
-        run();return
+        run(resume=cfg.get('resume_predictions',False));return
     from event_loop.science import run
     run(cfg)
 if __name__=='__main__':main()

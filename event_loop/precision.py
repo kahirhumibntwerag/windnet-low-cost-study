@@ -1,7 +1,7 @@
 """M10: fit-only variance weights and preregistered training-side stability."""
 import json,time
 import numpy as np
-from matched.runner import DATA,EXPORT,save_json
+from matched.runner import DATA,EXPORT,save_json,sha
 from matched.science import metrics,rowhash
 from event_loop.science import split,aggregate,gate,identity,save_predictions
 from event_loop.location import representation,temporal,ridge_path
@@ -16,9 +16,20 @@ def stability(row,controls):
     ratios=[m['rmse']/min(c['fold_metrics'][i]['rmse'] for c in controls) for i,m in enumerate(row['fold_metrics'])]
     return {'leave_one_fold_out':leave,'directional_passes':sum(x['all_four_directional'] for x in leave),'per_fold_rmse_control_ratios':ratios,'pre_bootstrap_passed':sum(x['all_four_directional'] for x in leave)>=3 and max(ratios)<=1.05}
 
-def run():
+def run(resume=False):
     t=time.time();controls=json.loads((EXPORT/'event_controls.json').read_text())['rows'];cs=[c['metrics'] for c in controls];prior=np.load(DATA/'bank_prior_M6.npz');datasets={f:split(f)[:2] for f in range(1,5)};raw={};audits=[]
+    if resume:
+        checkpoint=DATA/'m10_all_predictions.npz';assert checkpoint.exists(),'No completed prediction bank to resume'
+        saved=np.load(checkpoint)
+        for kind,view in [('ratio','flatten'),('log','flatten'),('ratio','mean')]:
+            for weight in [.25,.5,1,2,4]:
+                for alpha in [3000,10000,30000]:
+                    key=f'{kind}_{view}_w{weight}_a{alpha}';raw[key]={'recipe':{'family':'location_ridge','representation':kind,'view':view,'weight_lambda':weight,'alpha':alpha},'predictions':{f:saved['M10_raw_'+key+'_cv'+str(f)] for f in range(1,5)}}
+        save_json(EXPORT/'m10_resume.json',{'prediction_bank_sha256':sha(checkpoint.read_bytes()),'raw_recipes':len(raw),'scientific_choices_changed':False,'bootstrap_draws_changed':False,'optimization':'Reuse already loaded validation arrays; do not reconstruct compressed splits for each candidate/control.','identity':identity()})
+        print('Resumed completed prediction bank; identical recipes and criteria',flush=True)
     for held,(tr,va) in datasets.items():
+        if resume:
+            audits.append({'held_training_fold':held,'fit_row_sha256':rowhash(tr),'validation_row_sha256':rowhash(va)});continue
         d=np.load(DATA/f'location_cv{held}.npz')
         for kind,view in [('ratio','flatten'),('log','flatten'),('ratio','mean')]:
             frames=representation(d['local'],d['glob'],kind);xx=[np.stack([frames[int(b),int(o)-6:int(o)-2] for b,o in zip(a['block'],a['offset'])]) for a in [tr,va]];x,v=[temporal(z,view) for z in xx]
@@ -42,12 +53,13 @@ def run():
                     score(f'M10_{name}_mix{w}_g{gain}_b{bias}',{'family':'affine_location_mix','location':r['recipe'],'location_weight':w,'prior':'M6','gain':gain,'bias':bias},pp)
         if i%5==0:print(json.dumps({'M10_grid_bases_complete':i+1,'strict_gate_passes':sum(x['gate']['all_four'] for x in rows),'stability_pre_passes':len(candidates),'seconds':time.time()-t}),flush=True)
     assert len(rows)==3645
-    np.savez_compressed(DATA/'m10_all_predictions.npz',**all_predictions)
+    if not resume:np.savez_compressed(DATA/'m10_all_predictions.npz',**all_predictions)
     m9=json.loads((EXPORT/'m9_results.json').read_text())['selected'];m9_stability=stability(m9,controls)
     control_predictions={c['model']:{f:np.load(DATA/(c['model']+'.npz'))['cv'+str(f)] for f in range(1,5)} for c in controls}
     selected=None;checks=[]
     for row in sorted((x for x in rows if x['model'] in candidates),key=lambda x:x['metrics']['rmse']):
-        pp=candidates[row['model']];ci={name:bootstrap(pp,p) for name,p in control_predictions.items()};passed=all(c['hse_ts']['delta_95'][0]>0 for c in ci.values());checks.append({'model':row['model'],'bootstrap':ci,'passed':passed})
+        pp=candidates[row['model']];ci={name:bootstrap(pp,p,datasets=datasets) for name,p in control_predictions.items()};passed=all(c['hse_ts']['delta_95'][0]>0 for c in ci.values());checks.append({'model':row['model'],'bootstrap':ci,'passed':passed})
+        print(json.dumps({'M10_bootstrap_checked':row['model'],'passed':passed,'seconds':time.time()-t}),flush=True)
         if passed:selected=row;save_predictions('m10_selected',pp);break
     result={'stage':'M10','scope':'Four-fold training-bank CV only; Folds1-4','rows':rows,'controls':controls,'selected':selected,'gate_passed':selected is not None,'strict_four_gate_count':sum(x['gate']['all_four'] for x in rows),'pre_bootstrap_stability_count':len(candidates),'bootstrap_checks':checks,'M9_selected_stability':m9_stability,'stability_rule':'At least3/4 leave-one-validation-fold-out aggregates directionally improve all4 vsbothcontrols; each fold RMSE<=1.05*stronger control; conditional HSE bootstrap lower95 bound>0 vsboth. Check candidates in ascendingRMSE until firstpass; unchecked latercandidates are not declared failures.','bootstrap_limitations':'Conditional, not selection adjusted; blocks can overlap.','row_audits':audits,'identity':identity(),'seconds':time.time()-t,'original_final_evaluations':0,'fold5_available':False}
     save_json(EXPORT/'m10_results.json',result);print(json.dumps({'M10_complete':True,'strict_gate_count':result['strict_four_gate_count'],'pre_stability_count':len(candidates),'selected':selected,'M9_stability':m9_stability,'seconds':time.time()-t}),flush=True)

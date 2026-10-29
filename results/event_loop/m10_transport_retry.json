@@ -4,5 +4,12 @@
   "failed_returncode": 1,
   "scientific_changes_between_attempts": false,
   "hypothesis_changes": false,
-  "test_accesses": 0
+  "test_accesses": 0,
+  "bootstrap_resume": {
+    "reason": "Repeated decompression/reconstruction of identical training validation splits in each candidate/control bootstrap caused avoidable CPU overhead.",
+    "operation": "Restarted only this phase-owned container in place after completed fitting/grid and resumed its saved prediction bank.",
+    "original_fit_source_commit": "3bf1ce5",
+    "hypothesis_recipe_criteria_or_draw_changes": false,
+    "verification": "Synthetic cached and uncached bootstrap outputs exactly identical, including all percentile intervals and defined-draw counts. Seven checks pass."
+  }
 }
