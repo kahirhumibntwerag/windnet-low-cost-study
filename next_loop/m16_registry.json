@@ -1,0 +1,26 @@
+{
+  "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+  "hypothesis_id": "5128c433-8a56-455d-8764-d98251e4b76a",
+  "experiment_id": "621a4d21-b7af-4f56-84ec-e2ba6eb6b4ed",
+  "status": "planned; code and source freeze pending",
+  "predecessor_plan": {
+    "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+    "hypothesis_id": "ba0642a6-0096-4869-ad55-9e384c264cfa",
+    "experiment_id": "488d37ed-9991-4c7e-8e4a-58e20389fa1a",
+    "executed": false
+  },
+  "conditions": 144,
+  "raw_recipes": 36,
+  "fold_fits": 144,
+  "zero_penalty_prediction_tolerance": 1e-7,
+  "controls_metric_tolerance": 1e-9,
+  "original_final_evaluations": 0,
+  "cumulative_limit_usd": 5,
+  "prior_cumulative_estimate_usd": 1.6435833333333332,
+  "hypothesis_sources": [
+    "M15 training-side uncertainty and M13 training signal",
+    "https://journals.ametsoc.org/view/journals/aies/5/3/AIES-D-25-0090.1.xml",
+    "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024SW004125"
+  ],
+  "excluded_evidence": "All original historical feedback and F3 artifacts"
+}

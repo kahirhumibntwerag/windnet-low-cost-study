@@ -1,0 +1,81 @@
+{
+  "stage": "M15",
+  "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+  "experiment_id": "1c1812ee-1383-4fc4-adbd-aaad4107a843",
+  "run_id": "59f5faf6-3f21-4d13-b2a7-0040c1443460",
+  "observation_id": "b87fad01-a593-4d56-a826-945920b89552",
+  "analysis_id": "5c6d864d-c40f-4ca3-8cc7-09fdca8a0e58",
+  "decision_id": "95a05fa4-877d-4a0d-9363-b3ab088656dc",
+  "post_literature": {
+    "id": "ab677e8b-bdc2-411d-8c3a-b0b26484d9ab",
+    "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+    "event_id": 107
+  },
+  "results_artifact": {
+    "id": "d887b846-286c-4d45-97df-ad1c5fbc8f89",
+    "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+    "event_id": 113
+  },
+  "training_archive_artifact": {
+    "id": "5d888703-1a60-4c63-94ee-f7e19bdb2db5",
+    "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+    "event_id": 108
+  },
+  "frozen_source_artifact": {
+    "id": "4983371d-bb37-45f9-b312-5f59e4f53baa",
+    "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+    "event_id": 109
+  },
+  "campaign_visibility": "public",
+  "completed_finding_visibility": "private; UI publication pending browser permission",
+  "github_release": {
+    "assets": [
+      {
+        "browser_download_url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/releases/download/windnet-m15-2026-10-30/m15_frozen_sources.tar.gz",
+        "digest": "sha256:b17e1b4de5b3985a5fe671ac61d802e920e899ef4d88bab565094fae2b666380",
+        "name": "m15_frozen_sources.tar.gz",
+        "size": 51981
+      },
+      {
+        "browser_download_url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/releases/download/windnet-m15-2026-10-30/m15_training_artifacts.tar.gz",
+        "digest": "sha256:6594d0267206d46b18a015290dfbb1218669c542a7f8058452233e8c640de90e",
+        "name": "m15_training_artifacts.tar.gz",
+        "size": 1199465
+      }
+    ],
+    "id": 428676900,
+    "tag": "windnet-m15-2026-10-30",
+    "url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/releases/tag/windnet-m15-2026-10-30"
+  },
+  "site_source": {
+    "project_id": "appgprj_6ae3988ae03881919056b61092bec1f4",
+    "checkout_path": "C:\\Users\\mhesh\\OneDrive\\Belgeler\\ChatGPT\\experiment\\matched_dashboard",
+    "commit_sha": "81e67e2f331fd654af73026cf0926de0328eb2eb",
+    "archive": "C:\\Users\\mhesh\\OneDrive\\Belgeler\\ChatGPT\\experiment\\tmp\\m15-dashboard.tar.gz"
+  },
+  "site_deployment": {
+    "id": "appgdep_6ae427c27a88819193ba7cac46cee8dd",
+    "project_id": "appgprj_6ae3988ae03881919056b61092bec1f4",
+    "title": "WindNet Matched Research Loop",
+    "version_id": "appgprj_6ae3988ae03881919056b61092bec1f4~appgver_9637981062c481919728d19d5c2137e7",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://windnet-matched-research-loop.wellbat32.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6ae3988ae03881919056b61092bec1f4",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-30T05:14:58.771027+00:00"
+  },
+  "static_dashboard_checks": {
+    "html_conditions": 104,
+    "csv_rows": 104,
+    "svg_points": 104,
+    "prior_sections_preserved": true
+  },
+  "browser_qa": false,
+  "browser_qa_reason": "Earlier physical Escape stopped browser control; no resumption authorized.",
+  "raw_holdout_data_published": false,
+  "new_compute_launched_for_publication": false
+}

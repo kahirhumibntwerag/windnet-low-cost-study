@@ -1,0 +1,47 @@
+{
+  "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+  "hypothesis_id": "5128c433-8a56-455d-8764-d98251e4b76a",
+  "idempotency_key": "phase3-m16-design-20261030-01",
+  "title": "M16: Training-only derivative-aware regional ridge regression",
+  "method": "For each fitting split, StandardScaler on fittingfeatures only, scalefloor.01. Main rowweights w use fixedprecisionlambda4 andfast2(>=500),same fit-onlysigmafloor/median and mean-normalization asM13. Build pairs only between fittingrows in the SAME originalblock with offsets differing by1; use only13fittingtargetrows,never blockends outsidefittingset,cross-block or heldvalidationpairs. Pairweights v=(w_i+w_j)/2,mean-normalized overpairs. Fit min over(c,beta): SUM_i w_i*(y_i-c-X_i beta)^2 + lambda*SUM_pairs v_ij*((y_j-y_i)-(X_j-X_i)beta)^2 + alpha*||beta||^2. Use weightedmain means for centering/intercept; augment weightedcenteredmain rows with sqrt(lambda*v)*(X_j-X_i) and corresponding targetdifferences; ridgefit_interceptFalse. Temporal differences are between adjacent originalwindows,not claimed physical per-day derivatives. Inference remains singlefour-imagewindow only. Families regional/morphology/regional_morphology; alpha10/100/1000;lambda0/.25/1/4; calibratedhead gain1.2 about ordinaryfittingtargetmean,bias-5; headshares.125/.25/.5/1 with fixedM10,144conditions,36rawrecipes,144foldfits. Zero-penalty regional/alpha100/share.25 must reproduce fixedM13 predictionvectors within1e-7 before positivepenaltyfits; cache thosefits within the144count. No new calibrationsearch.",
+  "inputs": "Original108Folds1-4blocks,13fit/14validationwindowsperblock,1512validationrows,originalfour211AimagesH4D3. Same four frozenport/M6/M10/M13 training controls and originalrows. FeaturesfromM13regional6x6, M14morphology, M14regional+morphology, alltrend overfourimages. No new observations,targets,wavelengths or runtime neighborforecasts. Fold5hash/discard unparsed/unretained; no F3artifacts supplied.",
+  "conditions": "Implement/test/hash fullsource/panel/data/controlprovenance before any fitting. Firstverify fourcontrolbanks androws1e-9, freeze, then runzero-penaltyreproductioncheck1e-7 before positive-lambda grid. CPUworker under cumulativeUS$5; prior estimateaboutUS$1.64359,max1800s. Alloutcomes and negativeablations retained; downloadverifiedmodels/predictions before deleting only newresources. No originalhistoricalevaluation inM16. This is the execution registration of the unchanged unexecuted M16 design from prior campaign experiment 488d37ed-9991-4c7e-8e4a-58e20389fa1a. No completed runs or results are imported; future execution belongs only to this new campaign.",
+  "success_criteria": "Same four incumbent anchors strongestmetricwise:RMSE<=.99min,Fisher-r>=max+.005,chi2<=.995min,HSE>=max+.02;>=3/4leaveonefoldoutallfourdirectionalchecks;everyfoldRMSE<=1.05strongestcontrol. Check survivorsascendingRMSE;first with positive2000drawwhole-blockpairedconditionalHSE95lowerbounds versusall4,seed20261029. Undefinedfails. Zero-penalty ablationandallfamilies reported whether successful ornot.\nFailure criteria: Any source/control/row/boundary orzero-control mismatch is technicalfailure,withno tolerance relaxation. No fullyqualifyingcandidate=>retainM13. PriorM8failure remainsrecorded. Do not infer causality,fullnesting,physicalderivatives or freshconfirmation. No hypothesis or modelreplacement fromhistoricalfeedback.",
+  "variables": {
+    "fold_fits": 144,
+    "conditions": 144,
+    "head_shares": [
+      0.125,
+      0.25,
+      0.5,
+      1
+    ],
+    "raw_recipes": 36,
+    "ridge_alpha": [
+      10,
+      100,
+      1000
+    ],
+    "feature_families": 3,
+    "gradient_strengths": [
+      0,
+      0.25,
+      1,
+      4
+    ],
+    "original_final_evaluations": 0
+  },
+  "controls": {
+    "incumbents": [
+      "bank_windnet_port",
+      "bank_prior_M6",
+      "fixed_M10",
+      "fixed_M13"
+    ],
+    "control_metrics_tolerance": 1e-9,
+    "zero_penalty_prediction_tolerance": 1e-7,
+    "same_original_rows_and_predictor_budget": true
+  },
+  "expected_outcome": "A controlled test of whether a convex shape-sensitive fitting objective produces a training-qualified candidate; no historical claim or test until a separately completed fullfreeze.",
+  "requires_approval": false
+}
