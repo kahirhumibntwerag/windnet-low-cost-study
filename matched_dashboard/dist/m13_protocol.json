@@ -1,0 +1,107 @@
+{
+  "stage": "M13",
+  "experiment_id": "6e39e7e9-7997-494f-beac-57bbe441a006",
+  "hypothesis_id": "d7e6240a-47aa-4137-b0a9-a8bbf14771a9",
+  "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+  "scope": "Training-side Folds1-4 only; no original final evaluation",
+  "grids": [
+    [
+      4,
+      3
+    ],
+    [
+      6,
+      6
+    ]
+  ],
+  "views": [
+    "flatten",
+    "trend"
+  ],
+  "encodings": [
+    "linear",
+    "linear_plus_elementwise_squares"
+  ],
+  "precision_lambda": [
+    0,
+    4
+  ],
+  "ridge_alpha": [
+    10,
+    100,
+    1000
+  ],
+  "new_head_share": [
+    0.125,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "heads": 192,
+  "conditions": 960,
+  "disk_center": [
+    127.5,
+    127.5
+  ],
+  "disk_radius_pixels": 112.5,
+  "relative_dark_thresholds": [
+    0.3,
+    0.5,
+    0.7
+  ],
+  "per_cell_features": "fractions below each threshold plus mean normalized intensity clipped[0,3]",
+  "global_features": "log1p(nonnegative disk median), diskIQR/max(diskmedian,1e-6)",
+  "fixed_calibration": {
+    "gain": 1.2,
+    "bias": -5,
+    "anchor": "fitting-target mean"
+  },
+  "controls": "Frozen M11R port/M6/M10 training-bank forecasts. Recompute metrics from original reacquired labels and require agreement1e-9 and exact original row hashes. No cross-hardware LSTM refitting.",
+  "success": "Same registered all-four margins against all3controls, >=3/4 directional leave-one-fold-out checks, foldRMSE<=1.05*stronger control, positive HSE pairedblockbootstrap95 lower bound against all3controls; candidates checked ascendingRMSE;2000draws seed20261029.",
+  "budget": {
+    "prior_cumulative_estimate_usd": 1.3999938388888888,
+    "cumulative_limit_usd": 5,
+    "max_worker_seconds": 3600
+  },
+  "hypothesis_literature": [
+    "https://proceedings.mlr.press/v139/yang21m.html",
+    "https://arxiv.org/abs/2203.16427",
+    "https://arxiv.org/abs/2609.26683"
+  ],
+  "holdout_boundary": "Original Fold5 hash/discard without parsing or retaining; no historical final outputs supplied to worker",
+  "frozen_sources": {
+    "matched\\build_dashboard.py": "1fe23a08c316814fbe269ad4eeb76021d1373776e8d0f43a2e3699307490fb7a",
+    "matched\\final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+    "matched\\hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+    "matched\\remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+    "matched\\reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+    "matched\\runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+    "matched\\science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+    "matched\\test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+    "matched\\transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+    "matched\\verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a",
+    "matched\\__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+    "event_loop\\final.py": "02ac0589fcf1d85caa269630c2eedc5306c0dadcdc0989b793a37585f9bd5022",
+    "event_loop\\location.py": "8af3c6e203ba335aa34007e6b9cb810ea5e376ef523271ccf2f179c412c2586a",
+    "event_loop\\mixtures.py": "c7c9ed493db8880690f3fe882162a7518535a27dc195e70dd9017fc69fa392b1",
+    "event_loop\\precision.py": "e2dede44828610d04dc88867d6a242212de70dc15a0a006fb5e0c25305bb22ed",
+    "event_loop\\recover.py": "6858820bbc4761854948f41d884b80f02297099dc878ed21026c0713352e35a2",
+    "event_loop\\remote.py": "20c99217ad70acc1386040a769d7028708a4a34b82c65b7565aae72d5efc22ba",
+    "event_loop\\runner.py": "161d730b2dc5319ce3a9eb351f2ec4164e13e94d1caeb9a2032f5785dabfcbd6",
+    "event_loop\\science.py": "efba874fd5ad437c939040391a8614e04447b0d072cf9bc7c40d16bf683ae8a2",
+    "event_loop\\test_science.py": "48114256adb9db6dffd4a506b62057c5a2d6d56e70814a012a4a0e8178e864d6",
+    "event_loop\\transport.py": "066b412313801c95c064870a03f3e6c11626fde255ed89c80ed28512cf13dedc",
+    "event_loop\\__init__.py": "efb6e7445cd7ebd5bcdb4e7e5052d67b3c46913fde1b7f4ed808e63ee8812a68"
+  },
+  "target_weights": [
+    "unit",
+    "fast1.5",
+    "fast2",
+    "density"
+  ],
+  "fit_density_rule": "20km/s bins over[0,1000],clipbin0..49;Gaussian7points offset-3..3,sigma1.5;1/sqrt(1+smoothedcount);normalize mean1;clip[.5,3];multiply precision weights then normalize mean1",
+  "fast_weight_rule": "fitting y>=500 gets1.5or2,else1;unit exact M12 path",
+  "M12_unit_overlap_required": 192,
+  "M12_overlap_max_absolute_prediction_difference": 1e-07
+}

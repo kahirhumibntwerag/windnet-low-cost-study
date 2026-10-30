@@ -1,0 +1,56 @@
+{
+  "verified_at": "2026-10-30T03:50:35.339Z",
+  "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+  "public_completed_experiments": 4,
+  "public_experiments": [
+    "M11 technical failure",
+    "M11R not supported",
+    "M12 not supported",
+    "M13 conditional training qualification"
+  ],
+  "publication_verified_by": "RogNet get_public_campaign",
+  "site": {
+    "project_id": "appgprj_6ae3988ae03881919056b61092bec1f4",
+    "checkout_path": "C:\\Users\\mhesh\\OneDrive\\Belgeler\\ChatGPT\\experiment\\matched_dashboard",
+    "commit_sha": "9d6f26805ae658e915e3b2c678bb58d701d11c68",
+    "archive": "C:/Users/mhesh/OneDrive/Belgeler/ChatGPT/experiment/tmp/regional-dashboard.tar.gz",
+    "deployment": {
+      "id": "appgdep_6ae413d237c48191a3a6c89e271ec594",
+      "project_id": "appgprj_6ae3988ae03881919056b61092bec1f4",
+      "title": "WindNet Matched Research Loop",
+      "version_id": "appgprj_6ae3988ae03881919056b61092bec1f4~appgver_61ab8dc9997481919ecb297a46390797",
+      "type": "publish",
+      "status": "succeeded",
+      "url": "https://windnet-matched-research-loop.wellbat32.chatgpt.site",
+      "has_mcp": false,
+      "screenshot_asset_pointer": null,
+      "provider_deployment_id": "site---6ae3988ae03881919056b61092bec1f4",
+      "failure_message": null,
+      "env_set_revision": 0,
+      "updated_at": "2026-10-30T03:49:57.309899+00:00"
+    }
+  },
+  "browser_qa": {
+    "local_preview": true,
+    "scatter_charts_rendered": true,
+    "all_M12_M13_rows_present": true,
+    "selected_model_filter_returned_one_row": true,
+    "publication_toast_seen": true,
+    "screenshot_contains_personal_browser_chrome": false
+  },
+  "artifact_releases": {
+    "M12": {
+      "tag": "windnet-m12-2026-10-30",
+      "bytes": 4411652,
+      "sha256": "8328ab080be061956770b611b585f45b9bff6ffe9617c687f0ee7545571cf727"
+    },
+    "M13": {
+      "tag": "windnet-m13-2026-10-30",
+      "bytes": 14272122,
+      "sha256": "64a73923dbc8da0f7b05cc844227edcaa52c102bd3285df2afdde7c6999e90eb"
+    }
+  },
+  "raw_historical_holdout_data_added": false,
+  "F3_historical_evaluation_started": false,
+  "independent_model_refit_claimed": false
+}

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T02:59:34.927898+00:00",
+  "updated_at": "2026-10-30T03:28:58.969853+00:00",
   "registry": {
     "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
     "hypothesis_id": "db413194-1606-4095-87d7-23b608d5e626",
@@ -10,7 +10,15 @@
     "visibility": "public",
     "next_hypothesis_id": "9e3aee34-65cc-497f-ab21-303e91f9ed0b",
     "observation_id": "6a12a004-162c-4de3-b9ed-d2c62f2dd1b0",
-    "analysis_id": "7d94f286-fe60-487a-bfbe-b7ba6c574672"
+    "analysis_id": "7d94f286-fe60-487a-bfbe-b7ba6c574672",
+    "m12_experiment_id": "97b0bd0d-8bc1-46f7-882c-7d9859ae4bcd",
+    "m12_run_id": "0fedf19d-664d-4623-9d39-fafd38a5995c",
+    "m13_hypothesis_id": "d7e6240a-47aa-4137-b0a9-a8bbf14771a9",
+    "m13_experiment_id": "6e39e7e9-7997-494f-beac-57bbe441a006",
+    "m13_run_id": "c62db121-da88-48d1-ac71-b1b0e5cf0c2d",
+    "m12_observation_id": "a3f2e897-dccb-4c27-81a0-bc910ccf7f99",
+    "m13_observation_id": "1f31b26f-30d0-4ec0-9ba3-2e4bd9f7eaf5",
+    "F3_hypothesis_id": "c67e60cb-d36e-4a1e-9c05-0a89b84e9050"
   },
   "protocol": {
     "stage": "M11",
