@@ -2,7 +2,7 @@
   "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
   "hypothesis_id": "65f6ebf8-2c14-4ecc-8413-1de25c9381cf",
   "experiment_id": "1c1812ee-1383-4fc4-adbd-aaad4107a843",
-  "status": "planned; not executed",
+  "status": "running; preflight pending",
   "source": "M14 matched TRAINING anchor complementarity plus Jacobs1991/Breiman1996; no original historical feedback",
   "conditions": 104,
   "expert_A": "M14_morphology_trend_w4_targetfast2_a100_share0.25",
@@ -39,5 +39,10 @@
   "original_final_evaluations": 0,
   "prior_cumulative_estimate_usd": 1.6201732666666666,
   "cumulative_limit_usd": 5,
-  "next_action": "Read exact registered design; implement/test/hash deterministic gate and complete bank/control provenance before evaluating any condition; training-only CPU, no original holdout access"
+  "next_action": "Read exact registered design; implement/test/hash deterministic gate and complete bank/control provenance before evaluating any condition; training-only CPU, no original holdout access",
+  "run_id": "59f5faf6-3f21-4d13-b2a7-0040c1443460",
+  "pod_id": "8yl9zsunxcdlph",
+  "volume_id": "cu5p5600fv",
+  "created_at": "2026-10-30T04:54:19.396Z",
+  "source_commit": "875d216"
 }
