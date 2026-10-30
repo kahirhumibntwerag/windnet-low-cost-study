@@ -1,0 +1,20 @@
+{
+  "pod_id": "b2vo3i0njc9ax1",
+  "volume_id": "vdexoc96gq",
+  "stages": [
+    "M12",
+    "M13"
+  ],
+  "created_at": "2026-10-30T03:08:56.666000+00:00",
+  "deleted_verified_at": "2026-10-30T03:25:54+00:00",
+  "pod_deleted_verified_404": true,
+  "volume_deleted_verified_404": true,
+  "compute_rate_usd_per_hour": 0.06,
+  "compute_estimate_usd": 0.016955566666666665,
+  "storage_and_rounding_buffer_usd": 0.02,
+  "this_worker_estimate_usd": 0.03695556666666666,
+  "prior_cumulative_matched_estimate_usd": 1.3999938388888888,
+  "cumulative_matched_estimate_usd": 1.4369494055555556,
+  "cumulative_limit_usd": 5,
+  "limitations": "Creation-to-deletion estimate includes setup,technical retry and idle time;storage/rounding buffer;not a settled provider invoice. Only newly created pod/volume deleted."
+}

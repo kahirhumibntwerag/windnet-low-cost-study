@@ -1,0 +1,17 @@
+{
+  "stage": "M13",
+  "conditions": 960,
+  "aggregate_metrics_recomputed": true,
+  "all_four_gates_recomputed": true,
+  "fold_stability_recomputed": true,
+  "bootstrap_adoption_order_checked": true,
+  "original_row_hashes_match": true,
+  "prediction_bank_shapes_and_finiteness_checked": true,
+  "artifact_sha256": "64a73923dbc8da0f7b05cc844227edcaa52c102bd3285df2afdde7c6999e90eb",
+  "strict_gate_count": 50,
+  "fold_stability_count": 40,
+  "bootstrap_checks": 24,
+  "selected": "M13_g6x6_trend_linear_w4_a100_targetfast2_share0.25",
+  "original_final_evaluations": 0,
+  "scope_limit": "Arithmetic and identity audit from fold summaries and saved predictions; not an independent rerun of every trained model or ground-truth metric."
+}

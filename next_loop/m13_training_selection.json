@@ -1,0 +1,241 @@
+{
+  "stage": "M13_training_selection",
+  "recipe_locked": true,
+  "selected": {
+    "model": "M13_g6x6_trend_linear_w4_a100_targetfast2_share0.25",
+    "recipe": {
+      "grid": [
+        6,
+        6
+      ],
+      "view": "trend",
+      "encoding": "linear",
+      "precision_lambda": 4,
+      "ridge_alpha": 100,
+      "target_weight": "fast2",
+      "new_head_share": 0.25,
+      "gain": 1.2,
+      "bias": -5,
+      "prior": "fixed M10"
+    },
+    "fold_metrics": [
+      {
+        "n": 518,
+        "rmse": 79.12952495389689,
+        "mae": 59.26651711442922,
+        "r": 0.5047451374061779,
+        "chi2": 24.82087329174262,
+        "sigma_valid": 518,
+        "hse_ts": 0.2647058823529412,
+        "hse_counts_original": {
+          "tp": 9,
+          "fp": 23,
+          "fn": 2
+        }
+      },
+      {
+        "n": 350,
+        "rmse": 76.69751832688284,
+        "mae": 58.903181561168914,
+        "r": 0.6404434345421799,
+        "chi2": 30.34335547669036,
+        "sigma_valid": 350,
+        "hse_ts": 0.36,
+        "hse_counts_original": {
+          "tp": 9,
+          "fp": 16,
+          "fn": 0
+        }
+      },
+      {
+        "n": 364,
+        "rmse": 81.06829230844713,
+        "mae": 62.05001393803636,
+        "r": 0.5580378577799807,
+        "chi2": 25.205585669262817,
+        "sigma_valid": 364,
+        "hse_ts": 0.20833333333333334,
+        "hse_counts_original": {
+          "tp": 5,
+          "fp": 18,
+          "fn": 1
+        }
+      },
+      {
+        "n": 280,
+        "rmse": 71.49645466673857,
+        "mae": 56.194949118081645,
+        "r": 0.6417321830079126,
+        "chi2": 19.064068446811124,
+        "sigma_valid": 280,
+        "hse_ts": 0.34782608695652173,
+        "hse_counts_original": {
+          "tp": 8,
+          "fp": 15,
+          "fn": 0
+        }
+      }
+    ],
+    "metrics": {
+      "n": 1512,
+      "rmse": 77.09794756399135,
+      "r": 0.5891855690730897,
+      "chi2": 24.85847072112673,
+      "hse_ts": 0.2952163256606991,
+      "mae": 59.103665432929034
+    },
+    "gate": {
+      "rmse": true,
+      "r": true,
+      "chi2": true,
+      "hse_ts": true,
+      "all_four": true,
+      "anchors": {
+        "rmse": 77.97714841491737,
+        "r": 0.5730469304028007,
+        "chi2": 26.880774601074908,
+        "hse_ts": 0.2389044289044289
+      }
+    },
+    "stability": {
+      "leave_one_fold_out": [
+        {
+          "dropped_training_fold": 1,
+          "all_four_directional": true
+        },
+        {
+          "dropped_training_fold": 2,
+          "all_four_directional": true
+        },
+        {
+          "dropped_training_fold": 3,
+          "all_four_directional": true
+        },
+        {
+          "dropped_training_fold": 4,
+          "all_four_directional": true
+        }
+      ],
+      "directional_passes": 4,
+      "per_fold_rmse_control_ratios": [
+        0.9865350818237876,
+        1.0011265023488463,
+        0.9855323544300355,
+        0.9816968825136793
+      ],
+      "pre_bootstrap_passed": true
+    }
+  },
+  "selected_bootstrap": {
+    "model": "M13_g6x6_trend_linear_w4_a100_targetfast2_share0.25",
+    "bootstrap": {
+      "bank_windnet_port": {
+        "rmse": {
+          "delta_95": [
+            -8.237899447263938,
+            -3.4610811043143963
+          ],
+          "defined_draws": 2000
+        },
+        "r": {
+          "delta_95": [
+            0.029983279161076508,
+            0.09330733827870323
+          ],
+          "defined_draws": 2000
+        },
+        "chi2": {
+          "delta_95": [
+            -7.014431767267732,
+            -1.622387421702428
+          ],
+          "defined_draws": 2000
+        },
+        "hse_ts": {
+          "delta_95": [
+            0.09228814920370602,
+            0.2549521391569527
+          ],
+          "defined_draws": 2000
+        }
+      },
+      "bank_prior_M6": {
+        "rmse": {
+          "delta_95": [
+            -4.576244121120934,
+            -0.26495176454496366
+          ],
+          "defined_draws": 2000
+        },
+        "r": {
+          "delta_95": [
+            0.01008801155990591,
+            0.05889486458745131
+          ],
+          "defined_draws": 2000
+        },
+        "chi2": {
+          "delta_95": [
+            -6.813437734285473,
+            -2.1958447839895325
+          ],
+          "defined_draws": 2000
+        },
+        "hse_ts": {
+          "delta_95": [
+            0.059569777256919705,
+            0.19955125665762707
+          ],
+          "defined_draws": 2000
+        }
+      },
+      "fixed_M10": {
+        "rmse": {
+          "delta_95": [
+            -2.112796215074188,
+            0.2620155978374185
+          ],
+          "defined_draws": 2000
+        },
+        "r": {
+          "delta_95": [
+            0.002559392987721168,
+            0.031233852476663958
+          ],
+          "defined_draws": 2000
+        },
+        "chi2": {
+          "delta_95": [
+            -3.5324140317749184,
+            -0.5112117789956909
+          ],
+          "defined_draws": 2000
+        },
+        "hse_ts": {
+          "delta_95": [
+            0.0037402774821291367,
+            0.11528591443440743
+          ],
+          "defined_draws": 2000
+        }
+      }
+    },
+    "passed": true
+  },
+  "M12_overlap_count": 192,
+  "M12_max_prediction_difference": 0.0,
+  "training_evidence_hashes": {
+    "results/next_loop/m13_results.json": "2a2a441617a25d930c4111e3f387581d5eabcf68519a95abcd5224ee305b0c4e",
+    "results/next_loop/m13_verification.json": "549237597942ea157a846314dbaf9077ab5e20abe435dbf6e7d2c8fb45d22763",
+    "next_loop/m13_protocol.json": "65bc41dabd35ff16ac40fc4f79d89dacad68bd6280fd247696fb3c4b282083dc",
+    "next_loop/m13.py": "2256b92a6411e7553721ae3abc30e928c71119175b970b671b361cbc3a3df2b0",
+    "next_loop/m12.py": "91e6d04213bea056fa451f7403d47bb70f424e114f4807e29eebd5ee025a36f0",
+    "next_loop/regional_features.py": "cd9418bf0536ef09d9f25400a2a431b3e367fca7036e268c1e59ac8ead2e2c4b",
+    "next_loop/target_weights.py": "5d65caa35fe494827a8605b173cfa2ae365150c1cb56bb278db600ef61cf2c1e",
+    "next_loop/regional_stats.py": "69614f87ace51a1cc93d1913f6e3c17dac56ed86ec1ddd1fd4270fbcd195df4e"
+  },
+  "original_final_evaluations": 0,
+  "full_F3_evaluator_freeze_complete": false,
+  "F3_experiment_id": "e1215e22-e3e3-40d9-b59e-b5f7754e85e9",
+  "next_action": "Implement/test/hash full F3 evaluator and all fixed panel recipes before any historical acquisition; no test-driven replacement"
+}
