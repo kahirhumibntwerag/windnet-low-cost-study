@@ -1,0 +1,100 @@
+{
+  "stage": "M15",
+  "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+  "hypothesis_id": "65f6ebf8-2c14-4ecc-8413-1de25c9381cf",
+  "experiment_id": "1c1812ee-1383-4fc4-adbd-aaad4107a843",
+  "scope": "Training-only original Folds1-4; original Fold5 hash/discard unparsed/unretained",
+  "expert_names": {
+    "A": "M14_morphology_trend_w4_targetfast2_a100_share0.25",
+    "B": "M14_regional_morphology_trend_w4_targetfast2_a100_share0.25"
+  },
+  "formula": "p_gate=A+g*(B-A); p=(1-s)*fixedM13+s*p_gate",
+  "static_event_shares": [
+    0.125,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "gate_thresholds": [
+    400,
+    450,
+    500,
+    550
+  ],
+  "gate_temperatures": [
+    25,
+    50,
+    100
+  ],
+  "gate_max_shares": [
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "incumbent_mix_shares": [
+    0.5,
+    1
+  ],
+  "conditions": 104,
+  "new_base_fits": 0,
+  "controls": [
+    "bank_windnet_port",
+    "bank_prior_M6",
+    "fixed_M10",
+    "fixed_M13"
+  ],
+  "expert_ablations": [
+    "A",
+    "B"
+  ],
+  "control_and_expert_tolerance": 1e-09,
+  "selection": "Against strongest of all four controls: RMSE<=.99min, Fisher r>=max+.005, chi2<=.995min, HSE>=max+.02; >=3/4 leave-one-fold-out directional passes and every foldRMSE<=1.05strongest control. Check eligible candidates ascendingRMSE; first with all four conditional HSE95 lowerbounds>0. 2000whole-blockdraws,seed20261029. Undefined fails.",
+  "technical_checks_passed": 3,
+  "dependencies": {
+    "numpy": "2.1.2",
+    "scipy": "1.16.1",
+    "scikit-learn": "1.7.2",
+    "requests": "2.32.3",
+    "joblib": "1.5.2"
+  },
+  "budget": {
+    "prior_estimate_usd": 1.6201732666666666,
+    "cumulative_limit_usd": 5,
+    "max_worker_seconds": 1800
+  },
+  "hypothesis_sources": [
+    "M14 matched training-side anchor complementarity",
+    "https://www.cs.toronto.edu/~hinton/absps/jjnh91.pdf",
+    "https://statistics.berkeley.edu/sites/default/files/tech-reports/367.pdf"
+  ],
+  "excluded_evidence": "All original historical test feedback, individual original holdout observations/predictions/residuals and F3 artifacts",
+  "frozen_sources": {
+    "matched/__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+    "matched/runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+    "matched/hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+    "matched/source_manifest.json": "bc05daf387663b78621dde4716852df044ceac86b6ea5f66067db589d7f87271",
+    "event_loop/__init__.py": "efb6e7445cd7ebd5bcdb4e7e5052d67b3c46913fde1b7f4ed808e63ee8812a68",
+    "event_loop/runner.py": "161d730b2dc5319ce3a9eb351f2ec4164e13e94d1caeb9a2032f5785dabfcbd6",
+    "next_loop/__init__.py": "43418f9f5fbc680229393c4d39998ae5d1086c4c8d7bafd76d1b7a9f5fe9da23",
+    "next_loop/m12.py": "91e6d04213bea056fa451f7403d47bb70f424e114f4807e29eebd5ee025a36f0",
+    "next_loop/m12_reference.json": "70f237ee0c233c88a192a0888b9e5b3e33e6ceffad49d94f86abb12f89b6589f",
+    "next_loop/regional_stats.py": "69614f87ace51a1cc93d1913f6e3c17dac56ed86ec1ddd1fd4270fbcd195df4e",
+    "next_loop/regional_features.py": "cd9418bf0536ef09d9f25400a2a431b3e367fca7036e268c1e59ac8ead2e2c4b",
+    "next_loop/target_weights.py": "5d65caa35fe494827a8605b173cfa2ae365150c1cb56bb278db600ef61cf2c1e",
+    "next_loop/digital_topology.py": "84483177222335d62a86b1e343318c4a4f2848a38a28678669b9448a95a6daa9",
+    "next_loop/test_topology.py": "b5eb3a0d6298e04ea4b66cd10153748a8c39da2486d6fc25875bea3b75e2874f",
+    "next_loop/test_regions.py": "39b2e1ac9b96ad9dd5cbcc28689bf28eb1b77ee8535cc7d5752db84724efd1a5",
+    "next_loop/test_target_weights.py": "445cb0c944cb97e83275adecc7e516b75c7a7a993b7bff8990a890d0d50f6016",
+    "next_loop/m14.py": "0340c352d0da46789b7e30119ff207153c611e4302a884e953c99a4aca04246c",
+    "next_loop/m14_entry.py": "78dcbe562dbf287c2bcfae937562e6685440d3514774d1211c3dca83047d5d6a",
+    "next_loop/m14_transport.py": "0b49ef6fc6277711bbbf14fe27dc0a465e1857c05810e11bbd50bc8a19279c2d",
+    "next_loop/m14_reference.json": "a0c85adc3dbfab98f9237b0fc8202ec51fc1123f701201cb10b2d5244abb8c7a",
+    "next_loop/expert_gate.py": "7b498549045264f120f43609699f5808feaf0e93302cd725abc3a2200422e1a4",
+    "next_loop/test_expert_gate.py": "f7ff42e8420ab2653bd82951913fc1f0f25e58d449c630783df21d1b8513a004",
+    "next_loop/m15.py": "e37f1815bc0e5637cf5ac8970acc78a6a8c0b6438428f853b5a1e883c27c4c8e",
+    "next_loop/m15_entry.py": "8a552d0876418d317c484577be3f958847e0684937bb027e71b63627a2f1bc45",
+    "next_loop/m15_transport.py": "612a1a1bd41d57b71f9dad79862cd9a664c143155ea63722f4b0693df7d98460",
+    "next_loop/m15_reference.json": "b3751b37bcfeb4c1d9d9c0c6250d7203ed9dfb6ab3b61191ce9316b28ea6e133"
+  }
+}
