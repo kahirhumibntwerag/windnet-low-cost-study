@@ -1,0 +1,21 @@
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.2
+[notice] To update, run: pip install --upgrade pip
+..............
+----------------------------------------------------------------------
+Ran 14 tests in 0.059s
+
+OK
+{"members_verified": 30, "seconds": 7.905727386474609}
+{"members_verified": 60, "seconds": 14.401109457015991}
+{"members_verified": 90, "seconds": 20.50727939605713}
+{"members_verified": 120, "seconds": 24.774222373962402}
+{"members_verified": 150, "seconds": 26.303515911102295}
+Development data ready; no Fold5 data retained
+M16 controls, original rows, fitting pair boundaries and full source/panel freeze verified before fitting
+M16 zero-strength prediction check passed on every original training validation row; now testing positive penalties
+{"M16_feature_blocks": 30, "seconds": 15.170353889465332}
+{"M16_feature_blocks": 60, "seconds": 19.301937103271484}
+{"M16_feature_blocks": 90, "seconds": 23.433385133743286}
+{"M16_complete": true, "conditions": 144, "fold_fits": 144, "numerical_passes": 0, "qualified": false, "selected": null, "seconds": 31.820179224014282}

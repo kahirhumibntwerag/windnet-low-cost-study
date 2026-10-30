@@ -1,0 +1,15 @@
+{
+  "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+  "hypothesis_id": "ef444203-aa40-4dc6-81c5-91260e9c7c04",
+  "experiment_id": "dddea291-a4df-408a-889a-af76c52589b6",
+  "status": "planned; not implemented or executed",
+  "parent_experiment_id": "621a4d21-b7af-4f56-84ec-e2ba6eb6b4ed",
+  "post_literature_observation_id": "5571627f-0630-4b83-9ed3-e9f3ce5e878f",
+  "conditions": 144,
+  "raw_recipes": 36,
+  "fold_fits": 144,
+  "original_final_evaluations": 0,
+  "prior_cumulative_estimate_usd": 1.6676224333333332,
+  "cumulative_limit_usd": 5,
+  "next_action": "Read exact RogNet design; implement weighted centered linear/RBF kernels and technical checks; freeze all sources, data, controls and 144-condition panel before any fitting. No historical feedback or original Fold5 access."
+}

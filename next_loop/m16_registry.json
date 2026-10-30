@@ -2,7 +2,7 @@
   "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
   "hypothesis_id": "5128c433-8a56-455d-8764-d98251e4b76a",
   "experiment_id": "621a4d21-b7af-4f56-84ec-e2ba6eb6b4ed",
-  "status": "planned; code and source freeze pending",
+  "status": "completed; not_supported; M13 retained",
   "predecessor_plan": {
     "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
     "hypothesis_id": "ba0642a6-0096-4869-ad55-9e384c264cfa",
@@ -12,8 +12,8 @@
   "conditions": 144,
   "raw_recipes": 36,
   "fold_fits": 144,
-  "zero_penalty_prediction_tolerance": 1e-7,
-  "controls_metric_tolerance": 1e-9,
+  "zero_penalty_prediction_tolerance": 1e-07,
+  "controls_metric_tolerance": 1e-09,
   "original_final_evaluations": 0,
   "cumulative_limit_usd": 5,
   "prior_cumulative_estimate_usd": 1.6435833333333332,
@@ -22,5 +22,18 @@
     "https://journals.ametsoc.org/view/journals/aies/5/3/AIES-D-25-0090.1.xml",
     "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024SW004125"
   ],
-  "excluded_evidence": "All original historical feedback and F3 artifacts"
+  "excluded_evidence": "All original historical feedback and F3 artifacts",
+  "run_id": "abcfae93-7039-4403-a855-a7df03befe41",
+  "pod_id": "hqg7pen0b0fh7m",
+  "volume_id": "a3a313jisp",
+  "created_at": "2026-10-30T05:19:55.654Z",
+  "source_commit": "dcd8201e6952635770b3d282ac3c95ef06a70494",
+  "observation_id": "7f10c77a-9d8c-4556-8293-686973cf304e",
+  "analysis_id": "55b7c25d-7b0d-47c5-ba37-eda8b27be4a7",
+  "decision_id": "0271244e-3fa1-498d-9c7c-2871b285541c",
+  "gate_passed": false,
+  "freeze_sha256": "faa5f74c3ad06da43c77bff12c4d33358340f1a00e5825832f62a587dbbe637e",
+  "cumulative_estimate_usd": 1.6676224333333332,
+  "pod_deleted_verified_404": true,
+  "volume_deleted_verified_404": true
 }

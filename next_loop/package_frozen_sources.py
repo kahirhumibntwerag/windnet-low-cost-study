@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('stage',choices=['f3','m14','m15']);args=ap.parse_args();stage=args.stage
+    ap=argparse.ArgumentParser();ap.add_argument('stage',choices=['f3','m14','m15','m16']);args=ap.parse_args();stage=args.stage
     freeze_path=ROOT/'results/next_loop'/f'{stage}_freeze.json';freeze=json.loads(freeze_path.read_text())
     sources=dict(freeze['source_hashes']);protocol=f'next_loop/{stage}_protocol.json'
     if protocol not in sources:sources[protocol]=freeze['protocol_sha256']

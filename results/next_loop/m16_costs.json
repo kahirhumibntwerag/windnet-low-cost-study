@@ -1,0 +1,17 @@
+{
+  "stage": "M16",
+  "pod_id": "hqg7pen0b0fh7m",
+  "volume_id": "a3a313jisp",
+  "created_at": "2026-10-30T05:19:55.654Z",
+  "deleted_verified_at": "2026-10-30T05:23:58Z",
+  "pod_deleted_verified_404": true,
+  "volume_deleted_verified_404": true,
+  "compute_rate_usd_per_hour": 0.06,
+  "compute_estimate_usd": 0.0040390999999999995,
+  "storage_and_rounding_buffer_usd": 0.02,
+  "prior_cumulative_matched_estimate_usd": 1.6435833333333332,
+  "cumulative_limit_usd": 5,
+  "limitations": "Creation-to-deletion verification estimate includes installation, downloads and idle time plus storage/rounding buffer; not a settled invoice. Only the M16 pod and volume were deleted after verified downloads.",
+  "this_worker_estimate_usd": 0.0240391,
+  "cumulative_matched_estimate_usd": 1.6676224333333332
+}

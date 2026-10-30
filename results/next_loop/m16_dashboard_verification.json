@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "m16_html_conditions": 144,
+  "m16_csv_rows": 144,
+  "m16_scatter_conditions": 144,
+  "matched_anchor_ablations": 12,
+  "earlier_sections_preserved": true,
+  "phase3_link_present": true,
+  "joint_numerical_passes": 0,
+  "browser_qa_performed": false,
+  "browser_qa_limit": "Browser control remains stopped after physical Escape; native Sites publication only."
+}

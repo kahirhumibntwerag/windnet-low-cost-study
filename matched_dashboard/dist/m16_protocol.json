@@ -1,0 +1,138 @@
+{
+  "stage": "M16",
+  "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+  "hypothesis_id": "5128c433-8a56-455d-8764-d98251e4b76a",
+  "experiment_id": "621a4d21-b7af-4f56-84ec-e2ba6eb6b4ed",
+  "scope": "Training-only Folds1-4; original Fold5 hash/discard unparsed/unretained",
+  "families": [
+    "regional",
+    "morphology",
+    "regional_morphology"
+  ],
+  "view": "trend",
+  "encoding": "linear",
+  "ridge_alpha": [
+    10,
+    100,
+    1000
+  ],
+  "difference_strengths": [
+    0,
+    0.25,
+    1,
+    4
+  ],
+  "new_head_shares": [
+    0.125,
+    0.25,
+    0.5,
+    1
+  ],
+  "conditions": 144,
+  "raw_recipes": 36,
+  "fold_fits": 144,
+  "fit_window_offsets": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "validation_window_offsets": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "pairing": "Same original fitting block; target offset difference exactly1; 12 pairs among13 fitting windows, no cross-block or validation pairs",
+  "objective": "SUM w*(y-c-Xbeta)^2 + difference_strength*SUM pair_v*(dy-dXbeta)^2 + alpha*||beta||^2",
+  "weights": "M13 precision4 times fast2; normalize each main weighting step; pair_v=(w_left+w_right)/2 then normalize over fitting pairs",
+  "intercept": "Weighted main centering; Ridge fit_intercept=False; pair differences have no intercept",
+  "gain": 1.2,
+  "bias": -5,
+  "gain_center": "ordinary fitting target mean",
+  "prior": "fixed_M10",
+  "zero_control": {
+    "family": "regional",
+    "ridge_alpha": 100,
+    "difference_strength": 0,
+    "new_head_share": 0.25,
+    "prediction_tolerance": 1e-07,
+    "before_any_positive_difference_fit": true,
+    "fits_cached_within_total": true
+  },
+  "controls": [
+    "bank_windnet_port",
+    "bank_prior_M6",
+    "fixed_M10",
+    "fixed_M13"
+  ],
+  "control_tolerance": 1e-09,
+  "selection": "Same four incumbent anchors strongestmetricwise:RMSE<=.99min,Fisher-r>=max+.005,chi2<=.995min,HSE>=max+.02;>=3/4leaveonefoldoutallfourdirectionalchecks;everyfoldRMSE<=1.05strongestcontrol. Check survivorsascendingRMSE;first with positive2000drawwhole-blockpairedconditionalHSE95lowerbounds versusall4,seed20261029. Undefinedfails. Zero-penalty ablationandallfamilies reported whether successful ornot.\nFailure criteria: Any source/control/row/boundary orzero-control mismatch is technicalfailure,withno tolerance relaxation. No fullyqualifyingcandidate=>retainM13. PriorM8failure remainsrecorded. Do not infer causality,fullnesting,physicalderivatives or freshconfirmation. No hypothesis or modelreplacement fromhistoricalfeedback.",
+  "technical_tests_passed": 14,
+  "dependencies": {
+    "numpy": "2.1.2",
+    "scipy": "1.16.1",
+    "scikit-learn": "1.7.2",
+    "requests": "2.32.3",
+    "joblib": "1.5.2"
+  },
+  "budget": {
+    "prior_estimate_usd": 1.6435833333333332,
+    "cumulative_limit_usd": 5,
+    "max_worker_seconds": 1800
+  },
+  "hypothesis_sources": [
+    "M15 training-side uncertainty and M13 training signal",
+    "https://journals.ametsoc.org/view/journals/aies/5/3/AIES-D-25-0090.1.xml",
+    "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024SW004125"
+  ],
+  "excluded_evidence": "All original historical feedback and F3 artifacts",
+  "frozen_sources": {
+    "matched/__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+    "matched/runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+    "matched/hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+    "matched/source_manifest.json": "bc05daf387663b78621dde4716852df044ceac86b6ea5f66067db589d7f87271",
+    "event_loop/__init__.py": "efb6e7445cd7ebd5bcdb4e7e5052d67b3c46913fde1b7f4ed808e63ee8812a68",
+    "event_loop/runner.py": "161d730b2dc5319ce3a9eb351f2ec4164e13e94d1caeb9a2032f5785dabfcbd6",
+    "next_loop/__init__.py": "43418f9f5fbc680229393c4d39998ae5d1086c4c8d7bafd76d1b7a9f5fe9da23",
+    "next_loop/m12.py": "91e6d04213bea056fa451f7403d47bb70f424e114f4807e29eebd5ee025a36f0",
+    "next_loop/m12_reference.json": "70f237ee0c233c88a192a0888b9e5b3e33e6ceffad49d94f86abb12f89b6589f",
+    "next_loop/regional_stats.py": "69614f87ace51a1cc93d1913f6e3c17dac56ed86ec1ddd1fd4270fbcd195df4e",
+    "next_loop/regional_features.py": "cd9418bf0536ef09d9f25400a2a431b3e367fca7036e268c1e59ac8ead2e2c4b",
+    "next_loop/target_weights.py": "5d65caa35fe494827a8605b173cfa2ae365150c1cb56bb278db600ef61cf2c1e",
+    "next_loop/digital_topology.py": "84483177222335d62a86b1e343318c4a4f2848a38a28678669b9448a95a6daa9",
+    "next_loop/test_topology.py": "b5eb3a0d6298e04ea4b66cd10153748a8c39da2486d6fc25875bea3b75e2874f",
+    "next_loop/test_regions.py": "39b2e1ac9b96ad9dd5cbcc28689bf28eb1b77ee8535cc7d5752db84724efd1a5",
+    "next_loop/test_target_weights.py": "445cb0c944cb97e83275adecc7e516b75c7a7a993b7bff8990a890d0d50f6016",
+    "next_loop/m14.py": "0340c352d0da46789b7e30119ff207153c611e4302a884e953c99a4aca04246c",
+    "next_loop/m14_entry.py": "78dcbe562dbf287c2bcfae937562e6685440d3514774d1211c3dca83047d5d6a",
+    "next_loop/m14_transport.py": "0b49ef6fc6277711bbbf14fe27dc0a465e1857c05810e11bbd50bc8a19279c2d",
+    "next_loop/m14_reference.json": "a0c85adc3dbfab98f9237b0fc8202ec51fc1123f701201cb10b2d5244abb8c7a",
+    "next_loop/difference_ridge.py": "e3e410d4500e85e5a82b8e077dc3c6b3e90cee64e17f8f6dd9a1fafdc193b5ba",
+    "next_loop/test_difference_ridge.py": "b0cb9a29c9ff52a117eb36b74bc0a87e1c7185cdda5be1f381f7d36c0daa2b28",
+    "next_loop/m16.py": "2e29aebed69af869003f11b0c6cb2873844766a1e42e946828c0603f088b6bf0",
+    "next_loop/m16_entry.py": "966be5986e296e7fb37dd9fc4fd0af37745a511fc15750281ebc785d7ea8b9f8",
+    "next_loop/m16_transport.py": "96b2aeac10eefa00a4a40ead8e24ad55d482911bada30f158253976018e3188d",
+    "next_loop/prepare_m16_worker.py": "ed7c70b18eed251ccea28426addfcc89c9dc08055bdf9ff459f5a53dbe8e3c06",
+    "next_loop/m16_registered_design.json": "78014c906499d39ab7b134d3ad3894780bd6e3dc2f76de9f58fd6acb074b4b6e"
+  }
+}

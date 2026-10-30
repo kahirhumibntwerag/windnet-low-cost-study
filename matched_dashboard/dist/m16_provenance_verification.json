@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "frozen_sources": 27,
+  "conditions": 144,
+  "raw_recipes": 36,
+  "fold_fits": 144,
+  "original_development_blocks": 108,
+  "four_controls_match": true,
+  "pair_boundaries_verified_from_audits": true,
+  "zero_control_verified_from_saved_training_predictions": true,
+  "zero_control_max_abs_differences": [
+    1.1368683772161603e-13,
+    1.1368683772161603e-13,
+    1.1368683772161603e-13,
+    1.1368683772161603e-13
+  ],
+  "original_final_evaluations": 0,
+  "fold5_available": false,
+  "scope": "Source/freeze/control provenance and saved zero-penalty identity; no independent full model refit or raw-label metric rerun"
+}

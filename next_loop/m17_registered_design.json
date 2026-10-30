@@ -1,0 +1,56 @@
+{
+  "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+  "hypothesis_id": "ef444203-aa40-4dc6-81c5-91260e9c7c04",
+  "parent_experiment_id": "621a4d21-b7af-4f56-84ec-e2ba6eb6b4ed",
+  "relation": "follow_up",
+  "reason": "M16 training-only joint gate failed; nonlinear RBF hypothesis from post-experiment primary literature",
+  "idempotency_key": "m17-kernel-design-20261030-01",
+  "title": "M17: Training-only weighted linear versus RBF kernel heads",
+  "inputs": "Original108Folds1-4blocks,13fit/14validationwindows,1512validationrows,originalfour211AimagesH4D3. Features regional6x6,morphology,regional_morphology;alltrend/linearencoding. Samefourfrozencontrols bank_windnet_port/bank_prior_M6/fixed_M10/fixed_M13. No additionaldatachannels,solarindices,observedspeedhistories orruntime neighborforecasts. Fold5hash/discardunparsed/unretained;noF3files.",
+  "method": "Fitting-only StandardScaler,scalefloor.01. UsefixedM13mainweights:precisionlambda4 withfit-onlysigmafloor/median,mean-normalize,thenfast2 atfittingtarget>=500 andmean-normalize. Let a=w/sum(w),ybar=a.T*y. BuildtrainGram K. Linearkernel K=X*X.T/d,where d=featurecount;RBF K=exp(-gamma*max(squaredEuclideandistance,0));gamma=factor/median(strictlypositivetrainoffdiagonalsquareddistances),factor[.25,1,4]. Invalid/zero/nonfinitedistancemedian istechnicalfailure,nofallbacktuning. Weightedcentering:Kc=K-(K*a)[:,None]-(a.T*K)[None,:]+a.T*K*a. FitKernelRidge(kernel=precomputed,alpha[.1,1,10])to(y-ybar),sample_weight=w. Atinference,centerKtestusingonlystoredtraininga,trainingcolumnmeansandgrandmean:Kv_c=Kv-(Kv*a)[:,None]-(a.T*K)[None,:]+grandmean. Predict=ybar+Kv_c*dualcoef. Thisimplementsanunpenalizedinterceptandrequiresnospeedlabelsatinference. Outerheadgain1.2aboutordinaryfittingtargetmean,bias-5;mixturewithFIXEDM13,shares[.125,.25,.5,1]. Perfamily:3linearrecipes+9RBFrecipes=12;3families=>36rawrecipes,144foldfits,144conditions(36linear+108RBF). Nohyperparameteroptimization beyondthisfrozengrid,nostochasticseedsearch,nodifferenceloss. ZeroheadsharefixedM13control unchanged. Syntheticlinearkernel-vs-primalweightedRidgeequivalence,weightedkernelcenteringandbatchinvariance testsmustpassbeforefreeze/worker.",
+  "conditions": "Beforeanycandidatefit,freezeallsource/protocol/fullpanel/datahashesandverifyallfourcontrolsandoriginalrows1e-9. Kernelnormalization/centering/scaler/weightsfit-only. SameRunpodCPUbudgetcumulativeUS$5,priorM16estimateUS$1.6676224333,max1800seconds. Exportallfits/predictions/scaler/kerneltrainingfeatures/centeringstatisticsandallablations;cleanuponlynewresourcesafterverifieddownload. Nooriginalhistoricalevaluation inM17.",
+  "success_criteria": "Strongestoffourcontrolsmetricwise:RMSE<=.99min,Fisher-r>=max+.005,chi2<=.995min,HSE>=max+.02;>=3/4leaveonefoldoutallfourdirectionalchecks;everyfoldRMSE<=1.05strongestcontrol. ChecksurvivorsascendingRMSE;firstwithpositive2000drawwhole-blockpairedconditionalHSE95lowerboundsversusall4,seed20261029. Undefinedfails. Fixeddisplayanchoralpha1/share.25 compareslinearwithRBFfactor1forall3families;allotherrowsretained. Noqualifier=>retainM13.",
+  "failure_criteria": "Any source/data/control/row mismatch,invalid kernelmedian,nonfinite output orfailedtechnicaltest istechnicalfailure;no relaxedtoleranceorchangedgrid. No jointqualifier isscientificnegativewithinthispanel. No Gaussian-process uncertainty orfreshblind/causalclaims. Neveradaptfromoriginalhistoricalfeedback.",
+  "variables": {
+    "feature_families": 3,
+    "kernel_types": [
+      "linear",
+      "rbf"
+    ],
+    "ridge_alpha": [
+      0.1,
+      1,
+      10
+    ],
+    "rbf_gamma_factors": [
+      0.25,
+      1,
+      4
+    ],
+    "head_shares": [
+      0.125,
+      0.25,
+      0.5,
+      1
+    ],
+    "raw_recipes": 36,
+    "fold_fits": 144,
+    "conditions": 144,
+    "linear_conditions": 36,
+    "rbf_conditions": 108,
+    "original_final_evaluations": 0
+  },
+  "controls": {
+    "incumbents": [
+      "bank_windnet_port",
+      "bank_prior_M6",
+      "fixed_M10",
+      "fixed_M13"
+    ],
+    "control_tolerance": 1e-9,
+    "prior": "fixed_M13",
+    "fit_only_transformations": true
+  },
+  "requires_approval": false,
+  "expected_outcome": "Controlled test of nonlinear regression on identical information;no claimedwinbeforeexecution."
+}

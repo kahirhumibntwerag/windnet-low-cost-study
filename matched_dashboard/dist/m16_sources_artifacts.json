@@ -1,0 +1,18 @@
+{
+  "filename": "m16_frozen_sources.tar.gz",
+  "bytes": 55064,
+  "sha256": "811a299c9375fd989bade107a8dc5f7f79f81c03d1d20ce3dce660dc962a795a",
+  "scientific_source_files": 28,
+  "all_source_bytes_match_original_freeze": true,
+  "archive_roundtrip_verified": true,
+  "git_newline_conversion_paths": [
+    "next_loop/m12_reference.json",
+    "next_loop/m14_reference.json",
+    "next_loop/m16_entry.py",
+    "next_loop/m16_protocol.json",
+    "next_loop/m16_transport.py",
+    "next_loop/prepare_m16_worker.py",
+    "next_loop/regional_stats.py"
+  ],
+  "raw_holdout_observations_or_forecasts_included": false
+}

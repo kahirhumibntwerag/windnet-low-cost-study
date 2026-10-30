@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "tolerance": 1e-07,
+  "checks": [
+    {
+      "held_training_fold": 1,
+      "max_abs_prediction_difference": 1.1368683772161603e-13,
+      "passed": true
+    },
+    {
+      "held_training_fold": 2,
+      "max_abs_prediction_difference": 1.1368683772161603e-13,
+      "passed": true
+    },
+    {
+      "held_training_fold": 3,
+      "max_abs_prediction_difference": 1.1368683772161603e-13,
+      "passed": true
+    },
+    {
+      "held_training_fold": 4,
+      "max_abs_prediction_difference": 1.1368683772161603e-13,
+      "passed": true
+    }
+  ],
+  "positive_strength_fits_before_check": 0,
+  "cached_zero_fits": 4
+}

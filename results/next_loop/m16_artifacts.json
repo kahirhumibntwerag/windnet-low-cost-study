@@ -1,0 +1,9 @@
+{
+  "filename": "m16_training_artifacts.tar.gz",
+  "sha256": "96ec12241ba236104348d4344637b6e3a8cc6629418d104d3b2abff4113ca60e",
+  "bytes": 3444815,
+  "models": 144,
+  "candidate_recipes": 36,
+  "conditions": 144,
+  "scope": "Training-side fitted heads and validation predictions only; fixed M10 parent models required for inference; no original holdout data"
+}

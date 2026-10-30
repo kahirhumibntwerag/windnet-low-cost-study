@@ -1,0 +1,12 @@
+{
+  "id": "hqg7pen0b0fh7m",
+  "created_at": "2026-10-30T05:19:55.654Z",
+  "volume_id": "a3a313jisp",
+  "rate_usd_per_hour": 0.06,
+  "source_commit": "dcd8201e6952635770b3d282ac3c95ef06a70494",
+  "run_id": "abcfae93-7039-4403-a855-a7df03befe41",
+  "status": "completed; worker and volume deleted",
+  "returncode": 0,
+  "pod_deleted_verified_404": true,
+  "volume_deleted_verified_404": true
+}

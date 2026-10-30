@@ -9,3 +9,5 @@ Every comparator must use the original 211 Å four-image H4/D3 inputs, identical
 The [previous campaign](https://fixrelay.vercel.app/campaigns/1b7e08e2-70f1-4945-b613-5e785d3f76bb) remains intact. This campaign starts with zero hypotheses, zero experiments and no new compute. Previous experiments have not been copied as new results. The existing cumulative US$5 study budget carries forward.
 
 Current visibility is **private**. Public visibility was requested, but the connector cannot change it. Browser control was previously stopped with Escape; publication is pending permission to resume browser control. The existing dashboard audience is unchanged.
+
+M16 has now completed: [all 144 conditions and controlled ablations](../../results/next_loop/M16_RESULTS.md) failed the joint numerical gate. M13 remains the incumbent. Sources and pair boundaries were frozen before fitting, and zero penalty reproduced M13 to floating-point precision. No historical M16 evaluation ran.
