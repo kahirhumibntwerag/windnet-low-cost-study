@@ -1,0 +1,32 @@
+{
+  "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+  "hypothesis_id": "5a04d5cf-4584-4e7b-8156-7e2d148c47c8",
+  "idempotency_key": "external2020-2025-design-20261030-01",
+  "title": "E2020: sealed matched external comparison, original WindNet and M13",
+  "inputs": "Target dates2020-01-01 through2025-12-31UTC; common daily211Angstrom inputs at/nearest00UTC fromsameUTCday, same original H4/D3(t-6,t-5,t-4,t-3), requiring imagecontext from2019-12-26. Daily OMNI2 bulk speed anddaily sigma-V forscoring only. Original author211A H4D3 checkpointreplicas1-5, retainediterations60/63/108/290/99; existingF3 M13trainedreplicas1-5. No additionalpredictors. Model lockSHA256566e401d2e52feb077eddf4b22afecc4306c8f8b471fd59f8aa708117f89de02.",
+  "method": "PhaseApreflight:recover/hash authororiginal15checkpointcomponents and existing55M13artifacts; restore originalTensorFlowcheckpointgraphs forinference ratherthan substitutingthePyTorchport. Reconstruct any missing normalization onlyfromthecorresponding originalpre2019trainingfolds;neverrefitweights. Validate implementation usingpre2019source/referenceforecasts andsynthetic tests. PhaseBbeforeexternalarraysopened:freezeallmodel,source,normalization,data-provenance,preprocessing,quality/timealignment,exclusion andevaluationcodehashes. Primarycomparison evaluatesall5matchedhistoricalCVreplicas onidenticalexternaltargetdates,andaveragesreplicaRMSE/chi2/HSETSandFisher-zaveragescorrelations. Reportuniqueexternaldatecount separately;nevercountreplicasasindependenttestdata. NoCVreplicachosenafterexternalresults, no newensembleweight tuning. UseoriginalBatchwiseHSE implementation withcalendar14-target-dayblocks anchored2020-01-01 andfinalshortblock retained;nevercompactgapsintoartificialneighbors. Retainonlyblockscompleteforbothmethodsunderfrozenimagequality/missing-targetrules. Samepositivefinite-sigmamaskforbothchi2scores;reportitsdenominator. Overallandfixedcalendar-year summaries. Paired2000drawbootstrap ofcalendar28-daytimeunits withinyear,seed20261030,sharedresamplingacrossallreplicas/methods;preserve14-dayHSEboundaries. Releaseaggregatesonlyafterallforecastsarecompleteandpredictionhashesarelocked.",
+  "conditions": "Preparation currentlyusescheckpointfiles/publicmetadata/pre2020dataonly;noexternalimagesorlabelsinspected. Completepreprocessing/sourceavailabilityaudit andpre2019restorationvalidationbeforesealingthefinalcode/datafreeze. Anytechnicalamendmentbeforeexternaldataunsealingmustbedated/versioned;noresult-dependentchanges. Donottruncate2025coverageorreplaceoriginalWindNetwitharetrainedportwithoutreportingfailuretofulfillscope. Ifmatchingcannotsafelybedone,recordunresolvedtechnicalstatusanddo notclaimtestresults. ExistingcumulativeUS$5budgetcarriesforward, priorrecordedestimateUS$1.6953490833. Do notresumeadaptiveM17orbroaderimprovementloop.",
+  "success_criteria": "Evaluationcompletewhenallfourmetricsforbothfrozenmethodsarecomputedontheidentical2020-2025eligibledatawithpaireduncertainty,source/model/dataidentityandcoverage/exclusionaudits,andRogNet/GitHub/dashboardupdated. Scientificall-fourpointwinrequiresRMSEandchi2strictlylower,r andHSETSstrictlyhigher;undefinedfails. Statisticaluncertaintyreportedseparatelywithoutchangingthresholds, models, data eligibility or primary aggregation.",
+  "failure_criteria": "Anyfutureperiodtuning/refitting/calibration,checkpointreplacement,training/testoverlap,unmatchedtimestamps,inputnormalizationusingexternalstatistics,unverifiedpreprocessingorunsupportedoriginalcheckpointrestoration invalidatesconfirmatorycomparison. Technicalfailureisnotamodelloss. Preservefailedattempts;nocandidatepromotionfromthisexternalperiod.",
+  "controls": {
+    "original_windnet": "Exact author-retainedTensorFlow211A H4D3checkpoints",
+    "M13": "Existing frozenF3 trained primary;no refit",
+    "same_target_dates": true,
+    "same_images": true,
+    "no_external_tuning": true,
+    "predict_calls_accept_targets": false
+  },
+  "variables": {
+    "start_date": "2020-01-01",
+    "end_date": "2025-12-31",
+    "models": 2,
+    "replicas_per_model": 5,
+    "history": 4,
+    "delay": 3,
+    "wavelength_angstrom": 211,
+    "bootstrap_draws": 2000,
+    "bootstrap_seed": 20261030
+  },
+  "requires_approval": false,
+  "expected_outcome": "A single external generalization comparison regardless of whether either modelwins;no improvement isassumed."
+}

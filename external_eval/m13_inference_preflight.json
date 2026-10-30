@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "external_arrays_accessed": false,
+  "frozen_artifacts_hash_verified": 55,
+  "refits": 0,
+  "checks": [
+    {
+      "fold": 1,
+      "pre2019_member": "Fold1/Partition103.npy",
+      "synthetic_history_count": 3,
+      "legacy_composition_max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "fold": 2,
+      "pre2019_member": "Fold2/Partition124.npy",
+      "synthetic_history_count": 3,
+      "legacy_composition_max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "fold": 3,
+      "pre2019_member": "Fold3/Partition1.npy",
+      "synthetic_history_count": 3,
+      "legacy_composition_max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "fold": 4,
+      "pre2019_member": "Fold4/Partition100.npy",
+      "synthetic_history_count": 3,
+      "legacy_composition_max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "fold": 5,
+      "pre2019_member": "Fold5/Partition101.npy",
+      "synthetic_history_count": 3,
+      "legacy_composition_max_abs_error": 0.0,
+      "passed": true
+    }
+  ],
+  "source_bridge": {
+    "source_date": "2018-01-01",
+    "source_sha256": "fe727a7b1438a5701fb089825b9934cda856a5e127aba954d21d9be840faf28e",
+    "paired_release_images": 1,
+    "rms_difference_0_to256": [
+      0.0017818851340585043
+    ],
+    "status": "paired comparison available",
+    "scientific_limitation": "Reconstructed source processing follows published SDOMLv1 and author scripts; archive revisions and interpolation libraries can prevent bitwise image equality.",
+    "required_rms_tolerance_0_to256": 0.1
+  },
+  "runtime_torch": "2.8.0.dev20250319+cu128",
+  "limitation": "No individual F3 forecasts were retained for vector-by-vector cross-runtime verification. Loaded exact weights and saved scalers; independent frozen recipe composition checked on pre2019 images."
+}

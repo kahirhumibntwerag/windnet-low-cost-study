@@ -1,0 +1,241 @@
+{
+  "scope": "Public metadata only; no2020-2025arrays inspected",
+  "model": "211A H4D3",
+  "folds": [
+    {
+      "fold": 1,
+      "folder_id": "1oZnJDoExLxuiqEXgukJoX6GwxqHqpcHf",
+      "entries": [
+        {
+          "id": "1_WmECf3QFFcxZ6UEeuDpB1gV-nNJcwGm",
+          "name": "Model_save",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "16B3tv18SQgNz1Qh8OvHBDArkZdsr7Gv6",
+          "name": "Testing",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "1tssgRk-GahJ-vk4R6FEeQxcxMS9VsG51",
+          "name": "AE_Predict_TrainCorr43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1-aGMCnfJv99RskmN0bEcmPunFDXEuQib",
+          "name": "AE_Predict_TrainError43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1dDrFD-XhW3u4JXR1Frh3US7VQ8_c4HUS",
+          "name": "AE_Predict_ValidChi243.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "19qvSjz1ogLTLpQuGX_7crKD8ZVRVsKTs",
+          "name": "AE_Predict_ValidCorr43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1sf4GOUehxeNiTJyb-x3SyGJdsyqO7cqY",
+          "name": "AE_Predict_ValidError43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "14E_0I6z_G5YJgu5ge4S7qvKqvqq6GMJn",
+          "name": "Bestp.txt",
+          "type": "application/octet-stream"
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "folder_id": "1VM2R8ICfUnSeTwdLHkkEdo8wh3at19Ke",
+      "entries": [
+        {
+          "id": "1e0DxYX8zDuHcQzn3yZZTEVsnGp8g8Ypn",
+          "name": "Model_save",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "1A_bDIVo-9CS0wJJaXnsuUGuvgP82MCiZ",
+          "name": "Testing",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "1tis94hqUzydyxJ7yHULHErlX9RBicvlg",
+          "name": "AE_Predict_TrainCorr43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1UxfGJhj_XCVbzdsZr1f8k0-llui4k9IQ",
+          "name": "AE_Predict_TrainError43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1ujjp-gZrz-eK28rtngjLCJOV6I2D2R44",
+          "name": "AE_Predict_ValidChi243.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1FMdadYyI7qfDccuhbSjBPPFjmdZoYrHW",
+          "name": "AE_Predict_ValidCorr43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1-zVKecwIB0tCjNkgyJJIf-wuQxpSgRK6",
+          "name": "AE_Predict_ValidError43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1Kqww2si-tA-Mm3THlW-QxOrFSDocRgWR",
+          "name": "Bestp.txt",
+          "type": "application/octet-stream"
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "folder_id": "1arYMdjq6OrlsZZ0maUwbHtozyn4mKJLQ",
+      "entries": [
+        {
+          "id": "1WQc2mfU5JNk79t_9NfE6KqbvVAuxEnMQ",
+          "name": "Model_save",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "1zu7x_V-vBj3hcKqpjghepEtaBdwDGvUr",
+          "name": "Testing",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "1WetTAB2bQexkchXrBnn23iAeh3Z99Gdm",
+          "name": "AE_Predict_TrainCorr43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "10YDeT4lmDX-afX0TBKqQPt0qCjwAhWGK",
+          "name": "AE_Predict_TrainError43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1amVA6qsGoQKHsKn_tDSwqAeewtKr4sxa",
+          "name": "AE_Predict_ValidChi243.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1cgtvZGjtp4_SLdCByqKyzxyxfiTx4pOv",
+          "name": "AE_Predict_ValidCorr43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "11OigC-75cB7rULorNt24Vyej64xHMKGN",
+          "name": "AE_Predict_ValidError43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1j73fzWyklSBSTJ9DYS8DUJZ1kFWnbQyg",
+          "name": "Bestp.txt",
+          "type": "application/octet-stream"
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "folder_id": "1_rVWADU8dxJETT4oJyyyQZE1ufsBfbIT",
+      "entries": [
+        {
+          "id": "1ixjBNHoF3q6YneLj72O_3JYndakOPqLt",
+          "name": "Model_save",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "181ZG6Xl7LBlPXfjfMNcUqfWkDqF6kSw1",
+          "name": "Testing",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "1PYcgKXUQkUp544czjjgisuvEpmAHSO04",
+          "name": "AE_Predict_TrainCorr43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "13f3znkVg2YQedMboY4Cgslcjnp94T32F",
+          "name": "AE_Predict_TrainError43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1bxgLHCKqMoIWIQrp7aLJiGFHj4g3bV32",
+          "name": "AE_Predict_ValidChi243.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "172EY_Ler2NiB5SObAlTvtWAYLBqcEWDC",
+          "name": "AE_Predict_ValidCorr43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1MDhAvCRjp7BsVhH_ArxzwS3EFekkbeEB",
+          "name": "AE_Predict_ValidError43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1dSk1CmsBWDxjJ9zVC5aGVlpilfx0IblR",
+          "name": "Bestp.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1z6wW3ngj-KuwNyAaiAJfZRfUuRmMMGZl",
+          "name": "GC_train.npy",
+          "type": "application/octet-stream"
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "folder_id": "1TmHBOSrn6QLjPqr4j3W55Py3YYiibaST",
+      "entries": [
+        {
+          "id": "1s8NczDqdIvwRITICueUZOGhmuwrzUV8t",
+          "name": "Model_save",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "13WZTc2x_WEnVvvR0-oftLuxX56_JyCAr",
+          "name": "Testing",
+          "type": "application/vnd.google-apps.folder"
+        },
+        {
+          "id": "1VeIm-HxhyNUMRifs8pzsF0Ow7N_7vW_L",
+          "name": "AE_Predict_TrainCorr43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1e6xYH8J2E7THm-JL1wdbUa7jtC_RRrdC",
+          "name": "AE_Predict_TrainError43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1MJZ-FKu4nDAsTVD5-WzmbruqRslP1UoC",
+          "name": "AE_Predict_ValidChi243.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "17xCHthpoUP6YzhNVSkFZn4C3iMEsvLrh",
+          "name": "AE_Predict_ValidCorr43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "15kzuLL3lPdloOsbr3mZGkG7B4FmbwLmV",
+          "name": "AE_Predict_ValidError43.txt",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1JUMGUFr4GTaQVrOiVjVavhKb5o2jC4La",
+          "name": "Bestp.txt",
+          "type": "application/octet-stream"
+        }
+      ]
+    }
+  ]
+}

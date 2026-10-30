@@ -1,0 +1,25 @@
+{
+  "stage": "evaluator frozen; external test not yet started",
+  "external_evaluation_complete": false,
+  "external_arrays_accessed": false,
+  "original_checkpoint_replica_preflight": "passed all5;max error0.000711km/s",
+  "M13_saved_inference": "passed all5 replicas;55 artifacts verified",
+  "technical_attempts": [
+    {
+      "stage": "author graph restoration",
+      "error": "TensorFlow2 eager Saver context",
+      "resolution": "disable eager and restore within original graph; all5 reference checks passed",
+      "external_arrays_accessed": false
+    },
+    {
+      "stage": "M13 pickle loading",
+      "error": "NumPy2 _core module renamed relative to NumPy1.26 TensorFlow runtime",
+      "resolution": "module-name compatibility unpickler; no artifact or parameter changes",
+      "external_arrays_accessed": false
+    }
+  ],
+  "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+  "experiment_id": "a84303f5-6cff-4af4-9aab-225c96b8b499",
+  "run_id": "11af4a3c-0361-45b0-af4c-b6d0a5f0932d",
+  "complete_freeze_sha256": "4cf33024df2d83267eaa079bde36f639b481512949d2f66bc01b62b003875927"
+}

@@ -1,0 +1,115 @@
+{
+  "scope": "Author-trained checkpoint metadata only; historical retained selection, no new-data selection",
+  "folds": [
+    {
+      "fold": 1,
+      "model_folder": "1_WmECf3QFFcxZ6UEeuDpB1gV-nNJcwGm",
+      "historical_selected_prediction_filename": "WindNet_Predict_Test_Iter_no60.npy",
+      "files": [
+        {
+          "id": "1NS-_YX2SH84XlHXqa0QGDVvEmhszC7sN",
+          "name": "model_no-60.data-00000-of-00001",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1UOMR6b2h3Y3mFlut86ADIFnwSS3CqrHP",
+          "name": "model_no-60.index",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1td47d3XNUuo7glUFSc5z2WdEJSGwvCzF",
+          "name": "model_no-60.meta",
+          "type": "application/octet-stream"
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "model_folder": "1e0DxYX8zDuHcQzn3yZZTEVsnGp8g8Ypn",
+      "historical_selected_prediction_filename": "WindNet_Predict_Test_Iter_no63.npy",
+      "files": [
+        {
+          "id": "1wlHUG6wZUswlxQ4g_462FtBhTggayNZo",
+          "name": "model_no-63.data-00000-of-00001",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1ofLzDHIfp53ivD-VasIPAWTCZkD9WcOz",
+          "name": "model_no-63.index",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1JnSvINhKut9F2LfsX1Z00o9C3QtZTgsm",
+          "name": "model_no-63.meta",
+          "type": "application/octet-stream"
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "model_folder": "1WQc2mfU5JNk79t_9NfE6KqbvVAuxEnMQ",
+      "historical_selected_prediction_filename": "WindNet_Predict_Test_Iter_no108.npy",
+      "files": [
+        {
+          "id": "1xi5XofJwfwUDPg88JELKaKMtirAT9ThY",
+          "name": "model_no-108.data-00000-of-00001",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1n68ojp8BmylsbQ3VZyIa5DahJp5PsWHv",
+          "name": "model_no-108.index",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1qXgjp_iAxYrZrwIQion85RKeRCDjR7Ix",
+          "name": "model_no-108.meta",
+          "type": "application/octet-stream"
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "model_folder": "1ixjBNHoF3q6YneLj72O_3JYndakOPqLt",
+      "historical_selected_prediction_filename": "WindNet_Predict_Test_Iter_no290.npy",
+      "files": [
+        {
+          "id": "1hOHTiyVEl9uGza2Z31vLTKkkMVJd0zth",
+          "name": "model_no-290.data-00000-of-00001",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1XKHugc2QrT4DwNVS7_YlHvKVdiQjQnWY",
+          "name": "model_no-290.index",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1PgBCy3kTC-kPiattNOteGQ-rKiMhcasg",
+          "name": "model_no-290.meta",
+          "type": "application/octet-stream"
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "model_folder": "1s8NczDqdIvwRITICueUZOGhmuwrzUV8t",
+      "historical_selected_prediction_filename": "WindNet_Predict_Test_Iter_no99.npy",
+      "files": [
+        {
+          "id": "158SOaPgU68TF5_X9ddcwXABZwJylZUpq",
+          "name": "model_no-99.data-00000-of-00001",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1dNr2T8lvEdq9FECpz-KWEnhJta8rQtgd",
+          "name": "model_no-99.index",
+          "type": "application/octet-stream"
+        },
+        {
+          "id": "1PpmhK4G-yxin71ou--marSGS65LqcsMt",
+          "name": "model_no-99.meta",
+          "type": "application/octet-stream"
+        }
+      ]
+    }
+  ]
+}

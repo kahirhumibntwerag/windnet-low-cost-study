@@ -1,0 +1,1071 @@
+{
+  "tensorflow_inspection_runtime": "2.15.1",
+  "forecasts_executed": false,
+  "folds": [
+    {
+      "fold": 1,
+      "epoch": 60,
+      "nodes": 2925,
+      "placeholders": [
+        {
+          "name": "Placeholder",
+          "shape": [
+            -1,
+            224,
+            224,
+            3
+          ]
+        },
+        {
+          "name": "Placeholder_1",
+          "shape": [
+            -1,
+            1
+          ]
+        },
+        {
+          "name": "Placeholder_2",
+          "shape": [
+            -1,
+            1
+          ]
+        },
+        {
+          "name": "Placeholder_3",
+          "shape": [
+            -1,
+            4,
+            1
+          ]
+        },
+        {
+          "name": "Placeholder_4",
+          "shape": []
+        },
+        {
+          "name": "Placeholder_5",
+          "shape": []
+        },
+        {
+          "name": "Placeholder_6",
+          "shape": [
+            -1,
+            4,
+            832
+          ]
+        }
+      ],
+      "elu": [
+        "Elu",
+        "Elu_1",
+        "Elu_2",
+        "Elu_3"
+      ],
+      "last_concat": [
+        "rnn/concat",
+        "rnn/DropoutWrapperZeroState/LSTMCellZeroState/concat",
+        "rnn/DropoutWrapperZeroState/LSTMCellZeroState/concat_1",
+        "rnn/concat_1",
+        "rnn/while/lstm_cell/concat",
+        "rnn/concat_2",
+        "gradients/rnn/while/lstm_cell/split_grad/concat",
+        "concat"
+      ],
+      "normalization_candidate_shapes": [
+        {
+          "name": "conv1_7x7_s2_1/Assign/value",
+          "shape": [
+            7,
+            7,
+            3,
+            64
+          ]
+        },
+        {
+          "name": "conv1_7x7_s2_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "inception_4e_1x1_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            528,
+            256
+          ]
+        },
+        {
+          "name": "inception_4e_1x1_1/Assign_1/value",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "conv2_3x3_reduce_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            64,
+            64
+          ]
+        },
+        {
+          "name": "conv2_3x3_reduce_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "inception_4a_pool_proj_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            480,
+            64
+          ]
+        },
+        {
+          "name": "inception_4a_pool_proj_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "inception_4c_3x3_1/Assign/value",
+          "shape": [
+            3,
+            3,
+            128,
+            256
+          ]
+        },
+        {
+          "name": "inception_4c_3x3_1/Assign_1/value",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "inception_5a_1x1_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            832,
+            256
+          ]
+        },
+        {
+          "name": "inception_5a_1x1_1/Assign_1/value",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "inception_4b_5x5_1/Assign/value",
+          "shape": [
+            5,
+            5,
+            24,
+            64
+          ]
+        },
+        {
+          "name": "inception_4b_5x5_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "sub_3/y",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "div/y",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "sub_4/y",
+          "shape": [
+            512
+          ]
+        },
+        {
+          "name": "div_1/y",
+          "shape": [
+            512
+          ]
+        },
+        {
+          "name": "sub_5/y",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "div_2/y",
+          "shape": [
+            256
+          ]
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "epoch": 63,
+      "nodes": 2925,
+      "placeholders": [
+        {
+          "name": "Placeholder",
+          "shape": [
+            -1,
+            224,
+            224,
+            3
+          ]
+        },
+        {
+          "name": "Placeholder_1",
+          "shape": [
+            -1,
+            1
+          ]
+        },
+        {
+          "name": "Placeholder_2",
+          "shape": [
+            -1,
+            1
+          ]
+        },
+        {
+          "name": "Placeholder_3",
+          "shape": [
+            -1,
+            4,
+            1
+          ]
+        },
+        {
+          "name": "Placeholder_4",
+          "shape": []
+        },
+        {
+          "name": "Placeholder_5",
+          "shape": []
+        },
+        {
+          "name": "Placeholder_6",
+          "shape": [
+            -1,
+            4,
+            832
+          ]
+        }
+      ],
+      "elu": [
+        "Elu",
+        "Elu_1",
+        "Elu_2",
+        "Elu_3"
+      ],
+      "last_concat": [
+        "rnn/concat",
+        "rnn/DropoutWrapperZeroState/LSTMCellZeroState/concat",
+        "rnn/DropoutWrapperZeroState/LSTMCellZeroState/concat_1",
+        "rnn/concat_1",
+        "rnn/while/lstm_cell/concat",
+        "rnn/concat_2",
+        "gradients/rnn/while/lstm_cell/split_grad/concat",
+        "concat"
+      ],
+      "normalization_candidate_shapes": [
+        {
+          "name": "conv1_7x7_s2_1/Assign/value",
+          "shape": [
+            7,
+            7,
+            3,
+            64
+          ]
+        },
+        {
+          "name": "conv1_7x7_s2_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "inception_4e_1x1_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            528,
+            256
+          ]
+        },
+        {
+          "name": "inception_4e_1x1_1/Assign_1/value",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "conv2_3x3_reduce_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            64,
+            64
+          ]
+        },
+        {
+          "name": "conv2_3x3_reduce_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "inception_4a_pool_proj_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            480,
+            64
+          ]
+        },
+        {
+          "name": "inception_4a_pool_proj_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "inception_4c_3x3_1/Assign/value",
+          "shape": [
+            3,
+            3,
+            128,
+            256
+          ]
+        },
+        {
+          "name": "inception_4c_3x3_1/Assign_1/value",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "inception_5a_1x1_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            832,
+            256
+          ]
+        },
+        {
+          "name": "inception_5a_1x1_1/Assign_1/value",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "inception_4b_5x5_1/Assign/value",
+          "shape": [
+            5,
+            5,
+            24,
+            64
+          ]
+        },
+        {
+          "name": "inception_4b_5x5_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "sub_3/y",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "div/y",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "sub_4/y",
+          "shape": [
+            512
+          ]
+        },
+        {
+          "name": "div_1/y",
+          "shape": [
+            512
+          ]
+        },
+        {
+          "name": "sub_5/y",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "div_2/y",
+          "shape": [
+            256
+          ]
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "epoch": 108,
+      "nodes": 2925,
+      "placeholders": [
+        {
+          "name": "Placeholder",
+          "shape": [
+            -1,
+            224,
+            224,
+            3
+          ]
+        },
+        {
+          "name": "Placeholder_1",
+          "shape": [
+            -1,
+            1
+          ]
+        },
+        {
+          "name": "Placeholder_2",
+          "shape": [
+            -1,
+            1
+          ]
+        },
+        {
+          "name": "Placeholder_3",
+          "shape": [
+            -1,
+            4,
+            1
+          ]
+        },
+        {
+          "name": "Placeholder_4",
+          "shape": []
+        },
+        {
+          "name": "Placeholder_5",
+          "shape": []
+        },
+        {
+          "name": "Placeholder_6",
+          "shape": [
+            -1,
+            4,
+            832
+          ]
+        }
+      ],
+      "elu": [
+        "Elu",
+        "Elu_1",
+        "Elu_2",
+        "Elu_3"
+      ],
+      "last_concat": [
+        "rnn/concat",
+        "rnn/DropoutWrapperZeroState/LSTMCellZeroState/concat",
+        "rnn/DropoutWrapperZeroState/LSTMCellZeroState/concat_1",
+        "rnn/concat_1",
+        "rnn/while/lstm_cell/concat",
+        "rnn/concat_2",
+        "gradients/rnn/while/lstm_cell/split_grad/concat",
+        "concat"
+      ],
+      "normalization_candidate_shapes": [
+        {
+          "name": "conv1_7x7_s2_1/Assign/value",
+          "shape": [
+            7,
+            7,
+            3,
+            64
+          ]
+        },
+        {
+          "name": "conv1_7x7_s2_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "inception_4e_1x1_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            528,
+            256
+          ]
+        },
+        {
+          "name": "inception_4e_1x1_1/Assign_1/value",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "conv2_3x3_reduce_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            64,
+            64
+          ]
+        },
+        {
+          "name": "conv2_3x3_reduce_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "inception_4a_pool_proj_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            480,
+            64
+          ]
+        },
+        {
+          "name": "inception_4a_pool_proj_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "inception_4c_3x3_1/Assign/value",
+          "shape": [
+            3,
+            3,
+            128,
+            256
+          ]
+        },
+        {
+          "name": "inception_4c_3x3_1/Assign_1/value",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "inception_5a_1x1_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            832,
+            256
+          ]
+        },
+        {
+          "name": "inception_5a_1x1_1/Assign_1/value",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "inception_4b_5x5_1/Assign/value",
+          "shape": [
+            5,
+            5,
+            24,
+            64
+          ]
+        },
+        {
+          "name": "inception_4b_5x5_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "sub_3/y",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "div/y",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "sub_4/y",
+          "shape": [
+            512
+          ]
+        },
+        {
+          "name": "div_1/y",
+          "shape": [
+            512
+          ]
+        },
+        {
+          "name": "sub_5/y",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "div_2/y",
+          "shape": [
+            256
+          ]
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "epoch": 290,
+      "nodes": 2925,
+      "placeholders": [
+        {
+          "name": "Placeholder",
+          "shape": [
+            -1,
+            224,
+            224,
+            3
+          ]
+        },
+        {
+          "name": "Placeholder_1",
+          "shape": [
+            -1,
+            1
+          ]
+        },
+        {
+          "name": "Placeholder_2",
+          "shape": [
+            -1,
+            1
+          ]
+        },
+        {
+          "name": "Placeholder_3",
+          "shape": [
+            -1,
+            4,
+            1
+          ]
+        },
+        {
+          "name": "Placeholder_4",
+          "shape": []
+        },
+        {
+          "name": "Placeholder_5",
+          "shape": []
+        },
+        {
+          "name": "Placeholder_6",
+          "shape": [
+            -1,
+            4,
+            832
+          ]
+        }
+      ],
+      "elu": [
+        "Elu",
+        "Elu_1",
+        "Elu_2",
+        "Elu_3"
+      ],
+      "last_concat": [
+        "rnn/concat",
+        "rnn/DropoutWrapperZeroState/LSTMCellZeroState/concat",
+        "rnn/DropoutWrapperZeroState/LSTMCellZeroState/concat_1",
+        "rnn/concat_1",
+        "rnn/while/lstm_cell/concat",
+        "rnn/concat_2",
+        "gradients/rnn/while/lstm_cell/split_grad/concat",
+        "concat"
+      ],
+      "normalization_candidate_shapes": [
+        {
+          "name": "conv1_7x7_s2_1/Assign/value",
+          "shape": [
+            7,
+            7,
+            3,
+            64
+          ]
+        },
+        {
+          "name": "conv1_7x7_s2_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "inception_4e_1x1_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            528,
+            256
+          ]
+        },
+        {
+          "name": "inception_4e_1x1_1/Assign_1/value",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "conv2_3x3_reduce_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            64,
+            64
+          ]
+        },
+        {
+          "name": "conv2_3x3_reduce_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "inception_4a_pool_proj_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            480,
+            64
+          ]
+        },
+        {
+          "name": "inception_4a_pool_proj_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "inception_4c_3x3_1/Assign/value",
+          "shape": [
+            3,
+            3,
+            128,
+            256
+          ]
+        },
+        {
+          "name": "inception_4c_3x3_1/Assign_1/value",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "inception_5a_1x1_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            832,
+            256
+          ]
+        },
+        {
+          "name": "inception_5a_1x1_1/Assign_1/value",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "inception_4b_5x5_1/Assign/value",
+          "shape": [
+            5,
+            5,
+            24,
+            64
+          ]
+        },
+        {
+          "name": "inception_4b_5x5_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "sub_3/y",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "div/y",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "sub_4/y",
+          "shape": [
+            512
+          ]
+        },
+        {
+          "name": "div_1/y",
+          "shape": [
+            512
+          ]
+        },
+        {
+          "name": "sub_5/y",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "div_2/y",
+          "shape": [
+            256
+          ]
+        }
+      ]
+    },
+    {
+      "fold": 5,
+      "epoch": 99,
+      "nodes": 2925,
+      "placeholders": [
+        {
+          "name": "Placeholder",
+          "shape": [
+            -1,
+            224,
+            224,
+            3
+          ]
+        },
+        {
+          "name": "Placeholder_1",
+          "shape": [
+            -1,
+            1
+          ]
+        },
+        {
+          "name": "Placeholder_2",
+          "shape": [
+            -1,
+            1
+          ]
+        },
+        {
+          "name": "Placeholder_3",
+          "shape": [
+            -1,
+            4,
+            1
+          ]
+        },
+        {
+          "name": "Placeholder_4",
+          "shape": []
+        },
+        {
+          "name": "Placeholder_5",
+          "shape": []
+        },
+        {
+          "name": "Placeholder_6",
+          "shape": [
+            -1,
+            4,
+            832
+          ]
+        }
+      ],
+      "elu": [
+        "Elu",
+        "Elu_1",
+        "Elu_2",
+        "Elu_3"
+      ],
+      "last_concat": [
+        "rnn/concat",
+        "rnn/DropoutWrapperZeroState/LSTMCellZeroState/concat",
+        "rnn/DropoutWrapperZeroState/LSTMCellZeroState/concat_1",
+        "rnn/concat_1",
+        "rnn/while/lstm_cell/concat",
+        "rnn/concat_2",
+        "gradients/rnn/while/lstm_cell/split_grad/concat",
+        "concat"
+      ],
+      "normalization_candidate_shapes": [
+        {
+          "name": "conv1_7x7_s2_1/Assign/value",
+          "shape": [
+            7,
+            7,
+            3,
+            64
+          ]
+        },
+        {
+          "name": "conv1_7x7_s2_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "inception_4e_1x1_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            528,
+            256
+          ]
+        },
+        {
+          "name": "inception_4e_1x1_1/Assign_1/value",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "conv2_3x3_reduce_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            64,
+            64
+          ]
+        },
+        {
+          "name": "conv2_3x3_reduce_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "inception_4a_pool_proj_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            480,
+            64
+          ]
+        },
+        {
+          "name": "inception_4a_pool_proj_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "inception_4c_3x3_1/Assign/value",
+          "shape": [
+            3,
+            3,
+            128,
+            256
+          ]
+        },
+        {
+          "name": "inception_4c_3x3_1/Assign_1/value",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "inception_5a_1x1_1/Assign/value",
+          "shape": [
+            1,
+            1,
+            832,
+            256
+          ]
+        },
+        {
+          "name": "inception_5a_1x1_1/Assign_1/value",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "inception_4b_5x5_1/Assign/value",
+          "shape": [
+            5,
+            5,
+            24,
+            64
+          ]
+        },
+        {
+          "name": "inception_4b_5x5_1/Assign_1/value",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "sub_3/y",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "div/y",
+          "shape": [
+            64
+          ]
+        },
+        {
+          "name": "sub_4/y",
+          "shape": [
+            512
+          ]
+        },
+        {
+          "name": "div_1/y",
+          "shape": [
+            512
+          ]
+        },
+        {
+          "name": "sub_5/y",
+          "shape": [
+            256
+          ]
+        },
+        {
+          "name": "div_2/y",
+          "shape": [
+            256
+          ]
+        }
+      ]
+    }
+  ]
+}
