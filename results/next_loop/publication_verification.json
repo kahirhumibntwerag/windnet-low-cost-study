@@ -1,0 +1,23 @@
+{
+  "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+  "campaign_visibility": "public",
+  "public_experiment_count": 2,
+  "campaign_url": "https://fixrelay.vercel.app/campaigns/1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+  "public_campaign_verified_with": "RogNet get_public_campaign and rendered public campaign page",
+  "dashboard_deployment_id": "appgdep_6ae40807a46c81918e2b1ba5008d751b",
+  "dashboard_source_commit": "37f334c8b7569d124adbe58e4dabb2b20b3e9719",
+  "dashboard_deployment_status": "succeeded",
+  "dashboard_url": "https://windnet-matched-research-loop.wellbat32.chatgpt.site/continuation.html",
+  "dashboard_audience_changed": false,
+  "release_tag": "windnet-m11r-2026-10-30",
+  "github_asset_id": 690723854,
+  "github_asset_bytes": 87920680,
+  "github_asset_state": "uploaded",
+  "github_asset_digest": "sha256:e03668f2034eee2321234b83858f11caf40c79d78acae7df0bb64c6d61ae085b",
+  "provider_digest_matches_local": true,
+  "rognet_artifact_id": "c9217f54-44a9-4831-a0be-09fefc30f736",
+  "original_final_evaluations": 0,
+  "elicit_used": false,
+  "human_scientific_verification_claimed": false,
+  "goal_status": "active; next M12 hypothesis registered, experiment not yet run"
+}
