@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+  "metric_id": "55347494-5635-4926-bfa9-24a41ab14085",
+  "campaign_url": "https://fixrelay.vercel.app/campaigns/fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+  "predecessor_campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+  "created_at": "2026-10-30T05:09:06.751Z",
+  "registration": {
+    "idempotency_key": "windnet-phase3-new-campaign-2026-10-30-user-request-01",
+    "title": "WindNet Phase III: matched improvements across all four metrics",
+    "question": "Can image-only solar-wind forecasting improve RMSE, correlation, reduced chi-squared and the original high-speed-event threat score together under the original WindNet data and evaluation protocol, with hypotheses chosen exclusively from training-side validation?",
+    "summary": "New user-requested campaign continuing the matched WindNet study. Prior campaign: https://fixrelay.vercel.app/campaigns/1b7e08e2-70f1-4945-b613-5e785d3f76bb . Preserve prior records and frozen models. Start with no new experiments or claimed improvements. Use primary literature and training-side evidence only; record all hypotheses, controls, ablations, outcomes, provenance and costs. No Elicit.",
+    "objective": "Improve all four original WindNet H4/D3 metrics through a preregistered hypothesis-experiment-observation loop using identical 211 Angstrom four-image inputs, original folds and forecast windows for every comparator. Search primary literature after each experiment and use only training-side validation plus that literature to motivate the next hypothesis. Compare against the matched WindNet port and fixed M6, M10 and M13 controls. Preserve all negative, inconclusive and technical-failure results. Keep RogNet, GitHub and the existing dashboard synchronized. Source repository: https://github.com/kahirhumibntwerag/windnet-low-cost-study .",
+    "constraints": "Training development is restricted to original Folds 1-4: 108 original development blocks, 13 fitting and 14 validation windows per block, 1512 training-bank validation rows. Stream/hash/discard Fold5; never inspect or retain its images, labels, individual predictions or residuals during development. Never use any prior historical holdout scores, predictions or residuals to choose hypotheses or replace a frozen primary. Creating this campaign does not make previously evaluated historical data a fresh blind test. All comparators use the same predictor information, fitting data, evaluation rows, H4/D3 alignment and original metric implementations, including batchwise HSE threat score. No extra wavelengths, in-situ histories, persistence inputs, solar indices or external labels. Register complete candidate panels, ablations, seeds and success criteria and freeze source/data provenance before scoring. Do not move or duplicate prior experiments as newly executed work. Do not use Elicit. Use Runpod only within the existing cumulative US$5 study budget; the new campaign does not reset that budget. Preserve the dashboard's existing audience. Public campaign and code are authorized; never publish secrets, raw protected holdout data or the local manuscript.",
+    "stop_conditions": "No compute is launched by campaign creation. Before later execution, confirm cumulative costs from the recorded cost files and preregister the experiment. Stop compute before the original cumulative US$5 cap and delete only resources created for this study after downloading and verifying evidence. Retain M13 unless a candidate passes every frozen training-side adoption requirement. Final historical evaluation requires a frozen training-qualified recipe and sealed evaluator; report historical reuse explicitly and never adapt from final-test feedback. A numerical win alone is not evidence of causal or statistical superiority.",
+    "metric": {
+      "name": "Balanced four-metric training-side adoption",
+      "direction": "maximize",
+      "baseline": 0,
+      "target": 1,
+      "unit": "all-four gate passed (0/1)",
+      "evaluation_protocol": "Four training-bank CV splits on original Folds 1-4 with identical original rows and four fixed controls: matched WindNet port, M6, M10 and M13. Aggregate RMSE by mean fold, correlation by Fisher-z mean, reduced chi-squared by mean fold, and HSE threat score with the original batchwise implementation. A candidate must have RMSE <=0.99 times the minimum control RMSE; correlation >= maximum control correlation +0.005; chi-squared <=0.995 times the minimum control chi-squared; and HSE threat score >= maximum control threat score +0.02. It must also pass at least 3 of 4 leave-one-fold-out directional comparisons, have every fold RMSE <=1.05 times the best control fold RMSE, and have the lower endpoint of a paired whole-block 2000-draw 95% HSE improvement interval strictly above zero against each of all four controls. Undefined metrics fail. Examine numerical candidates in ascending RMSE order. Gate=1 only after all requirements pass; otherwise gate=0 and retain M13. Report complete metric tuples, all ablations, uncertainty, repeated-validation limitations and failure reasons separately. This training gate must never be relabeled as historical-test performance."
+    }
+  },
+  "creation_response": {
+    "id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+    "metric_id": "55347494-5635-4926-bfa9-24a41ab14085",
+    "visibility": "private",
+    "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+    "event_id": 106
+  },
+  "verification": {
+    "readback_complete": true,
+    "registration_fields_match": true,
+    "metric_fields_match": true,
+    "backend_status": "active",
+    "visibility": "private",
+    "experiments": 0,
+    "hypotheses": 0,
+    "compute_launched": false
+  },
+  "publication": {
+    "requested_visibility": "public",
+    "verified_visibility": "private",
+    "status": "pending_browser_resumption",
+    "reason": "The connector creates private campaigns and exposes no publication action. Prior browser control was stopped with Escape; permission to resume for this new campaign is pending."
+  },
+  "continuation": {
+    "previous_records_preserved": true,
+    "previous_experiments_imported": false,
+    "historical_results_used_for_new_hypotheses": false,
+    "budget_reset": false,
+    "cumulative_limit_usd": 5,
+    "last_recorded_cost_estimate_usd": 1.6435833333333332,
+    "cost_estimate_source": "results/next_loop/m15_costs.json",
+    "cost_estimate_is_settled_invoice": false
+  }
+}
