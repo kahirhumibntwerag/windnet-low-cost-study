@@ -1,0 +1,157 @@
+{
+  "selected": {
+    "model": "M13_g6x6_trend_linear_w4_a100_targetfast2_share0.25",
+    "recipe": {
+      "grid": [
+        6,
+        6
+      ],
+      "view": "trend",
+      "encoding": "linear",
+      "precision_lambda": 4,
+      "ridge_alpha": 100,
+      "target_weight": "fast2",
+      "new_head_share": 0.25,
+      "gain": 1.2,
+      "bias": -5,
+      "prior": "fixed M10"
+    },
+    "fold_metrics": [
+      {
+        "n": 518,
+        "rmse": 79.12952495389689,
+        "mae": 59.26651711442922,
+        "r": 0.5047451374061779,
+        "chi2": 24.82087329174262,
+        "sigma_valid": 518,
+        "hse_ts": 0.2647058823529412,
+        "hse_counts_original": {
+          "tp": 9,
+          "fp": 23,
+          "fn": 2
+        }
+      },
+      {
+        "n": 350,
+        "rmse": 76.69751832688284,
+        "mae": 58.903181561168914,
+        "r": 0.6404434345421799,
+        "chi2": 30.34335547669036,
+        "sigma_valid": 350,
+        "hse_ts": 0.36,
+        "hse_counts_original": {
+          "tp": 9,
+          "fp": 16,
+          "fn": 0
+        }
+      },
+      {
+        "n": 364,
+        "rmse": 81.06829230844713,
+        "mae": 62.05001393803636,
+        "r": 0.5580378577799807,
+        "chi2": 25.205585669262817,
+        "sigma_valid": 364,
+        "hse_ts": 0.20833333333333334,
+        "hse_counts_original": {
+          "tp": 5,
+          "fp": 18,
+          "fn": 1
+        }
+      },
+      {
+        "n": 280,
+        "rmse": 71.49645466673857,
+        "mae": 56.194949118081645,
+        "r": 0.6417321830079126,
+        "chi2": 19.064068446811124,
+        "sigma_valid": 280,
+        "hse_ts": 0.34782608695652173,
+        "hse_counts_original": {
+          "tp": 8,
+          "fp": 15,
+          "fn": 0
+        }
+      }
+    ],
+    "metrics": {
+      "n": 1512,
+      "rmse": 77.09794756399135,
+      "r": 0.5891855690730897,
+      "chi2": 24.85847072112673,
+      "hse_ts": 0.2952163256606991,
+      "mae": 59.103665432929034
+    },
+    "gate": {
+      "rmse": true,
+      "r": true,
+      "chi2": true,
+      "hse_ts": true,
+      "all_four": true,
+      "anchors": {
+        "rmse": 77.97714841491737,
+        "r": 0.5730469304028007,
+        "chi2": 26.880774601074908,
+        "hse_ts": 0.2389044289044289
+      }
+    },
+    "stability": {
+      "leave_one_fold_out": [
+        {
+          "dropped_training_fold": 1,
+          "all_four_directional": true
+        },
+        {
+          "dropped_training_fold": 2,
+          "all_four_directional": true
+        },
+        {
+          "dropped_training_fold": 3,
+          "all_four_directional": true
+        },
+        {
+          "dropped_training_fold": 4,
+          "all_four_directional": true
+        }
+      ],
+      "directional_passes": 4,
+      "per_fold_rmse_control_ratios": [
+        0.9865350818237876,
+        1.0011265023488463,
+        0.9855323544300355,
+        0.9816968825136793
+      ],
+      "pre_bootstrap_passed": true
+    }
+  },
+  "row_audits": [
+    {
+      "held_training_fold": 1,
+      "fit_row_sha256": "30169fa5ca2421a48281113dc489a7409520406195110fb5182dbb3a2db0e5d4",
+      "validation_row_sha256": "f0499f57a34d5b1fc172a9995dd5afe48b970c6b3cf8e6794104a441c90bf87d",
+      "fit_rows": 923,
+      "validation_rows": 518
+    },
+    {
+      "held_training_fold": 2,
+      "fit_row_sha256": "f12b0557c74505d03a0ad12dc77c56b5994775e1b89fabfbe0ee76f7271e75f5",
+      "validation_row_sha256": "a2aa9b82298317a41c838b9e2ebc668fd6241251dc645f9c1e839a384a628f32",
+      "fit_rows": 1079,
+      "validation_rows": 350
+    },
+    {
+      "held_training_fold": 3,
+      "fit_row_sha256": "0cbbb1fe7cf9f37f54361733672dea325f2dcf6c376154336c26a26d00addb54",
+      "validation_row_sha256": "34684596614430384f1f80884521077a4b41c2a879209293095fb090057fc29e",
+      "fit_rows": 1066,
+      "validation_rows": 364
+    },
+    {
+      "held_training_fold": 4,
+      "fit_row_sha256": "67f192c5577b5d0c3790a1b7351d8b872ced3b39de771d3806ff95e2db90b6e3",
+      "validation_row_sha256": "1c05d4b3e6e57a4dc133ce13336a9c2275979181181ed81496db478714939018",
+      "fit_rows": 1144,
+      "validation_rows": 280
+    }
+  ]
+}
