@@ -1,0 +1,115 @@
+{
+  "stage": "M16",
+  "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+  "experiment_id": "621a4d21-b7af-4f56-84ec-e2ba6eb6b4ed",
+  "run_id": "abcfae93-7039-4403-a855-a7df03befe41",
+  "observation": {
+    "id": "7f10c77a-9d8c-4556-8293-686973cf304e",
+    "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+    "event_id": 116
+  },
+  "analysis": {
+    "id": "55b7c25d-7b0d-47c5-ba37-eda8b27be4a7",
+    "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+    "event_id": 118
+  },
+  "decision": {
+    "id": "0271244e-3fa1-498d-9c7c-2871b285541c",
+    "interpretation": "agent_reported",
+    "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+    "event_id": 119
+  },
+  "post_literature": {
+    "id": "5571627f-0630-4b83-9ed3-e9f3ce5e878f",
+    "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+    "event_id": 120
+  },
+  "registered_artifacts": [
+    {
+      "id": "f4452739-91ac-4599-97e0-c79cbc917fb7",
+      "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+      "event_id": 123
+    },
+    {
+      "id": "f8707e22-0cac-4f6a-ad7a-dcf1e13c76f7",
+      "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+      "event_id": 124
+    },
+    {
+      "id": "a9704abc-abbb-43f1-b580-93535c0403ae",
+      "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+      "event_id": 125
+    }
+  ],
+  "github_release": {
+    "assets": [
+      {
+        "browser_download_url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/releases/download/windnet-m16-2026-10-30/m16_frozen_sources.tar.gz",
+        "digest": "sha256:811a299c9375fd989bade107a8dc5f7f79f81c03d1d20ce3dce660dc962a795a",
+        "name": "m16_frozen_sources.tar.gz",
+        "size": 55064
+      },
+      {
+        "browser_download_url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/releases/download/windnet-m16-2026-10-30/m16_training_artifacts.tar.gz",
+        "digest": "sha256:96ec12241ba236104348d4344637b6e3a8cc6629418d104d3b2abff4113ca60e",
+        "name": "m16_training_artifacts.tar.gz",
+        "size": 3444815
+      }
+    ],
+    "id": 428684960,
+    "tag": "windnet-m16-2026-10-30",
+    "url": "https://github.com/kahirhumibntwerag/windnet-low-cost-study/releases/tag/windnet-m16-2026-10-30"
+  },
+  "source_commit": "dcd8201e6952635770b3d282ac3c95ef06a70494",
+  "results_commit": "8a5bd87",
+  "site_source": {
+    "project_id": "appgprj_6ae3988ae03881919056b61092bec1f4",
+    "commit_sha": "33713cddce18793dc3bf825d21053b6e7564c1c7",
+    "archive_filename": "m16-dashboard.tar.gz"
+  },
+  "site_deployment": {
+    "id": "appgdep_6ae42bac1a948191b49b6affda5ef4f7",
+    "project_id": "appgprj_6ae3988ae03881919056b61092bec1f4",
+    "title": "WindNet Matched Research Loop",
+    "version_id": "appgprj_6ae3988ae03881919056b61092bec1f4~appgver_588c11df6c008191a36566cb9d80b7cb",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://windnet-matched-research-loop.wellbat32.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6ae3988ae03881919056b61092bec1f4",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-30T05:31:40.158697+00:00"
+  },
+  "dashboard_static_verification": {
+    "html_conditions": 144,
+    "csv_rows": 144,
+    "svg_conditions": 144,
+    "matched_anchor_ablations": 12,
+    "all_previous_sections_retained": true
+  },
+  "browser_qa": false,
+  "browser_qa_reason": "Earlier physical Escape stopped browser control. New-campaign publication question is pending; no further browser actions.",
+  "rognet_campaign_visibility": "private",
+  "rognet_finding_visibility": "private",
+  "public_visibility_pending": true,
+  "raw_holdout_data_published": false,
+  "pod_deleted_verified_404": true,
+  "volume_deleted_verified_404": true,
+  "cumulative_estimated_cost_usd": 1.6676224333333332,
+  "estimate_not_invoice": true,
+  "next_hypothesis": {
+    "id": "ef444203-aa40-4dc6-81c5-91260e9c7c04",
+    "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+    "event_id": 121
+  },
+  "next_experiment": {
+    "id": "dddea291-a4df-408a-889a-af76c52589b6",
+    "hypothesis_id": "ef444203-aa40-4dc6-81c5-91260e9c7c04",
+    "awaiting_approval": false,
+    "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+    "event_id": 122
+  },
+  "next_experiment_executed": false
+}

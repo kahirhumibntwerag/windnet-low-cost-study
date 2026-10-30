@@ -35,5 +35,11 @@
   "freeze_sha256": "faa5f74c3ad06da43c77bff12c4d33358340f1a00e5825832f62a587dbbe637e",
   "cumulative_estimate_usd": 1.6676224333333332,
   "pod_deleted_verified_404": true,
-  "volume_deleted_verified_404": true
+  "volume_deleted_verified_404": true,
+  "post_literature_observation_id": "5571627f-0630-4b83-9ed3-e9f3ce5e878f",
+  "results_artifact_id": "f4452739-91ac-4599-97e0-c79cbc917fb7",
+  "models_artifact_id": "f8707e22-0cac-4f6a-ad7a-dcf1e13c76f7",
+  "sources_artifact_id": "a9704abc-abbb-43f1-b580-93535c0403ae",
+  "next_hypothesis_id": "ef444203-aa40-4dc6-81c5-91260e9c7c04",
+  "next_experiment_id": "dddea291-a4df-408a-889a-af76c52589b6"
 }
