@@ -1,0 +1,7 @@
+{
+  "file": "artifacts/external_eval/frozen_sources.tar.gz",
+  "sha256": "055f89d0b8ad740fc6735e4156805ab4879d4b462bc40ed3b1a6e7e45cff02d9",
+  "bytes": 83581,
+  "files": 36,
+  "includes_external_arrays": false
+}

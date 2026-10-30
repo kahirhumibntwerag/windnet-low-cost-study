@@ -1,0 +1,635 @@
+{
+  "overall": {
+    "original_windnet": {
+      "mean_rmse": 92.00564032026575,
+      "fisher_r": 0.4001729878806264,
+      "mean_chi2": 28.380119091210368,
+      "mean_hse_ts": 0.06872428631026879,
+      "unique_target_days": 1968,
+      "positive_sigma_days": 1968,
+      "replicas": 5,
+      "replica_scores_averaged": true,
+      "hse_counts_per_replica": [
+        {
+          "tp_original": 0,
+          "fp_original": 119,
+          "fn_original": 1
+        },
+        {
+          "tp_original": 0,
+          "fp_original": 119,
+          "fn_original": 0
+        },
+        {
+          "tp_original": 3,
+          "fp_original": 116,
+          "fn_original": 0
+        },
+        {
+          "tp_original": 37,
+          "fp_original": 86,
+          "fn_original": 18
+        },
+        {
+          "tp_original": 7,
+          "fp_original": 113,
+          "fn_original": 5
+        }
+      ]
+    },
+    "M13": {
+      "mean_rmse": 85.14602227940858,
+      "fisher_r": 0.5119180418987078,
+      "mean_chi2": 24.06282408271894,
+      "mean_hse_ts": 0.2301571300563236,
+      "unique_target_days": 1968,
+      "positive_sigma_days": 1968,
+      "replicas": 5,
+      "replica_scores_averaged": true,
+      "hse_counts_per_replica": [
+        {
+          "tp_original": 30,
+          "fp_original": 93,
+          "fn_original": 5
+        },
+        {
+          "tp_original": 30,
+          "fp_original": 92,
+          "fn_original": 4
+        },
+        {
+          "tp_original": 29,
+          "fp_original": 92,
+          "fn_original": 3
+        },
+        {
+          "tp_original": 26,
+          "fp_original": 96,
+          "fn_original": 4
+        },
+        {
+          "tp_original": 30,
+          "fp_original": 92,
+          "fn_original": 4
+        }
+      ]
+    }
+  },
+  "yearly": {
+    "2020": {
+      "original_windnet": {
+        "mean_rmse": 72.13449535217731,
+        "fisher_r": 0.38235822117690615,
+        "mean_chi2": 33.02890296562376,
+        "mean_hse_ts": 0.0125,
+        "unique_target_days": 338,
+        "positive_sigma_days": 338,
+        "replicas": 5,
+        "replica_scores_averaged": true,
+        "hse_counts_per_replica": [
+          {
+            "tp_original": 0,
+            "fp_original": 15,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 15,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 15,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 15,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 1,
+            "fp_original": 14,
+            "fn_original": 1
+          }
+        ]
+      },
+      "M13": {
+        "mean_rmse": 70.3245719769306,
+        "fisher_r": 0.4460585061104866,
+        "mean_chi2": 28.303875325691376,
+        "mean_hse_ts": 0.013333333333333332,
+        "unique_target_days": 338,
+        "positive_sigma_days": 338,
+        "replicas": 5,
+        "replica_scores_averaged": true,
+        "hse_counts_per_replica": [
+          {
+            "tp_original": 0,
+            "fp_original": 15,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 15,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 15,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 15,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 1,
+            "fp_original": 14,
+            "fn_original": 0
+          }
+        ]
+      }
+    },
+    "2021": {
+      "original_windnet": {
+        "mean_rmse": 89.19689299138486,
+        "fisher_r": 0.18420270474913064,
+        "mean_chi2": 48.54816915432902,
+        "mean_hse_ts": 0.12343859649122806,
+        "unique_target_days": 295,
+        "positive_sigma_days": 295,
+        "replicas": 5,
+        "replica_scores_averaged": true,
+        "hse_counts_per_replica": [
+          {
+            "tp_original": 0,
+            "fp_original": 18,
+            "fn_original": 1
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 18,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 3,
+            "fp_original": 15,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 6,
+            "fp_original": 12,
+            "fn_original": 7
+          },
+          {
+            "tp_original": 4,
+            "fp_original": 14,
+            "fn_original": 1
+          }
+        ]
+      },
+      "M13": {
+        "mean_rmse": 76.34402625083078,
+        "fisher_r": 0.3863496437148927,
+        "mean_chi2": 29.01132635112096,
+        "mean_hse_ts": 0.1387719298245614,
+        "unique_target_days": 295,
+        "positive_sigma_days": 295,
+        "replicas": 5,
+        "replica_scores_averaged": true,
+        "hse_counts_per_replica": [
+          {
+            "tp_original": 3,
+            "fp_original": 16,
+            "fn_original": 1
+          },
+          {
+            "tp_original": 2,
+            "fp_original": 16,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 2,
+            "fp_original": 16,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 4,
+            "fp_original": 15,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 2,
+            "fp_original": 16,
+            "fn_original": 0
+          }
+        ]
+      }
+    },
+    "2022": {
+      "original_windnet": {
+        "mean_rmse": 95.28531445192286,
+        "fisher_r": 0.3847741354869242,
+        "mean_chi2": 27.5989660783006,
+        "mean_hse_ts": 0.10618181818181818,
+        "unique_target_days": 295,
+        "positive_sigma_days": 295,
+        "replicas": 5,
+        "replica_scores_averaged": true,
+        "hse_counts_per_replica": [
+          {
+            "tp_original": 0,
+            "fp_original": 19,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 19,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 19,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 11,
+            "fp_original": 10,
+            "fn_original": 4
+          },
+          {
+            "tp_original": 2,
+            "fp_original": 19,
+            "fn_original": 1
+          }
+        ]
+      },
+      "M13": {
+        "mean_rmse": 91.35953050170228,
+        "fisher_r": 0.45136976202884693,
+        "mean_chi2": 27.619348897016216,
+        "mean_hse_ts": 0.2629964238659891,
+        "unique_target_days": 295,
+        "positive_sigma_days": 295,
+        "replicas": 5,
+        "replica_scores_averaged": true,
+        "hse_counts_per_replica": [
+          {
+            "tp_original": 4,
+            "fp_original": 16,
+            "fn_original": 2
+          },
+          {
+            "tp_original": 7,
+            "fp_original": 13,
+            "fn_original": 2
+          },
+          {
+            "tp_original": 8,
+            "fp_original": 12,
+            "fn_original": 2
+          },
+          {
+            "tp_original": 4,
+            "fp_original": 15,
+            "fn_original": 2
+          },
+          {
+            "tp_original": 6,
+            "fp_original": 14,
+            "fn_original": 3
+          }
+        ]
+      }
+    },
+    "2023": {
+      "original_windnet": {
+        "mean_rmse": 95.98543257104564,
+        "fisher_r": 0.35951702523426604,
+        "mean_chi2": 22.265462021599394,
+        "mean_hse_ts": 0.006896551724137931,
+        "unique_target_days": 337,
+        "positive_sigma_days": 337,
+        "replicas": 5,
+        "replica_scores_averaged": true,
+        "hse_counts_per_replica": [
+          {
+            "tp_original": 0,
+            "fp_original": 26,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 26,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 26,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 1,
+            "fp_original": 25,
+            "fn_original": 3
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 26,
+            "fn_original": 0
+          }
+        ]
+      },
+      "M13": {
+        "mean_rmse": 87.98543029099123,
+        "fisher_r": 0.45488520765958684,
+        "mean_chi2": 19.25849896059069,
+        "mean_hse_ts": 0.09230769230769231,
+        "unique_target_days": 337,
+        "positive_sigma_days": 337,
+        "replicas": 5,
+        "replica_scores_averaged": true,
+        "hse_counts_per_replica": [
+          {
+            "tp_original": 3,
+            "fp_original": 23,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 2,
+            "fp_original": 24,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 2,
+            "fp_original": 24,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 2,
+            "fp_original": 24,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 3,
+            "fp_original": 23,
+            "fn_original": 0
+          }
+        ]
+      }
+    },
+    "2024": {
+      "original_windnet": {
+        "mean_rmse": 69.38286149112608,
+        "fisher_r": 0.13584214005582332,
+        "mean_chi2": 18.951250171003203,
+        "mean_hse_ts": 0.011764705882352941,
+        "unique_target_days": 352,
+        "positive_sigma_days": 352,
+        "replicas": 5,
+        "replica_scores_averaged": true,
+        "hse_counts_per_replica": [
+          {
+            "tp_original": 0,
+            "fp_original": 15,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 15,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 15,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 1,
+            "fp_original": 14,
+            "fn_original": 2
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 15,
+            "fn_original": 0
+          }
+        ]
+      },
+      "M13": {
+        "mean_rmse": 71.41285438833019,
+        "fisher_r": 0.1145806433918148,
+        "mean_chi2": 20.228118526916234,
+        "mean_hse_ts": 0.026666666666666665,
+        "unique_target_days": 352,
+        "positive_sigma_days": 352,
+        "replicas": 5,
+        "replica_scores_averaged": true,
+        "hse_counts_per_replica": [
+          {
+            "tp_original": 1,
+            "fp_original": 14,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 15,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 15,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 15,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 1,
+            "fp_original": 14,
+            "fn_original": 0
+          }
+        ]
+      }
+    },
+    "2025": {
+      "original_windnet": {
+        "mean_rmse": 119.52513697112094,
+        "fisher_r": 0.4344915888353751,
+        "mean_chi2": 22.93618095163336,
+        "mean_hse_ts": 0.13076923076923078,
+        "unique_target_days": 351,
+        "positive_sigma_days": 351,
+        "replicas": 5,
+        "replica_scores_averaged": true,
+        "hse_counts_per_replica": [
+          {
+            "tp_original": 0,
+            "fp_original": 23,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 23,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 23,
+            "fn_original": 0
+          },
+          {
+            "tp_original": 17,
+            "fp_original": 8,
+            "fn_original": 1
+          },
+          {
+            "tp_original": 0,
+            "fp_original": 23,
+            "fn_original": 2
+          }
+        ]
+      },
+      "M13": {
+        "mean_rmse": 106.76492667266078,
+        "fisher_r": 0.40827714314657937,
+        "mean_chi2": 21.289079388356583,
+        "mean_hse_ts": 0.6063475783475785,
+        "unique_target_days": 351,
+        "positive_sigma_days": 351,
+        "replicas": 5,
+        "replica_scores_averaged": true,
+        "hse_counts_per_replica": [
+          {
+            "tp_original": 18,
+            "fp_original": 7,
+            "fn_original": 2
+          },
+          {
+            "tp_original": 17,
+            "fp_original": 8,
+            "fn_original": 2
+          },
+          {
+            "tp_original": 16,
+            "fp_original": 8,
+            "fn_original": 1
+          },
+          {
+            "tp_original": 14,
+            "fp_original": 11,
+            "fn_original": 2
+          },
+          {
+            "tp_original": 15,
+            "fp_original": 10,
+            "fn_original": 1
+          }
+        ]
+      }
+    }
+  },
+  "strict_all_four_numerical_win": true,
+  "metric_point_checks": {
+    "mean_rmse": true,
+    "fisher_r": true,
+    "mean_chi2": true,
+    "mean_hse_ts": true
+  },
+  "paired_uncertainty": {
+    "draws": 2000,
+    "seed": 20261030,
+    "metrics": {
+      "mean_rmse": {
+        "M13_minus_original_delta_95": [
+          -9.327741725118745,
+          -4.575993675087481
+        ],
+        "defined_draws": 2000
+      },
+      "fisher_r": {
+        "M13_minus_original_delta_95": [
+          0.06538631751893723,
+          0.15285161752066545
+        ],
+        "defined_draws": 2000
+      },
+      "mean_chi2": {
+        "M13_minus_original_delta_95": [
+          -6.425609323941224,
+          -2.2310728741235537
+        ],
+        "defined_draws": 2000
+      },
+      "mean_hse_ts": {
+        "M13_minus_original_delta_95": [
+          0.10770213183097473,
+          0.21895077567480553
+        ],
+        "defined_draws": 2000
+      }
+    },
+    "method": "paired calendar28-day units within start-year; original14-day HSE boundaries preserved; final partial units retained",
+    "limitations": "Conditional on two frozen models and this solar-cycle period. No replicas or overlapping dates counted as independent samples. Partial annual HSE boundary blocks are retained."
+  },
+  "coverage": {
+    "requested_target_days": 2192,
+    "retained_common_blocks": 141,
+    "requested_blocks": 157,
+    "retained_unique_target_days": 1968,
+    "incomplete_common_blocks_excluded": 16
+  },
+  "status": "completed",
+  "period": [
+    "2020-01-01",
+    "2025-12-31"
+  ],
+  "models_frozen": true,
+  "future_tuning_or_refits": 0,
+  "external_evaluation_passes": 1,
+  "predictions": {
+    "sha256": "0f40df92ad36771ee5833cdd73caee8e448db69ec78b63c38d8b26327845b560",
+    "bytes": 125125,
+    "completed_before_labels_opened": true,
+    "replicas_per_model": 5,
+    "model_names": [
+      "original_windnet",
+      "M13"
+    ],
+    "timestamp": "2026-10-30T15:50:09.999179+00:00"
+  },
+  "image_sources": {
+    "manifest_sha256": "32783ad8a89e26512dff03972c59bc833e98996b5d34b2ef048163b7c06ca255",
+    "requested_images": 2195,
+    "valid_images": 2181,
+    "excluded_by_reason": {
+      "nonfinite_or_shape": 2,
+      "quality_flag": 12
+    },
+    "source": "https://jsoc1.stanford.edu/data/aia/synoptic/",
+    "preprocessing": "SDOMLv1 SUM256 then author ProcessImg_common211; pinned2017 V8 calibration"
+  },
+  "target_source": {
+    "url": "https://spdf.gsfc.nasa.gov/pub/data/omni/low_res_omni/omni_01_av.dat",
+    "sha256": "dc5986ee1ea35a2ae74055eb79100cc4e95548b5477330089f1fffdf583795c2",
+    "bytes": 7667328,
+    "speed_word_one_based": 25,
+    "sigma_word_one_based": 32,
+    "daily_rows_found": 2192,
+    "requested_days": 2192,
+    "valid_speed_days": 2192,
+    "positive_sigma_days": 2192,
+    "definition": "daily arithmetic mean bulk speed; daily sigma across hourly speeds; no minimum-hour threshold; fill9999 invalid"
+  },
+  "freeze_sha256": "4cf33024df2d83267eaa079bde36f639b481512949d2f66bc01b62b003875927",
+  "model_lock_sha256": "566e401d2e52feb077eddf4b22afecc4306c8f8b471fd59f8aa708117f89de02",
+  "runtime_seconds": 1531.5050146579742,
+  "metrics_comparable_to_original_paper_numbers": false,
+  "comparison_scope": "Head-to-head on a common new external period. Paper2011-2018 scores have different targets and are not directly interchangeable.",
+  "retrospective_preprocessing": "Definitive AIA synoptic archive; no real-time latency claim; V8 instrument response locked before external arrays.",
+  "post_test_candidate_promotion": false
+}

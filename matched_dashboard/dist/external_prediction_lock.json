@@ -1,0 +1,11 @@
+{
+  "sha256": "0f40df92ad36771ee5833cdd73caee8e448db69ec78b63c38d8b26327845b560",
+  "bytes": 125125,
+  "completed_before_labels_opened": true,
+  "replicas_per_model": 5,
+  "model_names": [
+    "original_windnet",
+    "M13"
+  ],
+  "timestamp": "2026-10-30T15:50:09.999179+00:00"
+}

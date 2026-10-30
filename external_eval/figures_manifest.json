@@ -1,0 +1,26 @@
+{
+  "figures": [
+    {
+      "file": "artifacts/external_eval/metrics_by_year.png",
+      "bytes": 231380,
+      "sha256": "181c50f028729775b5ed1704e441364c23b9a397d7b870241cdfec15af785c35"
+    },
+    {
+      "file": "artifacts/external_eval/metrics_by_year.svg",
+      "bytes": 46595,
+      "sha256": "7d2bf4cf038c0bb7e8ac818dd194c687a25192f04027b7045c9772b71677ea25"
+    },
+    {
+      "file": "artifacts/external_eval/paired_differences.png",
+      "bytes": 133495,
+      "sha256": "e5692a908dc74df7c00373c2681ad30ada64975f884fa6f6bc86652d61e1a4de"
+    },
+    {
+      "file": "artifacts/external_eval/paired_differences.svg",
+      "bytes": 28436,
+      "sha256": "ddf7a0ecc4abe1241fa7eff76ce8f638804c703620d8d7250d18a5685714727a"
+    }
+  ],
+  "source_results_sha256": "4ee0ed1702877441ffecfa83790d62f2c7aa26bf983271c7c3d1f860490adbdf",
+  "individual_test_data_read": false
+}

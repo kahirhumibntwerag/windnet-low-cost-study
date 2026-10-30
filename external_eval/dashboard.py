@@ -15,11 +15,15 @@ def table(rows):
     return '<div class="table-scroll"><table><thead><tr><th>Method / period</th>'+''.join('<th>'+esc(v)+'</th>' for v in LABELS)+'<th>Unique days</th><th>Positive σ days</th></tr></thead><tbody>'+''.join('<tr><td>'+esc(label)+'</td>'+''.join('<td>'+fmt(row[k])+'</td>' for k in KEYS)+f'<td>{row["unique_target_days"]}</td><td>{row["positive_sigma_days"]}</td></tr>' for label,row in rows if row)+'</tbody></table></div>'
 
 def plot_years(result):
+    standard=ROOT/'artifacts/external_eval/metrics_by_year.svg'
+    if standard.exists():
+        (D/'external_metrics_by_year.svg').write_bytes(standard.read_bytes())
+        return '<img src="external_metrics_by_year.svg" alt="All four aggregate metrics by calendar year for original WindNet and M13,2020 to2025" style="width:100%;height:auto">'
     parts=[]
     for k,label in zip(KEYS,LABELS):
         vals=[r[k] for group in result['yearly'].values() for r in group.values() if r and r[k] is not None]
         if not vals:continue
-        top=1 if k in ['fisher_r','mean_hse_ts'] else max(vals)*1.12
+        top=1 if k=='fisher_r' else max(1,max(vals)*1.12) if k=='mean_hse_ts' else max(max(vals)*1.12,.01)
         bottom=-1 if k=='fisher_r' else 0
         x=lambda yr:64+(yr-2020)*88
         y=lambda v:254-(v-bottom)/(top-bottom)*195
@@ -56,7 +60,12 @@ def main():
         for key,label in zip(KEYS,LABELS):
             u=result['paired_uncertainty']['metrics'][key];ci=u['M13_minus_original_delta_95'];a=result['overall']['M13'][key];b=result['overall']['original_windnet'][key]
             body+='<tr><td>'+esc(label)+'</td><td>'+fmt(a-b if a is not None and b is not None else None)+'</td><td>'+('undefined' if ci is None else f'[{ci[0]:.4f}, {ci[1]:.4f}]')+f'</td><td>{u["defined_draws"]}</td></tr>'
-        body+='</tbody></table></div></section><section><h2>Performance across calendar years</h2><p class="legend"><span style="color:#6d7665">● Original WindNet</span> <span style="color:#265e91">● M13</span></p>'+plot_years(result)+'<p class="caption">Source: frozen Runpod external evaluation, target dates 2020–2025. Each point averages five replica scores; correlation is Fisher-z averaged. Annual HSE retains partial event blocks at year boundaries. No yearly result was used for tuning.</p><details><summary>All annual scores and denominators</summary>'+table([(f'{yr} · {NAMES[n]}',r) for yr,group in result['yearly'].items() for n,r in group.items()])+'</details></section>'
+        body+='</tbody></table></div>'
+        standard=ROOT/'artifacts/external_eval/paired_differences.svg'
+        if standard.exists():
+            (D/'external_paired_differences.svg').write_bytes(standard.read_bytes())
+            body+='<img src="external_paired_differences.svg" alt="Four paired M13 minus original WindNet metric differences with conditional95percent confidence intervals" style="width:100%;height:auto">'
+        body+='</section><section><h2>Performance across calendar years</h2><p class="legend"><span style="color:#6d7665">● Original WindNet</span> <span style="color:#265e91">● M13</span></p>'+plot_years(result)+'<p class="caption">Source: frozen Runpod external evaluation, target dates 2020–2025. Each point averages five replica scores; correlation is Fisher-z averaged. Annual HSE retains partial event blocks at year boundaries. No yearly result was used for tuning.</p><details><summary>All annual scores and denominators</summary>'+table([(f'{yr} · {NAMES[n]}',r) for yr,group in result['yearly'].items() for n,r in group.items()])+'</details></section>'
         c=result['coverage'];body+=f'<section><h2>Coverage and common exclusions</h2><p>{c["retained_unique_target_days"]:,} common target days retained from {c["requested_target_days"]:,} requested days. {c["retained_common_blocks"]} of {c["requested_blocks"]} fixed calendar event blocks retained; {c["incomplete_common_blocks_excluded"]} incomplete blocks excluded for both methods.</p><p>Missing inputs and invalid targets exclude the whole original event block. Calendar gaps are never compacted. χ² uses an identical positive finite-sigma mask.</p><p class="caption">Image exclusions: {esc(result["image_sources"]["excluded_by_reason"])}.</p></section>'
     else:
         body+='<section class="integrity"><div><strong>External test running · scores remain sealed</strong><p>All ten replica forecast arrays must finish and be hashed before target labels are opened.</p></div><p>Checkpoint and implementation checks passed. No external performance result has been exported.</p></section>'
@@ -65,7 +74,7 @@ def main():
     body+='<section><h2>The evaluation contract</h2><p>Same four image dates, same 211 Å channel, same target days, same masks and same four metrics. Original TensorFlow author checkpoints, not a replacement baseline. M13 loads existing F3 weights and saved normalization. No test-period calibration, refitting or checkpoint selection.</p><p>The fixed 14-day event blocks are anchored on 2020-01-01. Paired uncertainty uses fixed calendar 28-day units within block-start year, shared by both methods and every replica. Definitive JSOC synoptic images are processed with the published SDOMLv1 SUM convention and the frozen version-8 AIA response table. OMNI daily sigma describes variation across hourly speeds.</p><p>This is a head-to-head external-period comparison. Its absolute metrics cannot be directly compared with the paper’s different historical target days. The older adaptive research loop remains paused.</p></section>'
     body+='<section><h2>Evidence and reproducibility</h2><p><a href="https://fixrelay.vercel.app/campaigns/fb77fb27-bc42-4d58-840b-a8e1460c0ae3">RogNet campaign ↗</a> · <a href="https://fixrelay.vercel.app/experiments/a84303f5-6cff-4af4-9aab-225c96b8b499">Registered experiment ↗</a> · <a href="https://github.com/kahirhumibntwerag/windnet-low-cost-study/tree/codex/windnet-matched-loop/external_eval">GitHub code and complete evidence ↗</a></p><p>RogNet’s connector created this campaign privately; its available tools cannot change public sharing. Dashboard access remains unchanged.</p><ul>'
     artifacts=['model_lock.json','evaluator_freeze.json','evaluator_freeze_identity.json','author_restoration_preflight.json','m13_inference_preflight.json','protocol_amendments.json','status.json']
-    if result:artifacts+=['external_results.json','prediction_lock.json','aggregate_comparison.csv']
+    if result:artifacts+=['external_results.json','prediction_lock.json','aggregate_comparison.csv','RESULTS.md','result_verification.json','costs.json']
     for name in artifacts:
         source=E/name
         if source.exists():(D/('external_'+name)).write_bytes(source.read_bytes());body+='<li><a download href="external_'+name+'">'+esc(name)+'</a></li>'
@@ -74,6 +83,8 @@ def main():
     (D/'external.html').write_text(page,encoding='utf8')
     for name in ['index.html','continuation.html']:
         path=D/name;old=path.read_text(encoding='utf8')
+        if result:
+            old=old.replace('2020–2025 · same data and four metrics · no test-period tuning. The previous adaptive loop remains paused.','Completed: M13 improved all four metrics on 1,968 common days, with no test-period tuning. The previous adaptive loop remains paused.')
         if 'id="external-comparison-link"' not in old:
             notice='<section id="external-comparison-link" class="integrity"><div><strong>Frozen external comparison: original WindNet vs M13</strong><p>2020–2025 · same data and four metrics · no test-period tuning. The previous adaptive loop remains paused.</p></div><a class="button" href="external.html">Open external comparison →</a></section>'
             old=old.replace('<main>','<main>'+notice,1);path.write_text(old,encoding='utf8')

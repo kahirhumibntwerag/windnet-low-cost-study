@@ -1,0 +1,13 @@
+{
+  "evaluator_hash_matches": true,
+  "model_lock_hash_matches": true,
+  "prediction_lock_matches": true,
+  "same_unique_days": 1968,
+  "same_positive_sigma_days": 1968,
+  "annual_denominators_sum_to_overall": true,
+  "final_worker_returncode": 0,
+  "completed_external_passes": 1,
+  "post_freeze_scientific_changes": 0,
+  "individual_external_arrays_read_by_publication": false,
+  "results_sha256": "4ee0ed1702877441ffecfa83790d62f2c7aa26bf983271c7c3d1f860490adbdf"
+}

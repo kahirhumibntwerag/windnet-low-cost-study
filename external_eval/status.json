@@ -1,6 +1,6 @@
 {
-  "stage": "external test running; aggregate results sealed",
-  "external_evaluation_complete": false,
+  "stage": "completed; publishing aggregate results",
+  "external_evaluation_complete": true,
   "external_arrays_accessed": true,
   "original_checkpoint_replica_preflight": "passed all5;max error0.000711km/s",
   "M13_saved_inference": "passed all5 replicas;55 artifacts verified",
@@ -23,5 +23,8 @@
   "run_id": "11af4a3c-0361-45b0-af4c-b6d0a5f0932d",
   "complete_freeze_sha256": "4cf33024df2d83267eaa079bde36f639b481512949d2f66bc01b62b003875927",
   "source_commit": "d12d1fc",
-  "post_freeze_model_or_scientific_code_changes": 0
+  "post_freeze_model_or_scientific_code_changes": 0,
+  "external_evaluation_passes": 1,
+  "strict_all_four_numerical_win": true,
+  "individual_external_arrays_exported": false
 }

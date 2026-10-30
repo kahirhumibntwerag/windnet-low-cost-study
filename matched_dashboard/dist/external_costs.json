@@ -1,0 +1,15 @@
+{
+  "pod_id": "4s0bvbsqnrx16i",
+  "created_at": "2026-10-30T15:09:17.793000+00:00",
+  "deleted_at": "2026-10-30T15:51:10+00:00",
+  "delete_status": 204,
+  "termination_verified": true,
+  "compute_price_per_hour": 0.24,
+  "allocation_seconds_upper_estimate": 2512.207,
+  "estimated_compute_usd": 0.16748046666666666,
+  "prior_cumulative_estimate_usd": 1.6953490833333331,
+  "cumulative_estimated_compute_usd": 1.8628295499999998,
+  "campaign_budget_usd": 5,
+  "billing_records_current_hour_not_posted": true,
+  "note": "Compute estimate from returned hourly rate and allocation time; empty current billing bucket is not zero spend. No network volume created. Unrelated stopped pods untouched."
+}
