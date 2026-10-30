@@ -1,0 +1,136 @@
+{
+  "stage": "M17",
+  "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+  "hypothesis_id": "ef444203-aa40-4dc6-81c5-91260e9c7c04",
+  "experiment_id": "dddea291-a4df-408a-889a-af76c52589b6",
+  "scope": "Training-only Folds1-4; original Fold5 hash/discard unparsed/unretained",
+  "families": [
+    "regional",
+    "morphology",
+    "regional_morphology"
+  ],
+  "view": "trend",
+  "encoding": "linear",
+  "kernel_types": [
+    "linear",
+    "rbf"
+  ],
+  "ridge_alpha": [
+    0.1,
+    1,
+    10
+  ],
+  "rbf_gamma_factors": [
+    0.25,
+    1,
+    4
+  ],
+  "new_head_shares": [
+    0.125,
+    0.25,
+    0.5,
+    1
+  ],
+  "conditions": 144,
+  "raw_recipes": 36,
+  "fold_fits": 144,
+  "linear_conditions": 36,
+  "rbf_conditions": 108,
+  "kernel_states": 48,
+  "method": "Fitting-only StandardScaler,scalefloor.01. UsefixedM13mainweights:precisionlambda4 withfit-onlysigmafloor/median,mean-normalize,thenfast2 atfittingtarget>=500 andmean-normalize. Let a=w/sum(w),ybar=a.T*y. BuildtrainGram K. Linearkernel K=X*X.T/d,where d=featurecount;RBF K=exp(-gamma*max(squaredEuclideandistance,0));gamma=factor/median(strictlypositivetrainoffdiagonalsquareddistances),factor[.25,1,4]. Invalid/zero/nonfinitedistancemedian istechnicalfailure,nofallbacktuning. Weightedcentering:Kc=K-(K*a)[:,None]-(a.T*K)[None,:]+a.T*K*a. FitKernelRidge(kernel=precomputed,alpha[.1,1,10])to(y-ybar),sample_weight=w. Atinference,centerKtestusingonlystoredtraininga,trainingcolumnmeansandgrandmean:Kv_c=Kv-(Kv*a)[:,None]-(a.T*K)[None,:]+grandmean. Predict=ybar+Kv_c*dualcoef. Thisimplementsanunpenalizedinterceptandrequiresnospeedlabelsatinference. Outerheadgain1.2aboutordinaryfittingtargetmean,bias-5;mixturewithFIXEDM13,shares[.125,.25,.5,1]. Perfamily:3linearrecipes+9RBFrecipes=12;3families=>36rawrecipes,144foldfits,144conditions(36linear+108RBF). Nohyperparameteroptimization beyondthisfrozengrid,nostochasticseedsearch,nodifferenceloss. ZeroheadsharefixedM13control unchanged. Syntheticlinearkernel-vs-primalweightedRidgeequivalence,weightedkernelcenteringandbatchinvariance testsmustpassbeforefreeze/worker.",
+  "selection": "Strongestoffourcontrolsmetricwise:RMSE<=.99min,Fisher-r>=max+.005,chi2<=.995min,HSE>=max+.02;>=3/4leaveonefoldoutallfourdirectionalchecks;everyfoldRMSE<=1.05strongestcontrol. ChecksurvivorsascendingRMSE;firstwithpositive2000drawwhole-blockpairedconditionalHSE95lowerboundsversusall4,seed20261029. Undefinedfails. Fixeddisplayanchoralpha1/share.25 compareslinearwithRBFfactor1forall3families;allotherrowsretained. Noqualifier=>retainM13.",
+  "failure_criteria": "Any source/data/control/row mismatch,invalid kernelmedian,nonfinite output orfailedtechnicaltest istechnicalfailure;no relaxedtoleranceorchangedgrid. No jointqualifier isscientificnegativewithinthispanel. No Gaussian-process uncertainty orfreshblind/causalclaims. Neveradaptfromoriginalhistoricalfeedback.",
+  "fit_window_offsets": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "validation_window_offsets": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "precision_lambda": 4,
+  "target_weight": "fast2",
+  "gain": 1.2,
+  "bias": -5,
+  "gain_center": "ordinary fitting target mean",
+  "prior": "fixed_M13",
+  "controls": [
+    "bank_windnet_port",
+    "bank_prior_M6",
+    "fixed_M10",
+    "fixed_M13"
+  ],
+  "control_tolerance": 1e-09,
+  "kernel_center_audit_tolerance": 1e-09,
+  "technical_tests_passed": 16,
+  "dependencies": {
+    "numpy": "2.1.2",
+    "scipy": "1.16.1",
+    "scikit-learn": "1.7.2",
+    "requests": "2.32.3",
+    "joblib": "1.5.2"
+  },
+  "budget": {
+    "prior_estimate_usd": 1.6676224333333332,
+    "cumulative_limit_usd": 5,
+    "max_worker_seconds": 1800
+  },
+  "hypothesis_sources": [
+    "M16 training-only joint gate failed; post-literature observation5571627f-0630-4b83-9ed3-e9f3ce5e878f",
+    "https://arxiv.org/pdf/2211.16572",
+    "https://github.com/scikit-learn/scikit-learn/blob/1.7.2/sklearn/kernel_ridge.py"
+  ],
+  "excluded_evidence": "All original historical feedback and F3 artifacts; no extra channels, solar indices or in-situ histories",
+  "frozen_sources": {
+    "matched/__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+    "matched/runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+    "matched/hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+    "matched/source_manifest.json": "bc05daf387663b78621dde4716852df044ceac86b6ea5f66067db589d7f87271",
+    "event_loop/__init__.py": "efb6e7445cd7ebd5bcdb4e7e5052d67b3c46913fde1b7f4ed808e63ee8812a68",
+    "event_loop/runner.py": "161d730b2dc5319ce3a9eb351f2ec4164e13e94d1caeb9a2032f5785dabfcbd6",
+    "next_loop/__init__.py": "43418f9f5fbc680229393c4d39998ae5d1086c4c8d7bafd76d1b7a9f5fe9da23",
+    "next_loop/m12.py": "91e6d04213bea056fa451f7403d47bb70f424e114f4807e29eebd5ee025a36f0",
+    "next_loop/m12_reference.json": "70f237ee0c233c88a192a0888b9e5b3e33e6ceffad49d94f86abb12f89b6589f",
+    "next_loop/regional_stats.py": "69614f87ace51a1cc93d1913f6e3c17dac56ed86ec1ddd1fd4270fbcd195df4e",
+    "next_loop/regional_features.py": "cd9418bf0536ef09d9f25400a2a431b3e367fca7036e268c1e59ac8ead2e2c4b",
+    "next_loop/target_weights.py": "5d65caa35fe494827a8605b173cfa2ae365150c1cb56bb278db600ef61cf2c1e",
+    "next_loop/digital_topology.py": "84483177222335d62a86b1e343318c4a4f2848a38a28678669b9448a95a6daa9",
+    "next_loop/test_topology.py": "b5eb3a0d6298e04ea4b66cd10153748a8c39da2486d6fc25875bea3b75e2874f",
+    "next_loop/test_regions.py": "39b2e1ac9b96ad9dd5cbcc28689bf28eb1b77ee8535cc7d5752db84724efd1a5",
+    "next_loop/test_target_weights.py": "445cb0c944cb97e83275adecc7e516b75c7a7a993b7bff8990a890d0d50f6016",
+    "next_loop/m14.py": "0340c352d0da46789b7e30119ff207153c611e4302a884e953c99a4aca04246c",
+    "next_loop/m14_entry.py": "78dcbe562dbf287c2bcfae937562e6685440d3514774d1211c3dca83047d5d6a",
+    "next_loop/m14_transport.py": "0b49ef6fc6277711bbbf14fe27dc0a465e1857c05810e11bbd50bc8a19279c2d",
+    "next_loop/m14_reference.json": "a0c85adc3dbfab98f9237b0fc8202ec51fc1123f701201cb10b2d5244abb8c7a",
+    "next_loop/kernel_head.py": "28ff3a628848223269413141341f903c65c41f1587605c5653c83c78be108617",
+    "next_loop/test_kernel_head.py": "278e7f99004c4456d1207f8a39eb7b6c296c15da0f0f2335ed4818ebcc7cfcf6",
+    "next_loop/m17.py": "2bfe43eb24e396325f7dec960716b58f71c05507eadd300adc6604b74e590628",
+    "next_loop/m17_entry.py": "d7e660fca6a52e7390da7c773947b15797da9002fc805ef7a54b642ff16f2b7c",
+    "next_loop/m17_transport.py": "31e5e5926d8d79aafac3001fe5778ea5f5c3ae7c5bb148050d8f636272a83f43",
+    "next_loop/prepare_m17_worker.py": "ab3d99e283c157d788dd7a7be6ecc1f5049becf01888f20c94b01f6cf4fec7f6",
+    "next_loop/m17_registered_design.json": "dfb493e9035263a4d2627228b44cee2277a8680032550185a7eef1d3d1aa393f"
+  }
+}
