@@ -1,0 +1,34 @@
+"""Append a distinct training-side continuation page without rewriting frozen history."""
+import datetime, html, json
+from pathlib import Path
+
+ROOT=Path(__file__).resolve().parents[1];D=ROOT/'matched_dashboard/dist';P=ROOT/'next_loop';R=ROOT/'results/next_loop'
+def main():
+    reg=json.loads((P/'registry.json').read_text());protocol=json.loads((P/'protocol.json').read_text())
+    result=json.loads((R/'m11_results.json').read_text()) if (R/'m11_results.json').exists() else None
+    execution=json.loads((P/'execution.json').read_text()) if (P/'execution.json').exists() else {'status':'running','observation':'Original archive hashes verified; Fold5 discarded; matched training-bank controls rebuilding.'}
+    data={'updated_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'registry':reg,'protocol':protocol,'execution':execution,'result':result}
+    (D/'continuation.json').write_text(json.dumps(data,indent=2),encoding='utf8')
+    (D/'m11_protocol.json').write_text(json.dumps(protocol,indent=2),encoding='utf8')
+    if result:(D/'m11_results.json').write_text(json.dumps(result,indent=2),encoding='utf8')
+    heading='New campaign · training-side continuation'
+    status='M11 completed' if result else 'M11 running'
+    verdict=('No candidate met the registered all-four gate; M10 retained.' if not result.get('gate_passed') else 'A training-qualified candidate was found; original test scoring remains disabled.') if result else execution['observation']
+    rows=([dict(c,control=True) for c in result['controls']]+result['rows']) if result else []
+    table=''.join('<tr><td>'+html.escape(r['model'])+'</td>'+''.join('<td>'+('undefined' if r['metrics'][k] is None else f"{r['metrics'][k]:.4f}")+'</td>' for k in ['rmse','r','chi2','hse_ts'])+'<td>'+('control' if r.get('control') else 'PASS' if r['gate']['all_four'] else 'fail')+'</td></tr>' for r in rows)
+    body='''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WindNet / Current research campaign</title><link rel="stylesheet" href="style.css"></head><body><header><a class="brand" href="index.html">WINDNET <span>/ RESEARCH LOOP</span></a><nav><a href="index.html">Archived F1/F2 study</a><a href="#results">M11 comparison</a><a href="#method">Protocol</a></nav></header><main>'''
+    body+=f'<div class="eyebrow">{heading}</div><h1>Learn from validation.<br>Keep the test outside the loop.</h1><p class="lead">Literature-guided image-only experiments beyond the previous training-selected M10 recipe.</p><div class="actions"><a class="button" href="https://fixrelay.vercel.app/observatory?campaign={reg["campaign_id"]}" target="_blank" rel="noopener">New RogNet campaign ↗</a><a href="https://github.com/kahirhumibntwerag/windnet-low-cost-study/tree/codex/windnet-matched-loop/next_loop">Code & protocol ↗</a></div>'
+    body+=f'<section class="integrity"><div><strong>{status}</strong><p>{html.escape(verdict)}</p></div><p>Original Fold5 is absent from development. No new original historical test evaluation. Prior historical exposure remains a limitation.</p></section>'
+    body+='''<section id="method"><div class="eyebrow">HYPOTHESIS → EXPERIMENT → OBSERVATION → LITERATURE</div><h2>M11 · Cross-fitted distribution correction</h2><p>Can a monotone correction learned from fitting-only out-of-fold predictions improve high-speed event skill while improving every other original metric beyond M10?</p><p>Keep the ratio/flatten location head, precision weight 4, ridge penalty 10,000, location/M6 mixture 0.625/0.375, gain 1.2 and bias −5 fixed. Vary correction strength at 0, 0.25, 0.5, 0.75 and 1. Strength 0 reproduces M10. An additional map learned from in-sample fitting predictions is an ablation and cannot be adopted.</p><p>Each outer split fits three of original Folds1–4 and validates the remaining fold. Inner cross-fitting holds out each fitting fold in turn. Inner scalers, precision weights and target anchors use inner fitting rows only. The fixed encoder uses the outer-fitting image mean throughout; this is not fully nested preprocessing.</p><p><a href="https://doi.org/10.1029/2024SW004125">Collin et al. (2025)</a> motivates distribution correction for underestimated stream peaks. <a href="https://arxiv.org/abs/2609.26683">PROSWIN (2026)</a> motivates balancing timeline and peak performance. Their results use different data and predictor budgets; neither is a matched comparator here.</p><p><a href="m11_protocol.json" download>Download registered protocol ↓</a></p></section>'''
+    body+='<section id="results"><div class="eyebrow">IDENTICAL TRAINING-SIDE ROWS · ALL FOUR ORIGINAL METRICS</div><h2>Complete M11 panel</h2><p>The stronger of fixed M10, matched WindNet port and M6 is the comparator for each metric. Adoption needs at least 1% lower RMSE, +0.005 correlation, 0.5% lower chi-square and +0.02 original HSE threat score, plus the registered stability checks. Undefined scores fail.</p>'
+    if result:
+        body+='<div class="table-scroll"><table><thead><tr><th>Model / ablation</th><th>RMSE km/s ↓</th><th>Fisher r ↑</th><th>Reduced χ² ↓</th><th>HSE TS ↑</th><th>All-four gate</th></tr></thead><tbody>'+table+'</tbody></table></div><p><a href="m11_results.json" download>Full aggregate results, fold metrics & calibration maps ↓</a></p>'
+    else:body+='<p>Results will appear when the recorded workload finishes. No estimated or synthetic scores are displayed.</p>'
+    body+='</section><section><h2>Boundaries and limitations</h2><p>All models receive the same original four 211 Å images and use the original H4/D3 window construction. No in-situ history, additional wavelength or external solar predictor is added. Hypotheses use training-side observations only. Large earlier searches and reused development folds limit generalization claims. Conditional block-bootstrap intervals do not correct adaptive selection. Elicit is not used.</p><p><a href="index.html">Read the archived original campaign, all earlier ablations and frozen F1/F2 results →</a></p></section><footer>Aggregate records only · Updated '+html.escape(data['updated_at'])+'</footer></main></body></html>'
+    (D/'continuation.html').write_text(body,encoding='utf8')
+    index=D/'index.html';s=index.read_text(encoding='utf8')
+    banner='<section id="current-campaign" class="integrity"><div><strong>New campaign: literature-guided continuation</strong><p>Training-side M11 experiments compare against fixed M10. Archived F1/F2 results below remain unchanged.</p></div><a class="button" href="continuation.html">Open current campaign →</a></section>'
+    if 'id="current-campaign"' not in s:s=s.replace('<section class="stats"',banner+'<section class="stats"')
+    index.write_text(s,encoding='utf8')
+    print(json.dumps({'new_campaign':reg['campaign_id'],'result_available':result is not None,'raw_holdout_data_added':False}))
+if __name__=='__main__':main()
