@@ -2,9 +2,11 @@
   "project_id": "appgprj_6ae3988ae03881919056b61092bec1f4",
   "url": "https://windnet-matched-research-loop.wellbat32.chatgpt.site/external.html",
   "status": "succeeded",
-  "deployment_id": "appgdep_6ae4b7af1ecc81919e3aee49f10e8695",
-  "source_commit": "92927234075e97ff3079b3e66092d4246e26b5ed",
-  "content": "external protocol and truthful running status; no test scores yet",
+  "deployment_id": "appgdep_6ae4be1d5840819199f18a44ce0dad48",
+  "source_commit": "ccf518a1ec4f5b7879a4e06803709e4b31205924",
+  "content": "completed external metrics, paired intervals, all fixed-year scores, coverage, standard plots and aggregate downloads",
+  "html_sha256": "e86e7c257d15aadcf3f56d30170f4965c3fe0ca8b046c8ebd75985afb4ccb97a",
   "audience": "existing owner-private audience preserved",
+  "verification": "HTML/SVG parse, local links and exact aggregate source hash passed; PNG plots visually inspected",
   "browser_qa": "not run; previous browser stop preserved"
 }

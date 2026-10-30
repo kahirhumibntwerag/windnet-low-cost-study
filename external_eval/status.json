@@ -1,5 +1,5 @@
 {
-  "stage": "completed; publishing aggregate results",
+  "stage": "completed; aggregate report, dashboard and GitHub published",
   "external_evaluation_complete": true,
   "external_arrays_accessed": true,
   "original_checkpoint_replica_preflight": "passed all5;max error0.000711km/s",
@@ -26,5 +26,7 @@
   "post_freeze_model_or_scientific_code_changes": 0,
   "external_evaluation_passes": 1,
   "strict_all_four_numerical_win": true,
-  "individual_external_arrays_exported": false
+  "individual_external_arrays_exported": false,
+  "runpod_deleted_and_verified": true,
+  "dashboard_deployment_id": "appgdep_6ae4be1d5840819199f18a44ce0dad48"
 }

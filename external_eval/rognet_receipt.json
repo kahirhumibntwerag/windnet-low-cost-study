@@ -1,0 +1,15 @@
+{
+  "campaign_id": "fb77fb27-bc42-4d58-840b-a8e1460c0ae3",
+  "hypothesis_id": "5a04d5cf-4584-4e7b-8156-7e2d148c47c8",
+  "experiment_id": "a84303f5-6cff-4af4-9aab-225c96b8b499",
+  "run_id": "11af4a3c-0361-45b0-af4c-b6d0a5f0932d",
+  "status": "completed",
+  "outcome": "supported within the registered external comparison",
+  "results_observation_id": "b240798c-1f34-4702-a38f-afc98af99dd1",
+  "analysis_id": "0778780b-4d8e-49dc-9628-6f094f890b3f",
+  "results_artifact_id": "d46b2f2c-0cdd-4ed3-b31e-896d2b879fff",
+  "scientific_decision_id": "4946517b-8688-48b1-ad42-d42b2bd69afa",
+  "visibility": "existing private campaign; connector has no public-sharing mutation",
+  "campaign_training_metric_reused_for_external_scores": false,
+  "note": "Decision endpoint rejected analysis/artifact IDs as evidence references; accepted the final observation ID. Interpretation remains separately recorded."
+}
