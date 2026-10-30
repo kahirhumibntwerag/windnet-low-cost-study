@@ -1,0 +1,61 @@
+{
+  "verified_at": "2026-10-30T04:23:11.687Z",
+  "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+  "F3": {
+    "experiment_id": "e1215e22-e3e3-40d9-b59e-b5f7754e85e9",
+    "run_id": "01ab51fc-7088-41bb-97a5-91abb91fd2a1",
+    "observation_id": "b4cc2d98-db6b-433f-8670-2ed0eabf6ef9",
+    "analysis_id": "2829efb3-8726-4022-97d6-8a45d4369880",
+    "decision_id": "12bf251a-5ec6-471c-afab-eb491cb2ddee",
+    "literature_observation_id": "0c9ad55f-b9ed-480f-acef-587b19c4d0f3",
+    "results_artifact_id": "94cfb639-d354-4e25-b659-4654b7a3a608",
+    "checkpoint_artifact_id": "5c4ba9a8-9253-4d6d-82c7-7b32a1e4b131",
+    "all_four_vs_released_windnet": true,
+    "all_four_vs_retrained_M10": false,
+    "rognet_completed_record_saved": true,
+    "rognet_finding_published": false,
+    "rognet_publication_state": "Browser control interrupted with Escape; explicit request to resume for F3 publication pending user reply. Campaign itself remains public."
+  },
+  "github": {
+    "source_and_results_commit": "5077939",
+    "checkpoint_release": "windnet-f3-2026-10-30",
+    "provider_asset_state": "uploaded",
+    "provider_size": 121343873,
+    "provider_sha256": "4afe902645f1820414a0c8621d953166f6ef99142a16851ebac69f1174a4603e",
+    "local_digest_and_size_match": true
+  },
+  "site": {
+    "project_id": "appgprj_6ae3988ae03881919056b61092bec1f4",
+    "checkout_path": "C:\\Users\\mhesh\\OneDrive\\Belgeler\\ChatGPT\\experiment\\matched_dashboard",
+    "commit_sha": "c29070444e942739e2e2da25ba68d7ef69b71c9e",
+    "archive": "C:/Users/mhesh/OneDrive/Belgeler/ChatGPT/experiment/tmp/f3-dashboard.tar.gz",
+    "deployment": {
+      "id": "appgdep_6ae41b1a883c819193bc99d8f5e21599",
+      "project_id": "appgprj_6ae3988ae03881919056b61092bec1f4",
+      "title": "WindNet Matched Research Loop",
+      "version_id": "appgprj_6ae3988ae03881919056b61092bec1f4~appgver_d0ba0171df908191863ebc0510573ecb",
+      "type": "publish",
+      "status": "succeeded",
+      "url": "https://windnet-matched-research-loop.wellbat32.chatgpt.site",
+      "has_mcp": false,
+      "screenshot_asset_pointer": null,
+      "provider_deployment_id": "site---6ae3988ae03881919056b61092bec1f4",
+      "failure_message": null,
+      "env_set_revision": 0,
+      "updated_at": "2026-10-30T04:20:57.277673+00:00"
+    },
+    "static_checks": {
+      "panel_rows": 10,
+      "metric_dots": 40,
+      "stale_no_historical_score_top_level_text_removed": true
+    },
+    "browser_qa": "Not repeated after user stopped browser control; deployment verified by native succeeded result."
+  },
+  "raw_holdout_data_or_individual_predictions_published": false,
+  "M14": {
+    "hypothesis_id": "7f4461a7-bc06-4a9d-b2a3-c494f2e8c8ae",
+    "experiment_id": "5f047285-fdd0-4e67-9fbf-243facf9b561",
+    "status": "planned_not_executed",
+    "hypothesis_source": "M13 training-side evidence and primary topology literature; no F3 historical metric feedback"
+  }
+}

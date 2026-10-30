@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "freeze_sha256": "7f133633005d179d1b49b07ef3441ee9ff560d01c65ce16032f89b5248e779c9",
+  "models": 10,
+  "test_windows": 2198,
+  "source_files_verified": 26,
+  "checkpoints_verified": 55,
+  "gates_independently_recomputed": {
+    "released_windnet": {
+      "all_four": true,
+      "checks": {
+        "mean_rmse": true,
+        "fisher_r": true,
+        "mean_chi2": true,
+        "mean_hse_ts": true
+      }
+    },
+    "prior_M10": {
+      "all_four": false,
+      "checks": {
+        "mean_rmse": true,
+        "fisher_r": true,
+        "mean_chi2": true,
+        "mean_hse_ts": false
+      }
+    }
+  },
+  "scope": "Aggregate arithmetic, gates, original fold counts, source identities and checkpoint-container hashes. No independent model refit or raw-label metric rerun; no individual historical data read."
+}

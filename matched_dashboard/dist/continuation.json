@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T03:28:58.969853+00:00",
+  "updated_at": "2026-10-30T04:16:03.606222+00:00",
   "registry": {
     "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
     "hypothesis_id": "db413194-1606-4095-87d7-23b608d5e626",
@@ -18,7 +18,8 @@
     "m13_run_id": "c62db121-da88-48d1-ac71-b1b0e5cf0c2d",
     "m12_observation_id": "a3f2e897-dccb-4c27-81a0-bc910ccf7f99",
     "m13_observation_id": "1f31b26f-30d0-4ec0-9ba3-2e4bd9f7eaf5",
-    "F3_hypothesis_id": "c67e60cb-d36e-4a1e-9c05-0a89b84e9050"
+    "F3_hypothesis_id": "c67e60cb-d36e-4a1e-9c05-0a89b84e9050",
+    "F3_experiment_id": "e1215e22-e3e3-40d9-b59e-b5f7754e85e9"
   },
   "protocol": {
     "stage": "M11",

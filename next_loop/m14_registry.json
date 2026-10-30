@@ -1,0 +1,15 @@
+{
+  "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+  "hypothesis_id": "7f4461a7-bc06-4a9d-b2a3-c494f2e8c8ae",
+  "experiment_id": "5f047285-fdd0-4e67-9fbf-243facf9b561",
+  "status": "planned; not executed",
+  "source": "M13 training evidence and arXiv2610.35549 only; no F3 historical feedback",
+  "public_search_query": "solar wind topology persistent homology",
+  "public_search_results": 0,
+  "conditions": 288,
+  "raw_recipes": 72,
+  "fold_fits": 288,
+  "prior_cumulative_estimate_usd": 1.5945701833333332,
+  "limit_usd": 5,
+  "next_action": "Read exact RogNet design; implement, test and hash complete M14 protocol/source/controls before fitting; CPU only, no original final evaluation"
+}

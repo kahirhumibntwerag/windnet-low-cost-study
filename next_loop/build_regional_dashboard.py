@@ -71,6 +71,9 @@ def main():
         s=s.replace('Original Fold5 is absent from development. No new original historical test evaluation. Prior historical exposure remains a limitation.','Original Fold5 was absent from development and acquired only after the full F3 freeze. Prior historical exposure remains a limitation.')
         s=s.replace('No original historical scoring yet.','The fixed F3 historical comparison is reported above.')
     p.write_text(s,encoding='utf8')
-    index=D/'index.html';text=index.read_text(encoding='utf8').replace('Training-side M11 experiments compare against fixed M10.','Training-side M12/M13 experiments compare against fixed M10.');index.write_text(text,encoding='utf8')
+    index=D/'index.html';text=index.read_text(encoding='utf8')
+    for old in ['Training-side M11 experiments compare against fixed M10.','Training-side M12/M13 experiments compare against fixed M10.']:
+        text=text.replace(old,'Training-side M12/M13 experiments compare against fixed M10. The fixed F3 historical comparison is now reported in the current campaign.' if historical else 'Training-side M12/M13 experiments compare against fixed M10.')
+    index.write_text(text,encoding='utf8')
     print(json.dumps({'M12_complete':(R/'m12_results.json').exists(),'M13_complete':(R/'m13_results.json').exists(),'F3_complete':bool(historical),'original_final_evaluations_this_phase':int(bool(historical))}))
 if __name__=='__main__':main()

@@ -1,0 +1,60 @@
+{
+  "stage": "F3",
+  "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+  "experiment_id": "e1215e22-e3e3-40d9-b59e-b5f7754e85e9",
+  "hypothesis_id": "c67e60cb-d36e-4a1e-9c05-0a89b84e9050",
+  "selection_source": "M13 training-only bank; no historical scores used",
+  "primary": "M13_g6x6_trend_linear_w4_a100_targetfast2_share0.25",
+  "panel_models": 10,
+  "original_blocks": 157,
+  "evaluation_windows": 2198,
+  "fit_windows_per_block": 13,
+  "evaluation_windows_per_block": 14,
+  "inputs": "Original four211Aimages,H4D3,original fivefolds; no extra predictor data",
+  "fixed_seeds": [
+    19,
+    43,
+    101
+  ],
+  "fixed_epochs": [
+    38,
+    27,
+    36
+  ],
+  "panel_definition": "next_loop.f3_panel.fixed_panel",
+  "rules": [
+    "Full source/data/panel freeze before acquiring original Fold5",
+    "Fold5 hash/discard before full freeze; never inspect individual historical data",
+    "Every trainable model retrained on identical other-four-fold rows on common final runtime",
+    "Predict calls accept only image-derived features; no test labels or sigmas",
+    "All five folds and panel fits complete before any metric export",
+    "One final pass; prohibit post-test replacement or hypotheses from test feedback",
+    "Report separate strict all-four numerical gates vs released original WindNet and same-runtime M10; undefined fails",
+    "Preserve all ten panel outcomes and 2000draw whole-block paired intervals vs both references"
+  ],
+  "prior_exposure": "Folds1-4 are adaptively reused development data. Earlier historical aggregate tests are known. F3 is a locked exploratory historical benchmark, not fresh blind confirmation.",
+  "uncertainty": "Conditional bootstrap seed20261029, not selection-adjusted, block overlap and sequential testing limit inference",
+  "literature_after_M13": [
+    "https://www.jmlr.org/beta/papers/v11/cawley10a.html",
+    "https://arxiv.org/abs/2006.05825"
+  ],
+  "runtime": {
+    "image": "runpod/pytorch@sha256:cb154fcca15d1d6ce858cfa672b76505e30861ef981d28ec94bd44168767d853",
+    "tag": "2.8.0-py3.11-cuda12.8.1-cudnn-devel-ubuntu22.04",
+    "numpy": "2.1.2",
+    "scipy": "1.16.1",
+    "sklearn": "1.7.2",
+    "torch": "2.8.0",
+    "gpu": "NVIDIA A40"
+  },
+  "budget": {
+    "prior_estimate_usd": 1.4369494055555556,
+    "cumulative_limit_usd": 5,
+    "planned_max_worker_seconds": 3600,
+    "compute_rate_usd_per_hour": 0.59,
+    "container_disk_gb": 30,
+    "network_volume_gb": 10,
+    "network_storage_usd_per_gb_month": 0.14,
+    "delete_new_resources_after_verified_export": true
+  }
+}
