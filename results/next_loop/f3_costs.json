@@ -1,0 +1,17 @@
+{
+  "pod_id": "lke23vlnua4vds",
+  "volume_id": "rrxqngwa8s",
+  "stage": "F3",
+  "created_at": "2026-10-30T03:58:27.280Z",
+  "deleted_verified_at": "2026-10-30T04:12:27.000Z",
+  "pod_deleted_verified_404": true,
+  "volume_deleted_verified_404": true,
+  "compute_rate_usd_per_hour": 0.59,
+  "compute_estimate_usd": 0.13762077777777776,
+  "storage_and_rounding_buffer_usd": 0.02,
+  "this_worker_estimate_usd": 0.15762077777777775,
+  "prior_cumulative_matched_estimate_usd": 1.4369494055555556,
+  "cumulative_matched_estimate_usd": 1.5945701833333334,
+  "cumulative_limit_usd": 5,
+  "limitations": "Creation-to-deletion estimate includes setup and idle time; storage and rounding buffer. Not a settled provider invoice. Only the newly created F3 pod and volume were deleted; checkpoints verified locally before deletion."
+}

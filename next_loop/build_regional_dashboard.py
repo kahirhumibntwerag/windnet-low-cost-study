@@ -2,6 +2,7 @@
 import csv,html,json,math,re
 from pathlib import Path
 from next_loop.build_dashboard import main as build_prior
+from next_loop.f3_dashboard import section as f3_section
 ROOT=Path(__file__).resolve().parents[1];R=ROOT/'results/next_loop';D=ROOT/'matched_dashboard/dist'
 def esc(s):return html.escape(str(s))
 def fmt(v):return 'undefined' if v is None else f'{v:.4f}'
@@ -62,7 +63,14 @@ def main():
     if (R/'m13_results.json').exists() and json.loads((R/'m13_results.json').read_text())['selected']:
         s=s.replace('<strong>M11R completed</strong><p>No candidate met the registered all-four gate; M10 retained.</p>','<strong>M13 qualified on training-side validation</strong><p>All four margins and the registered stability checks passed. The original historical comparison has not run; no new test-performance claim.</p>')
     s=s.replace('</body>','<script>for(const input of document.querySelectorAll(".regional-filter")){input.addEventListener("input",()=>{const q=input.value.toLowerCase();for(const row of document.querySelectorAll("#"+input.dataset.target+" tbody tr"))row.hidden=!row.cells[0].textContent.toLowerCase().includes(q);});}</script></body>')
+    historical=f3_section()
+    if historical:
+        s=s.replace('<section id="m13">',historical+'<section id="m13">',1)
+        s=s.replace('<nav>','<nav><a href="#f3">F3 historical</a>',1)
+        s=s.replace('<strong>M13 qualified on training-side validation</strong><p>All four margins and the registered stability checks passed. The original historical comparison has not run; no new test-performance claim.</p>','<strong>F3 historical comparison completed</strong><p>Both all-four gates and every fixed ablation are reported below. The primary was locked before evaluation.</p>')
+        s=s.replace('Original Fold5 is absent from development. No new original historical test evaluation. Prior historical exposure remains a limitation.','Original Fold5 was absent from development and acquired only after the full F3 freeze. Prior historical exposure remains a limitation.')
+        s=s.replace('No original historical scoring yet.','The fixed F3 historical comparison is reported above.')
     p.write_text(s,encoding='utf8')
     index=D/'index.html';text=index.read_text(encoding='utf8').replace('Training-side M11 experiments compare against fixed M10.','Training-side M12/M13 experiments compare against fixed M10.');index.write_text(text,encoding='utf8')
-    print(json.dumps({'M12_complete':(R/'m12_results.json').exists(),'M13_complete':(R/'m13_results.json').exists(),'original_final_evaluations':0}))
+    print(json.dumps({'M12_complete':(R/'m12_results.json').exists(),'M13_complete':(R/'m13_results.json').exists(),'F3_complete':bool(historical),'original_final_evaluations_this_phase':int(bool(historical))}))
 if __name__=='__main__':main()

@@ -1,0 +1,7 @@
+{
+  "file": "f3_checkpoints.tar.gz",
+  "sha256": "4afe902645f1820414a0c8621d953166f6ef99142a16851ebac69f1174a4603e",
+  "bytes": 121343873,
+  "count": 55,
+  "includes_raw_holdout_data_or_individual_predictions": false
+}

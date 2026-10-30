@@ -1,0 +1,333 @@
+{
+  "folds": [
+    {
+      "fold": 1,
+      "fit_folds": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "fit_rows": 1560,
+      "test_rows": 518,
+      "fit_row_sha256": "488c291d45adbf61ca4c336e5622a210a9729d419b2f57f8cc7a07afc3421074",
+      "test_row_sha256": "f0499f57a34d5b1fc172a9995dd5afe48b970c6b3cf8e6794104a441c90bf87d",
+      "all_models_identical_rows": true,
+      "test_labels_passed_to_fit_or_predict": false,
+      "predict_input_keys": [
+        "energy",
+        "ratio",
+        "regional_1x1",
+        "regional_6x6",
+        "spatial"
+      ],
+      "reference": {
+        "fold": 1,
+        "sha256": "28173479ab0f7214077d81b63154749940cc152a094008ba8d7cf59f9656cebb",
+        "rows": 518,
+        "labels_aligned": true,
+        "original_partition_order_recovered": true
+      },
+      "embedding": {
+        "fit_folds": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "blocks": 157,
+        "embedding_dimensions": 832,
+        "image_mean_training_only": 77.84248433070772,
+        "seconds": 6.291077136993408,
+        "fold5_accessed": true,
+        "original_weight_sha256": "d93955ecfb66c9cdbe0c038f7f47fbf971e46dee30930970e22fc4a1b8fa184f",
+        "cache_sha256": "5d295ca888cf9dd5b06b9162589c209b8291223f39b49b01551c0bf11531baf0",
+        "identity": {
+          "code": {
+            "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+            "build_dashboard.py": "1fe23a08c316814fbe269ad4eeb76021d1373776e8d0f43a2e3699307490fb7a",
+            "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+            "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+            "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+            "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+            "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+            "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+            "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+            "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+            "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+          },
+          "python": "3.11.11",
+          "numpy": "2.1.2",
+          "torch": "2.8.0.dev20250319+cu128",
+          "device": "cuda",
+          "gpu": "NVIDIA A40"
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "fit_folds": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "fit_rows": 1716,
+      "test_rows": 350,
+      "fit_row_sha256": "27af48f2d2473f1b6d929bf4e747a2631bc1c7049bf1f8f7fa8e6cbdfa815c95",
+      "test_row_sha256": "a2aa9b82298317a41c838b9e2ebc668fd6241251dc645f9c1e839a384a628f32",
+      "all_models_identical_rows": true,
+      "test_labels_passed_to_fit_or_predict": false,
+      "predict_input_keys": [
+        "energy",
+        "ratio",
+        "regional_1x1",
+        "regional_6x6",
+        "spatial"
+      ],
+      "reference": {
+        "fold": 2,
+        "sha256": "18ef1bbc96f859da46f7216376f973be43b832799a824f3e0787e112ea977c79",
+        "rows": 350,
+        "labels_aligned": true,
+        "original_partition_order_recovered": true
+      },
+      "embedding": {
+        "fit_folds": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "blocks": 157,
+        "embedding_dimensions": 832,
+        "image_mean_training_only": 80.22797740065981,
+        "seconds": 5.398558855056763,
+        "fold5_accessed": true,
+        "original_weight_sha256": "d93955ecfb66c9cdbe0c038f7f47fbf971e46dee30930970e22fc4a1b8fa184f",
+        "cache_sha256": "d74061240b5cf7ec8cdc2949f9b6399bd11b4cd6ee398b71771d29d74012af79",
+        "identity": {
+          "code": {
+            "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+            "build_dashboard.py": "1fe23a08c316814fbe269ad4eeb76021d1373776e8d0f43a2e3699307490fb7a",
+            "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+            "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+            "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+            "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+            "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+            "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+            "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+            "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+            "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+          },
+          "python": "3.11.11",
+          "numpy": "2.1.2",
+          "torch": "2.8.0.dev20250319+cu128",
+          "device": "cuda",
+          "gpu": "NVIDIA A40"
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "fit_folds": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "fit_rows": 1703,
+      "test_rows": 364,
+      "fit_row_sha256": "73f9903982afbf52d223b879a6b55c89617cfbc0a6b4ad908f58eaf061b6af41",
+      "test_row_sha256": "34684596614430384f1f80884521077a4b41c2a879209293095fb090057fc29e",
+      "all_models_identical_rows": true,
+      "test_labels_passed_to_fit_or_predict": false,
+      "predict_input_keys": [
+        "energy",
+        "ratio",
+        "regional_1x1",
+        "regional_6x6",
+        "spatial"
+      ],
+      "reference": {
+        "fold": 3,
+        "sha256": "dc7fc38c0af309792d9ac45edd6f9dad7e5574da827f43905fe355e1d69338da",
+        "rows": 364,
+        "labels_aligned": true,
+        "original_partition_order_recovered": true
+      },
+      "embedding": {
+        "fit_folds": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "blocks": 157,
+        "embedding_dimensions": 832,
+        "image_mean_training_only": 80.16533759604991,
+        "seconds": 5.4873058795928955,
+        "fold5_accessed": true,
+        "original_weight_sha256": "d93955ecfb66c9cdbe0c038f7f47fbf971e46dee30930970e22fc4a1b8fa184f",
+        "cache_sha256": "bd9c543b0c314f35c0ff6b49fec486b811aae286dd784584860cc50ba1d9cd32",
+        "identity": {
+          "code": {
+            "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+            "build_dashboard.py": "1fe23a08c316814fbe269ad4eeb76021d1373776e8d0f43a2e3699307490fb7a",
+            "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+            "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+            "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+            "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+            "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+            "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+            "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+            "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+            "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+          },
+          "python": "3.11.11",
+          "numpy": "2.1.2",
+          "torch": "2.8.0.dev20250319+cu128",
+          "device": "cuda",
+          "gpu": "NVIDIA A40"
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "fit_folds": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "fit_rows": 1781,
+      "test_rows": 280,
+      "fit_row_sha256": "22bae0b196155e1242a3b72301272b7713be20027364573ee772769228c76129",
+      "test_row_sha256": "1c05d4b3e6e57a4dc133ce13336a9c2275979181181ed81496db478714939018",
+      "all_models_identical_rows": true,
+      "test_labels_passed_to_fit_or_predict": false,
+      "predict_input_keys": [
+        "energy",
+        "ratio",
+        "regional_1x1",
+        "regional_6x6",
+        "spatial"
+      ],
+      "reference": {
+        "fold": 4,
+        "sha256": "a6d4c710ca1425ee3db63e114988298b226bbd02f4b9f5beeb9ead6ff6b0b33b",
+        "rows": 280,
+        "labels_aligned": true,
+        "original_partition_order_recovered": true
+      },
+      "embedding": {
+        "fit_folds": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "blocks": 157,
+        "embedding_dimensions": 832,
+        "image_mean_training_only": 80.22843579263952,
+        "seconds": 5.421171426773071,
+        "fold5_accessed": true,
+        "original_weight_sha256": "d93955ecfb66c9cdbe0c038f7f47fbf971e46dee30930970e22fc4a1b8fa184f",
+        "cache_sha256": "ab51eee7a6a2ec91b6e7426e2534ce396191b8e2c96ead0e9d9174970abc54a3",
+        "identity": {
+          "code": {
+            "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+            "build_dashboard.py": "1fe23a08c316814fbe269ad4eeb76021d1373776e8d0f43a2e3699307490fb7a",
+            "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+            "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+            "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+            "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+            "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+            "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+            "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+            "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+            "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+          },
+          "python": "3.11.11",
+          "numpy": "2.1.2",
+          "torch": "2.8.0.dev20250319+cu128",
+          "device": "cuda",
+          "gpu": "NVIDIA A40"
+        }
+      }
+    },
+    {
+      "fold": 5,
+      "fit_folds": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "fit_rows": 1404,
+      "test_rows": 686,
+      "fit_row_sha256": "d08f189f937b4060744edf07db670079127f5aa690cdfe843be20fd5415488f1",
+      "test_row_sha256": "0e66d1d3273bd61b6a5f3833086be7938be8ac095c42cb982a4c3b9de3552284",
+      "all_models_identical_rows": true,
+      "test_labels_passed_to_fit_or_predict": false,
+      "predict_input_keys": [
+        "energy",
+        "ratio",
+        "regional_1x1",
+        "regional_6x6",
+        "spatial"
+      ],
+      "reference": {
+        "fold": 5,
+        "sha256": "d1b29e8e0e5e8706d84b4cf6872ea1d46b7b1627bc86da0d1f6375d5f092ddea",
+        "rows": 686,
+        "labels_aligned": true,
+        "original_partition_order_recovered": true
+      },
+      "embedding": {
+        "fit_folds": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "blocks": 157,
+        "embedding_dimensions": 832,
+        "image_mean_training_only": 78.50377720852963,
+        "seconds": 5.307520151138306,
+        "fold5_accessed": true,
+        "original_weight_sha256": "d93955ecfb66c9cdbe0c038f7f47fbf971e46dee30930970e22fc4a1b8fa184f",
+        "cache_sha256": "4593db88710def01f635c2d1b279a44bbdef4797a4c144ba8a803845d432285d",
+        "identity": {
+          "code": {
+            "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+            "build_dashboard.py": "1fe23a08c316814fbe269ad4eeb76021d1373776e8d0f43a2e3699307490fb7a",
+            "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+            "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+            "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+            "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+            "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+            "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+            "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+            "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+            "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+          },
+          "python": "3.11.11",
+          "numpy": "2.1.2",
+          "torch": "2.8.0.dev20250319+cu128",
+          "device": "cuda",
+          "gpu": "NVIDIA A40"
+        }
+      }
+    }
+  ],
+  "original_members": 157,
+  "total_test_windows": 2198,
+  "cross_fold_dates_disjoint": true,
+  "fold5_parsed_only_after_full_freeze": true,
+  "all_model_row_identity_checks_passed": true,
+  "test_labels_never_passed_to_fit_or_predict": true,
+  "all_fits_completed_before_score_export": true,
+  "final_evaluation_passes": 1,
+  "checkpoint_count": 55
+}

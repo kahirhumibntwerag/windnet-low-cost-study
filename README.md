@@ -1,4 +1,12 @@
-# New matched image-only campaign
+# Current image-only continuation: all four WindNet metrics improved numerically
+
+The frozen M13 primary passed the **F3 all-four numerical gate against released WindNet** on the same original 157 blocks and 2,198 evaluation windows. Mean-fold RMSE fell **80.276 → 75.237 km/s**, Fisher correlation rose **0.5500 → 0.5996**, reduced chi-square fell **26.829 → 22.707**, and original HSE threat score rose **0.1996 → 0.2474**. Hypotheses and recipe selection used training-side validation; all ten panel entries were fixed before the historical evaluation. No model was replaced after testing.
+
+The result is narrower against the previous M10 recipe retrained on this same worker: RMSE, correlation and chi-square improved, but event score fell **0.2706 → 0.2474**, so the incremental all-four gate failed. The event-score interval versus released WindNet includes zero. Adaptive reuse of Folds 1–4, earlier historical aggregate exposure and overlapping blocks limit inference; this is a locked exploratory benchmark, not fresh blind confirmation.
+
+[Public continuation campaign](https://fixrelay.vercel.app/campaigns/1b7e08e2-70f1-4945-b613-5e785d3f76bb) · [Current dashboard](https://windnet-matched-research-loop.wellbat32.chatgpt.site/continuation.html) · [F3 results and all ablations](results/next_loop/F3_RESULTS.md) · [Training campaign](results/next_loop/REGIONAL_RESULTS.md) · [Code and reproduction](next_loop/README.md)
+
+# Archived matched image-only F1 campaign
 
 The [new research loop](results/matched/README.md) completed six public hypotheses and one frozen final comparison using the original WindNet images and identical folds. The fixed primary reduced mean RMSE **80.28 → 76.77 km/s (4.37%)**, increased Fisher correlation **0.550 → 0.566**, and reduced chi-square **26.83 → 26.43**, but HSE threat score fell **0.200 → 0.179**. The strict all-four-metric gate failed. This is a locked historical benchmark with prior holdout exposure, not fresh confirmation.
 
