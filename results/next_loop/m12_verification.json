@@ -1,0 +1,17 @@
+{
+  "stage": "M12",
+  "conditions": 288,
+  "aggregate_metrics_recomputed": true,
+  "all_four_gates_recomputed": true,
+  "fold_stability_recomputed": true,
+  "bootstrap_adoption_order_checked": true,
+  "original_row_hashes_match": true,
+  "prediction_bank_shapes_and_finiteness_checked": true,
+  "artifact_sha256": "8328ab080be061956770b611b585f45b9bff6ffe9617c687f0ee7545571cf727",
+  "strict_gate_count": 13,
+  "fold_stability_count": 9,
+  "bootstrap_checks": 9,
+  "selected": null,
+  "original_final_evaluations": 0,
+  "scope_limit": "Arithmetic and identity audit from fold summaries and saved predictions; not an independent rerun of every trained model or ground-truth metric."
+}

@@ -1,0 +1,11 @@
+{
+  "state": {
+    "running": false,
+    "returncode": 1,
+    "log": "WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.\n\n[notice] A new release of pip is available: 25.0.1 -> 26.2.2\n[notice] To update, run: pip install --upgrade pip\n{\"members_verified\": 30, \"seconds\": 9.012608766555786}\n{\"members_verified\": 60, \"seconds\": 16.166983604431152}\n{\"members_verified\": 90, \"seconds\": 23.71231460571289}\n{\"members_verified\": 120, \"seconds\": 28.79377818107605}\n{\"members_verified\": 150, \"seconds\": 30.499058723449707}\nDevelopment data ready; no Fold5 data retained\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/workspace/regional-windnet/next_loop/m12_entry.py\", line 13, in <module>\n    acquire();run()\n              ^^^^^\n  File \"/workspace/regional-windnet/next_loop/m12.py\", line 65, in run\n    assert all(sha((ROOT/p).read_bytes())==h for p,h in protocol['frozen_sources'].items())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/regional-windnet/next_loop/m12.py\", line 65, in <genexpr>\n    assert all(sha((ROOT/p).read_bytes())==h for p,h in protocol['frozen_sources'].items())\n                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/pathlib.py\", line 1019, in read_bytes\n    with self.open(mode='rb') as f:\n         ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/pathlib.py\", line 1013, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/workspace/regional-windnet/matched\\\\build_dashboard.py'\n"
+  },
+  "cause": "Windows source-manifest path separator on Linux",
+  "repair": "Normalize separator when resolving paths; preserve source hashes and scientific choices",
+  "models_fitted_before_failure": 0,
+  "scientific_choices_changed": false
+}

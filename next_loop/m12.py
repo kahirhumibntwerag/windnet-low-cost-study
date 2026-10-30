@@ -62,7 +62,7 @@ def run():
     started=time.time();bs=load_blocks();datasets={f:samples(bs,f) for f in range(1,5)}
     controls,cp,audits=load_controls(datasets)
     protocol=json.loads((ROOT/'next_loop/m12_protocol.json').read_text())
-    assert all(sha((ROOT/p).read_bytes())==h for p,h in protocol['frozen_sources'].items())
+    assert all(sha((ROOT/p.replace('\\','/')).read_bytes())==h for p,h in protocol['frozen_sources'].items())
     save_json(EXPORT/'m12_preflight.json',{'row_audits':audits,'controls':controls,'control_metrics_match_1e_9':True,'original_final_evaluations':0,'fold5_available':False,'frozen_sources_match':True})
     print('M12 preflight passed: all original rows, controls and frozen sources match',flush=True)
     all_predictions={};recipes={};models={}

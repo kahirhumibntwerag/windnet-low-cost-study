@@ -1,0 +1,8 @@
+{
+  "filename": "m12_training_artifacts.tar.gz",
+  "sha256": "8328ab080be061956770b611b585f45b9bff6ffe9617c687f0ee7545571cf727",
+  "bytes": 4411652,
+  "models": 288,
+  "candidate_recipes": 72,
+  "scope": "Training-side models and predictions only; no original holdout data"
+}
