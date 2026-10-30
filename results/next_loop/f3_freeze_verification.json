@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "freeze_sha256": "7f133633005d179d1b49b07ef3441ee9ff560d01c65ce16032f89b5248e779c9",
+  "source_files_verified": 26,
+  "panel_models": 10,
+  "fold5_available_before_final": false,
+  "final_evaluations": 0,
+  "tests_passed": 10,
+  "exact_expected_kaffe_weights_and_graph": true
+}
