@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "source_files": 26,
+  "original_final_evaluations": 0,
+  "new_base_fits": 0,
+  "fixed_experts": 2,
+  "controls": 4,
+  "freeze_sha256": "6122c9f1af629db44ec9141bb9ac065e5ad8f955f0d76b736618b65ff09dcb3e",
+  "scope": "Source/protocol/freeze identity and preflight provenance, not independent ground-truth metric rerun"
+}

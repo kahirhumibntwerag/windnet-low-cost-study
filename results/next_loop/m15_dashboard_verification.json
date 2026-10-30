@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "m15_html_conditions": 104,
+  "m15_csv_rows": 104,
+  "m15_scatter_conditions": 104,
+  "all_earlier_sections_preserved": true,
+  "one_numerical_pass_failed_adoption": true,
+  "browser_qa_performed": false,
+  "browser_qa_limit": "Browser control remains stopped after physical Escape; publication uses native Sites tools."
+}

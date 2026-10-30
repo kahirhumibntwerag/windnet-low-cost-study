@@ -4,6 +4,7 @@ from pathlib import Path
 from next_loop.build_dashboard import main as build_prior
 from next_loop.f3_dashboard import section as f3_section
 from next_loop.m14_dashboard import section as m14_section
+from next_loop.m15_dashboard import section as m15_section
 ROOT=Path(__file__).resolve().parents[1];R=ROOT/'results/next_loop';D=ROOT/'matched_dashboard/dist'
 def esc(s):return html.escape(str(s))
 def fmt(v):return 'undefined' if v is None else f'{v:.4f}'
@@ -79,12 +80,22 @@ def main():
         selected=json.loads((R/'m14_results.json').read_text())['selected']
         title='M14 qualified on training-side validation' if selected else 'M14 completed; M13 training incumbent retained'
         s=s.replace('<strong>F3 historical comparison completed</strong><p>Both all-four gates and every fixed ablation are reported below. The primary was locked before evaluation.</p>','<strong>'+title+'</strong><p>The complete training-only topology panel is reported below. No historical M14 evaluation has run.</p>')
+    routing=m15_section()
+    if routing:
+        target='<section id="m14">' if topology else '<section id="f3">' if historical else '<section id="m13">'
+        s=s.replace(target,routing+target,1)
+        s=s.replace('<nav>','<nav><a href="#m15">M15 routing</a>',1)
+        selected=json.loads((R/'m15_results.json').read_text())['selected']
+        title='M15 qualified on training-side validation' if selected else 'M15 completed; M13 training incumbent retained'
+        s=s.replace('<strong>M14 completed; M13 training incumbent retained</strong><p>The complete training-only topology panel is reported below. No historical M14 evaluation has run.</p>','<strong>'+title+'</strong><p>The full prediction-only gate panel and uncertainty checks are reported below. No historical M15 evaluation has run.</p>')
     p.write_text(s,encoding='utf8')
     index=D/'index.html';text=index.read_text(encoding='utf8')
     for old in ['Training-side M11 experiments compare against fixed M10.','Training-side M12/M13 experiments compare against fixed M10.']:
         text=text.replace(old,'Training-side M12/M13 experiments compare against fixed M10. The fixed F3 historical comparison is now reported in the current campaign.' if historical else 'Training-side M12/M13 experiments compare against fixed M10.')
     if topology:
         text=re.sub(r'(<section id="current-campaign"[^>]*>.*?<p>).*?(</p>)',r'\g<1>Training-side M14 topology results and the fixed F3 historical panel are reported in the current campaign. Archived F1/F2 results below remain unchanged.\2',text,count=1,flags=re.S)
+    if routing:
+        text=re.sub(r'(<section id="current-campaign"[^>]*>.*?<p>).*?(</p>)',r'\g<1>Training-side M15 routing results, earlier ablations and the fixed F3 historical panel are reported in the current campaign. Archived F1/F2 results below remain unchanged.\2',text,count=1,flags=re.S)
     index.write_text(text,encoding='utf8')
-    print(json.dumps({'M12_complete':(R/'m12_results.json').exists(),'M13_complete':(R/'m13_results.json').exists(),'M14_complete':bool(topology),'F3_complete':bool(historical),'original_final_evaluations_M14':0}))
+    print(json.dumps({'M12_complete':(R/'m12_results.json').exists(),'M13_complete':(R/'m13_results.json').exists(),'M14_complete':bool(topology),'M15_complete':bool(routing),'F3_complete':bool(historical),'original_final_evaluations_M15':0}))
 if __name__=='__main__':main()

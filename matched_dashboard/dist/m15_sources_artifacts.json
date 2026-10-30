@@ -1,0 +1,17 @@
+{
+  "filename": "m15_frozen_sources.tar.gz",
+  "bytes": 51981,
+  "sha256": "b17e1b4de5b3985a5fe671ac61d802e920e899ef4d88bab565094fae2b666380",
+  "scientific_source_files": 27,
+  "all_source_bytes_match_original_freeze": true,
+  "archive_roundtrip_verified": true,
+  "git_newline_conversion_paths": [
+    "next_loop/m12_reference.json",
+    "next_loop/m14_reference.json",
+    "next_loop/m15_protocol.json",
+    "next_loop/m15_reference.json",
+    "next_loop/m15_transport.py",
+    "next_loop/regional_stats.py"
+  ],
+  "raw_holdout_observations_or_forecasts_included": false
+}

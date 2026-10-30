@@ -1,0 +1,9 @@
+{
+  "filename": "m15_training_artifacts.tar.gz",
+  "sha256": "6594d0267206d46b18a015290dfbb1218669c542a7f8058452233e8c640de90e",
+  "bytes": 1199465,
+  "conditions": 104,
+  "new_base_models": 0,
+  "requires_parent_models": true,
+  "scope": "Gate recipes and training validation predictions only; parent models remain in referenced M14/M13/M11R archives; no original holdout data"
+}
