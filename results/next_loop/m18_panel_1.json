@@ -1,0 +1,1952 @@
+{
+  "stage": "M18",
+  "scope": "Training-side validation only; conditional and not independent holdout",
+  "part": 1,
+  "total_parts": 2,
+  "rows": [
+    {
+      "model": "M18_regional_linear_gNone_a0.1_share0.125",
+      "recipe": {
+        "family": "regional",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 77.59994954984009,
+        "r": 0.5862383006996449,
+        "chi2": 24.94899029787068,
+        "hse_ts": 0.30082530001967345,
+        "mae": 59.65366399573024
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_linear_gNone_a0.1_share0.25",
+      "recipe": {
+        "family": "regional",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 78.57688902673166,
+        "r": 0.5800562013043443,
+        "chi2": 25.45217732615252,
+        "hse_ts": 0.3457835642618251,
+        "mae": 60.49633353570378
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_linear_gNone_a0.1_share0.5",
+      "recipe": {
+        "family": "regional",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 81.87726792366944,
+        "r": 0.5617347630517068,
+        "chi2": 27.696553737329882,
+        "hse_ts": 0.3724167161667161,
+        "mae": 63.16959151395922
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_linear_gNone_a0.1_share1",
+      "recipe": {
+        "family": "regional",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 0.1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 93.05307300119996,
+        "r": 0.5176226038864431,
+        "chi2": 37.13731597813929,
+        "hse_ts": 0.3970253884046987,
+        "mae": 72.46584108301272
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_linear_gNone_a1_share0.125",
+      "recipe": {
+        "family": "regional",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 77.244913946355,
+        "r": 0.5902269172143074,
+        "chi2": 24.2603279617038,
+        "hse_ts": 0.30313299232736574,
+        "mae": 59.14624851656235
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_linear_gNone_a1_share0.25",
+      "recipe": {
+        "family": "regional",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 77.66680575321357,
+        "r": 0.5889872050413503,
+        "chi2": 23.903816428158247,
+        "hse_ts": 0.2973086759787527,
+        "mae": 59.37226988027551
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_linear_gNone_a1_share0.5",
+      "recipe": {
+        "family": "regional",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 79.31092807180987,
+        "r": 0.5811782733148093,
+        "chi2": 23.915687038699254,
+        "hse_ts": 0.330673674151935,
+        "mae": 60.50464075556077
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_linear_gNone_a1_share1",
+      "recipe": {
+        "family": "regional",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 85.5140265784256,
+        "r": 0.5527600169854889,
+        "chi2": 26.839002970309735,
+        "hse_ts": 0.3436551604655053,
+        "mae": 65.47193333636129
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_linear_gNone_a10_share0.125",
+      "recipe": {
+        "family": "regional",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 10,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.97844825693629,
+        "r": 0.590857526753241,
+        "chi2": 23.87568421075911,
+        "hse_ts": 0.24362483530961793,
+        "mae": 58.71695172894596
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_linear_gNone_a10_share0.25",
+      "recipe": {
+        "family": "regional",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 10,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 77.12126733216614,
+        "r": 0.5909454966599781,
+        "chi2": 23.110124572662954,
+        "hse_ts": 0.23362483530961792,
+        "mae": 58.522201285168066
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_linear_gNone_a10_share0.5",
+      "recipe": {
+        "family": "regional",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 10,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 78.18715044059816,
+        "r": 0.5853753265752694,
+        "chi2": 22.230685913285,
+        "hse_ts": 0.20030844155844157,
+        "mae": 58.854957412162015
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_linear_gNone_a10_share1",
+      "recipe": {
+        "family": "regional",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 10,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 83.26539671849147,
+        "r": 0.5446323670837988,
+        "chi2": 23.078531061786595,
+        "hse_ts": 0.1967174854131376,
+        "mae": 62.122494890704736
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g0.5_a0.1_share0.125",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.42931886791112,
+        "r": 0.5999474650624178,
+        "chi2": 24.581118436999603,
+        "hse_ts": 0.29751552795031055,
+        "mae": 58.58655957901567
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g0.5_a0.1_share0.25",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.51051245034925,
+        "r": 0.6028063421320614,
+        "chi2": 24.897041053173346,
+        "hse_ts": 0.33667874396135267,
+        "mae": 58.701869242958765
+      },
+      "gate": false,
+      "stability": true
+    },
+    {
+      "model": "M18_regional_poly_g0.5_a0.1_share0.5",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 78.87908138221871,
+        "r": 0.5911312110841948,
+        "chi2": 27.30871098642349,
+        "hse_ts": 0.37134841363102233,
+        "mae": 60.608352267457576
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g0.5_a0.1_share1",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 0.1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 91.2034140133724,
+        "r": 0.5392026700535371,
+        "chi2": 39.25134965653433,
+        "hse_ts": 0.453110599078341,
+        "mae": 70.02923492360308
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g0.5_a1_share0.125",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.55124509451963,
+        "r": 0.5979900892730197,
+        "chi2": 24.267555703292427,
+        "hse_ts": 0.28959886128364387,
+        "mae": 58.554173905089954
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g0.5_a1_share0.25",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.32280747827281,
+        "r": 0.6033217335196552,
+        "chi2": 23.93352791307314,
+        "hse_ts": 0.2880649784997611,
+        "mae": 58.25107604902769
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g0.5_a1_share0.5",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.82732039333922,
+        "r": 0.6052475599798557,
+        "chi2": 24.03613401547959,
+        "hse_ts": 0.35893454371715244,
+        "mae": 58.49985170179957
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g0.5_a1_share1",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 81.51435394896035,
+        "r": 0.586549397575351,
+        "chi2": 27.32399295167264,
+        "hse_ts": 0.3963680753608158,
+        "mae": 61.92395278003091
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g0.5_a10_share0.125",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 10,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.80616428323393,
+        "r": 0.5931534921784851,
+        "chi2": 23.91899875491534,
+        "hse_ts": 0.25120059288537555,
+        "mae": 58.570458403581135
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g0.5_a10_share0.25",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 10,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.72779987793307,
+        "r": 0.5957372475538167,
+        "chi2": 23.15974386096324,
+        "hse_ts": 0.2403310276679842,
+        "mae": 58.2013106948762
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g0.5_a10_share0.5",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 10,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 77.21353606176604,
+        "r": 0.5960547300950497,
+        "chi2": 22.181885289836895,
+        "hse_ts": 0.23742424242424243,
+        "mae": 58.103833179977684
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g0.5_a10_share1",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 10,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 80.6823422277172,
+        "r": 0.5726820760266903,
+        "chi2": 22.388773014695673,
+        "hse_ts": 0.24030844155844158,
+        "mae": 59.904519962185496
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g1_a0.1_share0.125",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 1,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.48699163489562,
+        "r": 0.5987444731916625,
+        "chi2": 24.693191874884533,
+        "hse_ts": 0.29520783564261827,
+        "mae": 58.69434697688603
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g1_a0.1_share0.25",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 1,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.63896009318772,
+        "r": 0.6005309748101443,
+        "chi2": 25.146860942766736,
+        "hse_ts": 0.32036311514572385,
+        "mae": 58.93569768850508
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g1_a0.1_share0.5",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 1,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 79.18146360605292,
+        "r": 0.587553284999546,
+        "chi2": 27.91104282090434,
+        "hse_ts": 0.38654298790454394,
+        "mae": 61.073175057516096
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g1_a0.1_share1",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 1,
+        "ridge_alpha": 0.1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 91.92909665976615,
+        "r": 0.5356407359998469,
+        "chi2": 40.866781546672314,
+        "hse_ts": 0.4612125014012124,
+        "mae": 70.95268675853268
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g1_a1_share0.125",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 1,
+        "ridge_alpha": 1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.64120732757443,
+        "r": 0.5970163776521681,
+        "chi2": 24.3983530397693,
+        "hse_ts": 0.29751552795031055,
+        "mae": 58.68012321332135
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g1_a1_share0.25",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 1,
+        "ridge_alpha": 1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.5261093548606,
+        "r": 0.6013306924642,
+        "chi2": 24.207848796737824,
+        "hse_ts": 0.3023506927854754,
+        "mae": 58.537731197107405
+      },
+      "gate": false,
+      "stability": true
+    },
+    {
+      "model": "M18_regional_poly_g1_a1_share0.5",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 1,
+        "ridge_alpha": 1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 77.32130399407758,
+        "r": 0.6016312586833361,
+        "chi2": 24.635680625652707,
+        "hse_ts": 0.38204156954156954,
+        "mae": 59.14928938200485
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g1_a1_share1",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 1,
+        "ridge_alpha": 1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 82.78026874233655,
+        "r": 0.5826462366808198,
+        "chi2": 28.726705543393876,
+        "hse_ts": 0.40880541871921183,
+        "mae": 63.25421961515531
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g1_a10_share0.125",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 1,
+        "ridge_alpha": 10,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.85611088830021,
+        "r": 0.5930553063855131,
+        "chi2": 24.009118996346913,
+        "hse_ts": 0.2569938192668372,
+        "mae": 58.66607618229107
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g1_a10_share0.25",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 1,
+        "ridge_alpha": 10,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.80922005688467,
+        "r": 0.5952838280297664,
+        "chi2": 23.333237243618957,
+        "hse_ts": 0.26612425404944584,
+        "mae": 58.376449747088
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g1_a10_share0.5",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 1,
+        "ridge_alpha": 10,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 77.2987734082135,
+        "r": 0.5947527789603984,
+        "chi2": 22.50188365431864,
+        "hse_ts": 0.2687878787878788,
+        "mae": 58.41146409085033
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g1_a10_share1",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 1,
+        "ridge_alpha": 10,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 80.53081222240007,
+        "r": 0.5743964023768273,
+        "chi2": 22.920816140340385,
+        "hse_ts": 0.25257575757575756,
+        "mae": 60.38604554407799
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g2_a0.1_share0.125",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 2,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.54793559954823,
+        "r": 0.5974044210686292,
+        "chi2": 24.818054956398857,
+        "hse_ts": 0.3132202580028667,
+        "mae": 58.790122185256294
+      },
+      "gate": false,
+      "stability": true
+    },
+    {
+      "model": "M18_regional_poly_g2_a0.1_share0.25",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 2,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.79773380908934,
+        "r": 0.5977846730558657,
+        "chi2": 25.448683571414676,
+        "hse_ts": 0.3107477305303392,
+        "mae": 59.16833950970217
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g2_a0.1_share0.5",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 2,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 79.63340805325454,
+        "r": 0.5824218363434553,
+        "chi2": 28.72307394067742,
+        "hse_ts": 0.40723443223443223,
+        "mae": 61.597755959214844
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g2_a0.1_share1",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 2,
+        "ridge_alpha": 0.1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 93.21597558306395,
+        "r": 0.5281230252416328,
+        "chi2": 43.3243872361273,
+        "hse_ts": 0.4528791680678791,
+        "mae": 72.2756938474631
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g2_a1_share0.125",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 2,
+        "ridge_alpha": 1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.73819870432354,
+        "r": 0.5958597856451747,
+        "chi2": 24.545443152280114,
+        "hse_ts": 0.29751552795031055,
+        "mae": 58.81691070913064
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g2_a1_share0.25",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 2,
+        "ridge_alpha": 1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.75722383170394,
+        "r": 0.5989179390899065,
+        "chi2": 24.528706388068485,
+        "hse_ts": 0.3132202580028667,
+        "mae": 58.843812427117534
+      },
+      "gate": false,
+      "stability": true
+    },
+    {
+      "model": "M18_regional_poly_g2_a1_share0.5",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 2,
+        "ridge_alpha": 1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 77.92357689363378,
+        "r": 0.596936413738847,
+        "chi2": 25.38410527355017,
+        "hse_ts": 0.39073426573426573,
+        "mae": 59.829103195979336
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g2_a1_share1",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 2,
+        "ridge_alpha": 1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 84.43886067109193,
+        "r": 0.5756681328410054,
+        "chi2": 30.650392700133335,
+        "hse_ts": 0.40795176018262647,
+        "mae": 65.03087785187816
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g2_a10_share0.125",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 2,
+        "ridge_alpha": 10,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.93210450771588,
+        "r": 0.592786442648657,
+        "chi2": 24.120122814136053,
+        "hse_ts": 0.28786338448422844,
+        "mae": 58.78031731551604
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g2_a10_share0.25",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 2,
+        "ridge_alpha": 10,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.97032813258018,
+        "r": 0.5945085267304588,
+        "chi2": 23.564054715346323,
+        "hse_ts": 0.2880649784997611,
+        "mae": 58.62504438224457
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g2_a10_share0.5",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 2,
+        "ridge_alpha": 10,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 77.65314632661998,
+        "r": 0.5928841948470188,
+        "chi2": 22.998757942369675,
+        "hse_ts": 0.308178241196144,
+        "mae": 58.931295375181875
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_regional_poly_g2_a10_share1",
+      "recipe": {
+        "family": "regional",
+        "kernel": "poly",
+        "kernel_factor": 2,
+        "ridge_alpha": 10,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 81.32867408497154,
+        "r": 0.573676186248542,
+        "chi2": 24.05552209482768,
+        "hse_ts": 0.30345349095349095,
+        "mae": 61.530138404606525
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_linear_gNone_a0.1_share0.125",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.50343553011582,
+        "r": 0.6009852224827317,
+        "chi2": 23.508256181363908,
+        "hse_ts": 0.258590727260804,
+        "mae": 58.27305562569043
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_linear_gNone_a0.1_share0.25",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.71792406802678,
+        "r": 0.6043360089542525,
+        "chi2": 22.924596771610574,
+        "hse_ts": 0.2360519914867741,
+        "mae": 58.09454417499492
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_linear_gNone_a0.1_share0.5",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 79.51840008922566,
+        "r": 0.5869046762973272,
+        "chi2": 24.056943342132357,
+        "hse_ts": 0.25941859066859063,
+        "mae": 59.93943560875132
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_linear_gNone_a0.1_share1",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 0.1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 93.20172211545784,
+        "r": 0.494073820789945,
+        "chi2": 35.52029804328973,
+        "hse_ts": 0.4219223404006013,
+        "mae": 71.3351294872016
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_linear_gNone_a1_share0.125",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.3477182673878,
+        "r": 0.6025151417971011,
+        "chi2": 23.33656522764462,
+        "hse_ts": 0.258590727260804,
+        "mae": 58.159379881721705
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_linear_gNone_a1_share0.25",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.26784694242089,
+        "r": 0.6094768689895166,
+        "chi2": 22.432436787085432,
+        "hse_ts": 0.23275818384514035,
+        "mae": 57.70779414707236
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_linear_gNone_a1_share0.5",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 78.10719704363032,
+        "r": 0.6031956965904156,
+        "chi2": 22.47751106473583,
+        "hse_ts": 0.22231934731934733,
+        "mae": 58.78709767930936
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_linear_gNone_a1_share1",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 88.90764966487663,
+        "r": 0.5251703654884511,
+        "chi2": 29.98098425511171,
+        "hse_ts": 0.31761620732208967,
+        "mae": 67.6812601981597
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_linear_gNone_a10_share0.125",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 10,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.34252298809413,
+        "r": 0.6018337315134871,
+        "chi2": 23.3293966199466,
+        "hse_ts": 0.26877635046113313,
+        "mae": 58.17170799025364
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_linear_gNone_a10_share0.25",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 10,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.11048290736181,
+        "r": 0.610826848813075,
+        "chi2": 22.24580262030629,
+        "hse_ts": 0.22314279922975572,
+        "mae": 57.64616895283051
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_linear_gNone_a10_share0.5",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 10,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 77.22925862180651,
+        "r": 0.6139919126676215,
+        "chi2": 21.41505492564514,
+        "hse_ts": 0.16393939393939394,
+        "mae": 58.08066719190407
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_linear_gNone_a10_share1",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "linear",
+        "kernel_factor": null,
+        "ridge_alpha": 10,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 85.33983015612247,
+        "r": 0.545645919634998,
+        "chi2": 25.099320754800694,
+        "hse_ts": 0.17500000000000002,
+        "mae": 64.74549662760623
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_poly_g0.5_a0.1_share0.125",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.05628337662122,
+        "r": 0.6004400518968219,
+        "chi2": 23.699609265305778,
+        "hse_ts": 0.25632828382189,
+        "mae": 58.13086706388736
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_poly_g0.5_a0.1_share0.25",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.16256513083782,
+        "r": 0.6000760996670941,
+        "chi2": 23.59188163356206,
+        "hse_ts": 0.287834155401291,
+        "mae": 57.988127825102374
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_poly_g0.5_a0.1_share0.5",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 79.75202744248372,
+        "r": 0.571304626137571,
+        "chi2": 26.529827842306346,
+        "hse_ts": 0.34837516087516085,
+        "mae": 60.902584810565465
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_poly_g0.5_a0.1_share1",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 0.1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 97.95943182559567,
+        "r": 0.4676004208560186,
+        "chi2": 45.01932614872176,
+        "hse_ts": 0.456545700717563,
+        "mae": 75.86413945747779
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_poly_g0.5_a1_share0.125",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 75.85770867353074,
+        "r": 0.6050103579179456,
+        "chi2": 23.087071319984716,
+        "hse_ts": 0.24362774906253168,
+        "mae": 57.86761856563511
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_poly_g0.5_a1_share0.25",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 75.3190529063105,
+        "r": 0.6136279374123175,
+        "chi2": 21.932431411633946,
+        "hse_ts": 0.25832601376079634,
+        "mae": 57.090315216030916
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_poly_g0.5_a1_share0.5",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.38663461565172,
+        "r": 0.6104553283903378,
+        "chi2": 21.47343007330611,
+        "hse_ts": 0.3122943233237351,
+        "mae": 57.58031627518197
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_poly_g0.5_a1_share1",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 86.39936308454816,
+        "r": 0.5475545108789224,
+        "chi2": 27.95654131014529,
+        "hse_ts": 0.40452898550724636,
+        "mae": 65.82383258531709
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_poly_g0.5_a10_share0.125",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 10,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.22227819351423,
+        "r": 0.6025164578771307,
+        "chi2": 23.23310463847248,
+        "hse_ts": 0.2616544527510001,
+        "mae": 58.03853236075249
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_poly_g0.5_a10_share0.25",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 10,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 75.85254756512907,
+        "r": 0.6116639071438169,
+        "chi2": 22.030044069457695,
+        "hse_ts": 0.23275818384514035,
+        "mae": 57.34685586008544
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_poly_g0.5_a10_share0.5",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 10,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.65489547799731,
+        "r": 0.6151527651580796,
+        "chi2": 20.890839472346517,
+        "hse_ts": 0.2202797202797203,
+        "mae": 57.30098471993712
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M18_morphology_poly_g0.5_a10_share1",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "poly",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 10,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M13"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 84.04857867109263,
+        "r": 0.5586320746162863,
+        "chi2": 23.68009644179775,
+        "hse_ts": 0.19991477272727273,
+        "mae": 62.74226490295868
+      },
+      "gate": false,
+      "stability": false
+    }
+  ]
+}
