@@ -1,0 +1,6 @@
+{
+  "filename": "m11_training_artifacts.tar.gz",
+  "sha256": "e03668f2034eee2321234b83858f11caf40c79d78acae7df0bb64c6d61ae085b",
+  "bytes": 87920680,
+  "scope": "training-side fitted controls and prediction arrays only; no Fold5"
+}

@@ -9,7 +9,7 @@ from event_loop.precision import stability
 from event_loop.mixtures import bootstrap
 from next_loop.calibration import fit_map, predict_map
 
-def run():
+def run(paired_restart=False):
     start = time.time()
     assert not (DATA / 'sealed').exists()
     members = json.loads((DATA / 'members.json').read_text())
@@ -56,10 +56,14 @@ def run():
     for left, right in zip(audits, reference['row_audits']):
         assert left['fit_row_sha256'] == right['fit_row_sha256']
         assert left['validation_row_sha256'] == right['validation_row_sha256']
+    reproduction = []
     for actual, expected in [(fixed, reference['selected']), *zip(controls, reference['controls'])]:
         for key in ['rmse', 'r', 'chi2', 'hse_ts']:
             tolerance = 1e-5 if key in ['r', 'hse_ts'] else .001
-            assert abs(actual['metrics'][key]-expected['metrics'][key]) <= tolerance, (actual['model'], key, actual['metrics'][key], expected['metrics'][key])
+            passes = abs(actual['metrics'][key]-expected['metrics'][key]) <= tolerance
+            reproduction.append({'model':actual['model'],'metric':key,'current':actual['metrics'][key],'archived':expected['metrics'][key],'tolerance':tolerance,'passes':passes})
+            if not paired_restart:
+                assert passes, (actual['model'], key, actual['metrics'][key], expected['metrics'][key])
     controls = [*controls, fixed]
     rows = []
     for name, pp in conditions.items():
@@ -81,8 +85,9 @@ def run():
             selected = row
             break
     identity = {str(p.relative_to(ROOT)): sha(p.read_bytes()) for pkg in ['matched', 'event_loop', 'next_loop'] for p in sorted((ROOT/pkg).glob('*')) if p.suffix in ['.py', '.json']}
-    result = {'stage': 'M11', 'scope': 'Training-bank Folds1-4 only', 'rows': rows, 'controls': controls, 'row_audits': audits, 'mapping_records': mapping_records, 'selected': selected, 'gate_passed': selected is not None, 'bootstrap_checks': checks, 'source_hashes': identity, 'seconds': time.time()-start, 'fold5_available': False, 'original_final_evaluations': 0, 'limitations': 'Adaptive reused training bank; conditional intervals not selection adjusted; inner regression is cross-fitted but fixed encoder centering uses all outer fitting images. Quantile clipping may suppress extremes. No test-generalization claim.'}
-    save_json(EXPORT / 'm11_results.json', result)
+    stage = 'M11R' if paired_restart else 'M11'
+    result = {'stage': stage, 'scope': 'Training-bank Folds1-4 only; within-platform paired comparison', 'rows': rows, 'controls': controls, 'row_audits': audits, 'mapping_records': mapping_records, 'selected': selected, 'gate_passed': selected is not None, 'bootstrap_checks': checks, 'source_hashes': identity, 'archived_control_reproduction':reproduction, 'paired_restart':paired_restart, 'seconds': time.time()-start, 'fold5_available': False, 'original_final_evaluations': 0, 'limitations': 'Adaptive reused training bank; conditional intervals not selection adjusted; inner regression is cross-fitted but fixed encoder centering uses all outer fitting images. Quantile clipping may suppress extremes. No test-generalization claim. Current-platform controls do not numerically reproduce archived controls; original M11 failure is retained.'}
+    save_json(EXPORT / (stage.lower()+'_results.json'), result)
     print(json.dumps({'M11_complete': True, 'selected': selected, 'metrics': [{'model': r['model'], 'metrics': r['metrics'], 'gate': r['gate']} for r in rows], 'seconds':time.time()-start}), flush=True)
 
 if __name__ == '__main__':

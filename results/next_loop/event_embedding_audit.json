@@ -1,0 +1,174 @@
+{
+  "splits": [
+    {
+      "fit_folds": [
+        2,
+        3,
+        4
+      ],
+      "blocks": 108,
+      "embedding_dimensions": 832,
+      "image_mean_training_only": 75.26574024315893,
+      "seconds": 3.757040500640869,
+      "fold5_accessed": false,
+      "original_weight_sha256": "d93955ecfb66c9cdbe0c038f7f47fbf971e46dee30930970e22fc4a1b8fa184f",
+      "cache_sha256": "a99cec5b5435a790025b61c798429c46f52418eafe0f4213db7dd5dab6679996",
+      "identity": {
+        "code": {
+          "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+          "build_dashboard.py": "1fe23a08c316814fbe269ad4eeb76021d1373776e8d0f43a2e3699307490fb7a",
+          "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+          "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+          "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+          "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+          "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+          "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+          "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+          "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+          "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+        },
+        "python": "3.12.3",
+        "numpy": "2.1.2",
+        "torch": "2.8.0+cu128",
+        "device": "cuda",
+        "gpu": "NVIDIA L4"
+      }
+    },
+    {
+      "fit_folds": [
+        1,
+        3,
+        4
+      ],
+      "blocks": 108,
+      "embedding_dimensions": 832,
+      "image_mean_training_only": 79.43207776465607,
+      "seconds": 3.5108160972595215,
+      "fold5_accessed": false,
+      "original_weight_sha256": "d93955ecfb66c9cdbe0c038f7f47fbf971e46dee30930970e22fc4a1b8fa184f",
+      "cache_sha256": "fa91f153a18986d1bea89d8bc0412b3e9d8fc1c49da2d98031a6c6f6f4a5b9a9",
+      "identity": {
+        "code": {
+          "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+          "build_dashboard.py": "1fe23a08c316814fbe269ad4eeb76021d1373776e8d0f43a2e3699307490fb7a",
+          "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+          "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+          "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+          "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+          "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+          "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+          "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+          "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+          "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+        },
+        "python": "3.12.3",
+        "numpy": "2.1.2",
+        "torch": "2.8.0+cu128",
+        "device": "cuda",
+        "gpu": "NVIDIA L4"
+      }
+    },
+    {
+      "fit_folds": [
+        1,
+        2,
+        4
+      ],
+      "blocks": 108,
+      "embedding_dimensions": 832,
+      "image_mean_training_only": 79.32230076416947,
+      "seconds": 3.471602439880371,
+      "fold5_accessed": false,
+      "original_weight_sha256": "d93955ecfb66c9cdbe0c038f7f47fbf971e46dee30930970e22fc4a1b8fa184f",
+      "cache_sha256": "d9957833c3410c180e22fef837e18d6702a036f620ad09ab93c7ef311c5b297b",
+      "identity": {
+        "code": {
+          "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+          "build_dashboard.py": "1fe23a08c316814fbe269ad4eeb76021d1373776e8d0f43a2e3699307490fb7a",
+          "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+          "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+          "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+          "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+          "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+          "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+          "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+          "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+          "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+        },
+        "python": "3.12.3",
+        "numpy": "2.1.2",
+        "torch": "2.8.0+cu128",
+        "device": "cuda",
+        "gpu": "NVIDIA L4"
+      }
+    },
+    {
+      "fit_folds": [
+        1,
+        2,
+        3
+      ],
+      "blocks": 108,
+      "embedding_dimensions": 832,
+      "image_mean_training_only": 79.47801296785194,
+      "seconds": 3.5155582427978516,
+      "fold5_accessed": false,
+      "original_weight_sha256": "d93955ecfb66c9cdbe0c038f7f47fbf971e46dee30930970e22fc4a1b8fa184f",
+      "cache_sha256": "86a46769630d3afefba409858e08bf07f970e8a347fbee7f9752cd1510efa9a6",
+      "identity": {
+        "code": {
+          "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+          "build_dashboard.py": "1fe23a08c316814fbe269ad4eeb76021d1373776e8d0f43a2e3699307490fb7a",
+          "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+          "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+          "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+          "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+          "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+          "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+          "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+          "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+          "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+        },
+        "python": "3.12.3",
+        "numpy": "2.1.2",
+        "torch": "2.8.0+cu128",
+        "device": "cuda",
+        "gpu": "NVIDIA L4"
+      }
+    }
+  ],
+  "fold5_available": false,
+  "prior_test_results_available": false,
+  "identity": {
+    "phase_code": {
+      "__init__.py": "efb6e7445cd7ebd5bcdb4e7e5052d67b3c46913fde1b7f4ed808e63ee8812a68",
+      "final.py": "02ac0589fcf1d85caa269630c2eedc5306c0dadcdc0989b793a37585f9bd5022",
+      "location.py": "8af3c6e203ba335aa34007e6b9cb810ea5e376ef523271ccf2f179c412c2586a",
+      "mixtures.py": "c7c9ed493db8880690f3fe882162a7518535a27dc195e70dd9017fc69fa392b1",
+      "precision.py": "e2dede44828610d04dc88867d6a242212de70dc15a0a006fb5e0c25305bb22ed",
+      "recover.py": "6858820bbc4761854948f41d884b80f02297099dc878ed21026c0713352e35a2",
+      "remote.py": "20c99217ad70acc1386040a769d7028708a4a34b82c65b7565aae72d5efc22ba",
+      "runner.py": "161d730b2dc5319ce3a9eb351f2ec4164e13e94d1caeb9a2032f5785dabfcbd6",
+      "science.py": "efba874fd5ad437c939040391a8614e04447b0d072cf9bc7c40d16bf683ae8a2",
+      "test_science.py": "48114256adb9db6dffd4a506b62057c5a2d6d56e70814a012a4a0e8178e864d6",
+      "transport.py": "066b412313801c95c064870a03f3e6c11626fde255ed89c80ed28512cf13dedc"
+    },
+    "frozen_matched_sources": {
+      "__init__.py": "c3c5ddfb710bef1d46004027216ce13654ed11b850e32e5cbce844697a0d656e",
+      "build_dashboard.py": "1fe23a08c316814fbe269ad4eeb76021d1373776e8d0f43a2e3699307490fb7a",
+      "final_study.py": "26431d37590c17a6de14f99576ea28d93358c1ba2606a1374ea3b43bd0b3edc0",
+      "hse_original.py": "f6dce192f81e22ee2f4cf176728d128ed3cde22186c46a7cbcc630863d81bd94",
+      "remote.py": "3c54a0304a5bbefe69666886eabd11763541c82e6ca28787bf99124fe5d64c18",
+      "reproduce_final.py": "d4b8d983db2b8b5590fc5b457ae0ad8f572b5a9154ff355d1d5f80534a6799ac",
+      "runner.py": "c568930c8c6c1811b8c7500a0913686e14ace92a4ccad2fbdb7447125cae0d38",
+      "science.py": "2826aea13693fb9b849e356747e988c3f55ff84c7d6455548914ee55d0668b05",
+      "test_protocol.py": "4ef6b0d9c97b54c0190c98a2c3ef28a74476cb39788564ad4d0c5ef6a3f5f3dc",
+      "transport.py": "031e3f6633183eb101ff3c2f54e629881322e19dc628f7cea541316d69b95218",
+      "verify_artifacts.py": "088ea51c08d153e84d32460ce1cd82273f90afebf1d30c0371ff54ed57e34f8a"
+    },
+    "python": "3.12.3",
+    "numpy": "2.1.2",
+    "torch": "2.8.0+cu128",
+    "device": "cuda"
+  }
+}

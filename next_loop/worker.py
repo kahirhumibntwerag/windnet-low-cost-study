@@ -1,6 +1,6 @@
 """One-purpose preregistered workload; never invoke an original final stage."""
 import json, subprocess, sys, tarfile
-from matched.runner import EXPORT, DATA, save_json, sha
+from matched.runner import EXPORT, DATA, ROOT, save_json, sha
 
 def main():
     EXPORT.mkdir(exist_ok=True)
@@ -8,12 +8,17 @@ def main():
     from event_loop.runner import acquire
     from event_loop.science import prepare, baseline
     from event_loop.location import prepare as prepare_location
-    acquire()
-    prepare()
-    baseline()
-    prepare_location()
+    paired_restart = (ROOT/'next_loop/m11r_protocol.json').exists()
+    if not paired_restart:
+        acquire()
+        prepare()
+        baseline()
+        prepare_location()
+    else:
+        assert (EXPORT/'event_controls.json').exists() and (DATA/'location_cv4.npz').exists()
+        print('M11R uses the identical live-worker training caches and saved controls; original M11 remains failed',flush=True)
     from next_loop.m11 import run
-    run()
+    run(paired_restart=paired_restart)
     target = EXPORT / 'm11_training_artifacts.tar.gz'
     with tarfile.open(target, 'w:gz') as archive:
         archive.add(DATA/'models', arcname='models')

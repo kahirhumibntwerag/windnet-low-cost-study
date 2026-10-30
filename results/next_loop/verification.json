@@ -1,0 +1,12 @@
+{
+  "stage": "M11R",
+  "aggregate_values_recomputed": true,
+  "all_six_gates_recomputed": true,
+  "identical_original_training_rows": true,
+  "fold5_available": false,
+  "original_final_evaluations": 0,
+  "artifact_sha256_verified": "e03668f2034eee2321234b83858f11caf40c79d78acae7df0bb64c6d61ae085b",
+  "artifact_members": 21,
+  "eligible_four_metric_passes": 0,
+  "adopted": false
+}

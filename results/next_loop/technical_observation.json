@@ -1,0 +1,98 @@
+{
+  "kind": "technical_reproduction_observation",
+  "identical_training_row_hashes": true,
+  "frozen_scientific_sources_unchanged": true,
+  "archived_environment": {
+    "python": "3.12.3",
+    "numpy": "2.1.2",
+    "torch": "2.8.0+cu128",
+    "device": "cuda"
+  },
+  "current_environment": {
+    "python": "3.12.3",
+    "numpy": "2.1.2",
+    "torch": "2.8.0+cu128",
+    "device": "cuda"
+  },
+  "comparisons": [
+    {
+      "model": "bank_windnet_port",
+      "metric": "rmse",
+      "archived_training": 82.90395523051754,
+      "current_training": 82.93143257623484,
+      "delta": 0.027477345717301205,
+      "tolerance": 0.001,
+      "passes": false
+    },
+    {
+      "model": "bank_windnet_port",
+      "metric": "r",
+      "archived_training": 0.5326109524409431,
+      "current_training": 0.5276365155160122,
+      "delta": -0.004974436924930936,
+      "tolerance": 1e-05,
+      "passes": false
+    },
+    {
+      "model": "bank_windnet_port",
+      "metric": "chi2",
+      "archived_training": 27.519113732587236,
+      "current_training": 29.201747741637803,
+      "delta": 1.6826340090505667,
+      "tolerance": 0.001,
+      "passes": false
+    },
+    {
+      "model": "bank_windnet_port",
+      "metric": "hse_ts",
+      "archived_training": 0.1236204258574525,
+      "current_training": 0.1236204258574525,
+      "delta": 0.0,
+      "tolerance": 1e-05,
+      "passes": true
+    },
+    {
+      "model": "bank_prior_M6",
+      "metric": "rmse",
+      "archived_training": 79.36680345763034,
+      "current_training": 79.50204999691418,
+      "delta": 0.13524653928384112,
+      "tolerance": 0.001,
+      "passes": false
+    },
+    {
+      "model": "bank_prior_M6",
+      "metric": "r",
+      "archived_training": 0.5580875090845372,
+      "current_training": 0.5551061683344183,
+      "delta": -0.0029813407501189104,
+      "tolerance": 1e-05,
+      "passes": false
+    },
+    {
+      "model": "bank_prior_M6",
+      "metric": "chi2",
+      "archived_training": 28.44158327256447,
+      "current_training": 29.43461605227086,
+      "delta": 0.9930327797063931,
+      "tolerance": 0.001,
+      "passes": false
+    },
+    {
+      "model": "bank_prior_M6",
+      "metric": "hse_ts",
+      "archived_training": 0.17429363763865868,
+      "current_training": 0.17157624633431084,
+      "delta": -0.002717391304347838,
+      "tolerance": 1e-05,
+      "passes": false
+    }
+  ],
+  "passed": false,
+  "cause": "Not isolated. Matching recorded versions and seeds do not prove cross-hardware numerical reproducibility.",
+  "scientific_hypothesis_verdict": "Not assessed. Registered run cannot adopt a candidate after control reproduction failure.",
+  "original_final_evaluations": 0,
+  "literature_after_observation": [
+    "https://github.com/pytorch/pytorch/blob/main/docs/source/notes/randomness.md"
+  ]
+}

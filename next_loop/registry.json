@@ -2,5 +2,11 @@
   "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
   "hypothesis_id": "db413194-1606-4095-87d7-23b608d5e626",
   "experiment_id": "571f6a04-4649-4e79-a83a-edb9ad102840",
-  "run_id": "9613d0b7-0bff-4451-8b25-856a5aaf0722"
+  "run_id": "9613d0b7-0bff-4451-8b25-856a5aaf0722",
+  "recovery_experiment_id": "57d4db9e-3e00-4e58-b905-0b60e0a0a2e4",
+  "recovery_run_id": "08688fd8-70de-486e-9b12-d81206efc4cf",
+  "visibility": "public",
+  "next_hypothesis_id": "9e3aee34-65cc-497f-ab21-303e91f9ed0b",
+  "observation_id": "6a12a004-162c-4de3-b9ed-d2c62f2dd1b0",
+  "analysis_id": "7d94f286-fe60-487a-bfbe-b7ba6c574672"
 }
