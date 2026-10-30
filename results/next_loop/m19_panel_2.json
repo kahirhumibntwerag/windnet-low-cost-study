@@ -1,0 +1,1466 @@
+{
+  "stage": "M19",
+  "scope": "Training-side validation only; conditional and not independent holdout",
+  "part": 2,
+  "total_parts": 2,
+  "rows": [
+    {
+      "model": "M19_morphology_cubic_g1_a1_share0.5",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 79.14303025565411,
+        "r": 0.594996711107082,
+        "chi2": 24.088018043070896,
+        "hse_ts": 0.3188296992644819,
+        "mae": 59.62350301200766
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g1_a1_share1",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 93.16400263943999,
+        "r": 0.5110610421915189,
+        "chi2": 35.68888562393492,
+        "hse_ts": 0.4459197961027229,
+        "mae": 70.98112138694498
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g1_a10_share0.125",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 10,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 75.42866171806288,
+        "r": 0.6204046659479543,
+        "chi2": 22.098160268775782,
+        "hse_ts": 0.32359407902886167,
+        "mae": 57.12845127430886
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g1_a10_share0.25",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 10,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 75.34683402939606,
+        "r": 0.6232728883709937,
+        "chi2": 21.323420275381412,
+        "hse_ts": 0.3171125975473802,
+        "mae": 56.78329571076106
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g1_a10_share0.5",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 10,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.65090336063949,
+        "r": 0.6168351940066702,
+        "chi2": 20.984522609583813,
+        "hse_ts": 0.30647667147667146,
+        "mae": 57.41413851156292
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g1_a10_share1",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 10,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 84.6842638119432,
+        "r": 0.5572739132382997,
+        "chi2": 25.149056561953127,
+        "hse_ts": 0.33291891635881404,
+        "mae": 63.7562948863218
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g2_a0.1_share0.125",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.00786982870434,
+        "r": 0.613057899043368,
+        "chi2": 23.412059626588416,
+        "hse_ts": 0.3342778397126223,
+        "mae": 57.77557326836052
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g2_a0.1_share0.25",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 77.7525808645815,
+        "r": 0.5985819481268624,
+        "chi2": 25.047799979159198,
+        "hse_ts": 0.3450309004656831,
+        "mae": 58.99968133117518
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g2_a0.1_share0.5",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 85.90537478146405,
+        "r": 0.5411823741959277,
+        "chi2": 32.81960596974942,
+        "hse_ts": 0.38060847198778236,
+        "mae": 65.77952105590667
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g2_a0.1_share1",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 0.1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 114.98240762059991,
+        "r": 0.40267122997274246,
+        "chi2": 66.36451909272449,
+        "hse_ts": 0.4233766233766234,
+        "mae": 88.13938950625078
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g2_a1_share0.125",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 75.71312361713102,
+        "r": 0.6170334557699616,
+        "chi2": 22.68945557963845,
+        "hse_ts": 0.3262650191998018,
+        "mae": 57.42605176408002
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g2_a1_share0.25",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.36049568053393,
+        "r": 0.6127335856528607,
+        "chi2": 22.923640548449313,
+        "hse_ts": 0.3356107660455487,
+        "mae": 57.790064353502636
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g2_a1_share0.5",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 80.33203358481234,
+        "r": 0.5848038590228661,
+        "chi2": 25.85548176108987,
+        "hse_ts": 0.3757945588609204,
+        "mae": 60.940642342184205
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g2_a1_share1",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 96.9848316698501,
+        "r": 0.4884700590133371,
+        "chi2": 41.57304928644627,
+        "hse_ts": 0.4497448979591837,
+        "mae": 74.6868907212118
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g2_a10_share0.125",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 10,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 75.39797140416815,
+        "r": 0.62088515704114,
+        "chi2": 22.106025467423727,
+        "hse_ts": 0.33320946364424625,
+        "mae": 57.12990386184882
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g2_a10_share0.25",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 10,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 75.34251766778276,
+        "r": 0.6236353849985914,
+        "chi2": 21.407600647623504,
+        "hse_ts": 0.309969740404523,
+        "mae": 56.86902481384687
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g2_a10_share0.5",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 10,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.8666860020552,
+        "r": 0.6158422328533172,
+        "chi2": 21.426683253852804,
+        "hse_ts": 0.3479052429052429,
+        "mae": 57.80272735801264
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_morphology_cubic_g2_a10_share1",
+      "recipe": {
+        "family": "morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 10,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 85.89251469610981,
+        "r": 0.5553338311795993,
+        "chi2": 27.128577449630363,
+        "hse_ts": 0.3933615433615434,
+        "mae": 65.35022742354813
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g0.5_a0.1_share0.125",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.40752790127236,
+        "r": 0.6119637155015824,
+        "chi2": 23.821227858228653,
+        "hse_ts": 0.37934318097361575,
+        "mae": 58.19305369787433
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g0.5_a0.1_share0.25",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 77.17821507627474,
+        "r": 0.6075007928373176,
+        "chi2": 24.654195586118803,
+        "hse_ts": 0.3627849817781168,
+        "mae": 58.84420364204501
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g0.5_a0.1_share0.5",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 79.75204396038328,
+        "r": 0.5924055714228147,
+        "chi2": 27.184633758385147,
+        "hse_ts": 0.3847762154213767,
+        "mae": 60.811012705858055
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g0.5_a0.1_share1",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 0.1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 88.49303629174587,
+        "r": 0.548436803818059,
+        "chi2": 35.703520968862044,
+        "hse_ts": 0.42533949790047354,
+        "mae": 67.48381291309933
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g0.5_a1_share0.125",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.11312442196198,
+        "r": 0.6146211166723244,
+        "chi2": 23.343825939912684,
+        "hse_ts": 0.37115229778273257,
+        "mae": 57.80618103066564
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g0.5_a1_share0.25",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.36333680354461,
+        "r": 0.6143221405760567,
+        "chi2": 23.519371638554023,
+        "hse_ts": 0.36173129651390523,
+        "mae": 57.90615916126877
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g0.5_a1_share0.5",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 77.26488202112499,
+        "r": 0.6107528616838375,
+        "chi2": 24.19490541952424,
+        "hse_ts": 0.360470166963302,
+        "mae": 58.363980640208
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g0.5_a1_share1",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 80.5902084849293,
+        "r": 0.594192451256587,
+        "chi2": 26.843742516214846,
+        "hse_ts": 0.35175438596491226,
+        "mae": 60.368106202069
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g0.5_a10_share0.125",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 10,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 75.86793741878294,
+        "r": 0.614510366495472,
+        "chi2": 22.73307962477645,
+        "hse_ts": 0.3380248978075065,
+        "mae": 57.453984697059404
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g0.5_a10_share0.25",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 10,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 75.89839710578835,
+        "r": 0.6144902609890628,
+        "chi2": 22.303013584829532,
+        "hse_ts": 0.307924563359346,
+        "mae": 57.19826105089324
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g0.5_a10_share0.5",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 10,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.4442624911905,
+        "r": 0.6119263473345146,
+        "chi2": 21.782727618267163,
+        "hse_ts": 0.283792051937832,
+        "mae": 57.10242528001338
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g0.5_a10_share1",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 0.5,
+        "ridge_alpha": 10,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 79.42767618154741,
+        "r": 0.5929906840286011,
+        "chi2": 22.1015401384683,
+        "hse_ts": 0.2166205533596838,
+        "mae": 58.65851006495648
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g1_a0.1_share0.125",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.56453582615167,
+        "r": 0.6102545091832952,
+        "chi2": 23.98378442176743,
+        "hse_ts": 0.37934318097361575,
+        "mae": 58.43935250980378
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g1_a0.1_share0.25",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 77.57906137502326,
+        "r": 0.6036098744882494,
+        "chi2": 25.058876580706297,
+        "hse_ts": 0.39607170099160943,
+        "mae": 59.421591193002335
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g1_a0.1_share0.5",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 80.87235052371173,
+        "r": 0.5835692910497476,
+        "chi2": 28.312267217599903,
+        "hse_ts": 0.3871328224776501,
+        "mae": 62.21351415762168
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g1_a0.1_share1",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 0.1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 91.7329715706189,
+        "r": 0.5311251121524149,
+        "chi2": 39.23187376745062,
+        "hse_ts": 0.4353758560280299,
+        "mae": 71.221593737267
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g1_a1_share0.125",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.2833925936887,
+        "r": 0.6133830079501581,
+        "chi2": 23.596001200179337,
+        "hse_ts": 0.38185049598093074,
+        "mae": 58.056335958826956
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g1_a1_share0.25",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.74581149998062,
+        "r": 0.6117080343205522,
+        "chi2": 24.050920730257985,
+        "hse_ts": 0.39287113200156676,
+        "mae": 58.44096233057992
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g1_a1_share0.5",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 78.18891995641113,
+        "r": 0.6053407408279053,
+        "chi2": 25.36679788761478,
+        "hse_ts": 0.3910818145731939,
+        "mae": 59.6042292284197
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g1_a1_share1",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 82.99126922956593,
+        "r": 0.5847286172964821,
+        "chi2": 29.62270459112636,
+        "hse_ts": 0.4271356033452807,
+        "mae": 63.42209943970017
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g1_a10_share0.125",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 10,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.01805184769466,
+        "r": 0.6147984886967839,
+        "chi2": 22.979005841838188,
+        "hse_ts": 0.35102347330608197,
+        "mae": 57.69322291951832
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g1_a10_share0.25",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 10,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.1102034677197,
+        "r": 0.6152840069032863,
+        "chi2": 22.745619252554725,
+        "hse_ts": 0.34407902886163755,
+        "mae": 57.57679400597544
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g1_a10_share0.5",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 10,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.51200582955374,
+        "r": 0.6148025461865103,
+        "chi2": 22.470951888124432,
+        "hse_ts": 0.34709835253313515,
+        "mae": 57.58733958505889
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g1_a10_share1",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 1,
+        "ridge_alpha": 10,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 78.16800353624129,
+        "r": 0.6080145243956968,
+        "chi2": 22.69004041581036,
+        "hse_ts": 0.3102423175952588,
+        "mae": 58.35832161681228
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g2_a0.1_share0.125",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.73341721329295,
+        "r": 0.6082245322930003,
+        "chi2": 24.15777354220747,
+        "hse_ts": 0.3837947479251827,
+        "mae": 58.66938995165761
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g2_a0.1_share0.25",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 78.04374792902071,
+        "r": 0.5987906227739019,
+        "chi2": 25.531155458499256,
+        "hse_ts": 0.39962788875832356,
+        "mae": 59.95429497729095
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g2_a0.1_share0.5",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 0.1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 82.26141411252891,
+        "r": 0.57207695316696,
+        "chi2": 29.75402752083734,
+        "hse_ts": 0.3866071706694078,
+        "mae": 63.622193924008585
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g2_a0.1_share1",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 0.1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 95.89591971337958,
+        "r": 0.5074485641846747,
+        "chi2": 44.10420456453157,
+        "hse_ts": 0.45149792125213983,
+        "mae": 74.99280433947509
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g2_a1_share0.125",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 1,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.49356544476082,
+        "r": 0.6112426977938523,
+        "chi2": 23.891531258653178,
+        "hse_ts": 0.38185049598093074,
+        "mae": 58.35653284478707
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g2_a1_share0.25",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 1,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 77.26105713758565,
+        "r": 0.6069553060464582,
+        "chi2": 24.725814452501844,
+        "hse_ts": 0.39962788875832356,
+        "mae": 59.14328841699384
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g2_a1_share0.5",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 1,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 79.57691770465638,
+        "r": 0.5945650785269868,
+        "chi2": 27.05191975328722,
+        "hse_ts": 0.40323448448448446,
+        "mae": 61.27562381975772
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g2_a1_share1",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 1,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 86.978941854877,
+        "r": 0.5617418611947693,
+        "chi2": 34.33428600721013,
+        "hse_ts": 0.4278006314765505,
+        "mae": 67.5613361400418
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g2_a10_share0.125",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 10,
+        "new_head_share": 0.125,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.22107939680156,
+        "r": 0.6139437460150496,
+        "chi2": 23.28872062055688,
+        "hse_ts": 0.378096742227177,
+        "mae": 57.96431351491952
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g2_a10_share0.25",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 10,
+        "new_head_share": 0.25,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 76.51435280428291,
+        "r": 0.6136399146055643,
+        "chi2": 23.35992731506969,
+        "hse_ts": 0.3850411866716214,
+        "mae": 58.128548172188836
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g2_a10_share0.5",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 10,
+        "new_head_share": 0.5,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 77.31005884474234,
+        "r": 0.6119352937970676,
+        "chi2": 23.67908203346466,
+        "hse_ts": 0.38185049598093074,
+        "mae": 58.655114146586044
+      },
+      "gate": false,
+      "stability": false
+    },
+    {
+      "model": "M19_regional_morphology_cubic_g2_a10_share1",
+      "recipe": {
+        "family": "regional_morphology",
+        "kernel": "cubic",
+        "kernel_factor": 2,
+        "ridge_alpha": 10,
+        "new_head_share": 1,
+        "view": "trend",
+        "encoding": "linear",
+        "precision_lambda": 4,
+        "target_weight": "fast2",
+        "gain": 1.2,
+        "bias": -5,
+        "prior": "fixed M18"
+      },
+      "metrics": {
+        "n": 1512,
+        "rmse": 79.70390092263402,
+        "r": 0.6050530067763199,
+        "chi2": 25.02435678773202,
+        "hse_ts": 0.3850144787644788,
+        "mae": 60.324271400575626
+      },
+      "gate": false,
+      "stability": false
+    }
+  ]
+}
