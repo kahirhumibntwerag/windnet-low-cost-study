@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "sources_verified": 20,
+  "control_count": 4,
+  "freeze_sha256": "d4c1c1f410821611fbe58fb2d5174c7d4cb138a622d3d09f2297dfed4276d329",
+  "control_match_tolerance": 1e-09,
+  "training_blocks": 108,
+  "fold5_available": false,
+  "original_final_evaluations": 0,
+  "scope": "Source/protocol/freeze identities and original preflight provenance; not independent model refit"
+}

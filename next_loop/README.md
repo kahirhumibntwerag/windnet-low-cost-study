@@ -7,6 +7,7 @@ This campaign tests image-only improvements beyond M10. Hypotheses, hyperparamet
 - [M12/M13 complete training results and ablations](../results/next_loop/REGIONAL_RESULTS.md)
 - [M13 training-selected recipe](m13_training_selection.json)
 - [F3 registered protocol](f3_protocol.json) and [complete freeze](../results/next_loop/f3_freeze.json)
+- [M14 topology experiment: complete negative result and matched ablations](../results/next_loop/M14_RESULTS.md)
 
 ## What is matched
 
@@ -19,6 +20,8 @@ The released original TensorFlow forecasts are a historical reference. The separ
 M11 failed an archived-control reproduction prerequisite and is retained as a technical failure. Separately preregistered M11R tested paired calibration changes against controls fitted on its own L4 runtime; none qualified. M12 tested 288 regional feature/mixture configurations and did not pass the complete adoption rule. M13 tested 960 target-weight/mixture configurations. Its selected model passed the registered numerical margins, fold stability screen and positive conditional HSE-difference lower bounds against all three controls. All 192 overlapping unit-weight conditions reproduced M12 predictions exactly.
 
 The selected regional head uses a 6×6 image-plane grid, trend encoding, linear features, precision lambda4, ridge alpha100 and 2× fitting weights for targets at least500km/s. Its forecast contributes25% of the primary, with75% from M10. The M13 training score is not an estimate of historical or prospective test performance. Conditional bootstrap intervals do not correct adaptive selection or multiple candidate checks.
+
+M14 tested 288 sampled digital topology/morphology configurations against four frozen controls, including M13. No condition passed all four numerical margins. M13 remains the training incumbent. Nine feature/weight checks and separate export/provenance audits passed; the fitted heads and training-side predictions are preserved in the public `windnet-m14-2026-10-30` release. No original historical evaluation ran in M14. Reproduce its registered workload from a fresh checkout with `python -m next_loop.m14_entry`; it rejects an existing M14 start marker and verifies its frozen sources and controls before fitting.
 
 ## F3 fixed historical panel
 
