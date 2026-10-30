@@ -1,0 +1,15 @@
+{
+  "filename": "m14_frozen_sources.tar.gz",
+  "bytes": 44700,
+  "sha256": "53738234e7d9ab173d2c4fb3a253cecf0cb8822a121b25af0bf2af95fccd9562",
+  "scientific_source_files": 21,
+  "all_source_bytes_match_original_freeze": true,
+  "archive_roundtrip_verified": true,
+  "git_newline_conversion_paths": [
+    "next_loop/m12_reference.json",
+    "next_loop/m14_protocol.json",
+    "next_loop/m14_reference.json",
+    "next_loop/regional_stats.py"
+  ],
+  "raw_holdout_observations_or_forecasts_included": false
+}

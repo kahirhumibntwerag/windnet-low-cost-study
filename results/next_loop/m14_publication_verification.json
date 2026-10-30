@@ -1,0 +1,69 @@
+{
+  "verified_at": "2026-10-30T04:48:42.318Z",
+  "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+  "experiment_id": "5f047285-fdd0-4e67-9fbf-243facf9b561",
+  "run_id": "5bf57d95-3531-4638-a590-3a803b816b0e",
+  "observation_id": "366d49af-c357-4488-9577-7b9023401f22",
+  "analysis_id": "76de32df-e373-4e5c-8f39-81626123b1e9",
+  "decision_id": "23f3a9ed-8cfd-4694-92f9-552fab486bf4",
+  "literature_observation_id": "3d302b12-48fd-4da4-a66c-bae821bb1587",
+  "results_artifact_id": "f962b1aa-8bb7-498e-b9e8-826d6be14058",
+  "model_artifact_id": "7088ef68-5236-422f-9c00-e6c664db0d36",
+  "conditions": 288,
+  "qualified": 0,
+  "original_final_evaluations": 0,
+  "github": {
+    "source_results_commit": "dafd570",
+    "release": "windnet-m14-2026-10-30",
+    "training_archive_bytes": 4026636,
+    "training_archive_sha256": "2e9f0b4230c10c661d36633b44f80f4afaf742a458dd9a533c6eacb5b412ee74",
+    "source_archive_bytes": 44700,
+    "source_archive_sha256": "53738234e7d9ab173d2c4fb3a253cecf0cb8822a121b25af0bf2af95fccd9562",
+    "provider_digest_and_size_match": true
+  },
+  "site": {
+    "project_id": "appgprj_6ae3988ae03881919056b61092bec1f4",
+    "checkout_path": "C:\\Users\\mhesh\\OneDrive\\Belgeler\\ChatGPT\\experiment\\matched_dashboard",
+    "commit_sha": "4393c9c20466a892780dccb0eff3a131d7d28866",
+    "archive": "C:/Users/mhesh/OneDrive/Belgeler/ChatGPT/experiment/tmp/m14-dashboard.tar.gz",
+    "deployment": {
+      "id": "appgdep_6ae4210068008191b26219f91f6b00de",
+      "project_id": "appgprj_6ae3988ae03881919056b61092bec1f4",
+      "title": "WindNet Matched Research Loop",
+      "version_id": "appgprj_6ae3988ae03881919056b61092bec1f4~appgver_fc0db2e1d64c8191a5306c047b6de0f5",
+      "type": "publish",
+      "status": "succeeded",
+      "url": "https://windnet-matched-research-loop.wellbat32.chatgpt.site",
+      "has_mcp": false,
+      "screenshot_asset_pointer": null,
+      "provider_deployment_id": "site---6ae3988ae03881919056b61092bec1f4",
+      "failure_message": null,
+      "env_set_revision": 0,
+      "updated_at": "2026-10-30T04:46:09.833844+00:00"
+    },
+    "static_checks": {
+      "candidate_rows": 288,
+      "csv_rows": 288,
+      "scatter_candidate_points": 288,
+      "incumbent_unchanged": true,
+      "F3_historical_panel_preserved": true
+    },
+    "browser_qa": "Not run after user stopped browser control; deployment verified by succeeded native response."
+  },
+  "rognet": {
+    "completed_private_finding_saved": true,
+    "campaign_public": true,
+    "finding_published": false,
+    "publication_limit": "Browser was stopped with physical Escape; F3 publication permission question remains unanswered. No further browser actions taken."
+  },
+  "resources": {
+    "pod_deleted_verified_404": true,
+    "volume_deleted_verified_404": true
+  },
+  "M15": {
+    "hypothesis_id": "65f6ebf8-2c14-4ecc-8413-1de25c9381cf",
+    "experiment_id": "1c1812ee-1383-4fc4-adbd-aaad4107a843",
+    "status": "planned; not executed"
+  },
+  "raw_original_holdout_observations_published": false
+}

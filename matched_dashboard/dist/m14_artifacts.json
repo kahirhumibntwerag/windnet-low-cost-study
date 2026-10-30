@@ -1,0 +1,8 @@
+{
+  "filename": "m14_training_artifacts.tar.gz",
+  "sha256": "2e9f0b4230c10c661d36633b44f80f4afaf742a458dd9a533c6eacb5b412ee74",
+  "bytes": 4026636,
+  "models": 288,
+  "candidate_recipes": 72,
+  "scope": "Training-side fitted heads and predictions only; no original holdout data"
+}

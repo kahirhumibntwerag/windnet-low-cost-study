@@ -29,6 +29,8 @@ Nine feature/weight tests passed. Separate export verification recomputed aggreg
 
 The training artifact archive contains 288 fitted heads and every candidate’s training-side validation forecasts. It is 4,026,636 bytes, SHA256 `2e9f0b4230c10c661d36633b44f80f4afaf742a458dd9a533c6eacb5b412ee74`. The temporary CPU pod and volume were deleted after verified download. Costs are estimates, not a settled provider invoice.
 
+The same release also supplies a 44,700-byte exact-source snapshot for portable hash checks. Git normalizes line endings in a few source/reference files; the snapshot preserves the frozen bytes, with no numerical changes. Its SHA256 is `53738234e7d9ab173d2c4fb3a253cecf0cb8822a121b25af0bf2af95fccd9562`. Every archived source byte was checked against the original freeze and checked again after an archive round trip.
+
 ## Post-experiment literature and next question
 
 [Jacobs et al. (1991), *Adaptive Mixtures of Local Experts*](https://www.cs.toronto.edu/~hinton/absps/jjnh91.pdf), motivates routing between predictors that specialize in different cases. [Breiman (1996), *Stacked Regressions*](https://statistics.berkeley.edu/sites/default/files/tech-reports/367.pdf), studies combinations using cross-validation forecasts and discusses the risks of fitting combinations to in-sample predictions.

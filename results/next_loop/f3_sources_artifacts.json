@@ -1,0 +1,12 @@
+{
+  "filename": "f3_frozen_sources.tar.gz",
+  "bytes": 66709,
+  "sha256": "f53c7ec781805302c2e403486a0ce5b4556646f3c90c8d3a376182c804fe6001",
+  "scientific_source_files": 26,
+  "all_source_bytes_match_original_freeze": true,
+  "archive_roundtrip_verified": true,
+  "git_newline_conversion_paths": [
+    "next_loop/m13_training_selection.json"
+  ],
+  "raw_holdout_observations_or_forecasts_included": false
+}

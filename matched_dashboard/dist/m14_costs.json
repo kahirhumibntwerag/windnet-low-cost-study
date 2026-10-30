@@ -1,0 +1,17 @@
+{
+  "pod_id": "g25y9hatfday85",
+  "volume_id": "4l32aicdql",
+  "stage": "M14",
+  "created_at": "2026-10-30T04:29:42.815Z",
+  "deleted_verified_at": "2026-10-30T04:35:19Z",
+  "pod_deleted_verified_404": true,
+  "volume_deleted_verified_404": true,
+  "compute_rate_usd_per_hour": 0.06,
+  "compute_estimate_usd": 0.005603083333333333,
+  "storage_and_rounding_buffer_usd": 0.02,
+  "prior_cumulative_matched_estimate_usd": 1.5945701833333332,
+  "cumulative_limit_usd": 5,
+  "limitations": "Creation-to-deletion estimate includes installation, acquisition and idle time; storage/rounding buffer. Not a settled provider invoice. Only new M14 resources deleted after verified artifact download.",
+  "this_worker_estimate_usd": 0.025603083333333332,
+  "cumulative_matched_estimate_usd": 1.6201732666666666
+}

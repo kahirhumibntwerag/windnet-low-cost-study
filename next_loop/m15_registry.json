@@ -1,0 +1,43 @@
+{
+  "campaign_id": "1b7e08e2-70f1-4945-b613-5e785d3f76bb",
+  "hypothesis_id": "65f6ebf8-2c14-4ecc-8413-1de25c9381cf",
+  "experiment_id": "1c1812ee-1383-4fc4-adbd-aaad4107a843",
+  "status": "planned; not executed",
+  "source": "M14 matched TRAINING anchor complementarity plus Jacobs1991/Breiman1996; no original historical feedback",
+  "conditions": 104,
+  "expert_A": "M14_morphology_trend_w4_targetfast2_a100_share0.25",
+  "expert_B": "M14_regional_morphology_trend_w4_targetfast2_a100_share0.25",
+  "formula": "p_gate=A+g*(B-A); p=(1-s)*fixedM13+s*p_gate",
+  "static_event_shares": [
+    0.125,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "gate_thresholds": [
+    400,
+    450,
+    500,
+    550
+  ],
+  "gate_temperatures": [
+    25,
+    50,
+    100
+  ],
+  "gate_max_shares": [
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "incumbent_mix_shares": [
+    0.5,
+    1
+  ],
+  "new_base_fits": 0,
+  "original_final_evaluations": 0,
+  "prior_cumulative_estimate_usd": 1.6201732666666666,
+  "cumulative_limit_usd": 5,
+  "next_action": "Read exact registered design; implement/test/hash deterministic gate and complete bank/control provenance before evaluating any condition; training-only CPU, no original holdout access"
+}

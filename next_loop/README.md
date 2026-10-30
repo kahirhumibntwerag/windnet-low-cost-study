@@ -48,6 +48,8 @@ Two strict numerical gates are reported separately: lower mean-fold RMSE and red
 
 Use the pinned CUDA/PyTorch image from [f3_protocol.json](f3_protocol.json), an NVIDIA GPU, and a fresh checkout with no existing `data/` directory. No Runpod account is needed by the scientific evaluator itself. The runner installs the pinned NumPy/SciPy/scikit-learn/requests versions. Original author archives are downloaded and verified against the source manifest.
 
+For strict byte-level source checks on Linux or another Git newline configuration, first extract the small `f3_frozen_sources.tar.gz` asset from the [F3 release](https://github.com/kahirhumibntwerag/windnet-low-cost-study/releases/tag/windnet-f3-2026-10-30) over the fresh source tree. Git normalizes one frozen JSON file's line endings; this snapshot preserves the original bytes and includes a checked source manifest. The analogous `m14_frozen_sources.tar.gz` asset in the [M14 release](https://github.com/kahirhumibntwerag/windnet-low-cost-study/releases/tag/windnet-m14-2026-10-30) preserves M14's source/protocol bytes. The snapshots contain no raw observations or historical predictions, and change no recipes or numerical results. Source snapshot digests are recorded in `results/next_loop/f3_sources_artifacts.json` and `m14_sources_artifacts.json`.
+
 ```bash
 python -m unittest next_loop.test_f3 next_loop.test_regions next_loop.test_target_weights
 python -c "import json; json.dump({'stage':'prepare'},open('f3-prepare-request.json','w'))"
