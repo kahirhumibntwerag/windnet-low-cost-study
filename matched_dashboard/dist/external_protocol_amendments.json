@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "registered_before_external_unseal": true,
+  "external_arrays_accessed": false,
+  "purpose": "Resolve implementation details using public metadata, pre2019 equivalence checks and synthetic data only",
+  "amendments": [
+    "Restore author graphs in TensorFlow compatibility graph mode; no architecture or weights replaced",
+    "Read NumPy2 pickles in NumPy1.26 via numpy._core to numpy.core module-name translation; frozen arrays and model parameters unchanged",
+    "Use published2017 AIA V8 response table to preserve original SDOMLv1 calibration convention; final published epoch extends2030",
+    "Choose first available same-day image nearest00UTC; a selected bad-quality image excludes the day instead of choosing a later quality-based replacement",
+    "Bootstrap fixed28-day calendar units anchored2020-01-01, stratified by14-day block start year; never pair across missing calendar units",
+    "Fixed-year event scores retain intersections of original14-day blocks with each calendar year, including partial boundary segments",
+    "Require a paired pre2019 source bridge with RMS image difference below0.1 on0-256 scale; observed2018 check0.001781885",
+    "Complete and hash all ten replica forecast arrays before opening external target labels"
+  ],
+  "scientific_choices_unchanged": ["models", "weights", "replicas", "training data", "H4D3", "test period", "four primary metrics", "no external tuning"]
+}

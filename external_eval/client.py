@@ -9,7 +9,11 @@ def main():
     url='https://'+config['pod_id']+'-8888.proxy.runpod.net'
     session=requests.Session();session.headers['Authorization']='Bearer '+config['token']
     if a.action in ['health','state']:
-        r=session.get(url+'/'+a.action,timeout=40);r.raise_for_status();print(json.dumps(r.json()));return
+        r=session.get(url+'/'+a.action,timeout=40);r.raise_for_status();value=r.json()
+        if a.action=='state':
+            Path('tmp').mkdir(exist_ok=True);Path('tmp/external_worker_state.json').write_text(json.dumps(value),encoding='utf8')
+            value={k:v for k,v in value.items() if k!='log'}|{'log_tail':value.get('log','')[-1200:]}
+        print(json.dumps(value));return
     if a.action=='run':
         r=session.post(url+'/run',json={'stage':a.value},timeout=40);r.raise_for_status();print(json.dumps(r.json()));return
     if a.action=='artifact':
