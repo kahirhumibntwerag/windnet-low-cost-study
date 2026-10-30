@@ -7,8 +7,8 @@
     },
     {
       "file": "artifacts/external_eval/metrics_by_year.svg",
-      "bytes": 46595,
-      "sha256": "7d2bf4cf038c0bb7e8ac818dd194c687a25192f04027b7045c9772b71677ea25"
+      "bytes": 45367,
+      "sha256": "524fa01c7abc46be37bfc1223bbfe1d33bff9d0cd9f6a5dd7faf34793b9123b9"
     },
     {
       "file": "artifacts/external_eval/paired_differences.png",
@@ -17,8 +17,8 @@
     },
     {
       "file": "artifacts/external_eval/paired_differences.svg",
-      "bytes": 28436,
-      "sha256": "ddf7a0ecc4abe1241fa7eff76ce8f638804c703620d8d7250d18a5685714727a"
+      "bytes": 27660,
+      "sha256": "d52b43734de0a35b08abc443658d3e7b507bc84d14f218c4b02f8880f81aba00"
     }
   ],
   "source_results_sha256": "4ee0ed1702877441ffecfa83790d62f2c7aa26bf983271c7c3d1f860490adbdf",

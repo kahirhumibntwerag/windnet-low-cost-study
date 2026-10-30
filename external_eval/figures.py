@@ -53,6 +53,8 @@ def main():
         for period,group in [('2020-2025',d['overall']),*d['yearly'].items()]:
             for model,row in group.items():
                 if row:w.writerow([period,model,*[row[k] for k in KEYS],row['unique_target_days'],row['positive_sigma_days']])
+    for path in OUT.glob('*.svg'):
+        path.write_bytes(('\n'.join(line.rstrip() for line in path.read_text(encoding='utf8').splitlines())+'\n').encode('utf8'))
     files=[{'file':str(p.relative_to(ROOT)).replace('\\','/'),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(OUT.glob('*')) if p.suffix in ['.svg','.png']]
     (E/'figures_manifest.json').write_bytes((json.dumps({'figures':files,'source_results_sha256':hashlib.sha256((E/'external_results.json').read_bytes()).hexdigest(),'individual_test_data_read':False},indent=2)+'\n').encode('utf8'))
     print(json.dumps({'figures':len(files),'csv':'external_eval/aggregate_comparison.csv','source':'aggregate results only'}))
